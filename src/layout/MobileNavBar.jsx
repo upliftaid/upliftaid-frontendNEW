@@ -3,6 +3,17 @@ import logo from '../assets/images/logo.png';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { NavLink } from 'react-router-dom';
 
+const navLinks = [
+  { path: '/', label: 'Home' },
+  { path: '/how-it-works', label: 'How It Works' },
+  { path: '/donate', label: 'Donate' },
+  { path: '/gallery', label: 'Gallery' },
+  { path: '/blog', label: 'Blog' },
+  { path: '/about', label: 'About' },
+  { path: '/contact', label: 'Contact' },
+  { path: '/career', label: 'Career' },
+];
+
 const MobileNavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,11 +26,9 @@ const MobileNavBar = () => {
         <div
           className='text-white flex items-center gap-2 cursor-pointer'
           onClick={() => {
-            setIsOpen(prev => !prev)
-            window.scrollTo({ top: 0, behavior: 'smooth' }
-            
-            );}
-          }
+            setIsOpen(prev => !prev);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
         >
           <GiHamburgerMenu size={25} />
           <p className='text-xl'>MENU</p>
@@ -28,14 +37,11 @@ const MobileNavBar = () => {
 
       {isOpen && (
         <div className='overflow-hidden bg-[#0f5253] w-full px-6 py-4 mt-[101px] flex flex-col space-y-4 text-white text-lg lg:hidden transition-all duration-300 ease-in-out'>
-          <NavLink to='/' >Home</NavLink>
-          <NavLink to='/how-it-works' >How It Works</NavLink>
-          <NavLink to='/donate' >Donate</NavLink>
-          <NavLink to='/gallery' >Gallery</NavLink>
-          <NavLink to='/blog' >Blog</NavLink>
-          <NavLink to='/about' >About</NavLink>
-          <NavLink to='/contact' >Contact</NavLink>
-          <NavLink to='/career' >Career</NavLink>
+          {navLinks.map(({ path, label }) => (
+            <NavLink key={path} to={path} onClick={() => setIsOpen(false)}>
+              {label}
+            </NavLink>
+          ))}
         </div>
       )}
     </>
