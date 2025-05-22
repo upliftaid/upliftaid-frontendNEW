@@ -38,7 +38,7 @@ const Navbar = () => {
             <img src={charity} alt="Charity Logo" className=" h-[70px]" />
         
         </div>
-        <nav className="hidden md:flex space-x-8 h-[70px] p-[15px] text-gray-700">
+        <nav className="hidden md:flex space-x-8 h-[70px] p-[15px] text-[#000000]">
           <a href="#">Home</a>
           <a href="#">About Us</a>
           <a href="#">Causes</a>
