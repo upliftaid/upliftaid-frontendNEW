@@ -1,15 +1,15 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaPinterestP, FaGooglePlusG, FaLinkedinIn } from 'react-icons/fa';
-import thecharity from '../assets/images/thecharity.png'; // adjust path as needed
+import upliftaid from '../assets/images/upliftaid.png'; // adjust path as needed
 
 const Footer = () => {
   return (
-    <footer className="bg-[#00adef] text-white px-6  pb-6">
+    <footer className="bg-[#00733C] text-white px-6  pb-6">
          
     <header className=" py-4  flex flex-col md:flex-row items-center justify-between border-b border-white/30">
       {/* Logo */}
       <div className="flex items-center gap-2 text-2xl font-bold">
-<img src={thecharity} alt="Charity Logo" className="h-[70px]" />
+<img src={upliftaid} alt="Charity Logo" className="h-[70px]" />
       </div>
 
       {/* Message and Button */}

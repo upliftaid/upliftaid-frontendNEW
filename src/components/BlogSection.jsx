@@ -41,15 +41,15 @@ const BlogSection = ({ totalPages = 4 }) => {
               <p className="text-black font-[sans-serif] my-[15px]">{post.desc}</p>
               <div className="flex flex-wrap gap-6 text-gray-600 text-sm">
                 <div className="flex items-center gap-2">
-                  <FaUser className="text-sky-500" />
+                  <FaUser className="text-[#00adefcc]" />
                   <span>{post.author}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <FaCalendarAlt className="text-sky-500" />
+                  <FaCalendarAlt className="text-[#00adefcc]" />
                   <span>{post.date}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <FaHeart className="text-sky-500" />
+                  <FaHeart className="text-[#00adefcc]" />
                   <span>{post.categories.join(', ')}</span>
                 </div>
               </div>
@@ -75,7 +75,7 @@ const BlogSection = ({ totalPages = 4 }) => {
               onClick={() => handleClick(pageNum)}
               className={`px-4 py-2 border-l ${
                 currentPage === pageNum
-                  ? 'bg-sky-500 text-white'
+                  ? 'bg-[#00adefcc] text-white'
                   : 'bg-white text-black hover:bg-gray-100'
               }`}
             >
@@ -107,7 +107,7 @@ const BlogSection = ({ totalPages = 4 }) => {
                 <div>
                   <p className="text-[17.92px] text-[#7f7f7f] leading-snug">{item.desc}</p>
                   <div className="flex items-center gap-2 text-gray-500 text-sm mt-1">
-                    <FaCalendarAlt className="text-sky-500" />
+                    <FaCalendarAlt className="text-[#00adefcc]" />
                     <span>{item.date}</span>
                   </div>
                 </div>
@@ -151,7 +151,7 @@ const BlogSection = ({ totalPages = 4 }) => {
                 <div>
                   <p className="text-[17.92px] text-[#7f7f7f] leading-snug">{item.desc}</p>
                   <div className="flex items-center gap-2 text-gray-500 text-sm mt-1">
-                    <FaCalendarAlt className="text-sky-500" />
+                    <FaCalendarAlt className="text-[#00adefcc]" />
                     <span>{item.date}</span>
                   </div>
                 </div>
