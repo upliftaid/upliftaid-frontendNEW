@@ -1,0 +1,317 @@
+import Navbar from "../layout/Navbar";
+import Carousel from "../components/HeaderCarousel";
+import SectionCarousel from "../components/SectionCarousel";
+import { NavLink } from "react-router-dom";
+import { FiRefreshCcw } from "react-icons/fi";
+import { TbSettingsCog } from "react-icons/tb";
+import { CgDropInvert } from "react-icons/cg";
+import PriceCard from "../components/PriceCard";
+import News from "../components/News";
+import { AiOutlinePauseCircle } from "react-icons/ai";
+import Footer from "../layout/Footer";
+import Gallery from "../components/Gallery";
+import StatsCard from "../components/StatsCard";
+import MobileNavbar from "../layout/MobileNavbar";
+
+const HomePage = () => {
+  return (
+    <div>
+      <Navbar />
+      <MobileNavbar/>
+
+      {/* carousel */}
+
+      <Carousel />
+
+      <section className="grid">
+        {/* About Us */}
+
+        <div className="flex flex-col lg:flex-row md:justify-center lg:w-full gap-10 px-4 lg:gap-20 lg:items-center mt-10 min-w-[320px] ">
+          <div className="grid gap-1 px-4">
+            <h1 className="text-[42px]">About Us</h1>
+            <div className="bg-[#00adef] w-16 h-[2.5px]"></div>
+          </div>
+          <div className="bg-[#ccc] w-1 h-20 hidden lg:block"></div>
+          <div className="lg:w-[820px] lg:h-[124px] w-full flex px-4 justify-center items-center gap-4">
+            <div className="bg-[#ccc] w-1 h-70 md:h-30 lg:hidden block"></div>
+            <p className="lg:mt-7 text-justify">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Repudiandae odit iste exercitationem praesentium deleniti nostrum
+              laborum rem id nihil tempora. Adipisci ea commodi unde nam placeat
+              cupiditate quasi a ducimus rem consequuntur ex eligendi minima
+              voluptatem assumenda voluptas quidem sit maiores odio velit
+              voluptate.
+            </p>
+          </div>
+        </div>
+
+<div className="flex flex-col md:flex-row justify-center items-start md:gap-6 gap-10 px-4 md:px-8 mt-10 w-full">
+  {/* Card 1 */}
+  <div className="flex flex-col gap-4 w-full md:w-1/3 max-w-[380px]">
+    <div className="h-[195px] md:h-[160px] lg:h-[215px]">
+      <img
+        src="https://zozothemes.com/html/the-charity/img/sections/charity-1.jpg"
+        alt=""
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <div className="grid gap-3 px-2">
+      <h1 className="text-[24px]">Child Care</h1>
+      <p className="text-justify text-[14px]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus facilisis cvallis.
+      </p>
+    </div>
+  </div>
+
+  {/* Card 2 */}
+  <div className="flex flex-col gap-4 w-full md:w-1/3 max-w-[380px]">
+    <div className="h-[195px] md:h-[160px] lg:h-[215px]">
+      <img
+        src="https://zozothemes.com/html/the-charity/img/sections/charity-2.jpg"
+        alt=""
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <div className="grid gap-3 px-2">
+      <h1 className="text-[24px]">Tree Planting</h1>
+      <p className="text-justify text-[14px]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus facilisis cvallis.
+      </p>
+    </div>
+  </div>
+
+  {/* Card 3 */}
+  <div className="flex flex-col gap-4 w-full md:w-1/3 max-w-[380px]">
+    <div className="h-[195px] md:h-[160px] lg:h-[215px]">
+      <img
+        src="https://zozothemes.com/html/the-charity/img/sections/charity-3.jpg"
+        alt=""
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <div className="grid gap-3 px-2">
+      <h1 className="text-[24px]">Fund Raising</h1>
+      <p className="text-justify text-[14px]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus facilisis cvallis.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+        {/* who we are */}
+
+        <div className="flex flex-col lg:flex-row lg:w-full mt-10 min-w-[320px]">
+          {/* left side */}
+          <div className="lg:w-[50%] h-[500px] bg-[#e1e1e1]/40">
+            <SectionCarousel />
+          </div>
+
+          {/* right side */}
+          <div className="lg:w-[50%] h-[500px]">
+            <img
+              src="https://zozothemes.com/html/the-charity/img/sections/bg/full-img17.jpg"
+              alt=""
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+
+        <div className="lg:w-full bg-[#00adef] md:h-40 h-90 mt-2 flex lg:flex-row flex-col gap-4 items-center justify-evenly min-w-[320px]">
+          <h1 className="text-[32px] text-white hidden md:block">
+            Let’s Stop This Hunger and Fullfill Their Happiness!{" "}
+          </h1>
+          <div className="text-[32px] text-white flex flex-col items-center justify-center md:hidden">
+              <h1>
+                LET'S STOP THIS
+              </h1>
+              <h1>
+                HUNGER AND
+              </h1>
+              <h1>
+                FULLFILL THEIR
+              </h1>
+                <h1>
+                HAPPINESS!
+              </h1>
+          </div>
+          <div className="hover:bg-[#00adef] w-[192px] h-14 bg-[#ffb600] flex items-center justify-center hover:border hover:border-white text-[18px]">
+            <NavLink to="/" className="">
+              Donate Now!!
+            </NavLink>
+          </div>
+        </div>
+
+        {/* Donate through mobile */}
+
+        <div className="lg:w-full flex flex-col lg:flex-row gap-20 mt-5 md:p-4 min-w-[320px]">
+          {/* left */}
+          <div className="md:w-[40%] lg:ml-40">
+            <div className="w-[280px] h-[454px] mx-auto md:flex md:items-center md:justify-center">
+              <img
+                src="https://zozothemes.com/html/the-charity/img/sections/iphone-img.png"
+                alt=""
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+
+          {/* right */}
+          <div className="">
+            <div className="w-full grid p-6 gap-8">
+              <div className="grid">
+                <h1 className="text-[32px]">DONATE THROUGH MOBILE APP</h1>
+                <div className="bg-[#00adef] w-16 h-[2.5px]"></div>
+              </div>
+              <div className="lg:w-[840px] grid gap-4 text-[14px]">
+                <p className="text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum nec odio ipsum. Suspendisse cursus malesuada
+                  facilisis. Nunc consectetur odio sed dolor tincidunt
+                  porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada
+                  facilisis. Nunc consectetur odio sed dolor tincidunt porttitor
+                  consectetur adipiscing elit. Vestibulum nec odio ipsum.
+                  Suspendisse cursus malesuada facilisis. porttitor
+                  consecteturadipiscing elit. Vestibulum nec odio ipsum.
+                  Suspendisse cursus malesuada facilisis.
+                </p>
+                <p className="text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum nec odio ipsum. Suspendisse cursus malesuada
+                  facilisis. Nunc consectetur odio sed dolor tincidunt
+                  porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.
+                </p>
+              </div>
+
+              <div className="grid lg:grid-cols-3 gap-8 mt-4">
+                <div className="grid gap-4">
+                  <div className="flex items-center gap-4">
+                    <FiRefreshCcw color="#00adef" size={20} />
+                    <p>Select</p>
+                  </div>
+                  <p className="text-[14px]">
+                    Lorem ipsum dolor sit, amet consectetur adipisic
+                  </p>
+                </div>
+
+                <div className="grid gap-4">
+                  <div className="flex items-center gap-4">
+                    <TbSettingsCog color="#00adef" size={20} />
+                    <p>Donate</p>
+                  </div>
+                  <p className="text-[14px]">
+                    Lorem ipsum dolor sit, amet consectetur adipisic
+                  </p>
+                </div>
+
+                <div className="grid gap-4">
+                  <div className="flex items-center gap-4">
+                    <CgDropInvert color="#00adef" size={20} />
+                    <p>Thanks</p>
+                  </div>
+                  <p className="text-[14px]">
+                    Lorem ipsum dolor sit, amet consectetur adipisic
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <StatsCard />
+
+        <PriceCard />
+
+        <Gallery />
+
+        <div className="bg-[#00adef] lg:w-full lg:h-30 h-66 flex lg:flex-row flex-col items-center justify-evenly md:p-4 gap-4 min-w-[320px]">
+          <h1 className="text-[32px] text-white hidden lg:block">
+            WE NEED YOUR HELP
+          </h1>
+          <div className="grid place-items-center lg:hidden">
+            <h1 className="text-[32px] text-white">
+              WE NEED YOUR
+            </h1>
+            <h1 className="text-[32px] text-white">
+              HELP
+            </h1>
+          </div>
+          <div className="hover:bg-[#00adef] w-[192px] h-14 bg-[#ffb600] flex items-center justify-center hover:border hover:border-white text-[18px]">
+            <NavLink to="/">
+              Donate Now!!
+            </NavLink>
+          </div>
+        </div>
+
+        <News />
+
+        <div className="relative lg:w-full mt-10 min-w-[320px]">
+          {/* Fixed background image */}
+          <div
+            className="absolute inset-0 h-full min-w-[320px] md:w-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/water-full-bg.jpg')] md:bg-fixed bg-cover bg-center -z-10"
+            aria-hidden="true"
+          ></div>
+
+          {/* Content wrapper with overlay */}
+          <div className="relative">
+            <div className="flex w-full flex-col md:flex-row">
+              {/* left side */}
+              <div className="md:w-[50%] md:h-[630px] lg:h-[500px] bg-[#e1e1e1]/20">
+                <div className="flex flex-col justify-center items-center mt-50 text-[#00adef]">
+                  <AiOutlinePauseCircle size={80} className="cursor-pointer" />
+                  <p>Play Video</p>
+                </div>
+              </div>
+
+              {/* right side */}
+              <div className="md:w-[50%] lg:h-[500px] bg-[#f7f7f7] p-6 px-10 py-10">
+                <div className="grid gap-1">
+                  <h1 className="text-[28px]">ADDITIONAL INFO</h1>
+                  <div className="bg-[#00adef] w-16 h-[2.5px]"></div>
+                </div>
+
+                <div className="grid gap-4 mt-8">
+                  <h1 className="font-semibold">Fund Raising</h1>
+                  <div className="bg-[#dddd] w-[95%] h-[0.8px] rounded" />
+                  <div className="flex flex-col lg:flex-row gap-4">
+                    <div className="grid gap-4 lg:w-[80%] ">
+                      <p className="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Dolores ipsa esse obcaecati repudiandae veniam
+                        amet modi recusandae optio earum sequi accusantium culpa
+                        vitae iste sit commodi eaque voluptatem officia quam
+                      </p>
+                      <p className="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Dolores ipsa esse obcaecati repudiandae veniam
+                        amet modi.
+                      </p>
+                      <h1 className="font-semibold mt-4">Educate Kids</h1>
+                      <div className="bg-[#dddd] w-[95%] h-[0.8px] rounded" />
+                      <h1 className="font-semibold">
+                        Building Clean Water Facility
+                      </h1>
+                    </div>
+                    <div className="w-[105px] h-[67px]">
+                      <img
+                        src="https://zozothemes.com/html/the-charity/img/sections/blog/news-6.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default HomePage;

@@ -1,43 +1,42 @@
-import React from "react";
 import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const navLinkStyles = ({ isActive }) =>
-    isActive ? "underline underline-offset-[15px] decoration-2" : "";
+  const navlinklist = [
+    { name: "Home", url: "/" },
+    { name: "About Us", url: "/about-us" },
+    { name: "Causes", url: "/causes" },
+    { name: "Events", url: "/events" },
+    { name: "Portfolio", url: "/portfolio" },
+    { name: "Blog", url: "/blog" },
+    { name: "Contact", url: "/contact" },
+  ];
 
   return (
-    <nav className="bg-[#0f5253] w-full h-[101px] p-4 lg:flex justify-evenly items-center gap-[80px] fixed z-50 top-0 hidden">
-      <div className="w-[70px] h-[70px]">
-        <img src={logo} alt="logo" />
+    <header className="bg-white w-full h-[70px] md:h-[140px] lg:h-[70px] md:flex md:flex-col lg:flex-row items-center justify-between px-40 fixed top-0 z-99 hidden">
+      <div>
+        <img src={logo} alt="" />
       </div>
-      <div className="text-[#f0f0f0] flex gap-12 text-[14px]">
-        <NavLink to="/" className={navLinkStyles}>
-          Home
-        </NavLink>
-        <NavLink to="/how-it-works" className={navLinkStyles}>
-          How It Works
-        </NavLink>
-        <NavLink to="/donate" className={navLinkStyles}>
-          Donate
-        </NavLink>
-        <NavLink to="/gallery" className={navLinkStyles}>
-          Gallery
-        </NavLink>
-        <NavLink to="/blog" className={navLinkStyles}>
-          Blog
-        </NavLink>
-        <NavLink to="/about" className={navLinkStyles}>
-          About
-        </NavLink>
-        <NavLink to="/contact" className={navLinkStyles}>
-          Contact
-        </NavLink>
-        <NavLink to="/career" className={navLinkStyles}>
-          Career
-        </NavLink>
-      </div>
-    </nav>
+      <nav className="flex gap-8 md:mb-4 lg:mb-0 text-[14px] font-sans">
+        {navlinklist.map((item, index) => {
+          return (
+            <div
+              className="flex items-center justify-center"
+              key={index + item.name}
+            >
+              <NavLink to={item.url} className="hover:text-[#00adef] whitespace-nowrap">
+                {item.name}
+              </NavLink>
+            </div>
+          );
+        })}
+        <div className="hover:bg-[#00adef] w-19 h-10 bg-[#ffb600] flex items-center justify-center hover:text-white">
+          <NavLink to="/" className="">
+            Donate
+          </NavLink>
+        </div>
+      </nav>
+    </header>
   );
 };
 

@@ -4,19 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        overpass: [
-          "Overpass",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          '"Segoe UI"',
-          "Roboto",
-          '"Helvetica Neue"',
-          "Arial",
-          "sans-serif",
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-        ],
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },

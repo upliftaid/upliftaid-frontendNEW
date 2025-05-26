@@ -1,115 +1,127 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { IoLocation } from "react-icons/io5";
-import { FaPhone } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
+import logo from "../assets/images/logo.png";
+import { Link, NavLink } from "react-router-dom";
 import { FaLinkedinIn } from "react-icons/fa6";
-import { TfiYoutube } from "react-icons/tfi";
+import { FaTwitter } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
+  const socialLinksDetails = [
+    {
+      image: FaFacebookF,
+      url: "/",
+    },
+    {
+      image: FaTwitter,
+      url: "/",
+    },
+    {
+      image: FaGoogle,
+      url: "/",
+    },
+    {
+      image: FaLinkedinIn,
+      url: "/",
+    },
+  ];
+
   return (
-    <div className="w-full lg:h-[554px] text-white px-[50px] py-[40px] bg-[#206d6c] mt-24">
-      <div className="lg:flex justify-evenly grid md:grid-cols-2 grid-cols-1">
-        <div className="lg:w-[500px] min-w-[200px] md:w-[400px] h-[454px] flex flex-col gap-2 mr-16">
-          <h1 className="text-[32px]">About Us</h1>
-          <div className="bg-pink-600 w-16 h-1"></div>
-          <div className="grid gap-4 text-sm md:text-base">
-            <p>
-              UpliftAid Foundation is more than just a non-profit—it's a
-              movement.
-            </p>
-            <p>
-              We invite you to join us in our efforts to make the world a
-              better, kinder place. Whether through donations, volunteering, or
-              raising awareness, your support can help us continue to create
-              meaningful change.
-            </p>
-            <div className="md:mt-16 mt-10 grid gap-4">
-              <h1>Read More</h1>
-              <div className="flex gap-1">
-                <a
-                  href="https://www.facebook.com/Upliftaidfoundation/"
-                  className="w-14 h-14 bg-[#1877F2] flex items-center justify-center hover:text-gray-400 hover:bg-blue-600 cursor-pointer"
-                >
-                  <FaFacebookF />
-                </a>
-                <a
-                  href="https://www.instagram.com/upliftaidfoundation/#"
-                  className="w-14 h-14 bg-[#c13584] flex items-center justify-center hover:bg-[#c13584]/50 cursor-pointer"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/upliftaidfoundation/"
-                  className="w-14 h-14  flex items-center justify-center bg-[#0077B5] hover:text-gray-400 hover:bg-blue-500 cursor-pointer"
-                >
-                  <FaLinkedinIn />
-                </a>
-                <a
-                  href="https://www.youtube.com/@upliftaidfoundation"
-                  className="w-14 h-14 bg-[#FF0000] flex items-center justify-center hover:bg-[#FF0000]/50 cursor-pointer"
-                >
-                  <TfiYoutube />
-                </a>
+    <div className="relative w-full mt-10">
+      {/* Fixed background image */}
+      <div
+        className="absolute inset-0 h-full w-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/bg-11.jpg')] bg-fixed bg-cover bg-center -z-10"
+        aria-hidden="true"
+      ></div>
+      <div className="relative bg-[#00adef]/90 text-white p-4 lg:px-20">
+        <div className="w-[90%] mx-auto grid gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div>
+              <img src={logo} alt="" />
+            </div>
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <h1 className="text-[28px]">We Need Your Help</h1>
+              <div className="w-32 h-10 bg-[#ffb600] flex items-center justify-center text-black">
+                <NavLink to="/" className="">
+                  Donate Now
+                </NavLink>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="w-[300px] md:h-[454px] h-[350px] flex flex-col gap-2 md:ml-20 lg:ml-0">
-          <h1 className="text-[32px]">Useful Links</h1>
-          <div className="bg-pink-600 w-16 h-1"></div>
-          <div className="grid gap-4 ml-8">
-            <Link className="hover:text-pink-500">Home</Link>
-            <Link className="hover:text-pink-500">How it Works</Link>
-            <Link className="hover:text-pink-500">Donate</Link>
-            <Link className="hover:text-pink-500">About</Link>
-            <Link className="hover:text-pink-500">Contact</Link>
-            <Link className="hover:text-pink-500">Carrer</Link>
-          </div>
-        </div>
-
-        <div className="w-[300px] md:h-[454px] h-[300px] flex flex-col gap-2">
-          <h1 className="text-[32px]">What we do</h1>
-          <div className="bg-pink-600 w-16 h-1"></div>
-          <div className="grid gap-4 ml-8">
-            <Link className="hover:text-pink-500">Latest Donations</Link>
-            <Link className="hover:text-pink-500">Success Stories</Link>
-            <Link className="hover:text-pink-500">Volunteer</Link>
-            <Link className="hover:text-pink-500">Campaigns</Link>
-            <Link className="hover:text-pink-500">Blogging</Link>
-          </div>
-        </div>
-
-        <div className="w-[300px] md:h-[454px] h-[300px] flex flex-col gap-2">
-          <h1 className="text-[32px]">Contact Info</h1>
-          <div className="bg-pink-600 w-16 h-1"></div>
-          <div className="grid gap-8 ml-8">
-            <div className="flex gap-2">
-              <div className="mt-1.5">
-                <IoLocation />
-              </div>
-              <div>
-                <p>Ghaziabad,Uttar</p>
-                <p>pradesh,India</p>
+          <div className="bg-[#ccc]/70 w-full h-[0.8px]" />
+          <div className="p-2 grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
+            <div className="grid gap-4 md:mb-30 h-fit">
+              <h1 className="font-bold">Spread The World</h1>
+              <div className="flex gap-2">
+                {socialLinksDetails.map((link, index) => {
+                  return (
+                    <div key={index + link.url}>
+                      <Link
+                        to={link.url}
+                        className="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-[#ffb600]"
+                      >
+                        <link.image />
+                      </Link>
+                    </div>
+                  );
+                })}
               </div>
             </div>
-            <div className="flex gap-4 items-center">
-              <FaPhone size={12} />
-              <p>8319301961</p>
+            <div>
+              <h1 className="font-bold">Useful Info</h1>
+              <div className="flex flex-col mt-4 gap-2 text-[14px]">
+                <Link>Annual Reports</Link>
+                <Link>Our Apporach</Link>
+                <Link>Statics</Link>
+                <Link>Stories from our work</Link>
+                <Link>Why WaterAid?</Link>
+              </div>
             </div>
-            <div className="flex gap-3 items-center">
-              <MdEmail />
-              <p>hello@upliftaid.org</p>
+            <div>
+              <h1 className="font-bold">Useful links</h1>
+              <div className="flex flex-col mt-4 gap-2 text-[14px]">
+                <Link>Carrers</Link>
+                <Link>Contact Us</Link>
+                <Link>Donate</Link>
+                <Link>Medical resources</Link>
+                <Link>Site map</Link>
+              </div>
+            </div>
+            <div className="grid gap-4 md:gap-0">
+              <h1 className="font-bold">Stayed Informed</h1>
+              <input
+                type="text"
+                placeholder="Email Address"
+                className="w-full h-10 bg-white p-4 text-black outline-none"
+              />
+              <Link className="w-25 h-10 bg-[#005D81] text-white hover:bg-[#ffb600] hover:text-black flex items-center justify-center">
+                Submit
+              </Link>
+            </div>
+          </div>
+
+          <p className="text-[10px]">
+            zozothemes.com, 233 Test, Test 2705, Test City, NY, 10279, Test.
+            Tel: (012) 345 - 6789
+          </p>
+          <div className="bg-[#ccc]/70 w-full h-[0.8px]" />
+          <div className="flex justify-between flex-col md:flex-row">
+            <div className="grid gap-3">
+              <p className="text-[12px]">
+                zozothemes.com is a Creative Agency.
+              </p>
+              <p className="text-[12px]">© Copyright 2025 zozothemes.com</p>
+            </div>
+            <div className="text-[12px] flex gap-4 mt-4">
+              <Link>Contact us</Link>
+              <div className="w-[1px] h-4 bg-white" />
+              <Link>FAQS</Link>
+              <div className="w-[1px] h-4 bg-white" />
+              <Link>Privacy Policy</Link>
+              <div className="w-[1px] h-4 bg-white" />
+              <Link>Terms & Conditions</Link>
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="flex justify-center items-center text-xs md:text-base">
-        <p>Copyright© 2025 Upliftaid | All Rights Reserved</p>
       </div>
     </div>
   );
