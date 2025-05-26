@@ -9,10 +9,10 @@ const MobileNavbar = () => {
       </div>
 
       <div>
-        <GiHamburgerMenu size={30} color="#00adef"/>
+        <GiHamburgerMenu size={30} color="#00adef" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MobileNavbar
+export default MobileNavbar;

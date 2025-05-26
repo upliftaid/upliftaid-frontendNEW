@@ -24,7 +24,10 @@ const Navbar = () => {
               className="flex items-center justify-center"
               key={index + item.name}
             >
-              <NavLink to={item.url} className="hover:text-[#00adef] whitespace-nowrap">
+              <NavLink
+                to={item.url}
+                className="hover:text-[#00adef] whitespace-nowrap"
+              >
                 {item.name}
               </NavLink>
             </div>

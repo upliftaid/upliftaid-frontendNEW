@@ -26,7 +26,10 @@ const ProgressBars = () => {
 
       {ProgressBarDetail.map((bar, index) => {
         return (
-          <div className="lg:w-[98%] min-w-68 lg:mx-auto mt-4" key={index + bar.label}>
+          <div
+            className="lg:w-[98%] min-w-68 lg:mx-auto mt-4"
+            key={index + bar.label}
+          >
             <div className="flex">
               <span className="text-[14px]">{bar.label}</span>
               <p className="text-gray-500 lg:px-[200px] px-12 py-2 text-[14px]">
