@@ -1,7 +1,6 @@
 import logo from "../assets/images/logo.png";
 import logo1 from "../assets/images/logo2-removebg-preview.png";
-// import logo2 from '../assets/images/logo1-removebg-preview.png'
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo2 from "../assets/logo1-removebg-preview.png";
 
 const Navbar = () => {
@@ -17,9 +16,9 @@ const Navbar = () => {
 
   return (
     <header className="bg-[#00733C] text-white w-full h-[70px] md:h-[140px] lg:h-[70px] md:flex md:flex-col lg:flex-row items-center justify-between px-40 fixed top-0 z-99 hidden">
-      <div className="w-16 h-16">
+      <Link to='/' className="w-16 h-16">
         <img src={logo2} alt="" />
-      </div>
+      </Link>
       <nav className="flex gap-8 md:mb-4 lg:mb-0 text-[14px] font-sans">
         {navlinklist.map((item, index) => {
           return (

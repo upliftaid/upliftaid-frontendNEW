@@ -1,4 +1,3 @@
-import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 const ProgressBars = () => {
@@ -43,7 +42,7 @@ const ProgressBars = () => {
               completed={bar.completed}
               bgColor="#00733C"
               borderRadius="0"
-              baseBgColor="#333333"
+              baseBgColor="#ccc"
               width="100%"
               height="15px"
               isLabelVisible={false} // hide label inside the bar

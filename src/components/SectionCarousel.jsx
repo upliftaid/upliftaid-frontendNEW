@@ -12,7 +12,7 @@ const RectangularDot = ({ active, onClick }) => {
       className={`
         w-6 h-2 border-0 cursor-pointer
         transition-colors duration-300
-        ${active ? "bg-black" : "bg-gray-500"}
+        ${active ? "bg-[#00733C]" : "bg-gray-500"}
       `}
     />
   );

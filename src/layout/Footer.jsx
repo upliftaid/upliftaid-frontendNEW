@@ -31,9 +31,9 @@ const Footer = () => {
       <div className="bg-[#00733C] text-white p-4 lg:px-20">
         <div className="w-[90%] mx-auto grid gap-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="h-16 w-16">
+            <Link to='/' className="h-16 w-16">
               <img src={logo2} alt="" />
-            </div>
+            </Link>
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <h1 className="text-[28px]">We Need Your Help</h1>
               <div className="w-32 h-10 flex items-center justify-center bg-[#FFB204] hover:bg-[#E69F00] text-black rounded hover:text-white">
