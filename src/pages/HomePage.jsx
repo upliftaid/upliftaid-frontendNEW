@@ -1,5 +1,4 @@
 import Navbar from "../layout/Navbar";
-import Carousel from "../components/HeaderCarousel";
 import SectionCarousel from "../components/SectionCarousel";
 import { NavLink } from "react-router-dom";
 import { FiRefreshCcw } from "react-icons/fi";
@@ -12,6 +11,7 @@ import Footer from "../layout/Footer";
 import Gallery from "../components/Gallery";
 import StatsCard from "../components/StatsCard";
 import MobileNavbar from "../layout/MobileNavbar";
+import HeaderCarousel from "../components/HeaderCarousel";
 
 const HomePage = () => {
   return (
@@ -21,7 +21,7 @@ const HomePage = () => {
 
       {/* carousel */}
 
-      <Carousel />
+      <HeaderCarousel />
 
       <section className="grid">
         {/* About Us */}
@@ -29,9 +29,9 @@ const HomePage = () => {
         <div className="flex flex-col lg:flex-row md:justify-center lg:w-full gap-10 px-4 lg:gap-20 lg:items-center mt-10 min-w-[320px] ">
           <div className="grid gap-1 px-4">
             <h1 className="text-[42px]">About Us</h1>
-            <div className="bg-[#00adef] w-16 h-[2.5px]"></div>
+            <div className="bg-[#00733C] w-16 h-[2.5px]"></div>
           </div>
-          <div className="bg-[#ccc] w-1 h-20 hidden lg:block"></div>
+          <div className="bg-[#00733C] w-1 h-20 hidden lg:block"></div>
           <div className="lg:w-[820px] lg:h-[124px] w-full flex px-4 justify-center items-center gap-4">
             <div className="bg-[#ccc] w-1 h-70 md:h-30 lg:hidden block"></div>
             <p className="lg:mt-7 text-justify">
@@ -119,7 +119,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="lg:w-full bg-[#00adef] md:h-40 h-90 mt-2 flex lg:flex-row flex-col gap-4 items-center justify-evenly min-w-[320px]">
+        <div className="lg:w-full bg-[#00733C] md:h-40 h-90 mt-2 flex lg:flex-row flex-col gap-4 items-center justify-evenly min-w-[320px]">
           <h1 className="text-[32px] text-white hidden md:block">
             Let’s Stop This Hunger and Fullfill Their Happiness!{" "}
           </h1>
@@ -129,7 +129,7 @@ const HomePage = () => {
             <h1>FULLFILL THEIR</h1>
             <h1>HAPPINESS!</h1>
           </div>
-          <div className="hover:bg-[#00adef] w-[192px] h-14 bg-[#ffb600] flex items-center justify-center hover:border hover:border-white text-[18px]">
+          <div className="bg-[#FFB204] hover:bg-[#E69F00] text-black rounded hover:text-white w-[192px] h-14  flex items-center justify-center text-[18px]">
             <NavLink to="/" className="">
               Donate Now!!
             </NavLink>
@@ -155,7 +155,7 @@ const HomePage = () => {
             <div className="w-full grid p-6 gap-8">
               <div className="grid">
                 <h1 className="text-[32px]">DONATE THROUGH MOBILE APP</h1>
-                <div className="bg-[#00adef] w-16 h-[2.5px]"></div>
+                <div className="bg-[#00733C] w-16 h-[2.5px]"></div>
               </div>
               <div className="lg:w-[840px] grid gap-4 text-[14px]">
                 <p className="text-justify">
@@ -182,7 +182,7 @@ const HomePage = () => {
               <div className="grid lg:grid-cols-3 gap-8 mt-4">
                 <div className="grid gap-4">
                   <div className="flex items-center gap-4">
-                    <FiRefreshCcw color="#00adef" size={20} />
+                    <FiRefreshCcw color="#00733C" size={20} />
                     <p>Select</p>
                   </div>
                   <p className="text-[14px]">
@@ -192,7 +192,7 @@ const HomePage = () => {
 
                 <div className="grid gap-4">
                   <div className="flex items-center gap-4">
-                    <TbSettingsCog color="#00adef" size={20} />
+                    <TbSettingsCog color="#00733C" size={20} />
                     <p>Donate</p>
                   </div>
                   <p className="text-[14px]">
@@ -202,7 +202,7 @@ const HomePage = () => {
 
                 <div className="grid gap-4">
                   <div className="flex items-center gap-4">
-                    <CgDropInvert color="#00adef" size={20} />
+                    <CgDropInvert color="#00733C" size={20} />
                     <p>Thanks</p>
                   </div>
                   <p className="text-[14px]">
@@ -220,7 +220,7 @@ const HomePage = () => {
 
         <Gallery />
 
-        <div className="bg-[#00adef] lg:w-full lg:h-30 h-66 flex lg:flex-row flex-col items-center justify-evenly md:p-4 gap-4 min-w-[320px]">
+        <div className="bg-[#00733C] lg:w-full lg:h-30 h-66 flex lg:flex-row flex-col items-center justify-evenly md:p-4 gap-4 min-w-[320px]">
           <h1 className="text-[32px] text-white hidden lg:block">
             WE NEED YOUR HELP
           </h1>
@@ -228,7 +228,7 @@ const HomePage = () => {
             <h1 className="text-[32px] text-white">WE NEED YOUR</h1>
             <h1 className="text-[32px] text-white">HELP</h1>
           </div>
-          <div className="hover:bg-[#00adef] w-[192px] h-14 bg-[#ffb600] flex items-center justify-center hover:border hover:border-white text-[18px]">
+          <div className="bg-[#FFB204] hover:bg-[#E69F00] text-black rounded hover:text-white w-[192px] h-14 flex items-center justify-center text-[18px]">
             <NavLink to="/">Donate Now!!</NavLink>
           </div>
         </div>
@@ -246,8 +246,8 @@ const HomePage = () => {
           <div className="relative">
             <div className="flex w-full flex-col md:flex-row">
               {/* left side */}
-              <div className="md:w-[50%] md:h-[630px] lg:h-[500px] bg-[#e1e1e1]/20">
-                <div className="flex flex-col justify-center items-center mt-50 text-[#00adef]">
+              <div className="md:w-[50%] md:h-[645px] lg:h-[500px] bg-[#e1e1e1]/20">
+                <div className="flex flex-col justify-center items-center mt-50 text-[#00733C]">
                   <AiOutlinePauseCircle size={80} className="cursor-pointer" />
                   <p>Play Video</p>
                 </div>
@@ -257,7 +257,7 @@ const HomePage = () => {
               <div className="md:w-[50%] lg:h-[500px] bg-[#f7f7f7] p-6 px-10 py-10">
                 <div className="grid gap-1">
                   <h1 className="text-[28px]">ADDITIONAL INFO</h1>
-                  <div className="bg-[#00adef] w-16 h-[2.5px]"></div>
+                  <div className="bg-[#00733C] w-16 h-[2.5px]"></div>
                 </div>
 
                 <div className="grid gap-4 mt-8">

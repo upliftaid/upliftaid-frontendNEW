@@ -41,7 +41,7 @@ const ProgressBars = () => {
             {/* Progress bar */}
             <ProgressBar
               completed={bar.completed}
-              bgColor="#00adef"
+              bgColor="#00733C"
               borderRadius="0"
               baseBgColor="#333333"
               width="100%"

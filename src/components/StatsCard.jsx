@@ -18,7 +18,7 @@ const StatsCard = () => {
               <div key={index} className="flex flex-col items-center">
                 <card.image size={90} />
                 <h1 className="text-4xl font-bold mt-4">{card.no}</h1>
-                <div className="bg-[#00adef] w-16 h-[2.5px] my-2" />
+                <div className="bg-[#00733C] w-16 h-[2.5px] my-2" />
                 <p className="text-lg">{card.heading}</p>
               </div>
             );

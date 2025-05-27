@@ -14,7 +14,7 @@ const News = () => {
       <div className="w-[90%] md:mx-auto grid gap-8">
         <div className="grid gap-1">
           <h1 className="text-[28px]">NEWS</h1>
-          <div className="bg-[#00adef] w-16 h-[2.5px]"></div>
+          <div className="bg-[#00733C] w-16 h-[2.5px]"></div>
         </div>
 
         {/* Render arrows on last visible card */}
@@ -65,7 +65,7 @@ const News = () => {
                   <h1 className="font-medium text-[18px]">{news.heading}</h1>
                   <p className="text-[14px] line-clamp-2">{news.description}</p>
                   <div className="flex gap-2 items-center">
-                    <FaCalendarAlt color="#00adef" />
+                    <FaCalendarAlt color="#00733C" />
                     <p className="text-[12px] text-[#7F7F7F]">{news.date}</p>
                   </div>
                 </div>

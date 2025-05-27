@@ -4,6 +4,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
+import logo2 from "../assets/logo1-removebg-preview.png";
 
 const Footer = () => {
   const socialLinksDetails = [
@@ -26,21 +27,16 @@ const Footer = () => {
   ];
 
   return (
-    <div className="relative w-full mt-10">
-      {/* Fixed background image */}
-      <div
-        className="absolute inset-0 h-full w-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/bg-11.jpg')] bg-fixed bg-cover bg-center -z-10"
-        aria-hidden="true"
-      ></div>
-      <div className="relative bg-[#00adef]/90 text-white p-4 lg:px-20">
+    <div className="w-full mt-10">
+      <div className="bg-[#00733C] text-white p-4 lg:px-20">
         <div className="w-[90%] mx-auto grid gap-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div>
-              <img src={logo} alt="" />
+            <div className="h-16 w-16">
+              <img src={logo2} alt="" />
             </div>
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <h1 className="text-[28px]">We Need Your Help</h1>
-              <div className="w-32 h-10 bg-[#ffb600] flex items-center justify-center text-black">
+              <div className="w-32 h-10 flex items-center justify-center bg-[#FFB204] hover:bg-[#E69F00] text-black rounded hover:text-white">
                 <NavLink to="/" className="">
                   Donate Now
                 </NavLink>
@@ -93,7 +89,7 @@ const Footer = () => {
                 placeholder="Email Address"
                 className="w-full h-10 bg-white p-4 text-black outline-none"
               />
-              <Link className="w-25 h-10 bg-[#005D81] text-white hover:bg-[#ffb600] hover:text-black flex items-center justify-center">
+              <Link className="w-25 h-10 bg-[#FFB204] hover:bg-[#E69F00] rounded hover:text-white text-black flex items-center justify-center">
                 Submit
               </Link>
             </div>

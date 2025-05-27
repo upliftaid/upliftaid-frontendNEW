@@ -31,7 +31,7 @@ const SectionCarousel = () => {
       {/* Header */}
       <div className="grid gap-1 mt-4">
         <h1 className="text-[28px]">WHO WE ARE</h1>
-        <div className="bg-[#00adef] w-16 h-[2.5px]" />
+        <div className="bg-[#00733C] w-16 h-[2.5px]" />
       </div>
 
       {/* Carousel Content */}

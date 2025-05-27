@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
-const Carousel = () => {
+const HeaderCarousel = () => {
   const sliderDetails = [
     {
       image:
@@ -77,7 +77,7 @@ const Carousel = () => {
         <p className="text-lg md:text-xl">{slide.line2}</p>
         <NavLink
           to="/"
-          className="inline-block mt-8 bg-[#00adef] hover:bg-[#ffb600] text-white hover:text-black font-semibold py-3 px-6 transition duration-300"
+          className="inline-block mt-8 bg-[#FFB204] hover:bg-[#E69F00] text-black rounded hover:text-white font-semibold py-3 px-6 transition duration-300"
         >
           Donate Now
         </NavLink>
@@ -121,4 +121,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default HeaderCarousel;

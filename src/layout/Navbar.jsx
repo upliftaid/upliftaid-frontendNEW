@@ -1,5 +1,8 @@
 import logo from "../assets/images/logo.png";
+import logo1 from "../assets/images/logo2-removebg-preview.png";
+// import logo2 from '../assets/images/logo1-removebg-preview.png'
 import { NavLink } from "react-router-dom";
+import logo2 from "../assets/logo1-removebg-preview.png";
 
 const Navbar = () => {
   const navlinklist = [
@@ -13,9 +16,9 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="bg-white w-full h-[70px] md:h-[140px] lg:h-[70px] md:flex md:flex-col lg:flex-row items-center justify-between px-40 fixed top-0 z-99 hidden">
-      <div>
-        <img src={logo} alt="" />
+    <header className="bg-[#00733C] text-white w-full h-[70px] md:h-[140px] lg:h-[70px] md:flex md:flex-col lg:flex-row items-center justify-between px-40 fixed top-0 z-99 hidden">
+      <div className="w-16 h-16">
+        <img src={logo2} alt="" />
       </div>
       <nav className="flex gap-8 md:mb-4 lg:mb-0 text-[14px] font-sans">
         {navlinklist.map((item, index) => {
@@ -26,15 +29,15 @@ const Navbar = () => {
             >
               <NavLink
                 to={item.url}
-                className="hover:text-[#00adef] whitespace-nowrap"
+                className="hover:text-[#FFB204] whitespace-nowrap"
               >
                 {item.name}
               </NavLink>
             </div>
           );
         })}
-        <div className="hover:bg-[#00adef] w-19 h-10 bg-[#ffb600] flex items-center justify-center hover:text-white">
-          <NavLink to="/" className="">
+        <div className="hover:bg-[#E69F00] w-19 h-10 bg-[#FFB204] flex items-center justify-center rounded">
+          <NavLink to="/" className="text-black hover:text-white font-semibold">
             Donate
           </NavLink>
         </div>

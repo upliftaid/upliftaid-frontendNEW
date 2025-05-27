@@ -20,7 +20,7 @@ const Gallery = () => {
         <div className="text-white text-center grid gap-10">
           <div className="grid gap-1">
             <h1 className="text-[36px]">Gallery</h1>
-            <div className="bg-[#00adef] w-16 h-[2.5px] mx-auto"></div>
+            <div className="bg-[#00733C] w-16 h-[2.5px] mx-auto"></div>
           </div>
 
           {/* Category Filter */}
