@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaPinterestP, FaGooglePlusG, FaLinkedinIn } from 'react-icons/fa';
-import upliftaid from '../assets/images/upliftaid.png'; // adjust path as needed
+import upliftaid from '../assets/images/logo1.png'; // adjust path as needed
 
 const Footer = () => {
   return (

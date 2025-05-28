@@ -177,6 +177,7 @@ const BlogSection = ({ totalPages = 4 }) => {
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );
