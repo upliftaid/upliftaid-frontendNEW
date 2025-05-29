@@ -25,12 +25,10 @@ const CausesContent = () => {
     dispatch(fetchDonations());
   }, [dispatch]);
 
-  // Auto-slide gallery every 2 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     }, 5000);
-
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -42,28 +40,29 @@ const CausesContent = () => {
     setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
-  // Pagination logic
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentDonations = donations.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className=" mx-auto">
-            <div className=" font-['Lora'] h-[115px] bg-[#f2f2f2] text-[54px] p-[30px] text-xl">Blog</div>
+    <div className="container mx-auto px-4">
+      <div className="font-['Lora'] h-[115px] bg-[#f2f2f2] text-[54px] p-[30px] text-xl">
+        Causes
+      </div>
+
       <div className="flex flex-col md:flex-row gap-8">
-        
         {/* Left - Donations */}
-        <div className="md:w-4/5 p-4">
+        <div className="md:w-4/5 w-full p-4">
           {status === "loading" && <p>Loading...</p>}
           {status === "failed" && <p className="text-red-500">{error}</p>}
           {status === "succeeded" &&
             currentDonations.map((donation) => (
-              <div key={donation.id} className="flex mb-10 border-b border-dashed border-gray-300 pb-6">
+              <div key={donation.id} className="flex flex-col md:flex-row mb-10 border-b border-dashed border-gray-300 pb-6">
                 <img
                   src={donation.image}
                   alt={donation.title}
-                  className="w-1/3 rounded-lg object-cover"
+                  className="md:w-1/3 w-full rounded-lg object-cover"
                 />
-                <div className="ml-6">
+                <div className="md:ml-6 mt-4 md:mt-0">
                   <h2 className="text-[33.28px] font-['Lora'] font-semibold">
                     {donation.title}
                   </h2>
@@ -73,7 +72,7 @@ const CausesContent = () => {
                       Goal: ${donation.goal}
                     </span>
                   </p>
-                  <p className="mt-[10px] mb-[15px] h-[71px] font-['sans-serif'] text-[17.92px]">
+                  <p className="mt-[10px] mb-[15px] h-auto font-['sans-serif'] text-[17.92px]">
                     {donation.description}
                   </p>
                   <button className="bg-[#00adef] h-[40px] text-white px-4 py-2 hover:bg-[#00adef] mt-2">
@@ -120,12 +119,11 @@ const CausesContent = () => {
               </button>
             </div>
           </div>
-
-          
         </div>
 
-        {/* Right - Categories & Gallery */}
-        <div className="md:w-1/5 ">
+        {/* Right - Sidebar */}
+        <div className="hidden lg:block lg:w-1/5 mt-8 space-y-8">
+
           {/* Categories */}
           <div>
             <h3 className="text-[28px] font-['lora'] font-bold mb-4">Category</h3>
@@ -142,7 +140,7 @@ const CausesContent = () => {
           </div>
 
           {/* Latest Causes */}
-          <div className="w-full p-4 bg-white ">
+          <div className="w-full p-4 bg-white shadow-sm rounded">
             <h2 className="text-2xl font-bold mb-4">Latest Causes</h2>
             <div className="space-y-4">
               {causes.map((cause) => (
@@ -164,7 +162,7 @@ const CausesContent = () => {
             </div>
           </div>
 
-          {/* Auto Sliding Gallery */}
+          {/* Gallery */}
           <div className="w-full text-center space-y-4">
             <div className="flex items-center justify-between mb-2">
               <h2 className="text-xl font-bold">Gallery</h2>
@@ -208,10 +206,9 @@ const CausesContent = () => {
               ))}
             </div>
           </div>
-         
         </div>
-       
       </div>
+
       <Pagination />
     </div>
   );
