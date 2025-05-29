@@ -1,0 +1,31 @@
+import React from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { FaRegCalendarAlt } from "react-icons/fa";
+
+export default function UpcomingEventsSection({ upcomingEvents }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.3, delay: 0.5 }}
+    >
+      <h2 className="text-xl font-bold mb-6">Upcoming Events</h2>
+      {upcomingEvents.map((event, index) => (
+        <div className="flex mb-4 gap-2 py-2" key={index}>
+          <img
+            src={event.image}
+            alt={event.title}
+            className="w-16 h-16 object-cover rounded mr-3"
+          />
+          <div className="flex flex-col gap-2">
+            <p className="font-medium text-sm leading-tight">{event.title}</p>
+            <div className="flex items-center text-gray-500 text-xs mt-2">
+              <FaRegCalendarAlt className="mr-1" color="#FFB204" /> {event.date}
+            </div>
+          </div>
+        </div>
+      ))}
+    </motion.div>
+  );
+}
