@@ -33,7 +33,10 @@ export default function MainEventsSection({
           </button>
         ))}
       </motion.div>
-      <div key={activeTab} className="grid grid-cols-3 gap-x-4 gap-y-12 py-4">
+      <div
+        key={activeTab}
+        className="grid md:grid-cols-3 sm:grid-cols-2 gap-x-4 gap-y-12 py-4"
+      >
         {filteredEvents.map((event, index) => (
           <motion.div
             initial={{ opacity: 0 }}
@@ -45,7 +48,7 @@ export default function MainEventsSection({
             <img
               src={event.image}
               alt={event.title}
-              className="w-[270px] h-[170px] object-cover rounded"
+              className="md:w-[270px] md:h-[170px] sm:w-full object-cover rounded"
             />
             <h2
               className="text-2xl font-semibold cursor-pointer hover:text-[#FFB204] mt-4 mb-2"
