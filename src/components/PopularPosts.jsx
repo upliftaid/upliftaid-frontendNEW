@@ -11,7 +11,7 @@ export default function PopularPosts() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.3, delay: 0.5 }}
     >
-      <h2 className="text-xl font-bold mb-4">Popular Posts</h2>
+      <h2 className="text-xl font-bold pb-4">Popular Posts</h2>
       <div className="flex flex-col gap-4">
         {popular.map((popular, index) => (
           <div className="flex gap-2" key={index}>
