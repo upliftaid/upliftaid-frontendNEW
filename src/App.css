@@ -5,3 +5,11 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+
+.tags {
+  font-size: 0.75rem;
+  background-color: #ffb204;
+  border-radius: 2px;
+  padding: 3px;
+  color: white;
+}
