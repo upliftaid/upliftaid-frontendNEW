@@ -10,9 +10,9 @@ export default function UpcomingEventsSection({ upcomingEvents }) {
       animate={{ opacity: 1 }}
       transition={{ duration: 1.3, delay: 0.5 }}
     >
-      <h2 className="text-xl font-bold mb-6">Upcoming Events</h2>
+      <h2 className="text-xl pb-4 font-bold">Upcoming Events</h2>
       {upcomingEvents.map((event, index) => (
-        <div className="flex mb-4 gap-2 py-2" key={index}>
+        <div className="flex gap-2 py-2" key={index}>
           <img
             src={event.image}
             alt={event.title}
