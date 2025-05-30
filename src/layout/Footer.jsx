@@ -1,35 +1,33 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaPinterestP, FaGooglePlusG, FaLinkedinIn } from 'react-icons/fa';
-import upliftaid from '../assets/images/logo1.png'; // adjust path as needed
+import upliftaid from '../assets/images/logo1.png'; // update path if needed
 
 const Footer = () => {
   return (
-    <footer className="bg-[#00733C] text-white px-6  pb-6">
-         
-    <header className=" py-4  flex flex-col md:flex-row items-center justify-between border-b border-white/30">
-      {/* Logo */}
-      <div className="flex items-center gap-2 text-2xl font-bold">
-<img src={upliftaid} alt="Charity Logo" className="h-[70px]" />
+    <footer className="bg-[#00733C] text-white px-4 lg:px-20 py-8">
+      {/* Top Header */}
+      <div className="flex flex-col lg:flex-row justify-between items-center border-b border-white/40 pb-6 gap-6">
+        <img src={upliftaid} alt="Logo" className="h-[70px]" />
+
+        <div className="text-center lg:text-right">
+          <h2 className="text-[28px] lg:text-[36px] font-bold font-['Lora'] mb-2">We Need Your Help</h2>
+          <button className="bg-[#ffb600] text-black font-semibold px-6 py-2 text-sm hover:bg-yellow-400 transition">
+            Donate Now
+          </button>
+        </div>
       </div>
 
-      {/* Message and Button */}
-      <div className="flex items-center gap-6 mt-4 md:mt-0">
-        <h1 className="text-[40px] h-[70px]  font-['lora'] font-bold">We Need Your Help</h1>
-        <button className="bg-[#ffb600] hover:bg-[#ffb600] h-[40px] w-[117px]  text-[14px] text-black font-semibold py-2 px-4">
-          Donate Now
-        </button>
-      </div>
-    </header>
-      <div className="flex flex-wrap justify-between gap-10  pb-10">
-        {/* Spread The Word */}
-        <div className="p-5">
-          <h2 className="text-[28px] font-['serif'] font-bold h-[28px] mb-4 ">Spread The Word</h2>
-          <div className="flex pt-[15px] gap-4">
-            {[FaFacebookF, FaTwitter, FaPinterestP, FaGooglePlusG, FaLinkedinIn].map((Icon, idx) => (
+      {/* Footer Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-10">
+        {/* Spread the Word */}
+        <div>
+          <h3 className="text-[22px] font-bold font-['Lora'] mb-4">Spread The Word</h3>
+          <div className="flex gap-3">
+            {[FaFacebookF, FaTwitter, FaPinterestP, FaGooglePlusG, FaLinkedinIn].map((Icon, index) => (
               <a
-                key={idx}
+                key={index}
                 href="#"
-                className="w-10 h-10 flex items-center justify-center border border-white rounded-full hover:bg-white hover:text-sky-500 transition"
+                className="w-10 h-10 flex items-center justify-center border border-white rounded-full hover:bg-white hover:text-sky-600 transition"
               >
                 <Icon />
               </a>
@@ -38,9 +36,9 @@ const Footer = () => {
         </div>
 
         {/* Useful Info */}
-        <div className='p-5'>
-          <h2 className="text-[28px] font-['lora'] font-bold mb-4">Useful Info</h2>
-          <ul className="space-y-2 text-[17.92px]">
+        <div>
+          <h3 className="text-[22px] font-bold font-['Lora'] mb-4">Useful Info</h3>
+          <ul className="space-y-2 text-sm lg:text-base">
             <li><a href="#">Annual reports</a></li>
             <li><a href="#">Our approach</a></li>
             <li><a href="#">Statistics</a></li>
@@ -50,9 +48,9 @@ const Footer = () => {
         </div>
 
         {/* Useful Links */}
-        <div className='p-5'>
-          <h2 className="text-[28px] font-['lora'] font-bold mb-4">Useful Links</h2>
-          <ul className="space-y-2 text-[17.92px]">
+        <div>
+          <h3 className="text-[22px] font-bold font-['Lora'] mb-4">Useful Links</h3>
+          <ul className="space-y-2 text-sm lg:text-base">
             <li><a href="#">Careers</a></li>
             <li><a href="#">Contact us</a></li>
             <li><a href="#">Donate</a></li>
@@ -75,32 +73,25 @@ const Footer = () => {
       </button>
     </div>
       </div>
-      <div className=" text-white text-sm ">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-        <p>
+
+      {/* Bottom Info */}
+      <div className="text-sm text-white border-t border-white/40 pt-6">
+        <p className="mb-4">
           zozothemes.com, 233 Test, Test 2705, Test City, NY, 10279, Test. Tel: (012) 345 - 6789
         </p>
-        
-      </div>
-
-      <hr className="border-white/40 mb-4" />
-
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-        <div><p>© 2025 zozothemes.com</p>
-        <p>zozothemes.com is a Creative Agency.</p></div>
-        <div className="flex items-center gap-4 mt-2 md:mt-0 text-sm">
-          <a href="#" className="hover:underline">Contact us</a>
-          <span className="hidden md:inline">|</span>
-          <a href="#" className="hover:underline">FAQs</a>
-          <span className="hidden md:inline">|</span>
-          <a href="#" className="hover:underline">Privacy policy</a>
-          <span className="hidden md:inline">|</span>
-          <a href="#" className="hover:underline">Terms & conditions</a>
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-2">
+          <p>© 2025 zozothemes.com | zozothemes.com is a Creative Agency.</p>
+          <div className="flex flex-wrap gap-3">
+            <a href="#" className="hover:underline">Contact us</a>
+            <span>|</span>
+            <a href="#" className="hover:underline">FAQs</a>
+            <span>|</span>
+            <a href="#" className="hover:underline">Privacy policy</a>
+            <span>|</span>
+            <a href="#" className="hover:underline">Terms & conditions</a>
+          </div>
         </div>
       </div>
-    </div>
-      {/* Bottom Line */}
-
     </footer>
   );
 };

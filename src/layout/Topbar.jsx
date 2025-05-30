@@ -13,7 +13,8 @@
         <span><FaPhone className="inline" /> +123 456 7890</span>
         <span><FaEnvelope className="inline ml-2" /> info@zozothemes.com</span>
       </div>
-      <div className="space-x-3 flex h-[24]">
+      
+      <div className="hidden lg:flex space-x-3  h-[24]">
         <FaFacebookF />
         <FaTwitter />
         <FaYoutube />
