@@ -12,8 +12,9 @@ const HelpingMessage = () => {
       {/* Content wrapper with overlay */}
       <div className="relative bg-black/70 md:py-16 md:px-8">
         <div className="grid gap-4 text-white place-items-center p-4 text-center">
-          <h1 className="font-bold text-[36px]">
-            Working with us by helping & donation
+          <h1 className="">Did Not Find Your Answer?</h1>
+          <h1 className="font-bold text-[36px] text-[#FFB204]">
+            JUST CALL FOR EMERGENCY SERVICE
           </h1>
           <p className="text-[14px] lg:w-[800px] text-ellipsis">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

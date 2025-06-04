@@ -29,7 +29,7 @@ const Header = () => {
                 isActive ? "text-[#FFB204]" : "text-gray-700"
               }
             >
-              What we do
+              Faq
             </NavLink>
           </nav>
         </div>
