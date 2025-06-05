@@ -1,17 +1,14 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import "./App.css";
+import BeAVolunteer from "./pages/BeAVolunteer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1 className="flex justify-center items-center h-screen font-bold">
-        Upliftaid
-      </h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/about-us/be-a-volunteer" element={<BeAVolunteer />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
