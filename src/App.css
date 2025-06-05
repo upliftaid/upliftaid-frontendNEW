@@ -1,0 +1,18 @@
+.card-hover {
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-hover {
+  background-color: #e2e8f0; /* light gray by default */
+  transition: background-color 0.3s ease;
+}
+
+.card-hover:hover .icon-hover {
+  background-color: #00733C; /* green on hover */
+  color: white;
+}
