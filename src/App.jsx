@@ -1,18 +1,19 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React from 'react';
 import "./App.css";
-
-function App() {
-  const [count, setCount] = useState(0);
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import About_us from "./pages/About_us";
+ 
+const App = () => {
   return (
-    <>
-      <h1 className="flex justify-center items-center h-screen font-bold">
-        Upliftaid
-      </h1>
-    </>
+    <BrowserRouter>
+      
+      <Routes>
+        <Route path="/" element={<About_us />} />
+        
+
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
