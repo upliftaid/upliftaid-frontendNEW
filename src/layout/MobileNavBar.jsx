@@ -7,15 +7,25 @@ import { useState } from "react";
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navlinks = [
+    { url: "/", name: "Home" },
+    { url: "/about", name: "About Us" },
+    { url: "/causes", name: "Causes" },
+    { url: "/events", name: "Events" },
+    { url: "/portfolio", name: "Portfolio" },
+    { url: "/blog", name: "Blog" },
+    { url: "/contact", name: "Contact" },
+  ];
+
   return (
     <>
       {/* Top Fixed Navbar */}
       <div className="md:hidden flex items-center justify-between p-4 w-full h-[70px] fixed top-0 z-[99] bg-[#00733C]">
         <Link to="/" className="h-16 w-16">
-          <img src={logo2} alt="logo" />
+          <img src={logo2} alt="logo" className="h-full w-full object-contain" />
         </Link>
 
-        <button onClick={() => setIsOpen(prev => !prev)}>
+        <button onClick={() => setIsOpen(prev => !prev)} aria-label="Toggle Menu">
           {isOpen ? (
             <RxCross2 size={30} color="#FFB204" />
           ) : (
@@ -31,13 +41,16 @@ const MobileNavbar = () => {
         }`}
       >
         <nav className="flex flex-col">
-          <Link to="/" className="text-white py-3 px-4">Home</Link>
-          <Link to="/" className="text-white py-3 px-4">About Us</Link>
-          <Link to="/" className="text-white py-3 px-4">Causes</Link>
-          <Link to="/" className="text-white py-3 px-4">Events</Link>
-          <Link to="/" className="text-white py-3 px-4">Portfolio</Link>
-          <Link to="/" className="text-white py-3 px-4">Blog</Link>
-          <Link to="/" className="text-white py-3 px-4">Contact</Link>
+          {navlinks.map((link, index) => (
+            <Link
+              key={index}
+              to={link.url}
+              className="text-white py-3 px-4 hover:text-[#FFB204] transition"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
         </nav>
       </div>
     </>
