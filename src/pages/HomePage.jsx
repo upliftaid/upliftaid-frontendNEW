@@ -9,14 +9,14 @@ import News from "../components/News";
 import Footer from "../layout/Footer";
 import Gallery from "../components/Gallery";
 import StatsCard from "../components/StatsCard";
-import MobileNavbar from "../layout/MobileNavbar";
+import MobileNavbar from "../layout/MobileNavBar";  
 import HeaderCarousel from "../components/HeaderCarousel";
 import AdditionalInfo from "../components/AdditionalInfo";
 
 const HomePage = () => {
 
   return (
-    <div>
+    <div className="">
       <Navbar />
       <MobileNavbar />
 

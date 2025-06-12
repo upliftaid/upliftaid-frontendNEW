@@ -54,7 +54,7 @@ const HeaderCarousel = () => {
   };
 
   return (
-    <div className="relative mt-16 w-full overflow-hidden h-[620px]">
+    <div className="relative lg:mt-16 w-full overflow-hidden h-[620px]">
       {/* Animated Carousel Image */}
       <AnimatePresence mode="wait">
         <motion.img
