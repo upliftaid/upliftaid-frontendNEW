@@ -1,7 +1,8 @@
 import logo from "../assets/images/logo.png";
 import { Link, NavLink } from "react-router-dom";
+import { PiXLogoBold } from "react-icons/pi";
 import { FaLinkedinIn } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import logo2 from "../assets/logo1-removebg-preview.png";
@@ -13,7 +14,7 @@ const Footer = () => {
       url: "/",
     },
     {
-      image: FaTwitter,
+      image: PiXLogoBold,
       url: "/",
     },
     {
@@ -24,6 +25,10 @@ const Footer = () => {
       image: FaLinkedinIn,
       url: "/",
     },
+    {
+      image: FaYoutube,
+      url: "/",
+    },
   ];
 
   return (
@@ -31,7 +36,7 @@ const Footer = () => {
       <div className="bg-[#00733C] text-white p-4 lg:px-20">
         <div className="w-[90%] mx-auto grid gap-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <Link to='/' className="h-16 w-16">
+            <Link to="/" className="h-16 w-16">
               <img src={logo2} alt="" />
             </Link>
             <div className="flex flex-col md:flex-row gap-8 items-center">
@@ -96,16 +101,16 @@ const Footer = () => {
           </div>
 
           <p className="text-[10px]">
-            zozothemes.com, 233 Test, Test 2705, Test City, NY, 10279, Test.
-            Tel: (012) 345 - 6789
+            uplift.com, 233 Test, Test 2705, Test City, NY, 10279, Test.
+            Tel: (+91) 1234567890
           </p>
           <div className="bg-[#ccc]/70 w-full h-[0.8px]" />
           <div className="flex justify-between flex-col md:flex-row">
             <div className="grid gap-3">
               <p className="text-[12px]">
-                zozothemes.com is a Creative Agency.
+                uplift.com is a Welfare Organizaton.
               </p>
-              <p className="text-[12px]">© Copyright 2025 zozothemes.com</p>
+              <p className="text-[12px]">© Copyright 2025 uplift.com</p>
             </div>
             <div className="text-[12px] flex gap-4 mt-4">
               <Link>Contact us</Link>
