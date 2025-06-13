@@ -6,15 +6,24 @@ import { useState } from "react";
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
 
   const navlinks = [
     { url: "/", name: "Home" },
-    { url: "/about", name: "About Us" },
+    { url: "/about", name: "About Us", hasSubmenu: true },
     { url: "/causes", name: "Causes" },
     { url: "/events", name: "Events" },
     { url: "/portfolio", name: "Portfolio" },
     { url: "/blog", name: "Blog" },
     { url: "/contact", name: "Contact" },
+  ];
+
+  const submenuLinks = [
+    { url: "/about/our-story", name: "Our Story" },
+    { url: "/about/what-we-do", name: "What we do" },
+    { url: "/about/be-a-volunteer", name: "Be a Volunteer" },
+    { url: "/about/faq", name: "FAQ" },
+    { url: "/about/testimonals", name: "Testimonals" },
   ];
 
   return (
@@ -41,16 +50,49 @@ const MobileNavbar = () => {
         }`}
       >
         <nav className="flex flex-col">
-          {navlinks.map((link, index) => (
-            <Link
-              key={index}
-              to={link.url}
-              className="text-white py-3 px-4 hover:text-[#FFB204] transition"
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </Link>
-          ))}
+{navlinks.map((link, index) => (
+  <div key={index} className="relative mb-1">
+    {link.hasSubmenu ? (
+      <>
+        <button
+          onClick={() => setIsSubmenuOpen(prev => !prev)}
+          className="text-white py-2 px-4 text-left w-full hover:text-[#FFB204] transition flex justify-between items-center"
+        >
+          {link.name}
+          <span className="ml-auto pr-2 text-[#FFB204]">
+            {isSubmenuOpen ? "−" : "+"}
+          </span>
+        </button>
+
+        {isSubmenuOpen && (
+          <div className="flex flex-col bg-[#006030]">
+            {submenuLinks.map((sublink, subIndex) => (
+              <Link
+                key={subIndex}
+                to={sublink.url}
+                className="text-white py-1.5 pl-8 pr-4 hover:text-[#FFB204] transition"
+                onClick={() => setIsOpen(false)}
+              >
+                {sublink.name}
+              </Link>
+            ))}
+          </div>
+        )}
+      </>
+    ) : (
+      <Link
+        to={link.url}
+        className="text-white py-2 px-4 hover:text-[#FFB204] transition block w-full"
+        onClick={() => setIsOpen(false)}
+      >
+        {link.name}
+      </Link>
+    )}
+  </div>
+))}
+
+
+
         </nav>
       </div>
     </>
