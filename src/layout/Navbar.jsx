@@ -1,40 +1,60 @@
-import logo from "../assets/images/logo.png";
-import logo1 from "../assets/images/logo2-removebg-preview.png";
 import { Link, NavLink } from "react-router-dom";
-import logo2 from "../assets/logo1-removebg-preview.png";
+import logo from "../assets/logo1-removebg-preview.png";
 
 const Navbar = () => {
-  const navlinklist = [
-    { name: "Home", url: "/" },
-    { name: "About Us", url: "/about-us" },
-    { name: "Causes", url: "/causes" },
-    { name: "Events", url: "/events" },
-    { name: "Portfolio", url: "/portfolio" },
-    { name: "Blog", url: "/blog" },
-    { name: "Contact", url: "/contact" },
-  ];
+const navlinklist = [
+  { name: "Home", url: "/" },
+  {
+    name: "About Us",
+    url: "/about-us",
+    hasSubmenu: true,
+    submenu: [
+      { name: "Our Story", url: "/about-us/our-story" },
+      { name: "What we do", url: "/about-us/what-we-do" },
+      { name: "Be a Volunteer", url: "/about-us/be-a-volunteer" },
+      { name: "FAQ", url: "/about-us/faq" },
+      { name: "Testimonals", url: "/about-us/testimonals" },
+    ],
+  },
+  { name: "Causes", url: "/causes" },
+  { name: "Events", url: "/events" },
+  { name: "Portfolio", url: "/portfolio" },
+  { name: "Blog", url: "/blog" },
+  { name: "Contact", url: "/contact" },
+];
+
 
   return (
     <header className="bg-[#00733C] text-white w-full h-[70px] md:h-[140px] lg:h-[70px] md:flex md:flex-col lg:flex-row items-center justify-between px-40 fixed top-0 z-99 hidden">
-      <Link to="/" className="w-16 h-16">
-        <img src={logo2} alt="" />
+      <Link to='/' className="w-16 h-16">
+        <img src={logo} alt="" />
       </Link>
       <nav className="flex gap-8 md:mb-4 lg:mb-0 text-[14px] font-sans">
-        {navlinklist.map((item, index) => {
-          return (
-            <div
-              className="flex items-center justify-center"
-              key={index + item.name}
+        {navlinklist.map((item, index) => (
+          <div key={index + item.name} className="relative group items-center flex">
+            <NavLink
+              to={item.url}
+              className="hover:text-[#FFB204] whitespace-nowrap block"
             >
-              <NavLink
-                to={item.url}
-                className="hover:text-[#FFB204] whitespace-nowrap"
-              >
-                {item.name}
-              </NavLink>
-            </div>
-          );
-        })}
+              {item.name}
+            </NavLink>
+
+            {/* Submenu */}
+            {item.hasSubmenu && (
+              <div className="absolute top-full left-0 mt-4 bg-[#00733C] shadow-lg rounded-md w-40 z-50 opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200">
+                {item.submenu.map((subItem, subIndex) => (
+                  <Link
+                    key={subIndex}
+                    to={subItem.url}
+                    className="block px-4 py-1.5 hover:text-[#FFB204] transition"
+                  >
+                    {subItem.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
         <div className="hover:bg-[#E69F00] w-19 h-10 bg-[#FFB204] flex items-center justify-center rounded">
           <NavLink to="/" className="text-black hover:text-white font-semibold">
             Donate
