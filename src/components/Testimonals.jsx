@@ -11,7 +11,7 @@ const Testimonials = () => {
       <div className="absolute inset-0 w-full h-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/bg-12.jpg')] bg-cover lg:bg-fixed -z-10"></div>
 
       {/* Overlay and Content */}
-      <div className="relative bg-black/70 h-full p-4 mx-auto md:py-16 md:px-8">
+      <div className="relative bg-black/70 h-full p-4 mx-auto md:py-16 md:px-8 ">
         <div className="grid gap-10">
           {/* Title */}
           <div className="grid gap-1 text-center">
@@ -33,15 +33,21 @@ const Testimonials = () => {
             className="w-full px-6 !pb-10" // Adds spacing for bullets
           >
             {TestimonalsDetails.map((data, index) => (
-              <SwiperSlide key={index} className="flex justify-center px-4">
-                <div className="w-[220px] lg:w-[380px] lg:h-[250px] bg-[#F7F7F7] relative rounded-sm lg:px-15 lg:py-6 p-8 mx-10">
-                  <div className="w-18 h-18 rounded-full bg-white absolute top-35 lg:top-40 -left-10">
+              <SwiperSlide key={index} className="flex justify-center">
+                <div className="max-h-[350px] min-w-[250px] md:w-[300px] lg:w-[380px] lg:h-[250px] bg-[#F7F7F7] relative rounded-sm lg:px-15 lg:py-6 p-8 mx-10 ">
+                  <div className="w-18 h-18 rounded-full bg-white absolute top-63 md:top-42 lg:top-40 -left-10">
                     <img
                       src={data.image}
                       alt=""
                       className="w-full h-full rounded-full"
                     />
-                    <div className="absolute -right-40 bottom-[15px]">
+                  </div>
+                  <div className="grid gap-4 ml-6 md:ml-0 md:h-40 lg:w-76 md:w-60 min-w-45 h-60">
+                    <p className="text-[14px] text-justify">
+                      {data.description}
+                    </p>
+                  </div>
+                  <div className="ml-6">
                       <h1 className="text-[12px] text-[#00733C] font-bold">
                         {data.name}
                       </h1>
@@ -49,13 +55,6 @@ const Testimonials = () => {
                         {data.post}
                       </p>
                     </div>
-                  </div>
-                  <div className="grid gap-4 ml-6 md:ml-0">
-                    <p className="text-[14px] text-justify">
-                      {data.description}
-                    </p>
-
-                  </div>
                 </div>
               </SwiperSlide>
             ))}

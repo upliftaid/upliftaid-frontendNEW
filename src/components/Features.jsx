@@ -3,7 +3,7 @@ import FeaturesDetails from "../constants/FeaturesDetails";
 const Features = () => {
   return (
     <div className="lg:w-full grid gap-20 lg:p-6 min-w-[320px] place-items-center justify-center bg-[#e1e1e1]/40">
-      <div className="grid lg:grid-cols-3 gap-10 md:gap-20 p-4 md:grid-cols-2">
+      <div className="grid lg:grid-cols-3 gap-6 md:gap-8 lg:gap-14 p-4 md:grid-cols-2">
         {FeaturesDetails.map((data, index) => {
           return (
             <div className="gap-4 flex" key={data.heading + index}>

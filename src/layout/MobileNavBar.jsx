@@ -1,4 +1,4 @@
-import logo2 from "../assets/logo1-removebg-preview.png";
+import logo from "../assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
@@ -16,6 +16,10 @@ const MobileNavbar = () => {
     { url: "/portfolio", name: "Portfolio" },
     { url: "/blog", name: "Blog" },
     { url: "/contact", name: "Contact" },
+    { name: "Contact", url: "/contact" },
+    { name: "Products", url: "/product" },
+    { name: "Career", url: "/career" },
+    { name: "Cart", url: "/cart" },
   ];
 
   const submenuLinks = [
@@ -29,9 +33,9 @@ const MobileNavbar = () => {
   return (
     <>
       {/* Top Fixed Navbar */}
-      <div className="md:hidden flex items-center justify-between p-4 w-full h-[70px] fixed top-0 z-[99] bg-[#00733C]">
+      <div className="lg:hidden flex items-center justify-between p-4 w-full h-[70px] fixed top-0 z-[99] bg-[#00733C]">
         <Link to="/" className="h-16 w-16">
-          <img src={logo2} alt="logo" className="h-full w-full object-contain" />
+          <img src={logo} alt="logo" className="h-full w-full object-contain" />
         </Link>
 
         <button onClick={() => setIsOpen(prev => !prev)} aria-label="Toggle Menu">
@@ -45,7 +49,7 @@ const MobileNavbar = () => {
 
       {/* Dropdown Menu */}
       <div
-        className={`transition-max-height duration-300 ease-in-out overflow-hidden bg-[#00733C] fixed top-[70px] left-0 right-0 z-[98] md:hidden ${
+        className={`transition-max-height duration-300 ease-in-out overflow-hidden bg-[#00733C] fixed top-[70px] left-0 right-0 z-[98] lg:hidden ${
           isOpen ? "max-h-[500px] py-4" : "max-h-0"
         }`}
       >

@@ -1,8 +1,3 @@
-import { FaLinkedinIn } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa";
-import { FaGoogle } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import VolunteersDetails from "../constants/Volunteers";
 
 const Volunteers = () => {
@@ -16,9 +11,9 @@ const Volunteers = () => {
       <div className="grid lg:grid-cols-4 gap-8 p-4 md:grid-cols-3 grid-cols-1">
         {VolunteersDetails.map((data, index) => {
           return (
-            <div className="grid lg:w-[350px] gap-14" key={data.name + index}>
+            <div className="grid lg:w-[350px] gap-5" key={data.name + index}>
               <div className="lg:w-[350px] h-[188px]">
-                <img src={data.image} alt="" className="w-full h-full object-fit" />
+                <img src={data.image} alt="" className="w-full h-full" />
               </div>
               <div className="text-center grid gap-4">
                 <div className="grid gap-1 text-center">

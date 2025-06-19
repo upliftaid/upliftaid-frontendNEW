@@ -3,7 +3,7 @@ const TestimonalsDetails = [
     image:
       "https://zozothemes.com/html/the-charity/img/sections/testimonials/2.jpg",
     description:
-      "Volunteering with Upliftaid changed my life. I saw firsthand how compassion, teamwork, and action can uplift entire communities. It’s more than just helping—it's being part of something truly meaningful.",
+      "Working with Upliftaid brought real change. They listened, respected our traditions, and helped us build sustainable solutions. Our community feels stronger, more confident, and ready to face the future together.",
     name: "Maria Lopez",
     post: "Community Leader",
   },
@@ -11,7 +11,7 @@ const TestimonalsDetails = [
     image:
       "https://zozothemes.com/html/the-charity/img/sections/testimonials/1.jpg",
     description:
-      "Thanks to upliftaid, my children now go to school, have regular meals, and access healthcare. They gave us hope when we had none.",
+      "Upliftaid didn’t just offer aid—they offered partnership. Their team valued our voice, honored our heritage, and supported us in building long-term solutions that truly reflect our community’s needs and aspirations.",
     name: "Dr. Ahmed Khan",
     post: "Teacher",
   },
@@ -19,7 +19,7 @@ const TestimonalsDetails = [
     image:
       "https://zozothemes.com/html/the-charity/img/sections/testimonials/3.jpg",
     description:
-      "I support Upliftaid because I trust their mission and impact. I know my donation is changing lives, and that’s all I need.",
+      "We never expected such transformation. Upliftaid’s collaborative approach helped us overcome major obstacles. Their compassion, cultural sensitivity, and focus on sustainability left a lasting impact we’ll carry forward with pride.",
     name: "Lina Chen",
     post: "Animal Welfare Volunteer",
   },
@@ -27,7 +27,7 @@ const TestimonalsDetails = [
     image:
       "https://zozothemes.com/html/the-charity/img/sections/testimonials/3.jpg",
     description:
-      "Partnering with [NGO Name] has empowered our community to address challenges we once thought insurmountable. Their respect for our culture and dedication to sustainable solutions is inspiring.",
+      "Partnering with Upliftaid has empowered our community to address challenges we once thought insurmountable. Their respect for our culture and dedication to sustainable solutions is inspiring.",
     name: "Samuel Njoroge",
     post: "Youth Program Graduate",
   },
@@ -35,7 +35,7 @@ const TestimonalsDetails = [
     image:
       "https://zozothemes.com/html/the-charity/img/sections/testimonials/2.jpg",
     description:
-      "Working alongside [NGO Name] has allowed me to bring vital healthcare services to remote areas. Their commitment to health education and access saves lives every day.",
+      "Through every challenge, Upliftaid stood beside us. They respected our people, heard our stories, and worked with us to co-create lasting, meaningful solutions. Our future looks brighter because of them.",
     name: "Dr. Ahmed Khan",
     post: "Doctor",
   },

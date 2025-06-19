@@ -13,25 +13,6 @@ const Header = () => {
       <div className="relative bg-white/10 h-60 md:mt-10 lg:mt-0 flex justify-center">
         <div className="pt-20 lg:px-40 md:px-16 px-5">
           <h1 className="font-semibold text-[42px]">What We Do</h1>
-          <nav className="flex gap-4 justify-center">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? "text-[#FFB204]" : "text-gray-700"
-              }
-            >
-              About Us
-            </NavLink>
-            /
-            <NavLink
-              to="/pages"
-              className={({ isActive }) =>
-                isActive ? "text-[#FFB204]" : "text-gray-700"
-              }
-            >
-              What we do
-            </NavLink>
-          </nav>
         </div>
       </div>
     </div>
