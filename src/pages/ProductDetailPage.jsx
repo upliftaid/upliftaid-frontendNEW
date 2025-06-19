@@ -37,7 +37,7 @@ const ProductDetailPage = () => {
     <>
       <Navbar />
       <MobileNavbar />
-      <div className="lg:p-10 p-2 flex gap-10 mt-15 flex-col lg:flex-row">
+      <div className="lg:p-10 p-2 flex gap-10 mt-15 md:mt-40 lg:mt-15 flex-col lg:flex-row">
         {/* Left */}
         <div className="grid gap-5">
           <div className="lg:w-180 h-130 border border-gray-200">
