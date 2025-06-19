@@ -5,17 +5,19 @@ import AboutUsSection from '../components/AboutUsSection'
 import About from '../components/About'
 import Who_we_are from '../components/Who_we_are'
 import Meet_team from '../components/Meet_team'
-import Testimonie from '../components/Testomonie'
+import Testimonials from '../components/Testimonals'
+import MobileNavbar from '../layout/MobileNavbar'
 
 const About_us = () => {
   return (
-    <div>
+    <div className='font-[Poppins]'>
         <Navbar/>
+        <MobileNavbar/>
         <About/>
         <AboutUsSection/>
         <Who_we_are/>
         <Meet_team/>
-        <Testimonie/>
+        <Testimonials/>
         <Footer/>
     </div>
   )

@@ -1,31 +1,22 @@
-import React from 'react';
+import { NavLink } from "react-router-dom";
 
-const About = () => {
+const Header = () => {
   return (
-    <div
-      className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] bg-cover bg-center flex items-center justify-center px-4"
-      style={{
-        backgroundImage: `url('https://images.pexels.com/photos/9037596/pexels-photo-9037596.jpeg?auto=compress&cs=tinysrgb&w=600')`,
-      }}
-    >
-      {/* Dark translucent overlay */}
-      <div className="absolute inset-0 "></div>
+    <div className="relative lg:w-full mt-10 min-w-[320px]">
+      {/* Fixed background image */}
+      <div
+        className="absolute inset-0 h-full w-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/about-header-bg.jpg')] bg-fixed bg-top -z-10"
+        aria-hidden="true"
+      ></div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-          About Us
-        </h1>
-        <div className="mt-2 text-gray-200 text-sm sm:text-base space-x-2">
-          <span>Home</span>
-          <span>/</span>
-          <span>Pages</span>
-          <span>/</span>
-          <span className="text-[#00733C]">About us</span>
+      {/* Content wrapper with overlay */}
+      <div className="relative bg-white/10 h-60 md:mt-10 lg:mt-0 flex justify-center">
+        <div className="pt-20 lg:px-40 md:px-16 px-5">
+          <h1 className="font-semibold text-[42px]">About Us</h1>
         </div>
       </div>
     </div>
   );
 };
 
-export default About;
+export default Header;

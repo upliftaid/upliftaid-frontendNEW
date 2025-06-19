@@ -9,17 +9,17 @@ export const tabs = [
       {
         icon: <FaUsers size={45} />,
         heading: 'WHO WE ARE?',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus facilisis cvallis.',
+        text: 'UpliftAid is a nonprofit working to empower communities through education, healthcare, and sustainable support.',
       },
       {
         icon: <FaTint size={45} />,
         heading: 'VISION',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus facilisis cvallis.',
+        text: 'A world where every community thrives with access to education, healthcare, and opportunity.',
       },
       {
         icon: <FaChartLine size={45} />,
         heading: 'MISSION',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus facilisis cvallis.',
+        text: 'UpliftAid empowers communities through education, healthcare, and sustainable support.',
       },
     ],
   },
@@ -27,32 +27,11 @@ export const tabs = [
     title: 'Our Mission',
     contentType: 'customMission',
   },
-  {
-    title: 'Why Choose Us?',
-    contentType: 'skills',
-    content: {
-      left: {
-        heading: 'WHY CHOOSE US?',
-        points: [
-          {
-            title: 'Worldwide charity programs',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
-          },
-          { title: 'Leading volunteer groups' },
-          { title: 'Charity programs for children' },
-        ],
-      },
-      right: {
-        heading: 'OUR SKILLS',
-        skills: [
-          { label: 'Fund For Childrens', value: 60 },
-          { label: 'Fund For Plants', value: 65 },
-          { label: 'Fund For Educations', value: 80 },
-          { label: 'Fund For Refugees', value: 70 },
-        ],
-      },
-    },
-  },
+{
+  title: "Why Choose Us",
+  contentType: "whyChooseUs",
+}
+
 ];
 
 export const missionBox1 = [
