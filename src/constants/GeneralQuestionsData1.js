@@ -1,28 +1,53 @@
 const GeneralQuestionsData1 = [
   {
-    heading: "What is Lorem Ipsum?",
+    heading: "What is UpliftiAid’s main mission?",
     description:
-      "Lorem Ipsu is simply dummy text of the printing and typesetting industry",
+      "UpliftiAid is dedicated to empowering vulnerable communities through education, healthcare, women’s empowerment, and sustainable development programs.",
   },
   {
-    heading: "Wh do we use it?",
+    heading: "How can I donate to UpliftiAid?",
     description:
-      "It is a lon established fact that a reader will be distracted by the readable content.",
+      "You can donate securely online via our website using credit/debit cards, PayPal, or bank transfers.",
   },
   {
-    heading: "Where doe it come from?",
+    heading: "Are donations tax-deductible?",
     description:
-      "Contrary to popuar belief, Lorem Ipsum is not simply random text.",
+      "Yes, donations to UpliftiAid are tax-deductible where applicable. Please consult your local tax laws.",
   },
   {
-    heading: "Where can get some?",
+    heading: "Can I volunteer with UpliftiAid?",
     description:
-      "There are many varations of passages of Lorem Ipsum available.",
+      "Absolutely! We welcome volunteers worldwide. Visit our Volunteer page to learn more and apply.",
   },
   {
-    heading: "Is Lorem Ipsusafe to use?",
+    heading: "What kind of volunteer opportunities does UpliftiAid offer?",
     description:
-      "Yes, it is safe to use orem Ipsum in most contexts, especially in design mockups.",
+      "Opportunities include community outreach, education support, healthcare assistance, fundraising, and environmental projects.",
+  },
+    {
+    heading: "What is UpliftiAid’s stance on sustainability?",
+    description:
+      "We commit to environmentally friendly practices and sustainable solutions in all our programs.",
+  },
+    {
+    heading: "How can I stay updated on UpliftiAid’s work?",
+    description:
+      "Subscribe to our newsletter and follow us on social media for the latest news and stories.",
+  },
+    {
+    heading: "Does UpliftiAid provide disaster relief?",
+    description:
+      "Yes, we respond quickly to emergencies with aid, resources, and rebuilding support.",
+  },
+    {
+    heading: "Can I make a monthly donation?",
+    description:
+      "Yes, monthly giving options are available to support ongoing projects.",
+  },
+    {
+    heading: "How do I contact UpliftiAid for more information?",
+    description:
+      "You can reach us via the Contact page on our website or email us at info@upliftaid.org.",
   },
 ];
 

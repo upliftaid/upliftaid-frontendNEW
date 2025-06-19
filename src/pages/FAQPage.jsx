@@ -20,10 +20,7 @@ const FAQPage = () => {
         <Header />
 
         <p className="text-center lg:w-[642px] lg:h-18 text-[14px] mx-auto px-1">
-          Below are some frequently asked questions and answers about our
-          products. If you need specific help or your question isn’t answered
-          here, you should head to our forums. You can also read our Terms of
-          Service and Support Policy here.
+Below are some frequently asked questions about UpliftAid and our programs. If you need personalized assistance or don’t find your question here, please visit our community forums. You can also review our Terms of Service and Support Policy for more information.
         </p>
 
         <div className="w-full lg:px-24 flex flex-col md:flex-row gap-8 items-start">

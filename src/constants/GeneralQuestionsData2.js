@@ -1,28 +1,53 @@
 const GeneralQuestionsData2 = [
   {
-    heading: "What is Lorem Ipsu?",
+    heading: "How does UpliftiAid ensure donations are used effectively?",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "We prioritize transparency, regular audits, and detailed impact reports to ensure funds reach the intended beneficiaries.",
   },
   {
-    heading: "Why do we use it?",
+    heading: "Can I start a fundraiser for UpliftiAid?",
     description:
-      "It is a long established fact that a reader will be distracted by the readable content.",
+      "Yes! We encourage supporters to organize fundraisers. Contact us for guidance and resources.",
   },
   {
-    heading: "Where does it come from?",
+    heading: "Does UpliftiAid work internationally?",
     description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+      "Yes, we operate in multiple countries focusing on areas with the greatest need.",
   },
   {
-    heading: "Where can I get some?",
+    heading: "How can I apply for assistance from UpliftiAid?",
     description:
-      "There are many variations of passages of Lorem Ipsum available.",
+      "Applications for assistance are accepted through our local partner organizations. Visit the Assistance page for details.",
   },
   {
-    heading: "Is Lorem Ipsum safe to use?",
+    heading: "What programs does UpliftiAid offer for children?",
     description:
-      "Yes, it is safe to use Lorem Ipsum in most contexts, especially in design mockups.",
+      "We run education support, nutrition programs, healthcare access, and child protection initiatives.",
+  },
+    {
+    heading: "How does UpliftiAid support women’s empowerment?",
+    description:
+      "Through skill development, leadership training, and advocacy for gender equality.",
+  },
+    {
+    heading: "Can I donate goods or services instead of money?",
+    description:
+      "Yes, but please contact us first to ensure we can accept and distribute the items properly.",
+  },
+    {
+    heading: "Is my personal information safe with UpliftiAid?",
+    description:
+      "Absolutely. We follow strict data privacy policies and never share your information without consent.",
+  },
+    {
+    heading: "How often does UpliftiAid publish impact reports?",
+    description:
+      "We publish detailed impact and financial reports annually, available on our website.",
+  },
+    {
+    heading: "Can corporations partner with UpliftiAid?",
+    description:
+      "Yes, we welcome corporate partnerships and CSR collaborations. Reach out to our Partnerships team.",
   },
 ];
 

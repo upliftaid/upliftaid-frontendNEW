@@ -12,7 +12,7 @@ const Header = () => {
       {/* Content wrapper with overlay */}
       <div className="relative bg-white/70 h-60 md:mt-10 lg:mt-0 flex justify-center">
         <div className="pt-20 lg:px-40 md:px-16 px-5">
-          <h1 className="font-semibold text-[42px]">What We Do</h1>
+          <h1 className="font-semibold text-[42px]">Frequently Asked Questions</h1>
           <nav className="flex gap-4 justify-center">
             <NavLink
               to="/"

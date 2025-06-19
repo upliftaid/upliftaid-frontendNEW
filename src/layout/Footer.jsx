@@ -6,29 +6,34 @@ import { FaYoutube } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import logo2 from "../assets/logo1-removebg-preview.png";
+import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const socialLinksDetails = [
     {
       image: FaFacebookF,
-      url: "/",
+      url: "https://facebook.com/upliftaidfoundation",
     },
     {
       image: PiXLogoBold,
-      url: "/",
+      url: "https://x.com/Upliftaid",
     },
     {
       image: FaGoogle,
-      url: "/",
+      url: "https://g.co/kgs/xVrf1sH",
     },
     {
       image: FaLinkedinIn,
-      url: "/",
+      url: "https://www.linkedin.com/company/upliftaidfoundation/",
     },
     {
       image: FaYoutube,
-      url: "/",
+      url: "https://youtube.com/@upliftaidfoundation",
     },
+    {
+      image : FaInstagram,
+      url : "https://www.instagram.com/upliftaidfoundation"
+    }
   ];
 
   return (
@@ -70,11 +75,11 @@ const Footer = () => {
             <div>
               <h1 className="font-bold">Useful Info</h1>
               <div className="flex flex-col mt-4 gap-2 text-[14px]">
-                <Link>Annual Reports</Link>
-                <Link>Our Apporach</Link>
-                <Link>Statics</Link>
+                <Link>Be a Volunteer</Link>
+                <Link>About Us</Link>
+                <Link>Our Campaigns</Link>
+                <Link>Events</Link>
                 <Link>Stories from our work</Link>
-                <Link>Why WaterAid?</Link>
               </div>
             </div>
             <div>
@@ -101,16 +106,16 @@ const Footer = () => {
           </div>
 
           <p className="text-[10px]">
-            uplift.com, 233 Test, Test 2705, Test City, NY, 10279, Test.
-            Tel: (+91) 1234567890
+            upliftaid.org, Ghazibad, UttarPradesh, India, 201001.
+            Email : hello@upliftaid.org
           </p>
           <div className="bg-[#ccc]/70 w-full h-[0.8px]" />
           <div className="flex justify-between flex-col md:flex-row">
             <div className="grid gap-3">
               <p className="text-[12px]">
-                uplift.com is a Welfare Organizaton.
+                upliftaid.org is a Welfare Organizaton.
               </p>
-              <p className="text-[12px]">© Copyright 2025 uplift.com</p>
+              <p className="text-[12px]">© Copyright 2025 upliftaid.org</p>
             </div>
             <div className="text-[12px] flex gap-4 mt-4">
               <Link>Contact us</Link>
