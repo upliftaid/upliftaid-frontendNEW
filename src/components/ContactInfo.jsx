@@ -12,7 +12,7 @@ const ContactInfo = () => {
           </div>
           <div>
             <p className="text-center">Address</p>
-            <p>49 Archdale, 2B Charleston, USA</p>
+            <p>Ghaizabad, UttaPradesh, India , 201001</p>
           </div>
         </div>
 
@@ -22,7 +22,7 @@ const ContactInfo = () => {
           </div>
           <div>
             <p className="text-center">Phones</p>
-            <p>Support: +123 (345) 6789</p>
+            <p>+91-8319301965</p>
           </div>
         </div>
 
@@ -31,8 +31,8 @@ const ContactInfo = () => {
             <MdEmail size={35} />
           </div>
           <div>
-            <p className="text-center">Email Addresses</p>
-            <p>Support: support@example.com</p>
+            <p className="text-center">Email Address</p>
+            <p>hello@upliftaid.org</p>
           </div>
         </div>
       </div>

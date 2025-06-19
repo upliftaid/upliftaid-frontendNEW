@@ -10,28 +10,10 @@ const Header = () => {
       ></div>
 
       {/* Content wrapper with overlay */}
-      <div className="relative bg-white/70 h-60 md:mt-10 lg:mt-0">
+      <div className="relative bg-white/10 h-60 md:mt-10 lg:mt-0">
         <div className="pt-20 lg:px-40 md:px-16 px-5">
           <h1 className="font-semibold text-[42px]">Contact Us</h1>
           <nav className="flex gap-4">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? "text-[#FFB204]" : "text-gray-700"
-              }
-            >
-              Home
-            </NavLink>
-            /
-            <NavLink
-              to="/pages"
-              className={({ isActive }) =>
-                isActive ? "text-[#FFB204]" : "text-gray-700"
-              }
-            >
-              Pages
-            </NavLink>
-            /
             <NavLink
               to="/contact"
               className={({ isActive }) =>
