@@ -8,8 +8,8 @@ const HeaderCarousel = () => {
       image:
         "https://zozothemes.com/html/the-charity/img/sections/slider/charity-slide19.jpg",
       heading: "SAVE CHILDREN",
-      line1: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-      line2: "Tempora commodi repellat nisi expedita.",
+      line1: "Every child deserves safety, love, and opportunity.",
+      line2: "We fight to protect their rights, health, and future—every step counts.",
     },
     {
       image:

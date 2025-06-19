@@ -15,7 +15,7 @@ const ProgressBars = () => {
       completed: "80",
     },
     {
-      label: "Funds For Refugees",
+      label: "Funds For Food",
       completed: "70",
     },
   ];
