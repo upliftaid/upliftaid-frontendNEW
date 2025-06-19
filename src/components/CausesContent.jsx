@@ -44,8 +44,8 @@ const CausesContent = () => {
   const currentDonations = donations.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="font-['Lora'] h-[115px] bg-[#f2f2f2] text-[54px] p-[30px] text-xl">
+    <div className="container mx-auto px-4 font-[Poppins]">
+      <div className="h-[115px] bg-[#f2f2f2] text-[54px] p-[30px] text-xl">
         Causes
       </div>
 
@@ -63,16 +63,16 @@ const CausesContent = () => {
                   className="md:w-1/3 w-full rounded-lg object-cover"
                 />
                 <div className="md:ml-6 mt-4 md:mt-0">
-                  <h2 className="text-[33.28px] font-['Lora'] font-semibold">
+                  <h2 className="text-[33.28px] font-[Poppins] font-semibold">
                     {donation.title}
                   </h2>
-                  <p className="text-[17.92px] font-['sans-serif']">
+                  <p className="text-[17.92px]">
                     <strong>Raised:</strong> ${donation.raised} &nbsp;|&nbsp;
                     <span className="text-[#00adef] font-semibold">
                       Goal: ${donation.goal}
                     </span>
                   </p>
-                  <p className="mt-[10px] mb-[15px] h-auto font-['sans-serif'] text-[17.92px]">
+                  <p className="mt-[10px] mb-[15px] h-auto text-[17.92px]">
                     {donation.description}
                   </p>
                   <button className="bg-[#00adef] h-[40px] text-white px-4 py-2 hover:bg-[#00adef] mt-2">
@@ -126,7 +126,7 @@ const CausesContent = () => {
 
           {/* Categories */}
           <div>
-            <h3 className="text-[28px] font-['lora'] font-bold mb-4">Category</h3>
+            <h3 className="text-[28px] font-[Poppins] font-bold mb-4">Category</h3>
             <ul className="space-y-2">
               {categories.map((cat) => (
                 <li
@@ -192,7 +192,7 @@ const CausesContent = () => {
 
           {/* Tags */}
           <div>
-            <h3 className="font-['lora','serif'] font-bold text-[18px] mb-2">
+            <h3 className="font-[Poppins] font-bold text-[18px] mb-2">
               Tags
             </h3>
             <div className="flex flex-wrap gap-2">

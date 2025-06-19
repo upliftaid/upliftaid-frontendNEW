@@ -1,62 +1,75 @@
-// src/components/Header.jsx
-import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import upliftaid from '../assets/images/logo1.png';
+import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/images/logo.png";
+import { FaCartShopping } from "react-icons/fa6";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const navlinklist = [
+  { name: "Home", url: "/" },
+  {
+    name: "About Us",
+    url: "/about-us",
+    hasSubmenu: true,
+    submenu: [
+      { name: "Our Story", url: "/about-us/our-story" },
+      { name: "What we do", url: "/about-us/what-we-do" },
+      { name: "Be a Volunteer", url: "/about-us/be-a-volunteer" },
+      { name: "FAQ", url: "/about-us/faq" },
+      { name: "Testimonals", url: "/about-us/testimonals" },
+    ],
+  },
+  { name: "Causes", url: "/causes" },
+  { name: "Events", url: "/events" },
+  { name: "Portfolio", url: "/portfolio" },
+  { name: "Blog", url: "/blog" },
+  { name: "Contact", url: "/contact" },
+  { name: "Products", url: "/product" },
+  { name: "Career", url: "/career" },
+];
 
-  const toggleMobileMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
-    <div className="sticky top-0 z-50 bg-[#00733C] text-white">
-      {/* Navbar */}
-      <div className="shadow-sm px-4 py-3 flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-2xl font-bold flex items-center space-x-1">
-          <img src={upliftaid} alt="upliftaid Logo" className="h-[70px]" />
-        </div>
+    <header className="bg-[#00733C] text-white w-full h-[70px] md:h-[140px] lg:h-[70px] md:flex md:flex-col lg:flex-row items-center justify-between px-30 fixed top-0 z-99 hidden">
+      <Link to='/' className="w-16 h-16">
+        <img src={logo} alt="" />
+      </Link>
+      <nav className="flex gap-8 md:mb-4 lg:mb-0 text-[14px] font-sans">
+        {navlinklist.map((item, index) => (
+          <div key={index + item.name} className="relative group items-center flex">
+            <NavLink
+              to={item.url}
+              className="hover:text-[#FFB204] whitespace-nowrap block"
+            >
+              {item.name}
+            </NavLink>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8 h-[70px] p-[15px] text-[#ffffff]">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Causes</a>
-          <a href="#">Events</a>
-          <a href="#">Portfolio</a>
-          <a href="#">Blog</a>
-          <a href="#">Contact</a>
-          <button className="bg-[#ffb600] hover:bg-[#e6a700] text-black font-[14px] py-2 px-4">
+            {/* Submenu */}
+            {item.hasSubmenu && (
+              <div className="absolute top-full left-0 mt-4 bg-[#00733C] shadow-lg rounded-md w-40 z-50 opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200">
+                {item.submenu.map((subItem, subIndex) => (
+                  <Link
+                    key={subIndex}
+                    to={subItem.url}
+                    className="block px-4 py-1.5 hover:text-[#FFB204] transition"
+                  >
+                    {subItem.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+        <div className="hover:bg-[#E69F00] w-14 h-10 bg-[#FFB204] flex items-center justify-center rounded">
+          <NavLink to="/cart" className="text-black hover:text-white font-semibold animate-bounce transition-ease-3000">
+            <FaCartShopping size={30}/>
+          </NavLink>
+        </div>
+        <div className="hover:bg-[#E69F00] w-19 h-10 bg-[#FFB204] flex items-center justify-center rounded">
+          <NavLink to="/" className="text-black hover:text-white font-semibold">
             Donate
-          </button>
-        </nav>
-
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden">
-          <button onClick={toggleMobileMenu} className="text-white text-2xl">
-            {isOpen ? <FaTimes /> : <FaBars />}
-          </button>
+          </NavLink>
         </div>
-      </div>
-
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden bg-[#00733C] px-4 pb-4 space-y-2 text-sm">
-          <a href="#" className="block">Home</a>
-          <a href="#" className="block">About Us</a>
-          <a href="#" className="block">Causes</a>
-          <a href="#" className="block">Events</a>
-          <a href="#" className="block">Portfolio</a>
-          <a href="#" className="block">Blog</a>
-          <a href="#" className="block">Contact</a>
-          <button className="w-full mt-2 bg-[#ffb600] hover:bg-[#e6a700] text-black font-[14px] py-2 px-4">
-            Donate
-          </button>
-        </div>
-      )}
-    </div>
+      </nav>
+    </header>
   );
 };
 
