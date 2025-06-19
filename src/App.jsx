@@ -1,10 +1,10 @@
 import "./App.css";
-import WhatWeDoPage from "./pages/WhatWeDoPage";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
     <>
-      <WhatWeDoPage />
+      <ProductPage />
     </>
   );
 }
