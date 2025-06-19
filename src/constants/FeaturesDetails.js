@@ -6,57 +6,81 @@ import { PiForkKnifeBold } from "react-icons/pi";
 const FeaturesDetails = [
   {
     icon: FaBook,
-    heading: "Charity For Education",
+    heading: "Child Welfare and Protection",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
+      "We ensure every child is safe, valued, and given the opportunity to grow in a nurturing environment.",
   },
   {
     icon: PiForkKnifeBold,
-    heading: "Feed For Hungry Child",
+    heading: "Women Empowerment and Gender Equality",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
+      "We promote equal rights, opportunities, and leadership for women and girls to build stronger, fairer societies.",
   },
   {
     icon: FaHome,
-    heading: "Home for Homeless",
+    heading: "Education for All",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
+      "We work to make quality education accessible to every child, regardless of background or circumstance.",
   },
   {
     icon: CgDropInvert,
-    heading: "Clean Water For People",
+    heading: "Healthcare Access and Awareness",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
+      "We provide health services and promote awareness to improve well-being in underserved communities.",
   },
   {
     icon: FaBook,
-    heading: "Charity For Education",
+    heading: "Environmental Conservation and Climate Action",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
+      "We advocate for a healthier planet through conservation, education, and sustainable action.",
   },
   {
     icon: PiForkKnifeBold,
-    heading: "Feed For Hungry Child",
+    heading: "Disaster Relief and Emergency Aid",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
+      "We respond swiftly to crises, delivering aid and support to those affected by natural or human-made disasters.",
   },
   {
     icon: PiForkKnifeBold,
-    heading: "Feed For Hungry Child",
+    heading: "Hunger and Malnutrition Eradication",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
+      "We combat hunger through food distribution, nutrition programs, and sustainable solutions.",
   },
   {
     icon: FaHome,
-    heading: "Home For Homeless",
+    heading: "Support for Orphans and Vulnerable Children",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
+      "We care for and empower children without families, ensuring they grow up with love, dignity, and hope.",
   },
   {
     icon: CgDropInvert,
-    heading: "Clean Water For People",
+    heading: "Elderly Care and Support",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
+      "We promote mental well-being through education, counseling, and community-based support services.",
+  },
+    {
+    icon: CgDropInvert,
+    heading: "Animal Welfare and Rescue",
+    description:
+      "We protect animals from abuse, provide rescue services, and promote humane treatment for all living beings.",
+  },
+    {
+    icon: CgDropInvert,
+    heading: "Anti-Trafficking and Human Rights Protection",
+    description:
+      "We fight against trafficking and advocate for the rights and freedom of all individuals.",
+  },
+    {
+    icon: CgDropInvert,
+    heading: "Clean Water and Sanitation Initiatives",
+    description:
+      "We bring safe drinking water and sanitation facilities to improve health and dignity in underserved areas.",
+  },
+      {
+    icon: CgDropInvert,
+    heading: "Support for People with Disabilities",
+    description:
+      "We work to create inclusive environments that empower people with disabilities through care, education, and equal opportunity.",
   },
 ];
 

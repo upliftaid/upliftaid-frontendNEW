@@ -17,8 +17,8 @@ const Volunteers = () => {
         {VolunteersDetails.map((data, index) => {
           return (
             <div className="grid lg:w-[350px] gap-14" key={data.name + index}>
-              <div className="lg:w-[350px] h-[188px] grid place-items-center">
-                <img src={data.image} alt="" />
+              <div className="lg:w-[350px] h-[188px]">
+                <img src={data.image} alt="" className="w-full h-full object-fit" />
               </div>
               <div className="text-center grid gap-4">
                 <div className="grid gap-1 text-center">
@@ -27,20 +27,6 @@ const Volunteers = () => {
                 </div>
                 <h1>{data.post}</h1>
                 <p>{data.description}</p>
-                <div className="flex items-center justify-center gap-8">
-                  <Link to={data.faceBookUrl}>
-                    <FaFacebookF />
-                  </Link>
-                  <Link to={data.twitterUrl}>
-                    <FaTwitter />
-                  </Link>
-                  <Link to={data.linkedinUrl}>
-                    <FaLinkedinIn />
-                  </Link>
-                  <Link to={data.googleUrl}>
-                    <FaGoogle />
-                  </Link>
-                </div>
               </div>
             </div>
           );

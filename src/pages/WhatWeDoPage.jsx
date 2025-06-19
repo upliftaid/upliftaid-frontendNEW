@@ -41,7 +41,7 @@ const WhatWeDoPage = () => {
             <div className="p-6 md:px-16">
               {/* Header */}
               <div className="grid gap-1 mt-4">
-                <h1 className="text-[28px]">Our Skills</h1>
+                <h1 className="text-[28px]">Our Fundraisers</h1>
                 <div className="bg-[#00733C] w-16 h-[2.5px]" />
               </div>
 

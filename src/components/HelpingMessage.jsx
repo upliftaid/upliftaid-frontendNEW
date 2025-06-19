@@ -16,12 +16,11 @@ const HelpingMessage = () => {
             Working with us by helping & donation
           </h1>
           <p className="text-[14px] lg:w-[800px] text-ellipsis">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+Join us in making a real difference. Whether you give your time, skills, or resources, your support helps us reach more lives and build stronger communities.
+
+Every donation fuels education, healthcare, protection, and hope. Every volunteer brings compassion and change.
+
+Together, we can transform lives—one act of kindness at a time.
           </p>
           <div className="bg-[#FFB204] hover:bg-[#E69F00] text-black rounded hover:text-white w-[111px] h-10 flex items-center justify-center text-[14px]">
             <NavLink to="/" className="">
