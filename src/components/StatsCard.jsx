@@ -1,5 +1,10 @@
 import React from "react";
 import StatsCardDetails from "../constants/StatsCardDetails";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 const StatsCard = () => {
   return (
@@ -12,18 +17,48 @@ const StatsCard = () => {
 
       {/* Content wrapper with overlay */}
       <div className="relative bg-black/70 md:py-16 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white text-center">
-          {StatsCardDetails.map((card, index) => {
-            return (
-              <div key={index} className="flex flex-col items-center">
+        {/* Header with navigation buttons */}
+        <div className="flex justify-end space-x-4">
+          <button className="swiper-button-prev-custom text-[#FFB204] font-bold text-3xl px-3 cursor-pointer select-none">
+            ‹
+          </button>
+          <button className="swiper-button-next-custom text-[#FFB204] font-bold text-3xl px-3 cursor-pointer select-none">
+            ›
+          </button>
+        </div>
+
+        <Swiper
+          spaceBetween={20}
+          loop={true}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          modules={[Autoplay, Navigation]}
+          navigation={{
+            nextEl: ".swiper-button-next-custom",
+            prevEl: ".swiper-button-prev-custom",
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+        >
+          {StatsCardDetails.map((card, index) => (
+            <SwiperSlide key={index + card.heading}>
+              <div className="flex flex-col items-center text-white text-center px-4">
                 <card.image size={90} />
                 <h1 className="text-4xl font-bold mt-4">{card.no}</h1>
                 <div className="bg-[#00733C] w-16 h-[2.5px] my-2" />
                 <p className="text-lg">{card.heading}</p>
               </div>
-            );
-          })}
-        </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

@@ -15,15 +15,15 @@ const HeaderCarousel = () => {
       image:
         "https://zozothemes.com/html/the-charity/img/sections/slider/charity-slide18.jpg",
       heading: "I NEED YOUR HELP",
-      line1: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-      line2: "Tempora commodi repellat nisi expedita.",
+      line1: "I need your help—not just to survive, but to dream, to hope,",
+      line2: "and to feel the warmth of humanity again.",
     },
     {
       image:
         "https://zozothemes.com/html/the-charity/img/sections/slider/charity-slide17.jpg",
       heading: "KINDNESS & HUMANITY",
-      line1: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-      line2: "Tempora commodi repellat nisi expedita.",
+      line1: "Kindness is not a sign of weakness; it is the strongest,",
+      line2: "most profound expression of true humanity and inner strength",
     },
   ];
 

@@ -12,6 +12,7 @@ import StatsCard from "../components/StatsCard";
 import MobileNavbar from "../layout/MobileNavBar";  
 import HeaderCarousel from "../components/HeaderCarousel";
 import AdditionalInfo from "../components/AdditionalInfo";
+import AboutUsCards from "../components/AboutUsCards";
 
 const HomePage = () => {
 
@@ -33,103 +34,15 @@ const HomePage = () => {
             <div className="bg-[#00733C] w-16 h-[2.5px]"></div>
           </div>
           <div className="bg-[#00733C] w-1 h-20 hidden lg:block"></div>
-          <div className="lg:w-[820px] lg:h-[124px] w-full flex px-4 justify-center items-center gap-4">
+          <div className="lg:w-[820px] lg:h-[124px] min-w-[250px] flex px-4 justify-center items-center gap-4">
             <div className="bg-[#00733C] w-2 h-70 md:h-30 lg:hidden block"></div>
-            <p className="lg:mt-7 text-justify">
+            <p className="text-justify">
 Upliftaid is a nonprofit dedicated to protecting lives, empowering communities, and creating equal opportunities through action in child welfare, education, healthcare, environment, human rights, and more. We work to build a just, inclusive, and compassionate world for all.
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-start md:gap-6 gap-10 px-4 md:px-8 mt-10 w-full">
-          {/* Card 1 */}
-          <div className="flex flex-col gap-4 w-full md:w-1/3 max-w-[380px]">
-            <div className="h-[195px] md:h-[160px] lg:h-[215px]">
-              <img
-                src="https://zozothemes.com/html/the-charity/img/sections/charity-1.jpg"
-                alt=""
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="grid gap-3 px-2">
-              <h1 className="text-[24px]">Child Welfare and Protection</h1>
-              <p className="text-justify text-[14px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas dapibus facilisis cvallis.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="flex flex-col gap-4 w-full md:w-1/3 max-w-[380px]">
-            <div className="h-[195px] md:h-[160px] lg:h-[215px]">
-              <img
-                src="https://zozothemes.com/html/the-charity/img/sections/charity-2.jpg"
-                alt=""
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="grid gap-3 px-2">
-              <h1 className="text-[24px]">Environmental Conservation and Climate Action</h1>
-              <p className="text-justify text-[14px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas dapibus facilisis cvallis.
-              </p>
-            </div>
-          </div>
-
-                    <div className="flex flex-col gap-4 w-full md:w-1/3 max-w-[380px]">
-            <div className="h-[195px] md:h-[160px] lg:h-[215px]">
-              <img
-                src="https://zozothemes.com/html/the-charity/img/sections/charity-2.jpg"
-                alt=""
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="grid gap-3 px-2">
-              <h1 className="text-[24px]">Environmental Conservation and Climate Action</h1>
-              <p className="text-justify text-[14px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas dapibus facilisis cvallis.
-              </p>
-            </div>
-          </div>
-
-                    <div className="flex flex-col gap-4 w-full md:w-1/3 max-w-[380px]">
-            <div className="h-[195px] md:h-[160px] lg:h-[215px]">
-              <img
-                src="https://zozothemes.com/html/the-charity/img/sections/charity-2.jpg"
-                alt=""
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="grid gap-3 px-2">
-              <h1 className="text-[24px]">Environmental Conservation and Climate Action</h1>
-              <p className="text-justify text-[14px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas dapibus facilisis cvallis.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="flex flex-col gap-4 w-full md:w-1/3 max-w-[380px]">
-            <div className="h-[195px] md:h-[160px] lg:h-[215px]">
-              <img
-                src="https://zozothemes.com/html/the-charity/img/sections/charity-3.jpg"
-                alt=""
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="grid gap-3 px-2">
-              <h1 className="text-[24px]">Fund Raising</h1>
-              <p className="text-justify text-[14px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas dapibus facilisis cvallis.
-              </p>
-            </div>
-          </div>
-        </div>
+        <AboutUsCards/>
 
         {/* who we are */}
 

@@ -8,7 +8,7 @@ const PriceCardDetails = [
     product4: "Homeless People",
   },
   {
-    heading: "SIVER",
+    heading: "SILVER",
     price: "99.9",
     product1: "Clothes",
     product2: "Education",

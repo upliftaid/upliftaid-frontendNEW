@@ -2,11 +2,18 @@ import { useState } from "react";
 import { FaCirclePlay } from "react-icons/fa6";
 import { AiOutlinePauseCircle } from "react-icons/ai";
 import PlayVideo from "./PlayVideo";
+import { motion, AnimatePresence } from "framer-motion";
+import InfoDetails from "../constants/InfoDetails";
+import { NavLink } from "react-router-dom";
 
 const AdditionalInfo = () => {
 
     const [play , setPlay] = useState(false)
+      const [openIndex, setOpenIndex] = useState(0); // Track open index
 
+  const toggleIndex = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  }
   return (
     <>
         <div className="relative lg:w-full mt-10 min-w-[320px]">
@@ -39,40 +46,50 @@ const AdditionalInfo = () => {
                   <div className="bg-[#00733C] w-16 h-[2.5px]"></div>
                 </div>
 
-                <div className="grid gap-4 mt-8">
-                  <h1 className="font-semibold">Fund Raising</h1>
-                  <div className="bg-[#dddd] w-[95%] h-[0.8px] rounded" />
-                  <div className="flex flex-col lg:flex-row gap-4">
-                    <div className="grid gap-4 lg:w-[80%] ">
-                      <p className="text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Dolores ipsa esse obcaecati repudiandae veniam
-                        amet modi recusandae optio earum sequi accusantium culpa
-                        vitae iste sit commodi eaque voluptatem officia quam
-                      </p>
-                      <p className="text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Dolores ipsa esse obcaecati repudiandae veniam
-                        amet modi.
-                      </p>
-                      <h1 className="font-semibold mt-4">Educate Kids</h1>
-                      <div className="bg-[#dddd] w-[95%] h-[0.8px] rounded" />
-                      <h1 className="font-semibold">
-                        Building Clean Water Facility
-                      </h1>
-                    </div>
-                    <div className="w-[105px] h-[67px]">
-                      <img
-                        src="https://zozothemes.com/html/the-charity/img/sections/blog/news-6.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
+                <div className="mt-10 grid gap-4">
+
+
+
+ {InfoDetails.map((data, index) => (
+        <div key={index} className="grid gap-2">
+          <h1
+            className="font-semibold cursor-pointer"
+            onClick={() => toggleIndex(index)}
+          >
+            {data.heading}
+          </h1>
+          <div className="w-full h-[0.5px] bg-[#ccc]" />
+
+          <AnimatePresence>
+            {openIndex === index && (
+              <motion.p
+                initial={{ y: -10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -10, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="text-[14px] mt-2"
+              >
+                {data.description}
+              </motion.p>
+            )}
+          </AnimatePresence>
+        </div>
+      ))}
+                      </div>
+      <div className="flex justify-end mt-6">
+
+        <div className="hover:bg-[#E69F00] w-25 h-10 bg-[#FFB204] flex items-center justify-center rounded">
+          <NavLink to="/about-us/faq" className="text-black hover:text-white font-semibold">
+            Read More
+          </NavLink>
+        </div>
+      </div>
+
+    </div>
               </div>
             </div>
           </div>
-        </div>
+
 
         {
             play && (
