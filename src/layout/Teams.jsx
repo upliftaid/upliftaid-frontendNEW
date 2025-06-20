@@ -1,6 +1,6 @@
 import React from "react";
 import { team } from "../constants/teamsDetails";
-import TeamsContainer from "../components/TeamsContainer";
+// import TeamsContainer from "../components/Testimonials1";
 
 export default function Teams() {
   return (

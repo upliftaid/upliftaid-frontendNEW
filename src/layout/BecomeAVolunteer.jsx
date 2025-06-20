@@ -13,10 +13,7 @@ export default function BecomeAVolunteer() {
           alt="volunteer"
         />
         <p className="text-[0.8rem] font-medium">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+Thank you for your interest in volunteering with us! By filling out this form, you’re taking the first step toward making a real impact in the community. Whether you’re looking to give back, gain experience, or connect with others, we have a place for you. Please provide your details below, and our team will reach out with next steps and opportunities that match your skills and interests.
         </p>
       </div>
       <div className="flex-1 flex flex-col items-start gap-5">

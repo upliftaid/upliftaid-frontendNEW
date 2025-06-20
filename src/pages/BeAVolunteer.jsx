@@ -6,7 +6,7 @@ import VolunteerTopSection from "../layout/VolunteerTopSection";
 import BecomeAVolunteer from "../layout/BecomeAVolunteer";
 import HowToApply from "../layout/HowToApply";
 import Teams from "../layout/Teams";
-import Testimonials from "../layout/Testimonials";
+import Testimonials from "../components/Testimonals";
 import { owlItems } from "../constants/OwlItems";
 
 export default function BeAVolunteer() {
@@ -51,7 +51,7 @@ export default function BeAVolunteer() {
         <main className="flex flex-col bg-white w-full gap-4">
           <BecomeAVolunteer />
           <HowToApply />
-          <Teams />
+          {/* <Teams /> */}
           <Testimonials />
           <div
             ref={scrollRef}

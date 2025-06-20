@@ -3,7 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
-import logo2 from "../assets/images/logo1-removebg-preview.png";
+import logo2 from "../assets/images/logo.png";
 
 const Footer = () => {
   const socialLinksDetails = [

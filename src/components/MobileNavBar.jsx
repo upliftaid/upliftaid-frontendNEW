@@ -1,5 +1,5 @@
 import { GiHamburgerMenu } from "react-icons/gi";
-import logo2 from "../assets/images/logo1-removebg-preview.png";
+import logo2 from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
 const MobileNavbar = () => {

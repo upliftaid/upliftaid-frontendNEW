@@ -20,32 +20,30 @@ export default function HowToApply() {
             <FaUser color="#FFB204" className="h-12 w-10" />
             <span className="text-2xl font-medium">Registration</span>
             <p className="text-center text-[0.8rem]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the text.
+Start by filling out our Volunteer Registration Form. This helps us get to know you and match you with the right opportunities.
             </p>
           </div>
           <div className={centerList}>
             <FaFileAlt color="#FFB204" className="h-12 w-10" />
             <span className="text-2xl font-medium">Check our program</span>
             <p className="text-center text-[0.8rem]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the text.
+Explore the different ways you can make a difference by visiting our Programs Page. Learn where your skills and passions are needed most.
+
+
             </p>
           </div>
           <div className={centerList}>
             <FaMoneyBillAlt color="#FFB204" className="h-12 w-10" />
             <span className="text-2xl font-medium">Make donation</span>
             <p className="text-center text-[0.8rem]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the text.
+Support our mission by making a contribution. Donations help us run programs and provide resources to volunteers. Donate Here.
             </p>
           </div>
           <div className={centerList}>
             <FaCheckCircle color="#FFB204" className="h-12 w-10" />
             <span className="text-2xl font-medium">You are volunteer!</span>
             <p className="text-center text-[0.8rem]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the text.
+Once you're registered and have chosen a program, our team will contact you with the next steps. Welcome aboard!
             </p>
           </div>
         </div>
