@@ -26,7 +26,7 @@ const StatsCard = () => {
               <p>Starting at</p>
               <div className="grid place-items-center">
                 <p className="text-[#00733C] text-3xl font-bold">
-                  ${card.price}
+                  ₹{card.price}
                 </p>
                 <p className="text-xs">/month</p>
               </div>

@@ -3,13 +3,12 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
-import AboutUsCardDetails from '../constants/AboutUsCardDetails'
+import AboutUsCardDetails from "../constants/AboutUsCardDetails";
 
 const AboutUsCards = () => {
   return (
     <section className="w-full p-4 overflow-hidden grid place-items-center justify-center">
       <div className="w-[90%] md:mx-auto grid gap-8">
-
         {/* Render arrows on last visible card */}
         <div className="-mb-10 ml-auto mr-9 md:block hidden">
           <button className="swiper-button-prev-custom text-[#FFB204] font-bold text-xl px-2">

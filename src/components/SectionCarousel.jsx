@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import ProgressBars from "../components/ProgressBars";
 
 const RectangularDot = ({ active, onClick }) => {
   return (
@@ -48,38 +47,38 @@ const SectionCarousel = () => {
         swipeable
         onChange={(index) => setCurrentSlide(index)}
       >
-        {/* Slide 1: Progress Bar */}
-        <div>
-          <ProgressBars />
+        {/* Slide 1: Description */}
+        <div className="h-[203px] mt-10 grid">
+          <h1 className="text-3xl flex flex-start">Our history</h1>
+          <p className="text-justify text-[14px]">
+            UpliftAid Founded in 2024, UpliftAid emerged from a shared
+            commitment to drive positive and lasting change. What began as a
+            small initiative has grown into a dynamic organization focused on
+            empowering communities, promoting equity, and addressing pressing
+            social challenges with compassion and purpose
+          </p>
         </div>
 
         {/* Slide 2: Description */}
         <div className="h-[203px] mt-10 grid">
-          <h1 className="text-3xl flex flex-start">Our history</h1>
-          <p className="text-justify text-[14px]">
-UpliftAid
-Founded in 2024, UpliftAid emerged from a shared commitment to drive positive and lasting change. What began as a small initiative has grown into a dynamic organization focused on empowering communities, promoting equity, and addressing pressing social challenges with compassion and purpose
-          </p>
-
-        </div>
-
-        {/* Slide 3: Description */}
-        <div className="h-[203px] mt-10 grid">
           <h1 className="text-3xl flex flex-start">Our Philosophy</h1>
           <p className="text-justify text-[14px]">
-At Uplifted, we believe that change begins with empathy and grows through action. Every person, regardless of background, has the potential to thrive when given the right support.
-
-We work with communities—not for them—ensuring solutions are rooted in dignity, inclusion, and sustainability.
+            At Uplifted, we believe that change begins with empathy and grows
+            through action. Every person, regardless of background, has the
+            potential to thrive when given the right support. We work with
+            communities—not for them—ensuring solutions are rooted in dignity,
+            inclusion, and sustainability.
           </p>
           <p className="text-justify text-[14px]">
- Our philosophy is simple: listen deeply, act boldly, and stay accountable to the people we serve.
+            Our philosophy is simple: listen deeply, act boldly, and stay
+            accountable to the people we serve.
           </p>
         </div>
       </Carousel>
 
       {/* Sticky Dots Navigation */}
       <div className="flex justify-center gap-2 mt-6">
-        {[0, 1, 2].map((i) => (
+        {[0, 1].map((i) => (
           <RectangularDot
             key={i}
             active={currentSlide === i}

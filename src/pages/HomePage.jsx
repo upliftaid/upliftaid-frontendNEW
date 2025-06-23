@@ -1,21 +1,19 @@
 import Navbar from "../layout/Navbar";
 import SectionCarousel from "../components/SectionCarousel";
 import { NavLink } from "react-router-dom";
-import { FiRefreshCcw } from "react-icons/fi";
-import { TbSettingsCog } from "react-icons/tb";
-import { CgDropInvert } from "react-icons/cg";
 import PriceCard from "../components/PriceCard";
 import News from "../components/News";
 import Footer from "../layout/Footer";
 import Gallery from "../components/Gallery";
 import StatsCard from "../components/StatsCard";
-import MobileNavbar from "../layout/MobileNavBar";  
+import MobileNavbar from "../layout/MobileNavBar";
 import HeaderCarousel from "../components/HeaderCarousel";
 import AdditionalInfo from "../components/AdditionalInfo";
 import AboutUsCards from "../components/AboutUsCards";
+import EventsSlider from "../components/EventsSlider";
+import CausesSlider from "../components/CausesSlider";
 
 const HomePage = () => {
-
   return (
     <div className="">
       <Navbar />
@@ -37,12 +35,16 @@ const HomePage = () => {
           <div className="lg:w-[820px] lg:h-[124px] min-w-[250px] flex px-4 justify-center items-center gap-4">
             <div className="bg-[#00733C] w-2 h-70 md:h-30 lg:hidden block"></div>
             <p className="text-justify">
-Upliftaid is a nonprofit dedicated to protecting lives, empowering communities, and creating equal opportunities through action in child welfare, education, healthcare, environment, human rights, and more. We work to build a just, inclusive, and compassionate world for all.
+              Upliftaid is a nonprofit dedicated to protecting lives, empowering
+              communities, and creating equal opportunities through action in
+              child welfare, education, healthcare, environment, human rights,
+              and more. We work to build a just, inclusive, and compassionate
+              world for all.
             </p>
           </div>
         </div>
 
-        <AboutUsCards/>
+        <AboutUsCards />
 
         {/* who we are */}
 
@@ -62,100 +64,26 @@ Upliftaid is a nonprofit dedicated to protecting lives, empowering communities, 
           </div>
         </div>
 
-        <div className="lg:w-full bg-[#00733C] md:h-40 h-90 mt-2 flex lg:flex-row flex-col gap-4 items-center justify-evenly min-w-[320px]">
-          <h1 className="text-[32px] text-white hidden md:block">
-            Let’s Stop This Hunger and Fullfill Their Happiness!{" "}
-          </h1>
-          <div className="text-[32px] text-white flex flex-col items-center justify-center md:hidden">
-            <h1>LET'S STOP THIS</h1>
-            <h1>HUNGER AND</h1>
-            <h1>FULLFILL THEIR</h1>
-            <h1>HAPPINESS!</h1>
+        <div className="flex flex-col lg:flex-row lg:w-full mt-10 min-w-[320px] bg-[#f5f5f5]">
+          {/* left side */}
+          <div className="lg:w-[50%] h-[500px] bg-white">
+            <EventsSlider />
           </div>
-          <div className="bg-[#FFB204] hover:bg-[#E69F00] text-black rounded hover:text-white w-[192px] h-14  flex items-center justify-center text-[18px]">
-            <NavLink to="/" className="">
-              Donate Now!!
-            </NavLink>
+
+          {/* vertical divider on large screens */}
+          <div className="hidden lg:block w-[1px] bg-gray-300" />
+
+          {/* right side */}
+          <div className="lg:w-[50%] h-[500px] bg-[#f0f0f0]">
+            <CausesSlider />
           </div>
         </div>
+
+        {/* <CausesEventsSlider /> */}
 
         {/* Donate through mobile */}
 
-        <div className="lg:w-full flex flex-col lg:flex-row gap-20 mt-5 md:p-4 min-w-[320px]">
-          {/* left */}
-          <div className="md:w-[40%] lg:ml-40">
-            <div className="w-[280px] h-[454px] mx-auto md:flex md:items-center md:justify-center">
-              <img
-                src="https://zozothemes.com/html/the-charity/img/sections/iphone-img.png"
-                alt=""
-                className="w-full h-full"
-              />
-            </div>
-          </div>
-
-          {/* right */}
-          <div className="">
-            <div className="w-full grid p-6 gap-8">
-              <div className="grid">
-                <h1 className="text-[32px]">DONATE THROUGH MOBILE APP</h1>
-                <div className="bg-[#00733C] w-16 h-[2.5px]"></div>
-              </div>
-              <div className="lg:w-[840px] grid gap-4 text-[14px]">
-                <p className="text-justify">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum nec odio ipsum. Suspendisse cursus malesuada
-                  facilisis. Nunc consectetur odio sed dolor tincidunt
-                  porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada
-                  facilisis. Nunc consectetur odio sed dolor tincidunt porttitor
-                  consectetur adipiscing elit. Vestibulum nec odio ipsum.
-                  Suspendisse cursus malesuada facilisis. porttitor
-                  consecteturadipiscing elit. Vestibulum nec odio ipsum.
-                  Suspendisse cursus malesuada facilisis.
-                </p>
-                <p className="text-justify">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum nec odio ipsum. Suspendisse cursus malesuada
-                  facilisis. Nunc consectetur odio sed dolor tincidunt
-                  porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit.
-                </p>
-              </div>
-
-              <div className="grid lg:grid-cols-3 gap-8 mt-4">
-                <div className="grid gap-4">
-                  <div className="flex items-center gap-4">
-                    <FiRefreshCcw color="#00733C" size={20} />
-                    <p>Select</p>
-                  </div>
-                  <p className="text-[14px]">
-                    Lorem ipsum dolor sit, amet consectetur adipisic
-                  </p>
-                </div>
-
-                <div className="grid gap-4">
-                  <div className="flex items-center gap-4">
-                    <TbSettingsCog color="#00733C" size={20} />
-                    <p>Donate</p>
-                  </div>
-                  <p className="text-[14px]">
-                    Lorem ipsum dolor sit, amet consectetur adipisic
-                  </p>
-                </div>
-
-                <div className="grid gap-4">
-                  <div className="flex items-center gap-4">
-                    <CgDropInvert color="#00733C" size={20} />
-                    <p>Thanks</p>
-                  </div>
-                  <p className="text-[14px]">
-                    Lorem ipsum dolor sit, amet consectetur adipisic
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className=""></div>
 
         <StatsCard />
 
@@ -178,14 +106,10 @@ Upliftaid is a nonprofit dedicated to protecting lives, empowering communities, 
 
         <News />
 
-        <AdditionalInfo/>
-        
+        <AdditionalInfo />
       </section>
 
       <Footer />
-
-    
-
     </div>
   );
 };
