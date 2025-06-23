@@ -8,7 +8,7 @@ const Header = () => {
       ></div>
 
       {/* Content wrapper with overlay */}
-      <div className="relative bg-black/50 h-60 md:mt-10 lg:mt-0 flex justify-center text-white">
+      <div className="relative bg-black/50 h-60 flex justify-center text-white">
         <div className="pt-20 lg:px-40 md:px-16 px-5">
           <h1 className="font-semibold text-[42px]">Products</h1>
         </div>

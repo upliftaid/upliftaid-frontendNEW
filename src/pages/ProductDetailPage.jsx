@@ -3,6 +3,7 @@ import Footer from "../layout/Footer";
 import MobileNavbar from "../layout/MobileNavbar";
 import Navbar from "../layout/Navbar";
 import ProductDetails from "../constants/ProductDetails";
+import { NavLink } from "react-router-dom";
 
 const ProductDetailPage = () => {
   const images = [
@@ -66,7 +67,7 @@ const ProductDetailPage = () => {
         </div>
 
         {/* Right */}
-        <div className="border border-gray-200 lg:w-200 lg:h-150 p-6 grid gap-6">
+        <div className="border border-gray-200 lg:w-200 p-6 grid gap-6">
           {ProductDetails.map((data, index) => {
             const count = counts[index] || 0;
 
@@ -76,6 +77,9 @@ const ProductDetailPage = () => {
                 <p className="text-gray-500">Size: {data.size}</p>
                 <p>Stock: {data.stock}</p>
                 <p className="font-semibold">Price: ₹{data.price}</p>
+                <p className="">This soft, breathable t-shirt is made from premium cotton for all-day comfort. Its classic fit and durable stitching make it perfect for everyday wear. Stylish and versatile, it's ideal for casual outings, lounging, or layering in any season.</p>
+
+                <div className="flex gap-10">
 
                 {count === 0 ? (
                   <button
@@ -99,8 +103,21 @@ const ProductDetailPage = () => {
                     >
                       +
                     </button>
-                  </div>
+                    
+                  </div>  
                 )}
+                        <div className="hover:bg-[#E69F00] w-22 h-10 border border-[#FFB204] flex items-center justify-center rounded">
+          <NavLink
+            to="/cart"
+            className="text-black hover:text-white"
+          >
+            Buy Now
+          </NavLink>
+        </div>
+                </div>
+
+
+                
               </div>
             );
           })}

@@ -14,20 +14,16 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #00733C !important;
+  background-color: #00733c !important;
 }
 
 /* src/index.css */
 .hide-scrollbar {
-  scrollbar-width: none;         /* Firefox */
-  -ms-overflow-style: none;      /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
 
   /* WebKit (Chrome, Safari) */
 }
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
-
-
-
