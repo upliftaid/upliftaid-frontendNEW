@@ -1,6 +1,6 @@
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
-import MobileNavbar from "../layout/MobileNavbar";
+import MobileNavbar from "../layout/MobileNavBar";
 import Header from "../components/Header";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import HelpingMessage from "../components/HelpingMessage";
@@ -10,7 +10,7 @@ import GeneralQuestionsData2 from "../constants/GeneralQuestionsData2";
 
 const FAQPage = () => {
   return (
-    <div>
+    <div className="font-[Poppins]">
       <Navbar />
 
       <MobileNavbar />
@@ -19,8 +19,11 @@ const FAQPage = () => {
         {/* Header */}
         <Header />
 
-        <p className="text-center lg:w-[642px] lg:h-18 text-[14px] mx-auto px-1">
-Below are some frequently asked questions about UpliftAid and our programs. If you need personalized assistance or don’t find your question here, please visit our community forums. You can also review our Terms of Service and Support Policy for more information.
+        <p className="text-center lg:w-[642px] lg:h-18 text-[14px] mx-auto px-4">
+          Below are some frequently asked questions about UpliftAid and our
+          programs. If you need personalized assistance or don’t find your
+          question here, please visit our community forums. You can also review
+          our Terms of Service and Support Policy for more information.
         </p>
 
         <div className="w-full lg:px-24 flex flex-col md:flex-row gap-8 items-start">
