@@ -5,13 +5,14 @@ import "./App.css";
 import Footer from "../src/layout/Footer";
 import CareerPage from "./pages/Career";
 import Navbar from "./layout/Navbar";
+import Testimonials from "./pages/Testimonials";
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
       <Navbar/>
-      <CareerPage/>
+      <Testimonials/>
       <Footer/>
     </>
   );
