@@ -28,11 +28,11 @@ const navlinklist = [
 
 
   return (
-    <header className="bg-[#00733C] text-white w-full h-[70px] md:h-[140px] lg:h-[70px] md:flex md:flex-col lg:flex-row items-center justify-between px-30 fixed top-0 z-99 hidden">
+    <header className="bg-[#00733C] text-white w-full h-[70px] md:h-[140px] lg:h-[70px] lg:flex lg:flex-row items-center justify-between px-30 fixed top-0 z-99 hidden">
       <Link to='/' className="w-16 h-16">
-        <img src={logo} alt="" />
+        <img src={logo} alt="logo" />
       </Link>
-      <nav className="flex gap-8 md:mb-4 lg:mb-0 text-[14px] font-sans">
+      <nav className="flex gap-8 lg:mb-0 text-[14px] font-[Poppins]">
         {navlinklist.map((item, index) => (
           <div key={index + item.name} className="relative group items-center flex">
             <NavLink

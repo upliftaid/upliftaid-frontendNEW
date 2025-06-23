@@ -44,38 +44,37 @@ const CausesContent = () => {
   const currentDonations = donations.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="container mx-auto px-4 font-[Poppins]">
-      <div className="h-[115px] bg-[#f2f2f2] text-[54px] p-[30px] text-xl">
-        Causes
-      </div>
+    <div className="container py-10 md:px-20 font-[Poppins]">
 
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row gap-8">
         {/* Left - Donations */}
-        <div className="md:w-4/5 w-full p-4">
+        <div className="lg::w-4/5 w-full p-4">
           {status === "loading" && <p>Loading...</p>}
           {status === "failed" && <p className="text-red-500">{error}</p>}
           {status === "succeeded" &&
             currentDonations.map((donation) => (
               <div key={donation.id} className="flex flex-col md:flex-row mb-10 border-b border-dashed border-gray-300 pb-6">
-                <img
-                  src={donation.image}
-                  alt={donation.title}
-                  className="md:w-1/3 w-full rounded-lg object-cover"
-                />
-                <div className="md:ml-6 mt-4 md:mt-0">
-                  <h2 className="text-[33.28px] font-[Poppins] font-semibold">
+                <div className="min-w-[274px] min-h-[174px] lg:w-[320px] lg:h-[202px]">
+                  <img
+                    src={donation.image}
+                    alt={donation.title}
+                    className="w-full h-full rounded object-scale-down"
+                  />
+                </div>
+                <div className="md:ml-6 mt-4 md:mt-3">
+                  <h2 className="text-[26px]">
                     {donation.title}
                   </h2>
-                  <p className="text-[17.92px]">
+                  <p className="text-[14px]">
                     <strong>Raised:</strong> ${donation.raised} &nbsp;|&nbsp;
-                    <span className="text-[#00adef] font-semibold">
+                    <span className="text-[#FFCA4D] font-semibold">
                       Goal: ${donation.goal}
                     </span>
                   </p>
-                  <p className="mt-[10px] mb-[15px] h-auto text-[17.92px]">
+                  <p className="mt-[10px] mb-[15px] h-auto text-[14px]">
                     {donation.description}
                   </p>
-                  <button className="bg-[#00adef] h-[40px] text-white px-4 py-2 hover:bg-[#00adef] mt-2">
+                  <button className="h-[40px] text-black  hover:text-white px-4 py-2 hover:bg-[#E69F00] bg-[#FFB204] mt-2 cursor-pointer rounded">
                     Donate Now
                   </button>
                 </div>
@@ -101,7 +100,7 @@ const CausesContent = () => {
                     onClick={() => handleClick(pageNum)}
                     className={`px-4 py-2 border-l ${
                       currentPage === pageNum
-                        ? "bg-[#00adefcc] text-white"
+                        ? "bg-[#FFB204]"
                         : "bg-white text-black hover:bg-gray-100"
                     }`}
                   >
@@ -122,16 +121,16 @@ const CausesContent = () => {
         </div>
 
         {/* Right - Sidebar */}
-        <div className="hidden lg:block lg:w-1/5 mt-8 space-y-8">
+        <div className="px-10 md:px-0 lg:w-1/5 mt-8 space-y-8">
 
           {/* Categories */}
           <div>
-            <h3 className="text-[28px] font-[Poppins] font-bold mb-4">Category</h3>
+            <h3 className="text-[18px] font-[Poppins] font-bold mb-4">Category</h3>
             <ul className="space-y-2">
               {categories.map((cat) => (
                 <li
                   key={cat}
-                  className="text-[17.92px] h-[33px] text-[#7f7f7f] hover:text-black cursor-pointer"
+                  className="text-[14px] h-[33px] text-[#7f7f7f] hover:text-black cursor-pointer"
                 >
                   &rsaquo; {cat}
                 </li>
@@ -141,18 +140,20 @@ const CausesContent = () => {
 
           {/* Latest Causes */}
           <div className="w-full p-4 bg-white shadow-sm rounded">
-            <h2 className="text-2xl font-bold mb-4">Latest Causes</h2>
+            <h2 className="text-[18px] font-bold mb-4">Latest Causes</h2>
             <div className="space-y-4">
               {causes.map((cause) => (
                 <div key={cause.id} className="flex items-center space-x-4">
-                  <img
-                    src={cause.image}
-                    alt="Cause"
-                    className="w-16 h-16 rounded-md object-cover"
-                  />
+                  <div className="w-[200px] h-[100px]">
+                    <img
+                      src={cause.image}
+                      alt="Cause"
+                      className="w-full h-full rounded object-scale-down"
+                    />
+                  </div>
                   <div>
-                    <p className="text-gray-700 text-sm">{cause.text}</p>
-                    <div className="flex items-center text-sm text-blue-500 mt-1">
+                    <p className="text-gray-700 text-[14px]">{cause.text}</p>
+                    <div className="flex items-center text-[14px] text-[#FFB204] mt-1">
                       <CalendarDays size={16} className="mr-1" />
                       <span>{cause.date}</span>
                     </div>
@@ -199,7 +200,7 @@ const CausesContent = () => {
               {tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="px-2 py-1 bg-[#00adefcc] text-white rounded text-xs"
+                  className="px-2 py-1 bg-[#FFB204] rounded text-xs"
                 >
                   {tag}
                 </span>
