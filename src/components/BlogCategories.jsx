@@ -1,7 +1,3 @@
-import React from "react";
-// eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
-
 export default function BlogCategories() {
   const categories = [
     "Awareness",
@@ -15,11 +11,7 @@ export default function BlogCategories() {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.3, delay: 0.5 }}
-    >
+    <div>
       <h2 className="text-xl font-bold mb-4">Blog Categories</h2>
       <ul className="text-gray-700 text-base cursor-pointer space-y-2 py-4">
         {categories.map((category, index) => (
@@ -28,6 +20,6 @@ export default function BlogCategories() {
           </li>
         ))}
       </ul>
-    </motion.div>
+    </div>
   );
 }

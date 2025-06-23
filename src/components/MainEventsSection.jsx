@@ -1,5 +1,3 @@
-import React from "react";
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaRegCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 
@@ -48,7 +46,7 @@ export default function MainEventsSection({
             <img
               src={event.image}
               alt={event.title}
-              className="md:w-[270px] md:h-[170px] sm:w-full object-cover rounded"
+              className="md:w-[270px] md:h-[170px] sm:w-full object-cover"
             />
             <h2
               className="text-2xl font-semibold cursor-pointer hover:text-[#FFB204] mt-4 mb-2"

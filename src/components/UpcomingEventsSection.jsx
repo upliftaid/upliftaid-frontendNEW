@@ -1,15 +1,8 @@
-import React from "react";
-// eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
 import { FaRegCalendarAlt } from "react-icons/fa";
 
 export default function UpcomingEventsSection({ upcomingEvents }) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.3, delay: 0.5 }}
-    >
+    <div>
       <h2 className="text-xl pb-4 font-bold">Upcoming Events</h2>
       {upcomingEvents.map((event, index) => (
         <div className="flex gap-2 py-2" key={index}>
@@ -26,6 +19,6 @@ export default function UpcomingEventsSection({ upcomingEvents }) {
           </div>
         </div>
       ))}
-    </motion.div>
+    </div>
   );
 }

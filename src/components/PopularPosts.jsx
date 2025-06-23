@@ -1,16 +1,9 @@
-import React from "react";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import popular from "../constants/popularPost";
-// eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
 
 export default function PopularPosts() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.3, delay: 0.5 }}
-    >
+    <div>
       <h2 className="text-xl font-bold pb-4">Popular Posts</h2>
       <div className="flex flex-col gap-4">
         {popular.map((popular, index) => (
@@ -30,6 +23,6 @@ export default function PopularPosts() {
           </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }
