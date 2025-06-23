@@ -1,16 +1,15 @@
 import React from 'react'
 import Navbar from '../layout/Navbar'
 import BlogSection from '../components/BlogSection'
-import LogoStrip from '../components/LogoStrip'
 import Footer from '../layout/Footer'
-import Topbar from '../layout/Topbar'
 import Pagination from '../components/Pagination'
+import MobileNavbar from '../layout/MobileNavBar'
 
 function Blog() {
   return (
-    <div>
- <Topbar />
+    <div className='font-[Poppins]'>
       <Navbar />
+      <MobileNavbar/>
       <BlogSection />
       <Pagination />
       <Footer />
