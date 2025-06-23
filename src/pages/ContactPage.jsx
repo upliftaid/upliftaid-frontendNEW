@@ -7,7 +7,7 @@ import ContactInfo from "../components/ContactInfo";
 
 const ContactPage = () => {
   return (
-    <div>
+    <div className="font-[Poppins]">
       <Navbar />
       <MobileNavbar />
 
