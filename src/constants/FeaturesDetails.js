@@ -58,25 +58,25 @@ const FeaturesDetails = [
     description:
       "We promote mental well-being through education, counseling, and community-based support services.",
   },
-    {
+  {
     icon: CgDropInvert,
     heading: "Animal Welfare and Rescue",
     description:
       "We protect animals from abuse, provide rescue services, and promote humane treatment for all living beings.",
   },
-    {
+  {
     icon: CgDropInvert,
     heading: "Anti-Trafficking and Human Rights Protection",
     description:
       "We fight against trafficking and advocate for the rights and freedom of all individuals.",
   },
-    {
+  {
     icon: CgDropInvert,
     heading: "Clean Water and Sanitation Initiatives",
     description:
       "We bring safe drinking water and sanitation facilities to improve health and dignity in underserved areas.",
   },
-      {
+  {
     icon: CgDropInvert,
     heading: "Support for People with Disabilities",
     description:

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import WhyChooseUsDescriptionDetails from "../constants/WhyChooseUsDescriptionDetails";
 
 const WhyChooseUsDescription = () => {
-  const [openIndex, setOpenIndex] = useState(null); // Track open index
+  const [openIndex, setOpenIndex] = useState(0); // Track open index
 
   const toggleIndex = (index) => {
     setOpenIndex(openIndex === index ? null : index);

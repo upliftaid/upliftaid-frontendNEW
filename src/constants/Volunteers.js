@@ -6,10 +6,6 @@ const VolunteersDetails = [
     post: "Senior Worker",
     description:
       "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those intereste.",
-    faceBookUrl: "/",
-    linkedinUrl: "/",
-    googleUrl: "/",
-    twitterUrl: "/",
   },
   {
     image:
@@ -30,10 +26,6 @@ const VolunteersDetails = [
     post: "Senior Worker",
     description:
       "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those intereste.",
-    faceBookUrl: "/",
-    linkedinUrl: "/",
-    googleUrl: "/",
-    twitterUrl: "/",
   },
   {
     image:
@@ -42,10 +34,6 @@ const VolunteersDetails = [
     post: "Senior Worker",
     description:
       "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those intereste.",
-    faceBookUrl: "/",
-    linkedinUrl: "/",
-    googleUrl: "/",
-    twitterUrl: "/",
   },
 ];
 

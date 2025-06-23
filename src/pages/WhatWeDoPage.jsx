@@ -8,7 +8,7 @@ import ProgressBars from "../components/ProgressBars";
 import WhyChooseUsDescription from "../components/WhyChooseUsDescription";
 import Testimonals from "../components/Testimonals";
 import Volunteers from "../components/Volunteers";
-import HelpingMessage from '../components/HelpingMessage'
+import HelpingMessage from "../components/HelpingMessage";
 
 const WhatWeDoPage = () => {
   return (
