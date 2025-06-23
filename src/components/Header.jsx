@@ -12,17 +12,7 @@ const Header = () => {
       {/* Content wrapper with overlay */}
       <div className="relative bg-white/10 h-60 md:mt-10 lg:mt-0">
         <div className="pt-20 lg:px-40 md:px-16 px-5">
-          <h1 className="font-semibold text-[42px]">Contact Us</h1>
-          <nav className="flex gap-4">
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive ? "text-[#FFB204]" : "text-gray-700"
-              }
-            >
-              Contact Us
-            </NavLink>
-          </nav>
+          <h1 className="font-semibold text-[42px]">Contact Us</h1>{" "}
         </div>
       </div>
     </div>
