@@ -2,13 +2,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import TestimonalsDetails from "../constants/TestimonialsDetails";
+import TestimonalsDetails from "../constants/TestimonalsDetails";
 
 const Testimonials = () => {
   return (
     <div className="relative mt-10 min-w-[320px] h-[500px]">
       {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full bg-[url('')] bg-cover lg:bg-fixed -z-10"></div>
+      <div className="absolute inset-0 w-full h-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/bg-12.jpg')] bg-cover lg:bg-fixed -z-10"></div>
 
       {/* Overlay and Content */}
       <div className="relative bg-black/70 h-full p-4 mx-auto md:py-16 md:px-8 ">

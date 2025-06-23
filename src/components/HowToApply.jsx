@@ -15,7 +15,7 @@ export default function HowToApply() {
         <h1 className="text-white text-3xl font-bold relative inline-block after:content-[''] after:block after:h-[3px] after:bg-[#FFB204] after:w-1/6 after:mx-auto after:mt-4">
           HOW TO APPLY
         </h1>
-        <div className="flex md:flex-row flex-col gap-5 text-white">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-5 md:gap-20  text-white">
           <div className={centerList}>
             <FaUser color="#FFB204" className="h-12 w-10" />
             <span className="text-2xl font-medium">Registration</span>

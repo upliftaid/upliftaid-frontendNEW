@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import Navbar from "../components/Navbar";
-import MobileNavBar from "../components/MobileNavBar";
-import Footer from "../components/Footer";
-import VolunteerTopSection from "../layout/VolunteerTopSection";
-import BecomeAVolunteer from "../layout/BecomeAVolunteer";
-import HowToApply from "../layout/HowToApply";
-import Teams from "../layout/Teams";
+import Navbar from "../layout/Navbar";
+import MobileNavBar from "../layout/MobileNavBar";
+import Footer from "../layout/Footer";
+import VolunteerTopSection from "../components/VolunteerTopSection";
+import BecomeAVolunteer from "../components/BecomeAVolunteer";
+import HowToApply from "../components/HowToApply";
 import Testimonials from "../components/Testimonals";
 import { owlItems } from "../constants/OwlItems";
+import Teams from "../components/Teams";
 
 export default function BeAVolunteer() {
   const scrollRef = useRef(null);
@@ -43,15 +43,14 @@ export default function BeAVolunteer() {
   }, [isHovered]);
 
   return (
-    <div className="w-full min-h-screen overflow-hidden flex flex-col">
+    <div className="w-full min-h-screen overflow-hidden flex flex-col font-[Poppins]">
       <Navbar />
       <MobileNavBar />
-      <section className="flex-1 bg-fixed bg-no-repeat bg-contain bg-[url(https://zozothemes.com/html/the-charity/img/sections/bg/about-header-bg.jpg)] pt-[70px]">
         <VolunteerTopSection />
-        <main className="flex flex-col bg-white w-full gap-4">
+        <main className="flex flex-col w-full gap-4">
           <BecomeAVolunteer />
           <HowToApply />
-          {/* <Teams /> */}
+          <Teams/>
           <Testimonials />
           <div
             ref={scrollRef}
@@ -64,7 +63,6 @@ export default function BeAVolunteer() {
             ))}
           </div>
         </main>
-      </section>
       <Footer />
     </div>
   );
