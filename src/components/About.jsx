@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-
 const Header = () => {
   return (
     <div className="relative lg:w-full mt-10 min-w-[320px]">

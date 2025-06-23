@@ -48,13 +48,13 @@ const Testimonials = () => {
                     </p>
                   </div>
                   <div className="ml-6">
-                      <h1 className="text-[12px] text-[#00733C] font-bold">
-                        {data.name}
-                      </h1>
-                      <p className="text-[12px] italic text-[#7F7F7F]">
-                        {data.post}
-                      </p>
-                    </div>
+                    <h1 className="text-[12px] text-[#00733C] font-bold">
+                      {data.name}
+                    </h1>
+                    <p className="text-[12px] italic text-[#7F7F7F]">
+                      {data.post}
+                    </p>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
