@@ -1,20 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import Footer from "../src/layout/Footer";
-import CareerPage from "./pages/Career";
-import Navbar from "./layout/Navbar";
-import Testimonials from "./pages/Testimonials";
-function App() {
-  const [count, setCount] = useState(0);
+import React from "react";
+import AuthPage from "./pages/AuthPage";
+import "./index.css";
 
+function App() {
   return (
-    <>
-      <Navbar/>
-      <Testimonials/>
-      <Footer/>
-    </>
+    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-tr from-[#00733C] via-white to-[#00b894] overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#ffffff33_1px,transparent_1px)] bg-[size:20px_20px] z-0"></div>
+      <AuthPage />
+    </div>
   );
 }
 
