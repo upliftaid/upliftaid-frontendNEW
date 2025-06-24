@@ -3,7 +3,7 @@ const Header = () => {
     <div className="relative lg:w-full mt-10 min-w-[320px] h-80">
       {/* Fixed background image */}
       <div
-        className="absolute inset-0 h-full w-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/about-header-bg.jpg')] bg-fixed -z-10 bg-top md:bg-top-right"
+        className="absolute inset-0 h-full w-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/about-header-bg.jpg')] bg-fixed -z-10 bg-top md:bg-top-right lg:bg-top"
         aria-hidden="true"
       ></div>
 
