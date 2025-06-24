@@ -34,7 +34,7 @@ const Testimonials = () => {
           >
             {TestimonalsDetails.map((data, index) => (
               <SwiperSlide key={index} className="flex justify-center">
-                <div className="max-h-[350px] min-w-[250px] md:w-[300px] lg:w-[380px] lg:h-[250px] bg-[#F7F7F7] relative rounded-sm lg:px-15 lg:py-6 p-8 mx-10 ">
+                <div className="max-h-[350px] min-w-[250px] bg-[#F7F7F7] relative rounded-sm lg:px-15 lg:py-6 p-8 mx-10 ">
                   <div className="w-18 h-18 rounded-full bg-white absolute top-63 md:top-42 lg:top-40 -left-10">
                     <img
                       src={data.image}
