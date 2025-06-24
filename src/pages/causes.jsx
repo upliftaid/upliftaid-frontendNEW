@@ -14,7 +14,7 @@ const Causes = () => {
       <MobileNavbar/>
 
       {/* Header */}
-      <div className="h-[115px] bg-[#f2f2f2] mt-18 px-10 lg:px-28 py-5 text-[42px]">
+      <div className="h-[115px] bg-[#f2f2f2] mt-18 px-10 lg:px-28 py-5 text-[42px] text-center">
         Causes
       </div>
 
