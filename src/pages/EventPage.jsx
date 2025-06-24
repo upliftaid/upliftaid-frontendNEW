@@ -28,11 +28,11 @@ export default function EventPage() {
       <Navbar />
       <MobileNavBar />
       <section className="flex-1 overflow-auto pt-[70px] bg-white mb-12">
-        <div className="text-[42px] lg:px-10 px-5 py-5 bg-[#F2F2F2]">
-          <h1>Events</h1>
+        <div className="text-[42px] bg-[#F2F2F2] p-8">
+          <h1 className="text-center">Events</h1>
         </div>
-        <div className="">
-          <div className="grid w-full sm:px-8 px-2 py-20  gap-4">
+        <div className="flex flex-col lg:flex-row lg:px-20 lg:gap-10">
+          <div className="grid w-full sm:px-8 px-2 py-20 gap-4">
             {!selectedEvent ? (
               <MainEventsSection
                 activeTab={activeTab}
@@ -48,7 +48,7 @@ export default function EventPage() {
               />
             )}
           </div>
-            <aside className="flex-1/5 flex flex-col gap-10 px-5">
+            <aside className="flex flex-1/4 flex-col gap-10 px-5 pb-5 lg:py-20">
               <UpcomingEventsSection upcomingEvents={upcomingEvents} />
               <BlogCategories />
               <PopularPosts />
