@@ -26,7 +26,7 @@ const GeneralQuestions = ({ accordinData }) => {
           {openIndex === index && (
             <>
               <div className="w-full h-[1px] bg-gray-100 mt-2 mb-2" />
-              <p className="text-[14px] mt-1">{item.description}</p>
+              <p className="text-[14px] mt-1 p-2">{item.description}</p>
             </>
           )}
         </div>
