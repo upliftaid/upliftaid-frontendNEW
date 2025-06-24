@@ -59,7 +59,7 @@ const HomePage = () => {
             <img
               src="https://zozothemes.com/html/the-charity/img/sections/bg/full-img17.jpg"
               alt=""
-              className="w-full h-full"
+              className="w-full h-full md:object-cover"
             />
           </div>
         </div>
