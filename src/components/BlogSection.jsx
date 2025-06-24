@@ -28,7 +28,7 @@ const BlogSection = ({ totalPages = 4 }) => {
 
   return (
     <div>
-  <div className="bg-[#f2f2f2] text-[32px] md:text-[42px] lg:px-22 py-5 mt-18 px-5">Blog</div>
+  <div className="bg-[#f2f2f2] text-[32px] md:text-[42px] lg:px-22 py-5 mt-18 px-5 text-center">Blog</div>
 
   <div className="flex flex-col lg:flex-row lg:px-20">
     {/* Blog Posts */}
