@@ -1,16 +1,16 @@
 const Header = () => {
   return (
-    <div className="relative lg:w-full mt-10 min-w-[320px]">
+    <div className="relative lg:w-full mt-10 min-w-[320px] h-80">
       {/* Fixed background image */}
       <div
-        className="absolute inset-0 h-full w-full bg-[url('https://thumbs.dreamstime.com/b/diverse-poor-people-getting-food-donation-non-profit-organization-center-group-aid-team-volunteers-giving-multiethnic-371077933.jpg')] bg-fixed bg-cover -z-10 bg-center object-scale-down"
+        className="absolute inset-0 h-full w-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/about-header-bg.jpg')] bg-fixed -z-10 bg-top md:bg-top-right lg:bg-top"
         aria-hidden="true"
       ></div>
 
       {/* Content wrapper with overlay */}
-      <div className="relative bg-black/50 h-60 flex justify-center text-white">
-        <div className="pt-20 lg:px-40 md:px-16 px-5">
-          <h1 className="font-semibold text-[42px]">Products</h1>
+      <div className="relative bg-white/10 h-80 flex justify-center">
+        <div className="pt-35 lg:px-40 md:px-16 px-5">
+          <h1 className="font-semibold md:text-[42px] text-[32px]">Product Page</h1>
         </div>
       </div>
     </div>

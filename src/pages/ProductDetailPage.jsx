@@ -4,6 +4,7 @@ import MobileNavbar from "../layout/MobileNavbar";
 import Navbar from "../layout/Navbar";
 import ProductDetails from "../constants/ProductDetails";
 import { NavLink } from "react-router-dom";
+import UserReviews from "../components/UserReviews";
 
 const ProductDetailPage = () => {
   const images = [
@@ -38,7 +39,7 @@ const ProductDetailPage = () => {
     <>
       <Navbar />
       <MobileNavbar />
-      <div className="lg:p-10 p-2 flex gap-10 mt-15 md:mt-40 lg:mt-15 flex-col lg:flex-row">
+      <div className="lg:p-10 flex gap-10 mt-15 md:mt-20 lg:mt-15 flex-col lg:flex-row">
         {/* Left */}
         <div className="grid gap-5">
           <div className="lg:w-180 h-130 border border-gray-200">
@@ -156,6 +157,7 @@ const ProductDetailPage = () => {
           </div>
         </div>
       </div>
+      <UserReviews/>
       <Footer />
     </>
   );
