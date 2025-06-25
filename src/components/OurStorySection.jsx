@@ -34,7 +34,7 @@ const AboutUsSection = () => {
             animateRight ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <h2 className="text-2xl sm:text-3xl font-serif text-black mb-4">
+          <h2 className="text-2xl sm:text-3xl text-black mb-4">
             VIDEO ABOUT OUR STORY
           </h2>
           <div className="w-10 h-1 bg-[#00AEEF] mb-6"></div>
