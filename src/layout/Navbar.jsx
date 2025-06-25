@@ -1,10 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
-<<<<<<< HEAD
 import logo from "../assets/images/logo.png";
 import { FaCartShopping } from "react-icons/fa6";
-=======
-import logo from "../assets/logo1-removebg-preview.png";
->>>>>>> cc5a1f8c3d79876005356312bb340e81c001945b
 
 const Navbar = () => {
 const navlinklist = [
@@ -26,28 +22,17 @@ const navlinklist = [
   { name: "Portfolio", url: "/portfolio" },
   { name: "Blog", url: "/blog" },
   { name: "Contact", url: "/contact" },
-<<<<<<< HEAD
   { name: "Products", url: "/product" },
   { name: "Career", url: "/career" },
-=======
->>>>>>> cc5a1f8c3d79876005356312bb340e81c001945b
 ];
 
 
   return (
-<<<<<<< HEAD
     <header className="bg-[#00733C] text-white w-full h-[70px] md:h-[140px] lg:h-[70px] lg:flex lg:flex-row items-center justify-between px-30 fixed top-0 z-99 hidden">
       <Link to='/' className="w-16 h-16">
         <img src={logo} alt="logo" />
       </Link>
       <nav className="flex gap-8 lg:mb-0 text-[14px] font-[Poppins]">
-=======
-    <header className="bg-[#00733C] text-white w-full h-[70px] md:h-[140px] lg:h-[70px] md:flex md:flex-col lg:flex-row items-center justify-between px-40 fixed top-0 z-99 hidden">
-      <Link to='/' className="w-16 h-16">
-        <img src={logo} alt="" />
-      </Link>
-      <nav className="flex gap-8 md:mb-4 lg:mb-0 text-[14px] font-sans">
->>>>>>> cc5a1f8c3d79876005356312bb340e81c001945b
         {navlinklist.map((item, index) => (
           <div key={index + item.name} className="relative group items-center flex">
             <NavLink
@@ -73,24 +58,16 @@ const navlinklist = [
             )}
           </div>
         ))}
-<<<<<<< HEAD
         <div className="hover:bg-[#E69F00] w-14 h-10 bg-[#FFB204] flex items-center justify-center rounded">
           <NavLink to="/cart" className="text-black hover:text-white font-semibold animate-bounce transition-ease-3000">
             <FaCartShopping size={30}/>
           </NavLink>
         </div>
         <div className="hover:bg-[#E69F00] w-19 h-10 bg-[#FFB204] flex items-center justify-center rounded">
-          <NavLink to="/" className="text-black hover:text-white font-semibold">
+          <NavLink to="/contact" className="text-black hover:text-white font-semibold">
             Donate
           </NavLink>
         </div>
-=======
-        <div className="hover:bg-[#E69F00] w-19 h-10 bg-[#FFB204] flex items-center justify-center rounded">
-          <NavLink to="/" className="text-black hover:text-white font-semibold">
-            Donate
-          </NavLink>
-        </div>
->>>>>>> cc5a1f8c3d79876005356312bb340e81c001945b
       </nav>
     </header>
   );
