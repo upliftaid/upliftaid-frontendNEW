@@ -5,7 +5,7 @@ import apply from '../assets/images/puzzle.png'
 
 const JoinTeamPage = () => {
   return (
-    <div className="font-sans">
+    <div className="font-[Poppins]">
       {/* Hero Section */}
       <div
         className="h-[400px] bg-cover bg-center flex items-center justify-center text-white text-4xl font-bold"
