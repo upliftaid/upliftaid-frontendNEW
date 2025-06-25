@@ -1,4 +1,4 @@
-const Header = () => {
+const OurStory = () => {
   return (
     <div className="relative lg:w-full mt-10 min-w-[320px] h-80">
       {/* Fixed background image */}
@@ -17,4 +17,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default OurStory;
