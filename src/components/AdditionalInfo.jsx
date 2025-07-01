@@ -26,9 +26,9 @@ const AdditionalInfo = () => {
         <div className="relative">
           <div className="flex w-full flex-col md:flex-row">
             {/* left side */}
-            <div className="md:w-[50%] md:h-[645px] lg:h-[500px] bg-[#e1e1e1]/20">
+            <div className="md:w-[50%] md:h-[645px] lg:h-[500px] bg-[#e1e1e1]/20 h-[300px]">
               <div
-                className="flex flex-col justify-center items-center mt-50 text-[#00733C]"
+                className="flex flex-col justify-center items-center md:mt-50 mt-25 text-[#00733C]"
                 onClick={() => setPlay(true)}
               >
                 {play ? (

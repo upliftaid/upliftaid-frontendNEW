@@ -48,7 +48,7 @@ const SectionCarousel = () => {
         onChange={(index) => setCurrentSlide(index)}
       >
         {/* Slide 1: Description */}
-        <div className="h-[203px] mt-10 grid">
+        <div className="mt-10 grid gap-3">
           <h1 className="text-3xl flex flex-start">Our history</h1>
           <p className="text-justify text-[14px]">
             UpliftAid Founded in 2024, UpliftAid emerged from a shared
@@ -60,7 +60,7 @@ const SectionCarousel = () => {
         </div>
 
         {/* Slide 2: Description */}
-        <div className="h-[203px] mt-10 grid">
+        <div className="mt-10 grid gap-3">
           <h1 className="text-3xl flex flex-start">Our Philosophy</h1>
           <p className="text-justify text-[14px]">
             At Uplifted, we believe that change begins with empathy and grows

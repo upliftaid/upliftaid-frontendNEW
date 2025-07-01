@@ -50,12 +50,12 @@ const HomePage = () => {
 
         <div className="flex flex-col lg:flex-row lg:w-full mt-10 min-w-[320px]">
           {/* left side */}
-          <div className="lg:w-[50%] h-[500px] bg-[#e1e1e1]/40">
+          <div className="lg:w-[50%] bg-[#e1e1e1]/40">
             <SectionCarousel />
           </div>
 
           {/* right side */}
-          <div className="lg:w-[50%] h-[500px]">
+          <div className="lg:w-[50%]">
             <img
               src="https://zozothemes.com/html/the-charity/img/sections/bg/full-img17.jpg"
               alt=""
