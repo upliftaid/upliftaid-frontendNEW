@@ -11,7 +11,7 @@ const ProductCart = () => {
 
       {/* Hero Section */}
       <section>
-        <div className="grid w-full lg:h-140 lg:grid-cols-[60%_40%] lg:mt-17 p-2 gap-2 md:mt-35 mt-15">
+        <div className="grid w-full lg:h-140 lg:grid-cols-[60%_40%] lg:mt-17 p-2 gap-2 md:mt-18 mt-15">
           {/* Left: Cart Summary */}
           <div className="p-4 h-[70vh] md:h-140 overflow-y-auto shadow-md hide-scrollbar">
             <p className="font-semibold text-lg mb-2">Cart Summary</p>
