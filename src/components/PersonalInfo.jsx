@@ -57,6 +57,8 @@ const PersonalInfo = () => {
         <div className="grid md:grid-cols-2 gap-x-10 gap-y-4">
           <InputField id="profession" label="Profession" placeholder="Software Engineer" disabled={!isEditing} />
           <InputField id="interest" label="Interest" placeholder="Volunteering, Reading" disabled={!isEditing} />
+          <InputField id="instagram" label="Instagram" placeholder="https://www.instagram.com/" disabled={!isEditing} />
+          <InputField id="linkedin" label="Linkedin" placeholder="https://www.linkedin.com/" disabled={!isEditing} />
         </div>
 
         {/* Save & Cancel */}

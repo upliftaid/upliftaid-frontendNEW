@@ -11,39 +11,39 @@ const Activity = () => {
             {/* Contribution */}
             <div className="grid gap-4">
                 <h1 className="font-semibold text-xl md:text-2xl">Your Contributions</h1>
-                <div className="grid grid-cols-4 gap-10">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10">
 
-                    <div className="flex bg-blue-500 w-64 px-4 py-2 items-center text-white justify-between rounded">
+                    <div className="flex bg-blue-500 md:w-64 px-4 py-2 items-center text-white justify-between rounded">
                         <div>
-                            <p className="text-gray-200 text-lg">Total Donations</p>
-                            <p className="font-bold text-xl">₹2450 </p>
+                            <p className="text-gray-200 lg:text-lg">Total Donations</p>
+                            <p className="font-bold md:text-xl text-[14px]">₹2450 </p>
                         </div>
                         <div>
                             <CiHeart size={25}/>
                         </div>
                     </div>
-                    <div className="flex bg-green-500 w-64 px-4 py-2 items-center text-white justify-between rounded">
+                    <div className="flex bg-green-500 md:w-64 px-4 py-2 items-center text-white justify-between rounded">
                         <div>
-                            <p className="text-gray-200 text-lg">Volunteers Hours</p>
-                            <p className="font-bold text-xl">124</p>
+                            <p className="text-gray-200 lg:text-lg">Volunteers Hours</p>
+                            <p className="font-bold md:text-xl text-[14px]">124</p>
                         </div>
                         <div>
                             <FaClock size={25}/>
                         </div>
                     </div>
-                    <div className="flex bg-red-600 w-64 px-4 py-2 items-center text-white justify-between rounded">
+                    <div className="flex bg-red-600 md:w-64 px-4 py-2 items-center text-white justify-between rounded">
                         <div>
-                            <p className="text-gray-200 text-lg">Events Attend</p>
-                            <p className="font-bold text-xl">8</p>
+                            <p className="text-gray-200 md:text-lg">Events Attend</p>
+                            <p className="font-bold md:text-xl text-[14px]">8</p>
                         </div>
                         <div>
                             <FaCalendar size={25}/>
                         </div>
                     </div>
-                    <div className="flex bg-yellow-500 w-64 px-4 py-2 items-center text-white justify-between rounded">
+                    <div className="flex bg-yellow-500 md:w-64 px-4 py-2 items-center text-white justify-between rounded">
                         <div>
-                            <p className="text-gray-200 text-lg">Total Donations</p>
-                            <p className="font-bold text-xl">₹2450 </p>
+                            <p className="text-gray-200 md:text-lg">Total Donations</p>
+                            <p className="font-bold md:text-xl text-[14px]">₹2450 </p>
                         </div>
                         <div>
                             <CiHeart size={40}/>
