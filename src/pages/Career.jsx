@@ -18,7 +18,7 @@ const JoinTeamPage = () => {
 
       {/* Our Culture */}
        <div className="py-16 px-8 md:px-20 bg-white">
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="grid lg:grid-cols-2 place-items-center">
           <img
             src={apply}
             alt="culture"
