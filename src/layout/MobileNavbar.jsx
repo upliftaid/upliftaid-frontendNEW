@@ -19,6 +19,7 @@ const MobileNavbar = () => {
     { url: "/contact", name: "Contact" },
     { name: "Products", url: "/product" },
     { name: "Career", url: "/career" },
+    { name: "Profile", url:"/profile" }
   ];
 
   const submenuLinks = [

@@ -109,7 +109,7 @@ const WhoWeAre = () => {
       {tabs[activeTab].contentType === "whyChooseUs" && (
         <div className="flex flex-col md:flex-row lg:w-full lg:mt-10 min-w-[320px] text-start">
           {/* Left: Why Choose Us */}
-          <div className="md:w-[50%] md:h-[500px] p-4 md:p-12 lg:px-25">
+          <div className="md:w-[50%] md:h-[500px] md:p-12 lg:px-25">
             <div className="grid gap-1 mt-4">
               <h1 className="text-[28px]">Why Choose Us</h1>
               <div className="bg-[#00733C] w-16 h-[2.5px]" />
@@ -123,7 +123,7 @@ const WhoWeAre = () => {
                   >
                     {data.heading}
                   </h1>
-                  <div className="w-[90%] h-[0.5px] bg-[#e9e7e7]" />
+                  <div className="w-[80%] h-[0.5px] bg-[#e9e7e7]" />
                   <AnimatePresence>
                     {openIndex === index && (
                       <motion.p
@@ -131,7 +131,7 @@ const WhoWeAre = () => {
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -10, opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="text-[14px] mt-2"
+                        className="text-[14px] mt-2 text-justify w-[280px] sm:min-w-[280px] md:w-full"
                       >
                         {data.description}
                       </motion.p>
@@ -144,12 +144,12 @@ const WhoWeAre = () => {
 
           {/* Right: Fundraisers */}
           <div className="md:w-[50%] md:h-[500px] md:py-5">
-            <div className="p-6 md:px-16">
+            <div className="md:px-16">
               <div className="grid gap-1 mt-4">
                 <h1 className="text-[28px]">Our Fundraisers</h1>
                 <div className="bg-[#00733C] w-16 h-[2.5px]" />
               </div>
-              <div>
+              <div className="w-[280px] sm:min-w-[280px] lg:w-full">
                 <ProgressBars />
               </div>
             </div>

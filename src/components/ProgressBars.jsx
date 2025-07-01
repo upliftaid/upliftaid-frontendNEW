@@ -26,7 +26,7 @@ const ProgressBars = () => {
       {ProgressBarDetail.map((bar, index) => {
         return (
           <div
-            className="lg:w-[90%] min-w-68 lg:mx-auto mt-4"
+            className="lg:w-[90%] min-w-48 lg:mx-auto mt-4"
             key={index + bar.label}
           >
             <div className="flex">
