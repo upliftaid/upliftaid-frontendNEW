@@ -19,7 +19,7 @@ const TestimonalsDetails = [
     image:
       "https://zozothemes.com/html/the-charity/img/sections/testimonials/3.jpg",
     description:
-      "We never expected such transformation. Upliftaid’s collaborative approach helped us overcome major obstacles. Their compassion, cultural sensitivity, and focus on sustainability left a lasting impact we’ll carry forward with pride.",
+      "We never expected such transformation. Upliftaid’s approach helped us overcome major obstacles. Their compassion, cultural, and focus on sustainability left a lasting impact we’ll.",
     name: "Lina Chen",
     post: "Animal Welfare Volunteer",
   },
