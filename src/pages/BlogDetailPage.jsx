@@ -9,7 +9,7 @@ import ArchivesDate from "../components/ArchivesDate";
 import TagsSection from "../components/TagsSection";
 import BlogDetail from "../components/BlogDetails";
 
-export default function EventPage() {
+export default function BlogDetailPage() {
 
   // Filter upcoming events for sidebar
   const upcomingEvents = events.filter((event) => event.status === "Upcoming");
