@@ -7,9 +7,9 @@ import BlogCategories from "../components/BlogCategories";
 import PopularPosts from "../components/PopularPosts";
 import ArchivesDate from "../components/ArchivesDate";
 import TagsSection from "../components/TagsSection";
-import BlogDetail from "../components/BlogDetails";
+import CauseDetail from "../components/CauseDetails";
 
-export default function EventPage() {
+export default function CauseDetailPage() {
 
   // Filter upcoming events for sidebar
   const upcomingEvents = events.filter((event) => event.status === "Upcoming");
@@ -22,10 +22,10 @@ export default function EventPage() {
       <MobileNavBar />
       <section className="flex-1 overflow-auto pt-[70px] bg-white mb-12">
         <div className="text-[42px] bg-[#F2F2F2] p-8">
-          <h1 className="text-center">Blog</h1>
+          <h1 className="text-center">Cause</h1>
         </div>
         <div className="flex flex-col lg:flex-row lg:px-20 lg:gap-10">
-            <BlogDetail />
+            <CauseDetail/>
             <aside className="flex flex-1/4 flex-col gap-10 px-5 pb-5 lg:py-20">
               <UpcomingEventsSection upcomingEvents={upcomingEvents} />
               <BlogCategories />
