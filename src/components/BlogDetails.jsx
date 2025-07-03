@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const EventDetail = () => {
+const BlogDetail = () => {
 
 const [formData , setFormData] = useState({
   fullName : '',
@@ -27,11 +27,11 @@ const handleSubmit = (e) => {
           </div>
           <div className="grid gap-6">
             <div className="grid gap-1">
-              <h1 className="text-[24px] font-medium">EVENT DESCRIPTION</h1>
+              <h1 className="text-[24px] font-medium">BLOG DESCRIPTION</h1>
               <p className="text-justify text-[14px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus dolores similique voluptas recusandae! Natus beatae eum quo quisquam expedita, est ratione vero qui officia dolores ad facere a aut. Nemo sint, iste dolorum blanditiis nam sapiente fugiat temporibus accusantium ipsum minus libero nesciunt ducimus unde cum deleniti suscipit inventore nobis.</p>
             </div>
             <div className="grid">
-              <p className="font-medium text-[24px]">EVENT CONTENT</p>
+              <p className="font-medium text-[24px]">BLOG CONTENT</p>
               <ul className="list-disc p-4 px-6 text-[14px] grid gap-2">
                 <li>100 volunteers needed for this charity activity.</li>
                 <li>We aggregate in the city center at 8:00 pm.</li>
@@ -98,4 +98,4 @@ const handleSubmit = (e) => {
   )
 }
 
-export default EventDetail
+export default BlogDetail
