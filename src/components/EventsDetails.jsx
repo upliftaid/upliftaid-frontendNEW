@@ -22,8 +22,8 @@ const handleSubmit = (e) => {
   return (
     <div className="w-full p-4 grid gap-4 h-fit">
         <h1 className="font-medium text-[26px]">FEED A HUNGRY CHILD</h1>
-          <div>
-            <img src="https://zozothemes.com/html/the-charity/img/sections/blog/single-blog.jpg" alt="image" />
+          <div className="min-w-[288px] min-h-[153px] md:w-[736px] md:h-[392px]">
+            <img src="https://zozothemes.com/html/the-charity/img/sections/blog/single-blog.jpg" alt="image" className="w-full h-full"/>
           </div>
           <div className="grid gap-6">
             <div className="grid gap-1">

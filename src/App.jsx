@@ -1,12 +1,12 @@
 import "./App.css";
-import EventPage from "./pages/EventPage";
+import EventDetailsPage from "./pages/EventDetailsPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<EventPage />} />
+        <Route path="/" element={<EventDetailsPage />} />
       </Routes>
     </Router>
   );
