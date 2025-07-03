@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const NewsDetail = () => {
+const NewsDetails = () => {
 
 const [formData , setFormData] = useState({
   fullName : '',
@@ -98,4 +98,4 @@ const handleSubmit = (e) => {
   )
 }
 
-export default NewsDetail
+export default NewsDetails
