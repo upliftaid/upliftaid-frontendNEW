@@ -6,12 +6,13 @@ import Footer from "../src/layout/Footer";
 import CareerPage from "./pages/Career";
 import Navbar from "./layout/Navbar";
 import Testimonials from "./pages/Testimonials";
+import MobileNavbar from "./layout/MobileNavBar";
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
       <Navbar/>
+      <MobileNavbar/>
       <Testimonials/>
       <Footer/>
     </>

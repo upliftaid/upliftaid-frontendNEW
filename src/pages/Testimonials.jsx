@@ -1,4 +1,3 @@
-import React from 'react';
 const testimonials = [
   {
     name: "Aisha Khan",
@@ -91,7 +90,7 @@ const Testimonials = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] flex items-center justify-center px-4 overflow-hidden">
+      <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] flex items-center justify-center px-4 overflow-hidden font-[Poppins] mt-10">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -100,15 +99,10 @@ const Testimonials = () => {
           }}
         ></div>
 
-        <div className="relative z-10 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black font-serif">
+        <div className="relative z-10 flex items-center justify-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
             Testimonials
           </h1>
-          <div className="mt-2 text-gray-800 text-sm sm:text-base space-x-2 font-serif">
-            <span>About Us</span>
-            <span>/</span>
-            <span className="text-[#00733C]">Testimonials</span>
-          </div>
         </div>
       </div>
 
