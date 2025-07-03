@@ -15,6 +15,8 @@ export default function EventPage() {
   const upcomingEvents = events.filter((event) => event.status === "Upcoming");
 
   return (
+    <>
+
     <div className="font-[Poppins]">
       <Navbar />
       <MobileNavBar />
@@ -35,5 +37,6 @@ export default function EventPage() {
       </section>
       <Footer />
     </div>
+        </>
   );
 }
