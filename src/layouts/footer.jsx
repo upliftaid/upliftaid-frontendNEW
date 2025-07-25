@@ -1,12 +1,13 @@
 
 import React from "react";
 // import { Link } from "react-router-dom";
-import { IoLocation } from "react-icons/io5";
+import {   } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
+import { IoLocation } from "react-icons/io5";
 import { TfiYoutube } from "react-icons/tfi";
 
 const Footer = () => {

@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
-import Home from './pages/home'
-import Navbar from './layouts/navbar'
-import MNavbar from './layouts/mobil-navbar'
-import Footer from './layouts/footer'
+import Home from './pages/home.jsx'
+import Navbar from './layouts/navbar.jsx'
+import MNavbar from './layouts/mobil-navbar.jsx'
+import Footer from './layouts/Footer.jsx'
 
 
 const App = () => {
@@ -12,7 +12,6 @@ const App = () => {
     <div>
       <MNavbar/>
       <Navbar/>
-      
       <Home/>
       <Footer/>
     </div>
