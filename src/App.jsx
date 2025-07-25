@@ -1,5 +1,6 @@
-import "./App.css";
+// import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import EventPage from "./pages/EventPage";
 import Home from "./pages/home.jsx";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/EventPage" element={<EventPage />} />
       </Routes>
     </Router>
   );
