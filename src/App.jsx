@@ -1,21 +1,15 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css'
-import Home from './pages/home.jsx'
-import Navbar from './layouts/navbar.jsx'
-import MNavbar from './layouts/mobil-navbar.jsx'
-import Footer from './layouts/Footer.jsx'
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/home.jsx";
 
-
-const App = () => {
+function App() {
   return (
-    <div>
-      <MNavbar/>
-      <Navbar/>
-      <Home/>
-      <Footer/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
