@@ -1,7 +1,5 @@
 import { useState } from "react";
-import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
-import MobileNavBar from "../layout/MobileNavBar";
 import events from "../constants/events";
 import MainEventsSection from "../components/MainEventsSection";
 import UpcomingEventsSection from "../components/UpcomingEventsSection";
@@ -25,8 +23,7 @@ export default function EventPage() {
 
   return (
     <div className="font-[Poppins] ">
-      <Navbar />
-      <MobileNavBar />
+ 
       <section className="flex-1 overflow-auto pt-[70px] bg-white mb-12">
         <div className="text-[42px] bg-[#F2F2F2] p-8">
           <h1 className="text-center">Events</h1>

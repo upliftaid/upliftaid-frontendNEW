@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 import HomePage from '../components/Home/HomePage.jsx'
 import Navbar from '../layouts/navbar.jsx'

@@ -1,4 +1,5 @@
-import logo from "../assets/images/logo.png";
+
+import logo from "../assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { PiXLogoBold } from "react-icons/pi";
 import { FaLinkedinIn } from "react-icons/fa6";

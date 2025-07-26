@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/logo.png";
 import { FaCartShopping } from "react-icons/fa6";
 
 const Navbar = () => {
@@ -24,7 +24,7 @@ const navlinklist = [
   { name: "Contact", url: "/contact" },
   { name: "Products", url: "/product" },
   { name: "Career", url: "/career" },
-  { name: "Profile", url: "/profile" },
+  { name: "Profile", url: "/profile"}
 ];
 
 
@@ -38,7 +38,7 @@ const navlinklist = [
           <div key={index + item.name} className="relative group items-center flex">
             <NavLink
               to={item.url}
-              className="hover:text-[#FFB204] whitespace-nowrap block"
+              className="hover:text-[#FFB204] whitespace-nowrap"
             >
               {item.name}
             </NavLink>

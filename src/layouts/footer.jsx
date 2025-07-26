@@ -1,7 +1,6 @@
 
 import React from "react";
 // import { Link } from "react-router-dom";
-import {   } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaFacebookF } from "react-icons/fa";
