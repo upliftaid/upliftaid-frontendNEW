@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import PriceCardDetails from "../constants/PriceCardDetails";
+import PriceCardDetails from "../../constants/Home2/PriceCardDetails";
 
 const StatsCard = () => {
   return (

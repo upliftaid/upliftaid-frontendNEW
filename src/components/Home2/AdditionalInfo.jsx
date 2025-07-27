@@ -3,7 +3,7 @@ import { FaCirclePlay } from "react-icons/fa6";
 import { AiOutlinePauseCircle } from "react-icons/ai";
 import PlayVideo from "./PlayVideo";
 import { motion, AnimatePresence } from "framer-motion";
-import InfoDetails from "../constants/InfoDetails";
+import InfoDetails from "../../constants/Home2/InfoDetails";
 import { NavLink } from "react-router-dom";
 
 const AdditionalInfo = () => {

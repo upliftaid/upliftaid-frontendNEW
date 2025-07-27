@@ -3,7 +3,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
-import AboutUsCardDetails from "../constants/AboutUsCardDetails";
+import AboutUsCardDetails from "../../constants/Home2/AboutUsCardDetails";
 
 const AboutUsCards = () => {
   return (

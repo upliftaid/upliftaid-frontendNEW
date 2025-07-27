@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
 
-import NewsDetails from "../constants/NewsDetails";
+import NewsDetails from "../../constants/Home2/NewsDetails";
 
 const News = () => {
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GalleryDetails from "../constants/GallerDetails";
+import GalleryDetails from "../../constants/Home2/GallerDetails";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Gallery = () => {

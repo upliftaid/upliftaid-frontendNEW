@@ -4,6 +4,8 @@ import EventPage from "./pages/EventPage";
 import Notfound from "./pages/Notfound";
 import HomePage from "./pages/HomePage";
 import Navbar from "./layout/Navbar";
+// import Home from "./pages/home"    // another home page
+
 
 function App() {
   return (

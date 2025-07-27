@@ -1,5 +1,5 @@
 import React from "react";
-import StatsCardDetails from "../constants/StatsCardDetails";
+import StatsCardDetails from "../../constants/Home2/StatsCardDetails";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 

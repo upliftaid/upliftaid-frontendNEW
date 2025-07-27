@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Footer from "../layout/Footer";
-import events from "../constants/events";
-import MainEventsSection from "../components/MainEventsSection";
-import UpcomingEventsSection from "../components/UpcomingEventsSection";
-import BlogCategories from "../components/BlogCategories";
-import PopularPosts from "../components/PopularPosts";
-import EventModel from "../components/EventModel";
-import ArchivesDate from "../components/ArchivesDate";
-import TagsSection from "../components/TagsSection";
+import events from "../constants/Event/events";
+import MainEventsSection from "../components/EventPage/MainEventsSection";
+import UpcomingEventsSection from "../components/EventPage/UpcomingEventsSection";
+import BlogCategories from "../components/EventPage/BlogCategories";
+import PopularPosts from "../components/EventPage/PopularPosts";
+import EventModel from "../components/EventPage/EventModel";
+import ArchivesDate from "../components/EventPage/ArchivesDate";
+import TagsSection from "../components/EventPage/TagsSection";
 
 export default function EventPage() {
   const [activeTab, setActiveTab] = useState("Happening");

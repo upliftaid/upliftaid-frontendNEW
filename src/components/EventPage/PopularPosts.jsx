@@ -1,5 +1,5 @@
 import { FaRegCalendarAlt } from "react-icons/fa";
-import popular from "../constants/popularPost";
+import popular from "../../constants/Event/popularPost";
 
 export default function PopularPosts() {
   return (
