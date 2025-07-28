@@ -1,4 +1,4 @@
-import FeaturesDetails from "../constants/FeaturesDetails";
+import FeaturesDetails from "../../../constants/aboutUS/whatWeDO/FeaturesDetails";
 
 const Features = () => {
   return (

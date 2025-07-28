@@ -1,14 +1,14 @@
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 import MobileNavbar from "../layout/MobileNavbar";
-import Header from "../components/Header";
-import Features from "../components/Features";
+import Header from "../components/aboutUs/whatWeDo/Header";
+import Features from "../components/aboutUs/whatWeDo/Features";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import ProgressBars from "../components/ProgressBars";
-import WhyChooseUsDescription from "../components/WhyChooseUsDescription";
-import Testimonals from "../components/Testimonals";
-import Volunteers from "../components/Volunteers";
-import HelpingMessage from "../components/HelpingMessage";
+import ProgressBars from "../components/aboutUs/whatWeDo/ProgressBars";
+import WhyChooseUsDescription from "../components/aboutUs/whatWeDo/WhyChooseUsDescription";
+import Testimonals from "../components/aboutUs/whatWeDo/Testimonals";
+import Volunteers from "../components/aboutUs/whatWeDo/Volunteers";
+import HelpingMessage from "../components/aboutUs/whatWeDo/HelpingMessage";
 
 const WhatWeDoPage = () => {
   return (

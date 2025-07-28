@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import WhyChooseUsDescriptionDetails from "../constants/WhyChooseUsDescriptionDetails";
+import WhyChooseUsDescriptionDetails from "../../../constants/aboutUS/whatWeDO/WhyChooseUsDescriptionDetails";
 
 const WhyChooseUsDescription = () => {
   const [openIndex, setOpenIndex] = useState(0); // Track open index

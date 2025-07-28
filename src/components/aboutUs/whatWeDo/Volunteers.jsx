@@ -1,4 +1,4 @@
-import VolunteersDetails from "../constants/Volunteers";
+import VolunteersDetails from "../../../constants/aboutUS/whatWeDO/Volunteers";
 
 const Volunteers = () => {
   return (
