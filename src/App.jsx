@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<BeAVolunteer />} />
+        <Route path="/about-us/be-a-volunteer" element={<BeAVolunteer />} />
       </Routes>
     </BrowserRouter>
   );
