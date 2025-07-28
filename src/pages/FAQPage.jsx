@@ -1,12 +1,12 @@
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 import MobileNavbar from "../layout/MobileNavBar";
-import Header from "../components/Header";
+import Header from "../components/aboutUs/FAQ/Header";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import HelpingMessage from "../components/HelpingMessage";
-import GeneralQuestions from "../components/GeneralQuestions";
-import GeneralQuestionsData1 from "../constants/GeneralQuestionsData1";
-import GeneralQuestionsData2 from "../constants/GeneralQuestionsData2";
+import HelpingMessage from "../components/aboutUs/FAQ/HelpingMessage";
+import GeneralQuestions from "../components/aboutUs/FAQ/GeneralQuestions";
+import GeneralQuestionsData1 from "../constants/aboutUs/FAQ/GeneralQuestionsData1";
+import GeneralQuestionsData2 from "../constants/aboutUs/FAQ/GeneralQuestionsData2";
 
 const FAQPage = () => {
   return (
