@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { tabs, missionBox1, missionBox2, missionBox3 } from "../constants/data";
+import { tabs, missionBox1, missionBox2, missionBox3 } from "../../constants/aboutUs/data";
 import { motion, AnimatePresence } from "framer-motion";
-import WhyChooseUsDescriptionDetails from "../constants/WhyChooseUsDescriptionDetails";
+import WhyChooseUsDescriptionDetails from "../../constants/aboutUs/WhyChooseUsDescriptionDetails";
 import ProgressBars from "./ProgressBars";
 
 const WhoWeAre = () => {
