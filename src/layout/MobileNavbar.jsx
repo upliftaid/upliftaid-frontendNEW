@@ -67,7 +67,7 @@ const MobileNavbar = () => {
                   >
                     {link.name}
                     <span className="ml-auto pr-2 text-[#FFB204]">
-                      {isSubmenuOpen ? "−" : "+"}
+                      {isSubmenuOpen ? "-" : "+"}
                     </span>
                   </button>
 
