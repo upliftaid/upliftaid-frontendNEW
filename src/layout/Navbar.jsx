@@ -65,7 +65,7 @@ const navlinklist = [
           </NavLink>
         </div>
         <div className="hover:bg-[#E69F00] w-19 h-10 bg-[#FFB204] flex items-center justify-center rounded">
-          <NavLink to="/" className="text-black hover:text-white font-semibold">
+          <NavLink to="/contact" className="text-black hover:text-white font-semibold">
             Donate
           </NavLink>
         </div>

@@ -7,6 +7,7 @@ import Navbar from "./layout/Navbar";
 // import Home from "./pages/home"    // another home page
 import BeAVolunteer from "./pages/BeAVolunteer";
 import About_us from "./pages/About_us";
+import Our_story from "./pages/our_story";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="*" element={<Notfound />} />
         <Route path="/about-us" element={<About_us />} />
         <Route path="/about-us/be-a-volunteer" element={<BeAVolunteer />} />
+        <Route path="/about-us/our-story" element={<Our_story />} />
       </Routes>
     </Router>
   );
