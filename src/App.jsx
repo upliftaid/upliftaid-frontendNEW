@@ -8,6 +8,7 @@ import Navbar from "./layout/Navbar";
 import BeAVolunteer from "./pages/BeAVolunteer";
 import About_us from "./pages/About_us";
 import Our_story from "./pages/our_story";
+import WhatWeDoPage from "./pages/WhatWeDoPage";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/about-us" element={<About_us />} />
         <Route path="/about-us/be-a-volunteer" element={<BeAVolunteer />} />
         <Route path="/about-us/our-story" element={<Our_story />} />
+        <Route path="/about-us/what-we-do" element={<WhatWeDoPage />} />
       </Routes>
     </Router>
   );
