@@ -1,9 +1,9 @@
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 import MobileNavbar from "../layout/MobileNavbar";
-import ContactForm from "../components/ContactForm";
-import Header from "../components/Header";
-import ContactInfo from "../components/ContactInfo";
+import ContactForm from "../components/contactUs/ContactForm";
+import Header from "../components/contactUs/Header";
+import ContactInfo from "../components/contactUs/ContactInfo";
 
 const ContactPage = () => {
   return (
