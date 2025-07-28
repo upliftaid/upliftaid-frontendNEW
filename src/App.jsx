@@ -5,6 +5,7 @@ import Notfound from "./pages/Notfound";
 import HomePage from "./pages/HomePage";
 import Navbar from "./layout/Navbar";
 // import Home from "./pages/home"    // another home page
+import BeAVolunteer from "./pages/BeAVolunteer";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/events" element={<EventPage />} />
         <Route path="*" element={<Notfound />} />
+        <Route path="/about-us/be-a-volunteer" element={<BeAVolunteer />} />
       </Routes>
     </Router>
   );
