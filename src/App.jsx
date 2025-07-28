@@ -1,16 +1,14 @@
 import React from 'react';
 import "./App.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import About_us from "./pages/About_us";
+import Our_story from "./pages/our_story";
  
 const App = () => {
   return (
     <BrowserRouter>
       
       <Routes>
-        <Route path="/" element={<About_us />} />
-        
-
+        <Route path="/" element={<Our_story />} />
       </Routes>
     </BrowserRouter>
   );

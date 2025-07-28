@@ -7,7 +7,7 @@ import Meet_team from '../components/aboutUs/ourStory/Meet_team'
 import Testimonials from '../components/aboutUs/ourStory/Testimonals'
 import MobileNavBar from '../layout/MobileNavBar'
 
-const About_us = () => {
+const Our_story = () => {
   return (
     <div className='font-[Poppins]'>
         <Navbar/>
@@ -22,4 +22,4 @@ const About_us = () => {
   )
 }
 
-export default About_us
+export default Our_story
