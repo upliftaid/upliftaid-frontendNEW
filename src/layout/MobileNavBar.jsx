@@ -25,7 +25,7 @@ const MobileNavbar = () => {
   const submenuLinks = [
     { url: "/about/our-story", name: "Our Story" },
     { url: "/about/what-we-do", name: "What we do" },
-    { url: "/about/be-a-volunteer", name: "Be a Volunteer" },
+    { url: "/about-us/be-a-volunteer", name: "Be a Volunteer" },
     { url: "/about/faq", name: "FAQ" },
     { url: "/about/testimonals", name: "Testimonals" },
   ];
