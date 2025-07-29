@@ -7,7 +7,9 @@ const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <div className="backdrop-blur-lg bg-white/30 border border-white/40 shadow-xl rounded-2xl p-8 w-full max-w-md animate-fade-in-up">
+    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-tr from-[#00733C] via-white to-[#00b894] overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(#ffffff33_1px,transparent_1px)] bg-[size:20px_20px] z-0"></div>
+      <div className="backdrop-blur-lg bg-white/30 border border-white/40 shadow-xl rounded-2xl p-8 w-full max-w-md animate-fade-in-up">
       <div className="flex justify-center mb-6">
         <img
              src={logo}
@@ -66,6 +68,7 @@ const AuthPage = () => {
           {isLogin ? "Create an account" : "Login"}
         </button>
       </p>
+    </div>
     </div>
   );
 };
