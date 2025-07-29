@@ -31,7 +31,7 @@ function App() {
         <Route path="/about-us/what-we-do" element={<WhatWeDoPage />} />
         <Route path="/about-us/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/JoinTeamPage" element={<JoinTeamPage />} />   {/*career page build by manav juneja at branch CareerPage-mana*/}
+        <Route path="/career" element={<JoinTeamPage />} />   {/*career page build by manav juneja at branch CareerPage-mana*/}
       </Routes>
       <Footer />
     </Router>
