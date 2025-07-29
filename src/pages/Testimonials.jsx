@@ -1,3 +1,7 @@
+import Footer from "../layout/Footer";
+import MobileNavbar from "../layout/MobileNavBar";
+import Navbar from "../layout/Navbar";
+
 const testimonials = [
   {
     name: "Aisha Khan",
@@ -89,6 +93,9 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <>
+    
+      <Navbar/>
+      <MobileNavbar/>
       {/* Hero Section */}
       <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] flex items-center justify-center px-4 overflow-hidden font-[Poppins] mt-10">
         <div
@@ -129,6 +136,8 @@ const Testimonials = () => {
           ))}
         </div>
       </section>
+      
+      <Footer/>
     </>
   );
 };
