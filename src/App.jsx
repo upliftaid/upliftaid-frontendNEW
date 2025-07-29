@@ -1,4 +1,5 @@
-// import "./App.css";
+import "./App.css";
+import BlogDetailPage from "./pages/BlogDetailPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import EventPage from "./pages/EventPage";
 import Notfound from "./pages/Notfound";
@@ -41,6 +42,7 @@ function App() {
             <Route path="/career" element={<JoinTeamPage />} />   {/*career page build by manav juneja at branch CareerPage-mana*/}
             <Route path="/about-us/testimonals" element={<Testimonials />} />
             <Route path="/causes" element={<CausePage />} />
+            <Route path="/blog" element={<BlogDetailPage />} />
           </Routes>
           <Footer />
         </Router>
