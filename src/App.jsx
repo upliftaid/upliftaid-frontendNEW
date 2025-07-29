@@ -11,6 +11,7 @@ import Our_story from "./pages/our_story";
 import WhatWeDoPage from "./pages/WhatWeDoPage";
 import FAQPage from "./pages/FAQPage";
 import ContactPage from "./pages/ContactPage";
+import JoinTeamPage from "./pages/Career2";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/about-us/what-we-do" element={<WhatWeDoPage />} />
         <Route path="/about-us/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/JoinTeamPage" element={<JoinTeamPage />} />   {/*career page build by manav juneja at branch CareerPage-mana*/}
       </Routes>
     </Router>
   );
