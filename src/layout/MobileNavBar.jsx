@@ -38,7 +38,10 @@ const MobileNavbar = () => {
           <img src={logo} alt="logo" className="h-full w-full object-contain" />
         </Link>
 
-        <button onClick={() => setIsOpen(prev => !prev)} aria-label="Toggle Menu">
+        <button
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-label="Toggle Menu"
+        >
           {isOpen ? (
             <RxCross2 size={30} color="#FFB204" />
           ) : (

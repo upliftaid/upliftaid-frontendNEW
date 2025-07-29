@@ -14,6 +14,7 @@ import JoinTeamPage from "./pages/Career2";
 import Navbar from "./layout/Navbar";
 import MobileNavbar from "./layout/MobileNavBar";
 import Footer from "./layout/Footer";
+import Testimonials from "./pages/Testimonials";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/about-us/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/career" element={<JoinTeamPage />} />   {/*career page build by manav juneja at branch CareerPage-mana*/}
+        <Route path="/about-us/testimonals" element={<Testimonials />} />
       </Routes>
       <Footer />
     </Router>
