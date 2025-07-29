@@ -1,6 +1,3 @@
-import Navbar from "../layout/Navbar";
-import Footer from "../layout/Footer";
-import MobileNavbar from "../layout/MobileNavBar";
 import Header from "../components/aboutUs/FAQ/Header";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import HelpingMessage from "../components/aboutUs/FAQ/HelpingMessage";
@@ -11,9 +8,6 @@ import GeneralQuestionsData2 from "../constants/aboutUs/FAQ/GeneralQuestionsData
 const FAQPage = () => {
   return (
     <div className="font-[Poppins]">
-      <Navbar />
-
-      <MobileNavbar />
 
       <section className="grid gap-8">
         {/* Header */}
@@ -49,7 +43,6 @@ const FAQPage = () => {
         <HelpingMessage />
       </section>
 
-      <Footer />
     </div>
   );
 };

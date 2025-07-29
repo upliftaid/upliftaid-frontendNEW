@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import EventPage from "./pages/EventPage";
 import Notfound from "./pages/Notfound";
 import HomePage from "./pages/HomePage";
-import Navbar from "./layout/Navbar";
 // import Home from "./pages/home"    // another home page
 import BeAVolunteer from "./pages/BeAVolunteer";
 import About_us from "./pages/About_us";
@@ -12,12 +11,16 @@ import WhatWeDoPage from "./pages/WhatWeDoPage";
 import FAQPage from "./pages/FAQPage";
 import ContactPage from "./pages/ContactPage";
 import JoinTeamPage from "./pages/Career2";
+import Navbar from "./layout/Navbar";
+import MobileNavbar from "./layout/MobileNavBar";
+import Footer from "./layout/Footer";
 
 
 function App() {
   return (
     <Router>
-         <Navbar />
+      <Navbar />
+      <MobileNavbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/events" element={<EventPage />} />
@@ -30,6 +33,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/JoinTeamPage" element={<JoinTeamPage />} />   {/*career page build by manav juneja at branch CareerPage-mana*/}
       </Routes>
+      <Footer />
     </Router>
   );
 };

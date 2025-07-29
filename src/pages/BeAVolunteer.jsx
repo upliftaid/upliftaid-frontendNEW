@@ -1,9 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Navbar from "../layout/Navbar";
-// import Navbar from "../layouts/navbar";
-import MobileNavbar from "../layout/MobileNavBar";
-import Footer from "../layout/Footer";
-// import Footer from "../layout/Footer";
 import VolunteerTopSection from "../components/aboutUs/BeAVolunteer/VolunteerTopSection";
 import BecomeAVolunteer from "../components/aboutUs/BeAVolunteer/BecomeAVolunteer";
 import HowToApply from "../components/aboutUs/BeAVolunteer/HowToApply";
@@ -46,8 +41,6 @@ export default function BeAVolunteer() {
 
   return (
     <div className="w-full min-h-screen overflow-hidden flex flex-col font-[Poppins]">
-      <Navbar />
-      <MobileNavbar />
         <VolunteerTopSection />
         <main className="flex flex-col w-full gap-4">
           <BecomeAVolunteer />
@@ -65,7 +58,6 @@ export default function BeAVolunteer() {
             ))}
           </div>
         </main>
-      <Footer />
     </div>
   );
 }

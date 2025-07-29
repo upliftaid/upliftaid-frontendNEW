@@ -1,6 +1,4 @@
-import Navbar from "../layout/Navbar";
-import Footer from "../layout/Footer";
-import MobileNavbar from "../layout/MobileNavBar";
+
 import Header from "../components/aboutUs/whatWeDo/Header";
 import Features from "../components/aboutUs/whatWeDo/Features";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -13,8 +11,6 @@ import HelpingMessage from "../components/aboutUs/whatWeDo/HelpingMessage";
 const WhatWeDoPage = () => {
   return (
     <div>
-      <Navbar />
-      <MobileNavbar />
 
       <section className="grid">
         {/* Header */}
@@ -62,8 +58,6 @@ const WhatWeDoPage = () => {
 
         <Testimonals />
       </section>
-
-      <Footer />
     </div>
   );
 };

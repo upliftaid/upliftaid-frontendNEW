@@ -1,14 +1,11 @@
 // merged my lokesh
 
-import Navbar from "../layout/Navbar";
 import SectionCarousel from "../components/Home2/SectionCarousel";
 import { NavLink } from "react-router-dom";
 import PriceCard from "../components/Home2/PriceCard";
 import News from "../components/Home2/News";
-import Footer from "../layout/Footer";
 import Gallery from "../components/Home2/Gallery";
 import StatsCard from "../components/Home2/StatsCard";
-import MobileNavbar from "../layout/MobileNavBar";
 import HeaderCarousel from "../components/Home2/HeaderCarousel";
 import AdditionalInfo from "../components/Home2/AdditionalInfo";
 import AboutUsCards from "../components/Home2/AboutUsCards";
@@ -18,8 +15,6 @@ import CausesSlider from "../components/Home2/CausesSlider";
 const HomePage = () => {
   return (
     <div className="">
-      <Navbar />
-      <MobileNavbar />
 
       {/* carousel */}
 
@@ -110,8 +105,6 @@ const HomePage = () => {
 
         <AdditionalInfo />
       </section>
-
-      <Footer />
     </div>
   );
 };
