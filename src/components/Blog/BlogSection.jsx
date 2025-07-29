@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBlogData } from '../redux/blogSlice';
+import { fetchBlogData } from '../../redux/blogSlice';
 import { FaUser, FaCalendarAlt, FaHeart, FaAngleRight, FaAngleDown } from 'react-icons/fa';
 
 const BlogSection = ({ totalPages = 4 }) => {

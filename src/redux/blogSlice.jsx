@@ -1,6 +1,6 @@
 // features/blog/blogSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchBlogData as fetchMockData } from '../constants/fecthBlogData'; // adjust path
+import { fetchBlogData as fetchMockData } from '../constants/Blog/fecthBlogData'; // adjust path
 
 export const fetchBlogData = createAsyncThunk('blog/fetchBlogData', async () => {
   const data = await fetchMockData(); // using our local mock API

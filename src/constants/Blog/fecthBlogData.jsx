@@ -1,10 +1,10 @@
 // src/api/BlogAPI.jsx
-import new1 from '../assets/images/news-1.jpg';
-import new2 from '../assets/images/news-2.jpg';
-import new3 from '../assets/images/news-3.jpg';
-import new4 from '../assets/images/news-4.jpg';
-import new5 from '../assets/images/news-5.jpg';
-import new6 from '../assets/images/news-6.jpg';
+import new1 from '../../assets/images/news-1.jpg';
+import new2 from '../../assets/images/news-2.jpg';
+import new3 from '../../assets/images/news-3.jpg';
+import new4 from '../../assets/images/news-4.jpg';
+import new5 from '../../assets/images/news-5.jpg';
+import new6 from '../../assets/images/news-6.jpg';
 
 export const fetchBlogData = () => {
     return new Promise((resolve) => {

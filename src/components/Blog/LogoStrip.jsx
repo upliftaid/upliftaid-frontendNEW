@@ -1,5 +1,5 @@
 import React from 'react';
-import logoStrip from '../assets/images/logoStrip.png'; // adjust path as needed
+import logoStrip from '../../assets/images/logoStrip.png'; // adjust path as needed
 
 const LogoStrip = () => {
   return (
