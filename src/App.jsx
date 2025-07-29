@@ -16,31 +16,42 @@ import MobileNavbar from "./layout/MobileNavBar";
 import Footer from "./layout/Footer";
 import Testimonials from "./pages/Testimonials";
 import CausePage from "./pages/CausePage";
-// import AuthPage from "./pages/AuthPage";
+import AuthPage from "./pages/AuthPage";
 
 
 function App() {
+  const pathname = window.location.pathname;
   return (
-    <Router>
-      <Navbar />
-      <MobileNavbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/events" element={<EventPage />} />
-        <Route path="*" element={<Notfound />} />
-        <Route path="/about-us" element={<About_us />} />
-        <Route path="/about-us/be-a-volunteer" element={<BeAVolunteer />} />
-        <Route path="/about-us/our-story" element={<Our_story />} />
-        <Route path="/about-us/what-we-do" element={<WhatWeDoPage />} />
-        <Route path="/about-us/faq" element={<FAQPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/career" element={<JoinTeamPage />} />   {/*career page build by manav juneja at branch CareerPage-mana*/}
-        <Route path="/about-us/testimonals" element={<Testimonials />} />
-        <Route path="/causes" element={<CausePage />} />
-        {/* <Route path="/auth" element={<AuthPage />} /> */}
-      </Routes>
-      <Footer />
-    </Router>
+    <>
+    {
+      pathname !== "/auth" ?
+        <Router>
+          <Navbar />
+          <MobileNavbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/events" element={<EventPage />} />
+            <Route path="*" element={<Notfound />} />
+            <Route path="/about-us" element={<About_us />} />
+            <Route path="/about-us/be-a-volunteer" element={<BeAVolunteer />} />
+            <Route path="/about-us/our-story" element={<Our_story />} />
+            <Route path="/about-us/what-we-do" element={<WhatWeDoPage />} />
+            <Route path="/about-us/faq" element={<FAQPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/career" element={<JoinTeamPage />} />   {/*career page build by manav juneja at branch CareerPage-mana*/}
+            <Route path="/about-us/testimonals" element={<Testimonials />} />
+            <Route path="/causes" element={<CausePage />} />
+          </Routes>
+          <Footer />
+        </Router>
+      :
+        <Router>
+          <Routes>
+            <Route path="/auth" element={<AuthPage />} />
+          </Routes>
+        </Router>
+    }
+    </>
   );
 };
 
