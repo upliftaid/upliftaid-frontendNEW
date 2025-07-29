@@ -1,13 +1,10 @@
-import Navbar from "../layout/Navbar";
-import Footer from "../layout/Footer";
-import MobileNavBar from "../layout/MobileNavBar";
-import events from "../constants/events";
-import UpcomingEventsSection from "../components/UpcomingEventsSection";
-import BlogCategories from "../components/BlogCategories";
-import PopularPosts from "../components/PopularPosts";
-import ArchivesDate from "../components/ArchivesDate";
-import TagsSection from "../components/TagsSection";
-import BlogDetail from "../components/BlogDetails";
+import events from "../constants/BlogDetailsPage/events";
+import UpcomingEventsSection from "../components/BlogDetailsPage/UpcomingEventsSection";
+import BlogCategories from "../components/BlogDetailsPage/BlogCategories";
+import PopularPosts from "../components/BlogDetailsPage/PopularPosts";
+import ArchivesDate from "../components/BlogDetailsPage/ArchivesDate";
+import TagsSection from "../components/BlogDetailsPage/TagsSection";
+import BlogDetail from "../components/BlogDetailsPage/BlogDetails";
 
 export default function BlogDetailPage() {
 
@@ -18,8 +15,6 @@ export default function BlogDetailPage() {
     <>
 
     <div className="font-[Poppins]">
-      <Navbar />
-      <MobileNavBar />
       <section className="flex-1 overflow-auto pt-[70px] bg-white mb-12">
         <div className="text-[42px] bg-[#F2F2F2] p-8">
           <h1 className="text-center">Blog</h1>
@@ -35,7 +30,6 @@ export default function BlogDetailPage() {
             </aside>
         </div>
       </section>
-      <Footer />
     </div>
         </>
   );
