@@ -1,16 +1,11 @@
 import "./App.css";
-import Footer from "../src/layout/Footer";
-import CareerPage from "./pages/Career";
-import Navbar from "./layout/Navbar";
-import MobileNavbar from "./layout/MobileNavBar";
+import JoinTeamPage from "./pages/Career2";
 function App() {
 
   return (
     <>
-      <Navbar/>
-      <MobileNavbar/>
-      <CareerPage/>
-      <Footer/>
+      
+      <JoinTeamPage/>
     </>
   );
 }

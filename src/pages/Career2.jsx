@@ -1,11 +1,19 @@
+// build by Manav juneja at branch CareerPage-mana
+
+
 import React from "react";
 import hands from '../assets/images/hands.jpeg';
 import puzzle from '../assets/images/image.png'
 import apply from '../assets/images/puzzle.png'
+import Navbar from "../layout/Navbar";
+import MobileNavbar from "../layout/MobileNavBar";
+import Footer from "../layout/Footer";
 
 const JoinTeamPage = () => {
   return (
     <div className="font-[Poppins]">
+      <Navbar/>
+      <MobileNavbar/>
       {/* Hero Section */}
       <div
         className="h-[400px] bg-cover bg-center flex items-center justify-center text-white text-4xl font-bold"
@@ -186,6 +194,8 @@ const JoinTeamPage = () => {
           </div>
         </div>
       </div>
+      
+      <Footer/>
     </div>
   );
 };
