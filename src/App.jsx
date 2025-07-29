@@ -1,5 +1,4 @@
 import "./App.css";
-import BlogDetailPage from "./pages/BlogDetailPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import EventPage from "./pages/EventPage";
 import Notfound from "./pages/Notfound";
@@ -18,6 +17,8 @@ import Footer from "./layout/Footer";
 import Testimonials from "./pages/Testimonials";
 import CausePage from "./pages/CausePage";
 import AuthPage from "./pages/AuthPage";
+// import Blog from "./pages/Blog"    // another blog page
+import BlogDetailPage from "./pages/BlogDetailPage";
 
 
 function App() {
@@ -42,7 +43,8 @@ function App() {
             <Route path="/career" element={<JoinTeamPage />} />   {/*career page build by manav juneja at branch CareerPage-mana*/}
             <Route path="/about-us/testimonals" element={<Testimonials />} />
             <Route path="/causes" element={<CausePage />} />
-            <Route path="/blog" element={<BlogDetailPage />} />
+            {/* <Route path="/blog" element={<Blog />} /> */}   {/*another blog page*/}
+            <Route path="/blog" element={<BlogDetailPage />} /> 
           </Routes>
           <Footer />
         </Router>
