@@ -10,12 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/poppins": "^5.2.6",
     "@ramonak/react-progress-bar": "^5.4.0",
     "@reduxjs/toolkit": "^2.8.2",
     "@headlessui/react": "^2.2.2",
     "@tailwindcss/vite": "^4.1.6",
+    "framer-motion": "^12.19.1",
     "phosphor-react": "^1.4.1",
-    "framer-motion": "^12.18.1",
     "lucide-react": "^0.510.0",
     "bootstrap": "^5.3.6",
     "icons": "^1.0.0",

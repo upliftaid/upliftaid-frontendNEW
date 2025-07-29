@@ -15,6 +15,8 @@ import Navbar from "./layout/Navbar";
 import MobileNavbar from "./layout/MobileNavBar";
 import Footer from "./layout/Footer";
 import Testimonials from "./pages/Testimonials";
+import CausePage from "./pages/CausePage";
+// import AuthPage from "./pages/AuthPage";
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/career" element={<JoinTeamPage />} />   {/*career page build by manav juneja at branch CareerPage-mana*/}
         <Route path="/about-us/testimonals" element={<Testimonials />} />
+        <Route path="/causes" element={<CausePage />} />
+        {/* <Route path="/auth" element={<AuthPage />} /> */}
       </Routes>
       <Footer />
     </Router>
