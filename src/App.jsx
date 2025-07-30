@@ -19,6 +19,7 @@ import CausePage from "./pages/CausePage";
 import AuthPage from "./pages/AuthPage";
 // import Blog from "./pages/Blog"    // another blog page
 import BlogDetailPage from "./pages/BlogDetailPage";
+import ProfilePage from "./pages/ProfilePage";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
             <Route path="/causes" element={<CausePage />} />
             {/* <Route path="/blog" element={<Blog />} /> */}   {/*another blog page*/}
             <Route path="/blog" element={<BlogDetailPage />} /> 
+            <Route path="/profile" element={<ProfilePage />} /> 
           </Routes>
           <Footer />
         </Router>
