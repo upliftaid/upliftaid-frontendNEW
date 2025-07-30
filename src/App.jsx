@@ -20,6 +20,9 @@ import AuthPage from "./pages/AuthPage";
 // import Blog from "./pages/Blog"    // another blog page
 import BlogDetailPage from "./pages/BlogDetailPage";
 import ProfilePage from "./pages/ProfilePage";
+import ProductDetailPage from "./pages/ProductDetailPage";
+import ProductCart from "./pages/ProductCart";
+import ProductPage from "./pages/ProductPage";
 
 
 function App() {
@@ -47,6 +50,9 @@ function App() {
             {/* <Route path="/blog" element={<Blog />} /> */}   {/*another blog page*/}
             <Route path="/blog" element={<BlogDetailPage />} /> 
             <Route path="/profile" element={<ProfilePage />} /> 
+            <Route path="/product-detail" element={<ProductDetailPage/>}/>
+            <Route path='/cart' element={<ProductCart/>} />
+            <Route path='/product' element={<ProductPage/>} />
           </Routes>
           <Footer />
         </Router>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaUserAlt, FaEnvelope, FaLock } from "react-icons/fa";
-import logo from "../assets/logo1-removebg-preview.png";
+import logo from "../assets/logo.png";
 
 
 const AuthPage = () => {
