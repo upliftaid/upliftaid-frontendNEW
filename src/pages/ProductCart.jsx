@@ -1,4 +1,4 @@
-import ProductCartDetails from "../constants/ProductCart";
+import ProductCartDetails from "../constants/product/ProductCart";
 import Footer from "../layout/Footer";
 import MobileNavbar from "../layout/MobileNavbar";
 import Navbar from "../layout/Navbar";

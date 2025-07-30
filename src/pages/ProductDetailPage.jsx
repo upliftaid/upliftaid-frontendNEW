@@ -2,9 +2,9 @@ import { useState } from "react";
 import Footer from "../layout/Footer";
 import MobileNavbar from "../layout/MobileNavbar";
 import Navbar from "../layout/Navbar";
-import ProductDetails from "../constants/ProductDetails";
+import ProductDetails from "../constants/product/ProductDetails";
 import { NavLink } from "react-router-dom";
-import UserReviews from "../components/UserReviews";
+import UserReviews from "../components/product/UserReviews";
 
 const ProductDetailPage = () => {
   const images = [

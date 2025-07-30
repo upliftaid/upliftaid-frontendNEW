@@ -1,10 +1,10 @@
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 import MobileNavbar from "../layout/MobileNavbar";
-import Header from "../components/Header";
+import Header from "../components/product/Header";
 import { IoIosSearch } from "react-icons/io";
-import ProductCard from "../components/ProductCard";
-import ProductFilter from "../components/ProductFilter";
+import ProductCard from "../components/product/ProductCard";
+import ProductFilter from "../components/product/ProductFilter";
 
 const ProductPage = () => {
   return (

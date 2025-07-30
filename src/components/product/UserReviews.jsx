@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReviewModal from "./ReviewModal";
-import UserReviewDetails from "../constants/UserReviewsDetails"; // renamed to avoid name conflict
+import UserReviewDetails from "../../constants/product/UserReviewsDetails"; // renamed to avoid name conflict
 
 const StarRating = ({ rating }) => (
   <div className="flex space-x-1 text-yellow-400">

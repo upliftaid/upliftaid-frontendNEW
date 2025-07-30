@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import ProductCardDetails from "../constants/ProductCardDetails";
+import ProductCardDetails from "../../constants/product/ProductCardDetails";
 import { useNavigate } from "react-router-dom";
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
 
