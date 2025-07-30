@@ -1,4 +1,55 @@
 @import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Optional: Import Inter font */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); */
 
 
+.swiper-pagination {
+  text-align: center !important;
+}
 
+.swiper-pagination-bullet {
+  width: 24px !important;
+  height: 8px !important;
+  border-radius: 0px !important;
+  background-color: #6b7280 !important; /* gray-500 */
+  opacity: 1 !important;
+  transition: background-color 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #00733c !important;
+}
+
+/* src/index.css */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+
+  /* WebKit (Chrome, Safari) */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

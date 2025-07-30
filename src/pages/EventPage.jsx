@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Footer from "../layout/Footer";
 import events from "../constants/Event/events";
 import MainEventsSection from "../components/EventPage/MainEventsSection";
 import UpcomingEventsSection from "../components/EventPage/UpcomingEventsSection";
@@ -23,7 +22,6 @@ export default function EventPage() {
 
   return (
     <div className="font-[Poppins] ">
- 
       <section className="flex-1 overflow-auto pt-[70px] bg-white mb-12">
         <div className="text-[42px] bg-[#F2F2F2] p-8">
           <h1 className="text-center">Events</h1>
@@ -54,7 +52,6 @@ export default function EventPage() {
             </aside>
         </div>
       </section>
-      <Footer />
     </div>
   );
 }

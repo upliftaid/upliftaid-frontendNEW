@@ -16,6 +16,13 @@ export default [
         sourceType: 'module',
       },
     },
+    theme: {
+      extend: {
+        fontFamily: {
+          lora: ['Lora', 'serif'],
+        },
+      },
+    },
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,

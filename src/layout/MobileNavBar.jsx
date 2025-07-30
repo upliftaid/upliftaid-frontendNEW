@@ -23,9 +23,9 @@ const MobileNavbar = () => {
   ];
 
   const submenuLinks = [
-    { url: "/about/our-story", name: "Our Story" },
+    { url: "/about-us/our-story", name: "Our Story" },
     { url: "/about/what-we-do", name: "What we do" },
-    { url: "/about/be-a-volunteer", name: "Be a Volunteer" },
+    { url: "/about-us/be-a-volunteer", name: "Be a Volunteer" },
     { url: "/about/faq", name: "FAQ" },
     { url: "/about/testimonals", name: "Testimonals" },
   ];
@@ -38,7 +38,10 @@ const MobileNavbar = () => {
           <img src={logo} alt="logo" className="h-full w-full object-contain" />
         </Link>
 
-        <button onClick={() => setIsOpen(prev => !prev)} aria-label="Toggle Menu">
+        <button
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-label="Toggle Menu"
+        >
           {isOpen ? (
             <RxCross2 size={30} color="#FFB204" />
           ) : (
