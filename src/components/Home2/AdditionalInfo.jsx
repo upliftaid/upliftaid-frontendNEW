@@ -51,9 +51,9 @@ const AdditionalInfo = () => {
             </div>
 
             {/* right side */}
-            <div className="md:w-[50%] lg:h-[500px] bg-[#f7f7f7] p-6 px-10 py-10">
-              <div className="grid gap-1">
-                <h1 className="text-[28px]">ADDITIONAL INFO</h1>
+            <div className="md:w-[50%] lg:h-[500px] overflow-hidden bg-[#f7f7f7] p-6 px-10 py-10">
+              <div className="grid gap-1 !my-10">
+                <h1 className="text-[40px] font-[400]">ADDITIONAL INFO</h1>
                 <div className="bg-[#00733C] w-16 h-[2.5px]"></div>
               </div>
 
@@ -75,7 +75,7 @@ const AdditionalInfo = () => {
                           animate={{ y: 0, opacity: 1 }}
                           exit={{ y: -10, opacity: 0 }}
                           transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="text-[14px] mt-2"
+                          className="text-[14px] mt-2 text-gray-500 duration-300"
                         >
                           {data.description}
                         </motion.p>
@@ -85,10 +85,10 @@ const AdditionalInfo = () => {
                 ))}
               </div>
               <div className="flex justify-end mt-6">
-                <div className="hover:bg-[#E69F00] w-25 h-10 bg-[#FFB204] flex items-center justify-center rounded">
+                <div className="group hover:bg-[#E69F00] cursor-pointer !mt-10   px-5 !py-5 w-full h-10 bg-[#FFB204] flex items-center justify-center rounded-lg">
                   <NavLink
                     to="/about-us/faq"
-                    className="text-black hover:text-white font-semibold"
+                    className="text-black group-hover:text-white font-semibold"
                   >
                     Read More
                   </NavLink>
