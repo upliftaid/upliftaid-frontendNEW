@@ -18,21 +18,24 @@ const Gallery = () => {
       {/* Overlay and Content */}
       <div className="relative bg-black/70 p-4 mx-auto md:py-16 md:px-8">
         <div className="text-white text-center grid gap-10">
-          <div className="grid gap-1">
-            <h1 className="text-[36px]">Gallery</h1>
-            <div className="bg-[#00733C] w-16 h-[2.5px] mx-auto"></div>
+          <div className="flex flex-col justify-center items-center gap-1">
+            <h1 className="text-[40px] font-[400]">Gallery</h1>
+            <div className="bg-[#FFB204] w-16 h-[2.5px] mx-auto"></div>
           </div>
 
           {/* Category Filter */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center w-fit mx-auto">
             {["All", "Charity", "Children", "Nature"].map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className="p-2 hover:border hover:border-white/20 transition duration-300"
-              >
-                {cat}
-              </button>
+              <div   key={cat} className=" group flex flex-col items-center justify-center">
+                <button
+                
+                  onClick={() => setSelectedCategory(cat)}
+                  className="  p-2 !pb-1 hover:scale-120 group-hover:text-white text-[#FFB204]/50 cursor-pointer transition duration-300"
+                >
+                  {cat}
+                </button>
+                <div className="bg-[#FFB204] w-0 group-hover:w-full h-[2px] duration-300"></div>
+              </div>
             ))}
           </div>
 
@@ -54,7 +57,7 @@ const Gallery = () => {
                     className="w-full h-full object-cover"
                     alt="gallery"
                   />
-                  <div className="bg-black/70 absolute top-0 w-full h-full group-hover:flex hidden items-center justify-center flex-col gap-2 transition duration-300 p-4">
+                  <div className="bg-black/70 absolute top-0 w-full h-full group-hover:opacity-100 opacity-0 flex  items-center justify-center flex-col gap-2 transition duration-300 p-4">
                     <p className="text-2xl text-white text-center">
                       Lorem ipsum dolor sit amet consectetur.
                     </p>

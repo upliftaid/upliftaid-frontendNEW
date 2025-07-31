@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 const StatsCard = () => {
   return (
-    <div className="relative lg:w-full mt-10 min-w-[320px]">
+    <div className="relative lg:w-full mt-10  min-w-[320px]">
       {/* Fixed background image */}
       <div
         className="absolute inset-0 h-full w-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/childrens.jpg')] lg:bg-fixed bg-cover bg-top-center -z-10"
@@ -16,7 +16,7 @@ const StatsCard = () => {
       ></div>
 
       {/* Content wrapper with overlay */}
-      <div className="relative bg-black/70 md:py-16 md:px-8">
+      <div className="relative !pb-20 bg-black/70 md:py-16 md:px-8">
         {/* Header with navigation buttons */}
         <div className="flex justify-end space-x-4">
           <button className="swiper-button-prev-custom text-[#FFB204] font-bold text-3xl px-3 cursor-pointer select-none">
@@ -53,7 +53,7 @@ const StatsCard = () => {
               <div className="flex flex-col items-center text-white text-center px-4">
                 <card.image size={90} />
                 <h1 className="text-4xl font-bold mt-4">{card.no}</h1>
-                <div className="bg-[#00733C] w-16 h-[2.5px] my-2" />
+                <div className="bg-[#FFB204] w-16 h-[2.5px] my-2" />
                 <p className="text-lg">{card.heading}</p>
               </div>
             </SwiperSlide>

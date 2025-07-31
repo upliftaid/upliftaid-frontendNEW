@@ -18,15 +18,17 @@ const AdditionalInfo = () => {
       <div className="relative lg:w-full mt-10 min-w-[320px]">
         {/* Fixed background image */}
         <div
-          className="absolute inset-0 h-full min-w-[320px] md:w-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/water-full-bg.jpg')] md:bg-fixed bg-cover bg-center -z-10"
+          className="absolute inset-0 h-full min-w-[320px]  md:w-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/water-full-bg.jpg')] md:bg-fixed bg-cover bg-center -z-10"
           aria-hidden="true"
-        ></div>
+        >
+          <div className="bg-black/80 h-full w-full"></div>
+        </div>
 
         {/* Content wrapper with overlay */}
         <div className="relative">
           <div className="flex w-full flex-col md:flex-row">
             {/* left side */}
-            <div className="md:w-[50%] md:h-[645px] lg:h-[500px] bg-[#e1e1e1]/20 h-[300px]">
+            <div className="md:w-[50%] flex items-center justify-center md:h-[645px] lg:h-[500px] bg-[#e1e1e1]/20 h-[300px]">
               <div
                 className="flex flex-col justify-center items-center md:mt-50 mt-25 text-[#00733C]"
                 onClick={() => setPlay(true)}
@@ -42,7 +44,7 @@ const AdditionalInfo = () => {
                 ) : (
                   <>
                     <FaCirclePlay size={80} className="cursor-pointer" />{" "}
-                    <p>Play Video</p>
+                    <p className="text-white">Play Video</p>
                   </>
                 )}
               </div>

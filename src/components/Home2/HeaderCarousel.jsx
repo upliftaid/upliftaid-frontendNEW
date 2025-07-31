@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -6,7 +6,7 @@ const HeaderCarousel = () => {
   const sliderDetails = [
     {
       image:
-        "https://zozothemes.com/html/the-charity/img/sections/slider/charity-slide19.jpg",
+        "/charity-slide19.jpg",
       heading: "SAVE CHILDREN",
       line1: "Every child deserves safety, love, and opportunity.",
       line2:
@@ -14,14 +14,14 @@ const HeaderCarousel = () => {
     },
     {
       image:
-        "https://zozothemes.com/html/the-charity/img/sections/slider/charity-slide18.jpg",
+        "/charity-slide18.jpg",
       heading: "I NEED YOUR HELP",
       line1: "I need your help—not just to survive, but to dream, to hope,",
       line2: "and to feel the warmth of humanity again.",
     },
     {
       image:
-        "https://zozothemes.com/html/the-charity/img/sections/slider/charity-slide17.jpg",
+        "/charity-slide17.jpg",
       heading: "KINDNESS & HUMANITY",
       line1: "Kindness is not a sign of weakness; it is the strongest,",
       line2: "most profound expression of true humanity and inner strength",
@@ -30,6 +30,7 @@ const HeaderCarousel = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
   const slide = sliderDetails[activeIndex];
+  const [opacity, setOpacity] = useState("opacity-100");
 
   // Custom animation for each slide
   const getVariants = (index) => {
@@ -54,8 +55,19 @@ const HeaderCarousel = () => {
     }
   };
 
+  const changeActiveIndex = useCallback((index) => {
+    setOpacity("opacity-0 scale-70");
+    setTimeout(() => {
+      setActiveIndex(index);
+      
+    },200)
+    setTimeout(() => {
+      setOpacity("opacity-100");
+    },1500)
+  },[activeIndex,opacity])
+
   return (
-    <div className="relative lg:mt-16 w-full overflow-hidden h-[620px]">
+    <div className="relative lg:mt-16 w-full sc overflow-hidden h-[90vh]">
       {/* Animated Carousel Image */}
       <AnimatePresence mode="wait">
         <motion.img
@@ -72,30 +84,34 @@ const HeaderCarousel = () => {
       </AnimatePresence>
 
       {/* Overlay Content */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center max-w-[800px] px-4 mt-20 z-10">
-        <h1 className="text-4xl md:text-6xl font-bold">{slide.heading}</h1>
-        <p className="mt-4 text-lg md:text-xl">{slide.line1}</p>
-        <p className="text-lg md:text-xl">{slide.line2}</p>
-        <NavLink
-          to="/"
-          className="inline-block mt-8 bg-[#FFB204] hover:bg-[#E69F00] text-black rounded hover:text-white font-semibold py-3 px-6 transition duration-300"
-        >
-          Donate Now
-        </NavLink>
-
-        {/* Scroll Down Indicator for First Slide */}
-        {activeIndex === 0 && (
-          <div className="mt-10 flex flex-col items-center gap-2 cursor-pointer">
-            <div className="w-10 h-14 rounded-4xl border flex items-center justify-center">
-              <motion.div
-                className="w-3 h-3 bg-white rounded-full"
-                animate={{ y: [0, -8, 0, 8, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              />
-            </div>
-            <p className="text-sm">Scroll Down</p>
+      <div className={`${opacity} duration-300 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-full text-white text-center max-w-[800px] px-4  z-10`}>
+        <div className="flex flex-col items-center justify-between h-full w-full min-[500px]:p-20 p-5">
+          <div className=" h-full flex flex-col items-center justify-center">
+            <h1 className="text-4xl md:text-6xl !mb-10 font-bold">{slide.heading}</h1>
+            <p className="mt-4 text-lg md:text-xl">{slide.line1}</p>
+            <p className="text-lg md:text-xl !mb-10">{slide.line2}</p>
+            <NavLink
+              to="/"
+              className="inline-block mt-8  bg-[#FFB204] hover:bg-[#a97707] text-black rounded hover:text-white font-semibold py-3 px-6 transition duration-300"
+            >
+              Donate Now
+            </NavLink>
           </div>
-        )}
+
+          {/* Scroll Down Indicator for First Slide */}
+          {activeIndex === 0 && (
+            <div className="mt-10 flex flex-col items-center gap-2 cursor-pointer">
+              <div className="w-8 h-14 rounded-4xl border flex items-center justify-center">
+                <motion.div
+                  className="w-2 h-2 bg-white rounded-full "
+                  animate={{ y: [ -8,4, 4,], opacity: [1,1, 0] }}
+                  transition={{ duration: 1, repeat: Infinity }}
+                />
+              </div>
+              <p className="text-sm">Scroll Down</p>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Slide Navigation Dots */}
@@ -103,15 +119,15 @@ const HeaderCarousel = () => {
         {sliderDetails.map((_, index) => (
           <div
             key={index}
-            onClick={() => setActiveIndex(index)}
-            className={`w-4 h-4 rounded-full border-2 flex items-center justify-center cursor-pointer ${
+            onClick={() => changeActiveIndex(index)}
+            className={`w-4 h-4 rounded-full border-2 flex !m-1 items-center  duration-300 hover:bg-black/50 justify-center cursor-pointer ${
               activeIndex === index
                 ? "bg-black/50 border-white"
                 : "bg-[#ccc]/70 border-none"
             }`}
           >
             <div
-              className={`w-2 h-2 rounded-full ${
+              className={`w-2 h-2 rounded-full hover:bg-white ${
                 activeIndex === index ? "bg-white" : ""
               }`}
             ></div>

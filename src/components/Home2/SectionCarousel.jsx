@@ -10,8 +10,8 @@ const RectangularDot = ({ active, onClick }) => {
       aria-label="carousel navigation dot"
       className={`
         w-6 h-2 border-0 cursor-pointer
-        transition-colors duration-300
-        ${active ? "bg-[#00733C]" : "bg-gray-500"}
+        transition-colors duration-300 rounded-lg
+        ${active ? "bg-[#00733C]" : "bg-gray-300"}
       `}
     />
   );
@@ -29,7 +29,7 @@ const SectionCarousel = () => {
     <div className="p-6 md:px-16">
       {/* Header */}
       <div className="grid gap-1 mt-4">
-        <h1 className="text-[28px]">WHO WE ARE</h1>
+        <h1 className="text-[40px] font-[400]">WHO WE ARE</h1>
         <div className="bg-[#00733C] w-16 h-[2.5px]" />
       </div>
 
@@ -40,7 +40,7 @@ const SectionCarousel = () => {
         showStatus={false}
         showIndicators={false}
         useKeyboardArrows
-        autoPlay={true}
+        autoPlay={false}
         interval={3000}
         infiniteLoop={true}
         showArrows={false}
@@ -48,9 +48,9 @@ const SectionCarousel = () => {
         onChange={(index) => setCurrentSlide(index)}
       >
         {/* Slide 1: Description */}
-        <div className="mt-10 grid gap-3">
-          <h1 className="text-3xl flex flex-start">Our history</h1>
-          <p className="text-justify text-[14px]">
+        <div className="!mt-10 grid gap-3">
+          <h1 className="text-2xl flex flex-start">Our history</h1>
+          <p className="text-justify text-[14px] text-gray-700">
             UpliftAid Founded in 2024, UpliftAid emerged from a shared
             commitment to drive positive and lasting change. What began as a
             small initiative has grown into a dynamic organization focused on
@@ -60,16 +60,16 @@ const SectionCarousel = () => {
         </div>
 
         {/* Slide 2: Description */}
-        <div className="mt-10 grid gap-3">
-          <h1 className="text-3xl flex flex-start">Our Philosophy</h1>
-          <p className="text-justify text-[14px]">
+        <div className="!mt-10 grid gap-3">
+          <h1 className="text-2xl flex flex-start">Our Philosophy</h1>
+          <p className="text-justify text-[14px] text-gray-700">
             At Uplifted, we believe that change begins with empathy and grows
             through action. Every person, regardless of background, has the
             potential to thrive when given the right support. We work with
             communities—not for them—ensuring solutions are rooted in dignity,
             inclusion, and sustainability.
           </p>
-          <p className="text-justify text-[14px]">
+          <p className="text-justify text-[14px] text-gray-700">
             Our philosophy is simple: listen deeply, act boldly, and stay
             accountable to the people we serve.
           </p>
@@ -77,7 +77,7 @@ const SectionCarousel = () => {
       </Carousel>
 
       {/* Sticky Dots Navigation */}
-      <div className="flex justify-center gap-2 mt-6">
+      <div className="flex justify-center gap-2 !mt-20">
         {[0, 1].map((i) => (
           <RectangularDot
             key={i}

@@ -32,3 +32,6 @@
   background-color: #00733C; /* green on hover */
   color: white;
 }
+.swiper-wrapper{
+  width: auto !important;
+}

@@ -9,7 +9,7 @@ const RectangularDot = ({ active, onClick }) => (
     type="button"
     aria-label="carousel navigation dot"
     className={`w-6 h-2 border-0 cursor-pointer transition-colors duration-300 rounded-sm ${
-      active ? "bg-[#00733C]" : "bg-gray-400"
+      active ? "bg-[#00733C]" : "bg-gray-300"
     }`}
   />
 );
@@ -80,7 +80,7 @@ const CausesSlider = () => {
     <div className="p-6 md:px-16">
       {/* Header */}
       <div className="grid gap-1 mt-4">
-        <h1 className="text-[28px]">CAUSES</h1>
+        <h1 className="text-[40px] font-[400]">CAUSES</h1>
         <div className="bg-[#00733C] w-16 h-[2.5px]" />
       </div>
 
