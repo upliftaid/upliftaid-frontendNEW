@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Footer from "../layout/Footer";
 import MobileNavbar from "../layout/MobileNavBar";
 import Navbar from "../layout/Navbar";
@@ -89,13 +90,18 @@ const testimonials = [
   },
 ];
 
-
 const Testimonials = () => {
+  const [visibleCount, setVisibleCount] = useState(6);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 6);
+  };
+
   return (
     <>
-    
-      <Navbar/>
-      <MobileNavbar/>
+      <Navbar />
+      <MobileNavbar />
+
       {/* Hero Section */}
       <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] flex items-center justify-center px-4 overflow-hidden font-[Poppins] mt-10">
         <div
@@ -105,7 +111,6 @@ const Testimonials = () => {
             opacity: 0.5,
           }}
         ></div>
-
         <div className="relative z-10 flex items-center justify-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
             Testimonials
@@ -114,10 +119,9 @@ const Testimonials = () => {
       </div>
 
       {/* Testimonials Section */}
-      <section className="bg-gray-100 py-16 px-6 md:px-20">
-
+      <section className="bg-gray-100 py-16 px-4 sm:px-6 md:px-20 overflow-x-hidden">
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.slice(0, visibleCount).map((testimonial, index) => (
             <div
               key={index}
               className="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
@@ -135,9 +139,19 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
+
+        {/* Load More Button */}
+        {visibleCount < testimonials.length && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={handleLoadMore}
+              className="px-6 py-2 bg-[#00733C] text-white font-semibold rounded-full hover:bg-green-800 transition"
+            >
+              Load More
+            </button>
+          </div>
+        )}
       </section>
-      
-      <Footer/>
     </>
   );
 };

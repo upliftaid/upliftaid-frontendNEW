@@ -1,4 +1,3 @@
-
 import Header from "../components/aboutUs/whatWeDo/Header";
 import Features from "../components/aboutUs/whatWeDo/Features";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -10,52 +9,40 @@ import HelpingMessage from "../components/aboutUs/whatWeDo/HelpingMessage";
 
 const WhatWeDoPage = () => {
   return (
-    <div>
-
-      <section className="grid">
-        {/* Header */}
+    <div className="overflow-x-hidden min-w-[320px]">
+      <section className="grid gap-x-12">
         <Header />
-
-        {/* Features */}
-
         <Features />
 
-        {/* why choose us */}
-
-        <div className="flex flex-col md:flex-row lg:w-full lg:mt-10 min-w-[320px]">
-          {/* left side */}
-          <div className="md:w-[50%] md:h-[500px] p-4 md:p-12 lg:px-25">
-            <div className="grid gap-1 mt-4">
-              <h1 className="text-[28px]">Why Choose Us</h1>
+        {/* Why Choose Us and Fundraisers */}
+        <div className="flex flex-col md:flex-row lg:w-full px-4 sm:px-6 sm:py-8 md:px-12 md:py-10 lg:px-20 lg:py-16">
+          {/* Left side */}
+          <div className="md:w-1/2 px-8">
+            <div className="grid gap-3">
+              <h1 className="text-[24px] sm:text-[28px] font-semibold">
+                Why Choose Us
+              </h1>
               <div className="bg-[#00733C] w-16 h-[2.5px]" />
             </div>
             <WhyChooseUsDescription />
           </div>
 
-          {/* right side */}
-          <div className="md:w-[50%] md:h-[500px] md:py-5">
-            <div className="p-6 md:px-16">
-              {/* Header */}
-              <div className="grid gap-1 mt-4">
-                <h1 className="text-[28px]">Our Fundraisers</h1>
-                <div className="bg-[#00733C] w-16 h-[2.5px]" />
-              </div>
-
-              <div>
-                <ProgressBars />
-              </div>
+          {/* Right side */}
+          <div className="md:w-1/2 px-8">
+            <div className="grid gap-3">
+              <h1 className="text-[24px] sm:text-[28px] font-semibold">
+                Our Fundraisers
+              </h1>
+              <div className="bg-[#00733C] w-16 h-[2.5px]" />
+            </div>
+            <div className="mt-4">
+              <ProgressBars />
             </div>
           </div>
         </div>
 
-        {/*  */}
         <HelpingMessage />
-        {/* volunteers */}
-
         <Volunteers />
-
-        {/* Testimonals */}
-
         <Testimonals />
       </section>
     </div>
