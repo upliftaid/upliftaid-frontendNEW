@@ -28,7 +28,7 @@ const Gallery = () => {
             {["All", "Charity", "Children", "Nature"].map((cat) => (
               <div   key={cat} className=" group flex flex-col items-center justify-center">
                 <button
-                
+                  style={{ color: selectedCategory === cat ? "#FFB204" : "" }}
                   onClick={() => setSelectedCategory(cat)}
                   className="  p-2 !pb-1 hover:scale-120 group-hover:text-white text-[#FFB204]/50 cursor-pointer transition duration-300"
                 >

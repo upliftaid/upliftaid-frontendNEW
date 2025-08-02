@@ -50,7 +50,7 @@ const SectionCarousel = () => {
         {/* Slide 1: Description */}
         <div className="!mt-10 grid gap-3">
           <h1 className="text-2xl flex flex-start">Our history</h1>
-          <p className="text-justify text-[14px] text-gray-700">
+          <p className="text-justify text-[14px] text-gray-500">
             UpliftAid Founded in 2024, UpliftAid emerged from a shared
             commitment to drive positive and lasting change. What began as a
             small initiative has grown into a dynamic organization focused on
@@ -62,14 +62,14 @@ const SectionCarousel = () => {
         {/* Slide 2: Description */}
         <div className="!mt-10 grid gap-3">
           <h1 className="text-2xl flex flex-start">Our Philosophy</h1>
-          <p className="text-justify text-[14px] text-gray-700">
+          <p className="text-justify text-[14px] text-gray-500">
             At Uplifted, we believe that change begins with empathy and grows
             through action. Every person, regardless of background, has the
             potential to thrive when given the right support. We work with
             communities—not for them—ensuring solutions are rooted in dignity,
             inclusion, and sustainability.
           </p>
-          <p className="text-justify text-[14px] text-gray-700">
+          <p className="text-justify text-[14px] text-gray-500">
             Our philosophy is simple: listen deeply, act boldly, and stay
             accountable to the people we serve.
           </p>

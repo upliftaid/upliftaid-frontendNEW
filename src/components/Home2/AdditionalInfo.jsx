@@ -75,7 +75,7 @@ const AdditionalInfo = () => {
                           animate={{ y: 0, opacity: 1 }}
                           exit={{ y: -10, opacity: 0 }}
                           transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="text-[14px] mt-2 text-gray-500 duration-300"
+                          className="text-[14px] mt-2 text-gray-400 duration-300"
                         >
                           {data.description}
                         </motion.p>

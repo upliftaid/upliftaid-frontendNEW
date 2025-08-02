@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronRight, FaCalendarAlt } from "react-icons/fa";
 import "@fontsource/poppins";
+
+
 import causeImage1 from "../assets/causes-1.jpg";
 import causeImage2 from "../assets/causes-2.jpg";
 import causeImage3 from "../assets/causes-3.jpg";
@@ -83,38 +85,43 @@ const CausesPage = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 min-h-screen px-8 pt-32 pb-8 font-[Poppins] text-[14px] ">
-      <h1 className="text-4xl font-medium mb-10 text-left">Causes</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+    <div className="bg-white min-h-screen w-full flex flex-col items-center justify-center !mt-18 font-[Poppins] text-[14px] ">
+      <div className="text-4xl font-medium mb-10 !h-[120px] w-full flex items-center justify-center text-left bg-[#f2f2f2]">
+        <p className="p-4 w-[80%]">Causes</p>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 min-[730px]:w-[80%] w-[95%] gap-10 !mt-20">
         <div className="lg:col-span-2 space-y-10">
           {causes.map((cause, idx) => (
-            <div key={idx} className="bg-white rounded-lg shadow p-4 flex gap-6">
-              <img
-                src={cause.image}
-                alt={cause.title}
-                className="w-64 h-48 object-cover rounded"
-              />
-              <div>
-                <h2 className="text-xl font-medium mb-2">{cause.title}</h2>
-                <p className="text-sm mb-1">
-                  <span className="font-medium">Raised:</span> ${cause.raised} &nbsp;
-                  <span className="text-blue-500 font-medium">Goal:</span> ${cause.goal}
-                </p>
-                <p className="text-gray-600 text-sm mb-4">{cause.description}</p>
-                <button className="bg-[#00733C] hover:bg-green-800 text-white px-4 py-2 rounded text-sm font-medium">
-                  Donate Now
-                </button>
+            <div key={idx}>
+              <div  className=" flex max-[550px]:flex-col gap-6 h-full !my-10">
+                <img
+                  src={cause.image}
+                  alt={cause.title}
+                  className="w-64 h-48 object-cover rounded max-[550px]:w-full"
+                />
+                <div className="!h-full flex flex-col justify-between items-start">
+                  <h2 className="text-3xl font-medium !mb-5">{cause.title}</h2>
+                  <p className="text-sm   !mb-2">
+                    <span className="font-medium">Raised:</span> ${cause.raised} &nbsp;
+                    <span className="text-[#FFB204] font-medium !ml-5">Goal: ${cause.goal}</span> 
+                  </p>
+                  <p className="text-gray-400 text-sm !mb-4 ">{cause.description}</p>
+                  <button className="bg-[#00733C] hover:bg-[#FFB204] duration-300 cursor-pointer text-white px-4 py-2 rounded text-sm font-medium">
+                    Donate Now
+                  </button>
+                </div>
               </div>
+              <div className="w-full border-t-[1px] border-dotted border-gray-400" />
             </div>
           ))}
         </div>
 
-        <div className="space-y-10">
+        <div className="space-y-10 !mt-10">
           <div>
-            <h3 className="text-lg font-medium mb-4 border-b pb-2">Category</h3>
+            <h3 className="text-xl font-semibold mb-4  pb-2">Category</h3>
             <ul className="space-y-2 text-gray-700">
               {categories.map((cat, i) => (
-                <li key={i} className="flex items-center gap-2">
+                <li key={i} className="flex items-center !my-5 text-gray-400 hover:text-black  duration-300 cursor-pointer gap-2">
                   <FaChevronRight className="text-xs" /> {cat}
                 </li>
               ))}
@@ -122,44 +129,48 @@ const CausesPage = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-medium mb-4 border-b pb-2">Latest Causes</h3>
+            <h3 className="text-xl font-semibold mb-4 !mt-7 pb-2">Latest Causes</h3>
             <ul className="space-y-4">
               {latestCauses.map((cause, i) => (
-                <li key={i} className="flex gap-3">
+                <li key={i} className="flex gap-3 !my-7">
                   <img
                     src={cause.image}
                     alt="thumb"
                     className="w-16 h-16 object-cover rounded"
                   />
                   <div>
-                    <p className="text-sm font-normal text-gray-800 leading-snug">
+                    <p className="text-sm !font-light text-gray-400 !mb-2 hover:text-gray-800  duration-300 cursor-pointer leading-snug">
                       {cause.title}
                     </p>
-                    <p className="flex items-center text-xs text-gray-500 mt-1">
-                      <FaCalendarAlt className="mr-1 text-sm" /> {cause.date}
-                    </p>
+                    <div className="flex items-center text-xs text-gray-500 mt-1">
+                      <FaCalendarAlt className="mr-1 text-sm text-[#fccc5b]" /> 
+                      <p className="!ml-2">{cause.date}</p>
+                    </div>
                   </div>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-lg font-medium mb-4 border-b pb-2">Gallery</h3>
-            <img
+          <div className="!mb-10">
+            <h3 className="text-xl font-semibold mb-4  pb-2">Gallery</h3>
+            {/* <img
               src={galleryImages[currentImage]}
               alt="Gallery Preview"
               className="rounded w-full object-cover transition-all duration-700 ease-in-out"
-            />
+            /> */}
+            <div 
+            style={{backgroundImage: `url(${galleryImages[currentImage]})`}}
+              className={`w-full h-[300px] duration-1000 ease-in-out bg-cover bg-center rounded-xl !mt-5`}></div>
           </div>
 
-          <div>
-            <h3 className="text-lg font-medium mb-4 border-b pb-2">Tags</h3>
+          <div className="!mb-20">
+            <h3 className="text-xl font-semibold mb-4 pb-2">Tags</h3>
             <div className="flex flex-wrap gap-2">
               {tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="bg-[#00733C] text-white text-xs px-3 py-1 rounded"
+                  className="bg-[#00733C] text-white text-xs px-3 py-1 hover:bg-[#FFB204] duration-300 cursor-default rounded"
                 >
                   {tag}
                 </span>

@@ -57,7 +57,7 @@ const AboutUsCards = () => {
                     <div className={`w-full h-[200px] bg-cover `} style={{ backgroundImage: `url(${card.image})` }}></div>
                   </div>
                   <h1 className="font-[400] text-[22px]">{card.heading}</h1>
-                  <p className="text-[14px] line-clamp-2 text-gray-700">{card.description}</p>
+                  <p className="text-[14px] line-clamp-2 text-gray-500">{card.description}</p>
                 </div>
               </SwiperSlide>
             ))}

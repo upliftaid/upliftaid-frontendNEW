@@ -98,7 +98,7 @@ const HomePage = () => {
             <h1 className="text-[32px] text-white">WE NEED YOUR</h1>
             <h1 className="text-[32px] text-white">HELP</h1>
           </div>
-          <div className="bg-[#FFB204] hover:bg-[#E69F00] duration-300 text-black rounded hover:text-white w-[192px] h-14 flex items-center justify-center text-[18px]">
+          <div className="bg-[#FFB204] hover:bg-[#E69F00] duration-300  rounded text-white w-[192px] h-14 flex items-center justify-center text-[18px]">
             <NavLink to="/">Donate Now!!</NavLink>
           </div>
         </div>

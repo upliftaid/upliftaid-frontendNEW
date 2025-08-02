@@ -115,7 +115,7 @@ const CausesSlider = () => {
                 <h2 className="mt-3 text-lg font-semibold text-start">
                   {cause.heading}
                 </h2>
-                <p className="text-sm text-gray-700 mt-2 line-clamp-2 text-start">
+                <p className="text-sm text-gray-500 mt-2 line-clamp-2 text-start">
                   {cause.description}
                 </p>
               </div>

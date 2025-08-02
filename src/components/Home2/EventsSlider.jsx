@@ -119,11 +119,11 @@ const EventsSlider = () => {
                 <h2 className="mt-3 text-lg font-semibold text-start">
                   {event.heading}
                 </h2>
-                <p className="text-sm text-gray-700 mt-2 line-clamp-2 text-start">
+                <p className="text-sm text-gray-500 mt-2 line-clamp-2 text-start">
                   {event.description}
                 </p>
-                <div className="flex items-center gap-2 mt-2 text-sm text-gray-600">
-                  <FaCalendarAlt className="text-[#00733C]" />
+                <div className="flex items-center gap-2 mt-2 text-sm text-gray-400">
+                  <FaCalendarAlt className="text-[#fccc5b]" />
                   <span>{event.date}</span>
                 </div>
               </div>

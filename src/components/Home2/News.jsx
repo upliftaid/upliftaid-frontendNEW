@@ -65,10 +65,10 @@ const News = () => {
                     <div className={`w-full h-[200px] bg-cover `} style={{ backgroundImage: `url(${news.imageUrl})` }}></div>
                   </div>
                   <h1 className="font-[400] text-[22px]">{news.heading}</h1>
-                  <p className="text-[14px] line-clamp-2 text-gray-700">{news.description}</p>
+                  <p className="text-[14px] line-clamp-2 text-gray-500">{news.description}</p>
                   <div className="flex gap-2 items-center">
-                    <FaCalendarAlt color="#c0c0c0" />
-                    <p className="text-[12px] text-[#7F7F7F]">{news.date}</p>
+                    <FaCalendarAlt color="#fccc5b" />
+                    <p className="text-[12px] text-gray-400">{news.date}</p>
                   </div>
                 </div>
               </SwiperSlide>

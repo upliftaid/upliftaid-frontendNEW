@@ -44,7 +44,7 @@ const StatsCard = () => {
                 </p>
               </div>
 
-              <div className="bg-[#FFB204] hover:bg-[#E69F00] duration-300 text-black rounded hover:text-white w-[132px] h-13 flex items-center justify-center text-lg mt-4 cursor-pointer">
+              <div className="bg-[#FFB204] hover:bg-[#E69F00] duration-300  rounded text-white w-[132px] h-13 flex items-center justify-center text-lg mt-4 cursor-pointer">
                 <NavLink to="/">Donate Now</NavLink>
               </div>
             </div>
