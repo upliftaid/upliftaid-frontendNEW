@@ -13,7 +13,7 @@ const Gallery = () => {
   return (
     <div className="relative lg:w-full mt-10 min-w-[320px]">
       {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full lg:min-h-screen bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/childrens2.jpg')] bg-cover lg:bg-fixed -z-10"></div>
+      <div className="absolute inset-0 w-full  bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/childrens2.jpg')] bg-cover lg:bg-fixed -z-10"></div>
 
       {/* Overlay and Content */}
       <div className="relative bg-black/70 p-4 mx-auto md:py-16 md:px-8">

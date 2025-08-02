@@ -18,11 +18,11 @@ const News = () => {
         </div>
 
         {/* Render arrows on last visible card */}
-        <div className="-mb-10 ml-auto mr-9 md:block hidden">
-          <button className="swiper-button-prev-custom text-[#FFB204] !m-2 border-2 cursor-pointer rounded-full font-bold text-xl px-2">
+        <div className="-mb-10 ml-auto mr-9 w-full !flex translate-y-40 z-10 relative !justify-between md:block ">
+          <button className="swiper-button-next-custom -translate-x-10 text-[#FFB204] !m-2 cursor-pointer rounded-full font-bold text-4xl px-2 hover:scale-130 hover:-translate-x-11 duration-300">
             ‹
           </button>
-          <button className="swiper-button-next-custom text-[#FFB204] !m-2 border-2 cursor-pointer rounded-full font-bold text-xl px-2">
+          <button className="swiper-button-prev-custom translate-x-10 text-[#FFB204] !m-2  cursor-pointer rounded-full font-bold text-4xl px-2 hover:scale-130 hover:translate-x-11 duration-300">
             ›
           </button>
         </div>
@@ -30,8 +30,8 @@ const News = () => {
         <div className="overflow-hidden">
           <Swiper
             spaceBetween={20}
-            autoplay={{ delay: 2000, disableOnInteraction: false }}
-            speed={5000}
+            autoplay={false}
+            speed={500}
             loop={true}
             modules={[Autoplay, Navigation]}
             navigation={{

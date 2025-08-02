@@ -23,7 +23,7 @@ const HomePage = () => {
       <section className="grid !mt-16">
         {/* About Us */}
 
-        <div className="flex flex-col lg:flex-row md:justify-center lg:w-full  px-4 lg:px-20 lg:gap-0 gap-10 lg:items-center !mb-10 min-w-[320px] ">
+        <div className="flex flex-col lg:flex-row md:justify-center lg:w-full  px-4 lg:px-20 lg:gap-0 gap-10 lg:items-center  min-w-[320px] ">
           <div className="grid gap-1 px-4 w-full max-w-[250px]">
             <h1 className="text-[50px] font-[400] max-[1210px]:text-[40px] w-full ">About Us</h1>
             <div className="bg-[#00733C] w-16 h-[2.5px]"></div>
@@ -98,7 +98,7 @@ const HomePage = () => {
             <h1 className="text-[32px] text-white">WE NEED YOUR</h1>
             <h1 className="text-[32px] text-white">HELP</h1>
           </div>
-          <div className="bg-[#FFB204] hover:bg-[#E69F00] text-black rounded hover:text-white w-[192px] h-14 flex items-center justify-center text-[18px]">
+          <div className="bg-[#FFB204] hover:bg-[#E69F00] duration-300 text-black rounded hover:text-white w-[192px] h-14 flex items-center justify-center text-[18px]">
             <NavLink to="/">Donate Now!!</NavLink>
           </div>
         </div>
