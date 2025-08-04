@@ -23,6 +23,7 @@ import ProfilePage from "./pages/ProfilePage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ProductCart from "./pages/ProductCart";
 import ProductPage from "./pages/ProductPage";
+import Blog from "./pages/blog";
 
 function App() {
   const pathname = window.location.pathname;
@@ -86,6 +87,10 @@ function App() {
             {/*another blog page*/}
             <Route
               path="/blog"
+              element={<Blog />}
+            />
+            <Route
+              path="/blog/:id"
               element={<BlogDetailPage />}
             />
             <Route

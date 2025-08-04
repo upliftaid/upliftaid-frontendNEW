@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBlogData } from '../../redux/blogSlice';
 import { FaUser, FaCalendarAlt, FaHeart, FaAngleRight, FaAngleDown } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+
 
 const BlogSection = ({ totalPages = 4 }) => {
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
+
+  const navigate = useNavigate();
 
   const handleClick = (page) => {
     if (page >= 1 && page <= totalPages) {
@@ -28,17 +32,17 @@ const BlogSection = ({ totalPages = 4 }) => {
 
   return (
     <div>
-  <div className="bg-[#f2f2f2] text-[32px] md:text-[42px] lg:px-22 py-5 mt-18 px-5 text-center">Blog</div>
+  <div  className="bg-[#f2f2f2] text-[32px] md:text-[42px] lg:px-22 py-5 mt-18 px-5 text-center">Blog</div>
 
   <div className="flex flex-col lg:flex-row lg:px-20">
     {/* Blog Posts */}
     <div className="w-full lg:w-[70%] grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
       {blogPosts.map((post, index) => (
-        <div key={index} className="p-4 min-w-[274px] lg:w-[346px]">
-          <div className='min-w-[274px] min-  h-[174px] lg:w-[346px] lg:h-[220px]'>
-            <img src={post.img} alt={post.title} className="w-full h-full object-scale-down" />
+        <div onClick={() => navigate(`/blog/${index}`)} key={index} className="group p-4 cursor-pointer min-w-[274px] lg:w-[346px]">
+          <div className='min-w-[274px] overflow-hidden min-h-[174px] lg:w-[346px] lg:h-[220px]'>
+            <img src={post.img} alt={post.title} className="group-hover:scale-105 duration-300 w-full h-full object-scale-down" />
           </div>
-          <h2 className="text-[24px] md:text-[28] mt-4 mb-3">{post.title}</h2>
+          <h2 className="text-xl font-semibold md:text-[28] mt-4 mb-3 group-hover:text-[#FFB204] duration-300">{post.title}</h2>
           <p className="text-black mb-4 text-[14px] text-justify">{post.desc}</p>
           <div className="flex flex-wrap gap-4 text-gray-600 text-sm">
             <div className="flex items-center gap-2 text-[12px]">
