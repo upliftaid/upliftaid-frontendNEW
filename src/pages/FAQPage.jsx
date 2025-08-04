@@ -7,42 +7,47 @@ import GeneralQuestionsData2 from "../constants/aboutUs/FAQ/GeneralQuestionsData
 
 const FAQPage = () => {
   return (
-    <div className="font-[Poppins]">
-
-      <section className="grid gap-8">
+    <div className="font-[Poppins] w-full overflow-x-hidden">
+      <section className="flex flex-col gap-10">
         {/* Header */}
         <Header />
 
-        <p className="text-center lg:w-[642px] lg:h-18 text-[14px] mx-auto px-4">
+        {/* Intro Paragraph */}
+        <p className="text-center max-w-3xl text-sm sm:text-base mx-auto text-gray-700 leading-relaxed">
           Below are some frequently asked questions about UpliftAid and our
           programs. If you need personalized assistance or don’t find your
           question here, please visit our community forums. You can also review
           our Terms of Service and Support Policy for more information.
         </p>
 
-        <div className="w-full lg:px-24 flex flex-col md:flex-row gap-8 items-start">
+        {/* FAQ Columns */}
+        <div className="w-full flex flex-col lg:flex-row gap-8 items-start">
           {/* Left Column */}
-          <div className="flex-1 h-full p-4 flex flex-col gap-8 w-full">
-            <div className="flex flex-col gap-1 px-4">
-              <h1 className="text-[28px]">GENERAL QUESTIONS</h1>
+          <div className="flex-1 min-w-0 w-full h-full p-2 sm:p-4 flex flex-col gap-6">
+            <div className="px-2 sm:px-4">
+              <h1 className="text-2xl sm:text-3xl font-semibold mb-1 text-gray-800">
+                GENERAL QUESTIONS
+              </h1>
               <div className="bg-[#00733C] w-16 h-[2.5px]" />
             </div>
             <GeneralQuestions accordinData={GeneralQuestionsData1} />
           </div>
 
           {/* Right Column */}
-          <div className="flex-1 h-full p-4 flex flex-col gap-8 w-full">
-            <div className="flex flex-col gap-1 px-4 ">
-              <h1 className="text-[28px]">GENERAL QUESTIONS</h1>
+          <div className="flex-1 min-w-0 w-full h-full p-2 sm:p-4 flex flex-col gap-6">
+            <div className="px-2 sm:px-4">
+              <h1 className="text-2xl sm:text-3xl font-semibold mb-1 text-gray-800">
+                GENERAL QUESTIONS
+              </h1>
               <div className="bg-[#00733C] w-16 h-[2.5px]" />
             </div>
             <GeneralQuestions accordinData={GeneralQuestionsData2} />
           </div>
         </div>
 
+        {/* Helping Message */}
         <HelpingMessage />
       </section>
-
     </div>
   );
 };
