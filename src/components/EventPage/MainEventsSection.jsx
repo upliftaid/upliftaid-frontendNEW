@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 import { FaRegCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { Bookmark, Box, User } from 'lucide-react';
+import events from "../../constants/Event/events";
+import { useState } from "react";
 
-export default function MainEventsSection({
-  activeTab,
-  setActiveTab,
-  filteredEvents,
-  tabs,
-  onEventClick,
-}) {
+export default function MainEventsSection({onEventClick}) {
+    const [activeTab, setActiveTab] = useState("Happening");
+    const filteredEvents = events.filter((event) => event.status === activeTab);
+    const tabs = ["Happening", "Upcoming", "Expired"];
+
+    
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8">
       {/* Tabs */}
@@ -15,18 +17,27 @@ export default function MainEventsSection({
         initial={{ opacity: 0, transform: "translateX(-100%)" }}
         animate={{ opacity: 1, transform: "translateX(0%)" }}
         transition={{ duration: 1.3 }}
-        className="flex flex-wrap gap-4 mb-8 border-b border-gray-200"
+        className="flex flex-wrap gap-4 max-[750px]:!justify-center !mb-15 border-b border-gray-200"
       >
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-t ${
+            className={`max-[445px]:pl-0 max-[445px]:pr-2 px-4 flex items-center cursor-pointer py-2 text-sm font-medium transition-colors  rounded-t ${
               activeTab === tab
-                ? "text-[#FFB204] border border-b-0 border-gray-200 bg-white"
-                : "text-gray-500 hover:text-gray-700 hover:bg-[#FFB204] hover:text-white"
+                ? "text-[#FFB204] border border-b-0 !pb-2 scale-104 relative z-10 duration-500 border-gray-200 bg-white"
+                : "text-gray-500  hover:bg-[#FFB204] hover:text-white duration-500"
             }`}
           >
+            {
+              tab === "Happening" && <Bookmark className="h-4 " />
+            }
+            {
+              tab === "Upcoming" && <Box className="h-4 " />
+            }
+            {
+              tab === "Expired" && <User className="h-4 "/>
+            }
             {tab}
           </button>
         ))}
@@ -35,7 +46,7 @@ export default function MainEventsSection({
       {/* Events Grid */}
       <div
         key={activeTab}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 py-4 justify-items-center"
+        className="grid grid-cols-1 min-[600px]:grid-cols-2  min-[1150px]:grid-cols-3 gap-x-6 gap-y-10 py-4 justify-items-center"
       >
         {filteredEvents.map((event, index) => (
           <motion.div
@@ -43,7 +54,7 @@ export default function MainEventsSection({
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: index * 0.3 }}
             key={index}
-            className="flex flex-col items-start w-full max-w-xs gap-2"
+            className="flex flex-col items-start w-full max-w-xs gap-2 border-b !pb-10 border-gray-800 border-dotted"
           >
             <div className="w-full h-44 overflow-hidden mb-4">
               <img
@@ -54,17 +65,17 @@ export default function MainEventsSection({
             </div>
 
             <h2
-              className="text-lg font-semibold cursor-pointer hover:text-[#FFB204] mb-2 px-2 text-start"
+              className="text-xl font-semibold cursor-pointer hover:text-[#FFB204] !my-4  duration-300 text-start"
               onClick={() => onEventClick(event)}
             >
               {event.title}
             </h2>
 
-            <p className="text-gray-600 text-[14px] text-start text-justify mb-3 px-2">
+            <p className="text-gray-500 text-[14px] text-start mb-3 ">
               {event.description}
             </p>
 
-            <div className="flex items-center text-sm text-gray-500 gap-4 flex-wrap px-2">
+            <div className="flex items-center text-[11px] !mt-2 text-gray-400 gap-4 flex-wrap ">
               <span className="flex items-center gap-1">
                 <FaRegCalendarAlt color="#FFB204" /> {event.date}
               </span>

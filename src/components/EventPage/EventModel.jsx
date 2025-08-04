@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function EventModel({ setSelectedEvent, selectedEvent }) {
+  console.log(selectedEvent)
   return (
     <motion.div
       initial={{ opacity: 0 }}
