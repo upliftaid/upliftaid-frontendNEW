@@ -41,23 +41,27 @@ export default function BeAVolunteer() {
 
   return (
     <div className="w-full min-h-screen overflow-hidden flex flex-col font-[Poppins]">
-        <VolunteerTopSection />
-        <main className="flex flex-col w-full gap-4">
-          <BecomeAVolunteer />
-          <HowToApply />
-          <Teams/>
-          <Testimonials />
-          <div
-            ref={scrollRef}
-            className="flex gap-5 items-center overflow-x-scroll scroll-smooth hide-scrollbar justify-center h-25"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            {owlItems.map((i) => (
-              <img src={i.image} alt="logo" key={i.id} />
-            ))}
-          </div>
-        </main>
+      <VolunteerTopSection />
+      <main className="flex flex-col w-full gap-4">
+        <BecomeAVolunteer />
+        <HowToApply />
+        <Teams />
+        <Testimonials />
+        <div
+          ref={scrollRef}
+          className="flex gap-5 items-center overflow-x-scroll scroll-smooth hide-scrollbar justify-center h-25"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {owlItems.map((i) => (
+            <img
+              src={i.image}
+              alt="logo"
+              key={i.id}
+            />
+          ))}
+        </div>
+      </main>
     </div>
   );
 }

@@ -6,55 +6,67 @@ import TestimonalsDetails from "../../../constants/aboutUs/BeVolunteer/Testimona
 
 const Testimonials = () => {
   return (
-    <div className="relative mt-10 min-w-[320px] h-[500px]">
+    <div className="relative mt-10 min-w-[320px]">
       {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/bg-12.jpg')] bg-cover lg:bg-fixed -z-10"></div>
+      <div className="absolute inset-0 w-full h-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/bg-12.jpg')] bg-cover bg-center bg-fixed -z-10" />
 
       {/* Overlay and Content */}
-      <div className="relative bg-black/70 h-full p-4 mx-auto md:py-16 md:px-8 ">
-        <div className="grid gap-10">
+      <div className="relative bg-black/70 w-full py-12 px-4 md:py-16 md:px-8">
+        <div className="grid gap-10 max-w-7xl mx-auto">
           {/* Title */}
-          <div className="grid gap-1 text-center">
-            <h1 className="text-[36px] text-white">Testimonials</h1>
-            <div className="bg-[#00733C] w-16 h-[2.5px] mx-auto"></div>
+          <div className="text-center">
+            <h1 className="text-3xl sm:text-4xl text-white font-semibold">
+              Testimonials
+            </h1>
+            <div className="bg-[#00733C] w-16 h-[2.5px] mx-auto mt-2" />
           </div>
 
           {/* Swiper Slider */}
           <Swiper
-            modules={[Autoplay, Pagination]} // Removed Navigation
+            modules={[Autoplay, Pagination]}
             spaceBetween={30}
             autoplay={{ delay: 3000 }}
             pagination={{ clickable: true }}
             breakpoints={{
-              0: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              0: { slidesPerView: 1, spaceBetween: 20 },
+              768: { slidesPerView: 2, spaceBetween: 25 },
+              1024: { slidesPerView: 3, spaceBetween: 30 },
             }}
-            className="w-full px-6 !pb-10" // Adds spacing for bullets
+            className="w-full px-2 sm:px-4 !pb-12"
           >
             {TestimonalsDetails.map((data, index) => (
-              <SwiperSlide key={index} className="flex justify-center">
-                <div className="max-h-[350px] min-w-[250px] md:w-[300px] lg:w-[380px] lg:h-[250px] bg-[#F7F7F7] relative rounded-sm lg:px-15 lg:py-6 p-8 mx-10 ">
-                  <div className="w-18 h-18 rounded-full bg-white absolute top-63 md:top-42 lg:top-40 -left-10">
-                    <img
-                      src={data.image}
-                      alt=""
-                      className="w-full h-full rounded-full"
-                    />
+              <SwiperSlide
+                key={index}
+                className="flex justify-center"
+              >
+                <div className="relative bg-[#F7F7F7] rounded-md shadow-lg pt-8 pb-6 px-4 sm:px-6 w-full max-w-sm text-center min-h-[320px] sm:min-h-[360px] flex flex-col">
+                  {/* Avatar Image */}
+                  <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white overflow-hidden shadow-lg border-4 border-white">
+                      <img
+                        src={data.image}
+                        alt={data.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
-                  <div className="grid gap-4 ml-6 md:ml-0 md:h-40 lg:w-76 md:w-60 min-w-45 h-60">
-                    <p className="text-[14px] text-justify">
+
+                  {/* Name & Post */}
+                  <div className="mb-4">
+                    <h1 className="text-sm sm:text-base font-bold text-[#00733C]">
+                      {data.name}
+                    </h1>
+                    <p className="text-xs sm:text-sm italic text-gray-500">
+                      {data.post}
+                    </p>
+                  </div>
+
+                  {/* Content */}
+                  <div className="px-1 sm:px-2 flex-1 flex items-center">
+                    <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-center">
                       {data.description}
                     </p>
                   </div>
-                  <div className="ml-6">
-                      <h1 className="text-[12px] text-[#00733C] font-bold">
-                        {data.name}
-                      </h1>
-                      <p className="text-[12px] italic text-[#7F7F7F]">
-                        {data.post}
-                      </p>
-                    </div>
                 </div>
               </SwiperSlide>
             ))}

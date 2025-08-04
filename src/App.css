@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
-  margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
@@ -22,7 +21,7 @@
 }
 
 .card-hover:hover .icon-hover {
-  background-color: #00733C; /* green on hover */
+  background-color: #00733c; /* green on hover */
   color: white;
 }
 .swiper-wrapper{

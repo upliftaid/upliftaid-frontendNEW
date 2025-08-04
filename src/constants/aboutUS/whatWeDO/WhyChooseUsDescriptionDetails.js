@@ -7,7 +7,7 @@ const WhyChooseUsDescriptionDetails = [
   {
     heading: "Leading volunteer groups",
     description:
-      "Our volunteers are the heart of our mission. From medical professionals and educators to students and community leaders, they bring passion and commitment to every initiative. We train, guide, and empower them to take active roles in disaster relief, community outreach, awareness campaigns, and capacity-building programs."
+      "Our volunteers are the heart of our mission. From medical professionals and educators to students and community leaders, they bring passion and commitment to every initiative. We train, guide, and empower them to take active roles in disaster relief, community outreach, awareness campaigns, and capacity-building programs.",
   },
   {
     heading: "Charity Program for children",

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
 const GeneralQuestions = ({ accordinData }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -9,28 +9,40 @@ const GeneralQuestions = ({ accordinData }) => {
   };
 
   return (
-    <div className="border p-4">
-      {accordinData.map((item, index) => (
-        <div key={index} className="px-4 py-2">
+    <div className="w-full max-w-3xl mx-auto p-4 sm:p-6 bg-white rounded-lg shadow-md overflow-hidden">
+      {accordinData.map((item, index) => {
+        const isOpen = openIndex === index;
+        return (
           <div
-            className="flex items-center justify-between cursor-pointer text-[#7C7C7C]"
-            onClick={() => toggleAccordion(index)}
+            key={index}
+            className="border-b last:border-b-0"
           >
-            <h1 className="">{item.heading}</h1>
-            <FaPlus />
+            {/* Accordion Header */}
+            <div
+              className="flex justify-between items-center cursor-pointer py-4 px-2 sm:px-4 text-[#333] hover:bg-gray-50 transition-colors"
+              onClick={() => toggleAccordion(index)}
+            >
+              <h2 className="text-sm sm:text-base font-medium w-11/12 truncate">
+                {item.heading}
+              </h2>
+              <div className="text-[#00733C] flex-shrink-0">
+                {isOpen ? <FaMinus size={14} /> : <FaPlus size={14} />}
+              </div>
+            </div>
+
+            {/* Accordion Body */}
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+              }`}
+            >
+              <div className="px-2 sm:px-4 pb-4 text-gray-600 text-sm leading-relaxed">
+                {item.description}
+              </div>
+            </div>
           </div>
-
-          {/* Render hr only if not the last item */}
-          {index !== accordinData.length - 1 && <hr className="mt-1" />}
-
-          {openIndex === index && (
-            <>
-              <div className="w-full h-[1px] bg-gray-100 mt-2 mb-2" />
-              <p className="text-[14px] mt-1 p-2">{item.description}</p>
-            </>
-          )}
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };

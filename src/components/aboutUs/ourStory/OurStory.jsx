@@ -1,17 +1,17 @@
 const OurStory = () => {
   return (
-    <div className="relative lg:w-full mt-10 min-w-[320px] h-80">
+    <div className="relative w-full mt-10 min-w-[320px] h-80 md:h-[22rem] lg:h-[26rem]">
       {/* Fixed background image */}
       <div
-        className="absolute inset-0 h-full w-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/about-header-bg.jpg')] bg-fixed -z-10 bg-top md:bg-top-right lg:bg-top"
+        className="absolute inset-0 w-full h-full bg-[url('https://zozothemes.com/html/the-charity/img/sections/bg/about-header-bg.jpg')] bg-fixed bg-cover bg-center md:bg-right-top lg:bg-top -z-10"
         aria-hidden="true"
       ></div>
 
       {/* Content wrapper with overlay */}
-      <div className="relative bg-white/10 h-80 flex justify-center">
-        <div className="pt-35 lg:px-40 md:px-16 px-5">
-          <h1 className="font-semibold md:text-[42px] text-[32px]">Our Story</h1>
-        </div>
+      <div className="relative flex items-center justify-center w-full h-full bg-white/10 px-4 md:px-12 lg:px-20">
+        <h1 className="text-[28px] md:text-[36px] lg:text-[42px] font-semibold text-center text-white drop-shadow-md">
+          Our Story
+        </h1>
       </div>
     </div>
   );
