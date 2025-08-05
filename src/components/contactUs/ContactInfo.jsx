@@ -1,41 +1,52 @@
 import { FaLocationDot } from "react-icons/fa6";
-import { MdKeyboardVoice } from "react-icons/md";
-import { MdEmail } from "react-icons/md";
+import { MdKeyboardVoice, MdEmail } from "react-icons/md";
 
 const ContactInfo = () => {
   return (
     <>
-      <div className="w-full h-auto px-2 py-2 lg:p-19 grid md:grid-cols-3 grid-cols-1 place-items-center text-sm lg:text-base gap-4">
-        <div className="lg:w-[336px] w-[200px] h-auto grid place-items-center gap-4">
-          <div className="w-23 h-23 bg-[#F7F7F7] rounded-full flex items-center justify-center text-[#00733C]">
-            <FaLocationDot size={25} />
+      <div className="w-full overflow-x-hidden px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center text-sm lg:text-base mb-8">
+        {/* Address */}
+        <div className="group w-full max-w-xs flex flex-col items-center gap-4 text-center cursor-pointer transition duration-200">
+          <div className="w-16 h-16 bg-[#F7F7F7] group-hover:bg-[#00733C] group-hover:text-white rounded-full flex items-center justify-center text-[#00733C] transition duration-200">
+            <FaLocationDot size={24} />
           </div>
           <div>
-            <p className="text-center">Address</p>
-            <p>Ghaizabad, UttaPradesh, India , 201001</p>
+            <p className="font-semibold group-hover:text-[#00733C] transition duration-200">
+              Address
+            </p>
+            <p className="break-words">
+              Ghaziabad, Uttar Pradesh, India, 201001
+            </p>
           </div>
         </div>
 
-        <div className="lg:w-[336px] w-[200px] h-auto grid place-items-center gap-4 ">
-          <div className="w-23 h-23 bg-[#F7F7F7] rounded-full flex items-center justify-center text-[#00733C]">
-            <MdKeyboardVoice size={35} />
+        {/* Phone */}
+        <div className="group w-full max-w-xs flex flex-col items-center gap-4 text-center cursor-pointer transition duration-200">
+          <div className="w-16 h-16 bg-[#F7F7F7] group-hover:bg-[#00733C] group-hover:text-white rounded-full flex items-center justify-center text-[#00733C] transition duration-200">
+            <MdKeyboardVoice size={28} />
           </div>
           <div>
-            <p className="text-center">Phones</p>
-            <p>+91-8319301965</p>
+            <p className="font-semibold group-hover:text-[#00733C] transition duration-200">
+              Phone
+            </p>
+            <p className="break-words">+91-8319301965</p>
           </div>
         </div>
 
-        <div className="lg:w-[336px] w-[200px] h-auto grid place-items-center gap-4 ">
-          <div className="w-23 h-23 bg-[#F7F7F7] rounded-full flex items-center justify-center text-[#00733C]">
-            <MdEmail size={35} />
+        {/* Email */}
+        <div className="group w-full max-w-xs flex flex-col items-center gap-4 text-center cursor-pointer transition duration-200">
+          <div className="w-16 h-16 bg-[#F7F7F7] group-hover:bg-[#00733C] group-hover:text-white rounded-full flex items-center justify-center text-[#00733C] transition duration-200">
+            <MdEmail size={28} />
           </div>
           <div>
-            <p className="text-center">Email Address</p>
-            <p>hello@upliftaid.org</p>
+            <p className="font-semibold group-hover:text-[#00733C] transition duration-200">
+              Email
+            </p>
+            <p className="break-words">hello@upliftaid.org</p>
           </div>
         </div>
       </div>
+
       <div className="w-[90%] mx-auto h-[1px] bg-[#e1e1e1]" />
     </>
   );
