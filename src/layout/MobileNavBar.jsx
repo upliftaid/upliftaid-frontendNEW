@@ -3,23 +3,24 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaCartShopping, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
-const MobileNavbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const SidebarNavbar = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
 
   const navlinks = [
     { url: "/", name: "Home" },
-    { url: "/about", name: "About Us", hasSubmenu: true },
+    { url: "/about-us", name: "About Us", hasSubmenu: true },
     { url: "/causes", name: "Causes" },
     { url: "/events", name: "Events" },
     { url: "/portfolio", name: "Portfolio" },
     { url: "/blog", name: "Blog" },
     { url: "/contact", name: "Contact" },
-    { name: "Products", url: "/product" },
-    { name: "Career", url: "/career" },
-    { name: "Profile", url: "/profile" }
+    { url: "/product", name: "Products" },
+    { url: "/career", name: "Career" },
+    { url: "/profile", name: "Profile" },
+    { url: "/login", name: "Login" },
   ];
 
   const submenuLinks = [
@@ -30,102 +31,130 @@ const MobileNavbar = () => {
     { url: "/about/testimonals", name: "Testimonals" },
   ];
 
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+    setIsSubmenuOpen(false);
+  };
+
   return (
     <>
-      {/* Top Navbar */}
-      <div className="lg:hidden flex items-center justify-between p-4 w-full h-[70px] fixed top-0 z-[99] bg-[#00733C]">
-        <Link to="/" className="h-16 w-16">
+      {/* Top Bar */}
+      <div className="min-[1245px]:hidden flex items-center justify-between px-4 w-full h-[70px] fixed top-0 z-[50] bg-[#00733C]">
+        
+        <button
+          onClick={() => setIsSidebarOpen(true)}
+          aria-label="Open Sidebar"
+        >
+          <GiHamburgerMenu size={30} color="#FFB204" />
+        </button>
+        <Link to="/" className="h-14 w-14">
           <img src={logo} alt="logo" className="h-full w-full object-contain" />
         </Link>
-
-        <button
-          onClick={() => setIsOpen((prev) => !prev)}
-          aria-label="Toggle Menu"
-        >
-          {isOpen ? (
-            <RxCross2 size={30} color="#FFB204" />
-          ) : (
-            <GiHamburgerMenu size={30} color="#FFB204" />
-          )}
-        </button>
       </div>
 
-      {/* Dropdown Menu */}
+      {/* Overlay */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 backdrop-blur bg-opacity-50 z-[70]"
+          onClick={closeSidebar}
+        ></div>
+      )}
+
+      {/* Sidebar Panel */}
       <div
-        className={`transition-max-height duration-300 ease-in-out overflow-hidden bg-[#00733C] fixed top-[70px] left-0 right-0 z-[98] lg:hidden ${
-          isOpen ? "max-h-[90vh] overflow-y-auto py-4" : "max-h-0"
+        className={`fixed top-0 left-0 h-full w-[80%] max-w-[300px] bg-[#00733C] z-[99] transform transition-transform duration-300 ease-in-out ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <nav className="flex flex-col">
+        <div className="flex items-center justify-between p-4 border-b border-white/10">
+          <Link to="/" onClick={closeSidebar}>
+            <img src={logo} alt="logo" className="w-12 h-12 object-contain" />
+          </Link>
+          <button onClick={closeSidebar} aria-label="Close Sidebar">
+            <RxCross2 size={30} color="#FFB204" />
+          </button>
+        </div>
+
+        <nav className="flex flex-col text-white font-[Poppins] p-4">
           {navlinks.map((link, index) => (
-            <div key={index} className="relative mb-1">
+            <div key={index} className="mb-1">
               {link.hasSubmenu ? (
                 <>
-                  <button
-                    onClick={() => setIsSubmenuOpen(prev => !prev)}
-                    className="text-white py-2 px-4 text-left w-full hover:text-[#FFB204] transition flex justify-between items-center"
-                  >
-                    {link.name}
-                    <span className="ml-auto pr-2 text-[#FFB204]">
-                      {isSubmenuOpen ? "−" : "+"}
-                    </span>
-                  </button>
+                  <div className="w-full flex justify-between items-center py-2  hover:text-[#FFB204]">
+                    <NavLink
+                      to={link.url}
+                      onClick={closeSidebar}
+                      // className="flex-1"
+                      className={({ isActive }) =>
+                        `hover:text-[#FFB204] flex-1 transition duration-200 px-2 block py-2 ${
+                          isActive ? "text-[#FFB204] font-semibold" : ""
+                        }`
+                      }
+                    >
+                      {link.name}
+                    </NavLink>
+                    <button onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}>
+                        <FaChevronUp className={`text-[#FFB204] ${isSubmenuOpen ? "rotate-180" : "rotate-90"} duration-300 cursor-pointer`} />
+                    </button>
+                  </div>
 
-                  {isSubmenuOpen && (
-                    <div className="flex flex-col bg-[#006030]">
-                      {submenuLinks.map((sublink, subIndex) => (
-                        <Link
-                          key={subIndex}
-                          to={sublink.url}
-                          className="text-white py-1.5 pl-8 pr-4 hover:text-[#FFB204] transition"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {sublink.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                  <div
+                    className={`ml-4 bg-[#006030] rounded-md overflow-hidden transition-[max-height] duration-500 ease-in-out ${
+                      isSubmenuOpen ? "max-h-96 " : "max-h-0 "
+                    }`}
+                  >
+                    {submenuLinks.map((sublink, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        to={sublink.url}
+                        className="block px-3 py-2 text-sm hover:text-[#FFB204] transition-colors duration-300"
+                        onClick={closeSidebar}
+                      >
+                        {sublink.name}
+                      </Link>
+                    ))}
+                  </div>
+
                 </>
               ) : (
-                <Link
+                <NavLink
                   to={link.url}
-                  className="text-white py-2 px-4 hover:text-[#FFB204] transition block w-full"
-                  onClick={() => setIsOpen(false)}
+                  // className="block py-2 px-2 hover:text-[#FFB204] transition"
+                  className={({ isActive }) =>
+                    `hover:text-[#FFB204] transition duration-200 px-2 block py-2 ${
+                      isActive ? "text-[#FFB204] font-semibold" : ""
+                    }`
+                  }
+                  onClick={closeSidebar}
                 >
                   {link.name}
-                </Link>
+                </NavLink>
               )}
             </div>
           ))}
 
           {/* Cart Button */}
-          <div className="mt-4 px-4">
-            <NavLink
-              to="/cart"
-              className="w-full bg-[#FFB204] hover:bg-[#E69F00] text-black hover:text-white font-semibold py-2 rounded transition flex items-center justify-center gap-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Cart
-              <FaCartShopping size={25}/>
-            </NavLink>
-          </div>
-
-          
+          <NavLink
+            to="/cart"
+            onClick={closeSidebar}
+            className="mt-6 bg-[#FFB204] hover:bg-[#E69F00] text-black hover:text-white font-semibold py-2 rounded flex items-center justify-center gap-2"
+          >
+            <FaCartShopping />
+            Cart
+          </NavLink>
 
           {/* Donate Button */}
-          <div className="mt-4 px-4">
-            <NavLink
-              to="/donate"
-              className="block w-full text-center bg-[#FFB204] hover:bg-[#E69F00] text-black hover:text-white font-semibold py-2 rounded transition"
-              onClick={() => setIsOpen(false)}
-            >
-              Donate
-            </NavLink>
-          </div>
+          <NavLink
+            to="/donate"
+            onClick={closeSidebar}
+            className="mt-4 bg-[#FFB204] hover:bg-[#E69F00] text-black hover:text-white text-center font-semibold py-2 rounded"
+          >
+            Donate
+          </NavLink>
         </nav>
       </div>
     </>
   );
 };
 
-export default MobileNavbar;
+export default SidebarNavbar;

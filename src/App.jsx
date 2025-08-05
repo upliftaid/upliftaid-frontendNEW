@@ -29,7 +29,6 @@ function App() {
   const pathname = window.location.pathname;
   return (
     <>
-      {pathname !== "/auth" ? (
         <Router>
           <Navbar />
           <MobileNavbar />
@@ -109,19 +108,14 @@ function App() {
               path="/product"
               element={<ProductPage />}
             />
-          </Routes>
-          <Footer />
-        </Router>
-      ) : (
-        <Router>
-          <Routes>
             <Route
               path="/auth"
               element={<AuthPage />}
             />
           </Routes>
+          <Footer />
         </Router>
-      )}
+      
     </>
   );
 }
