@@ -5,8 +5,7 @@ import ContactInfo from "../components/contactUs/ContactInfo";
 const ContactPage = () => {
   return (
     <div className="font-[Poppins]">
-
-      <section className="grid">
+      <section>
         {/* Header */}
         <Header />
 
@@ -17,7 +16,6 @@ const ContactPage = () => {
         {/* form */}
         <ContactForm />
       </section>
-
     </div>
   );
 };
