@@ -20,6 +20,7 @@ import { FormField } from '../components/signUp/FormField';
 import { PasswordStrengthMeter } from '../components/signUp/PasswordStrengthMeter';
 import { MultiSelect } from '../components/signUp/MultiSelect';
 import { AvatarUpload } from '../components/signUp/AvatarUpload';
+import { useNavigate } from 'react-router-dom';
 
 const INTERESTS_OPTIONS = [
   'Technology', 'Sports', 'Music', 'Art', 'Travel', 'Reading', 'Photography', 'Cooking',
@@ -34,6 +35,8 @@ const SKILLS_OPTIONS = [
 const App = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [showPassword, setShowPassword] = useState(false);
+
+  const navigate = useNavigate();
 
   // Step 1 form
   const step1Form = useForm({
@@ -432,12 +435,23 @@ const App = () => {
         </div>
 
         {/* Footer */}
-        <p className="text-center text-sm text-gray-600 mt-6">
+        {/* <p className="text-center text-sm text-gray-600 mt-6">
           Already have an account?{' '}
-          <a href="#" className="font-medium text-white  hover:text-gray-200 transition-colors duration-200">
+          <a href="/auth" className="font-medium text-white  hover:text-gray-200 transition-colors duration-200">
             Sign in
           </a>
-        </p>
+        </p> */}
+        <p className="text-center mt-4 text-sm text-green-900">
+          Already have an account?{' '}
+        <button
+            disabled={step1Form.formState.isSubmitting || step2Form.formState.isSubmitting}
+            style={{ opacity: step2Form.formState.isSubmitting || step1Form.formState.isSubmitting ? 0.5 : 1 }}
+            onClick={() => navigate("/auth")}
+          className="underline font-semibold hover:text-green-700"
+        >
+           Sign in
+        </button>
+      </p>
       </div>
     </div>
   );
