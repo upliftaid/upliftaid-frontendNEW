@@ -76,7 +76,7 @@ export default function ResetPassword() {
       </div>
 
       <h2 className="text-3xl font-bold text-center text-green-800 mb-6 tracking-tight">
-        Please enter your email
+        Please enter your new password
       </h2>
 
       <form className="space-y-4" onSubmit={handleSubmit(onsubmit)}>
