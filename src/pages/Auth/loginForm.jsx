@@ -1,6 +1,6 @@
 import React from "react";  
 import { FaEnvelope, FaLock } from "react-icons/fa";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import {z} from "zod";
 import { useForm} from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';

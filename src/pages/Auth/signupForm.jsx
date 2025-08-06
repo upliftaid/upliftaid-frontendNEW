@@ -15,11 +15,11 @@ import {
   ChevronRight 
 } from 'lucide-react';
 
-import { step1Schema, step2Schema } from '../constants/signUp/form';
-import { FormField } from '../components/signUp/FormField';
-import { PasswordStrengthMeter } from '../components/signUp/PasswordStrengthMeter';
-import { MultiSelect } from '../components/signUp/MultiSelect';
-import { AvatarUpload } from '../components/signUp/AvatarUpload';
+import { step1Schema, step2Schema } from '../../constants/signUp/form';
+import { FormField } from '../../components/signUp/FormField';
+import { PasswordStrengthMeter } from '../../components/signUp/PasswordStrengthMeter';
+import { MultiSelect } from '../../components/signUp/MultiSelect';
+import { AvatarUpload } from '../../components/signUp/AvatarUpload';
 import { useNavigate } from 'react-router-dom';
 
 const INTERESTS_OPTIONS = [

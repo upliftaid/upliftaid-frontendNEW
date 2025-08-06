@@ -13,7 +13,7 @@ import ContactPage from "./pages/ContactPage";
 import JoinTeamPage from "./pages/Career2";
 import Testimonials from "./pages/Testimonials";
 import CausePage from "./pages/CausePage";
-import AuthPage from "./pages/AuthPage";
+import AuthPage from "./pages/Auth/AuthPage";
 // import Blog from "./pages/Blog"    // another blog page
 import BlogDetailPage from "./pages/BlogDetailPage";
 import ProfilePage from "./pages/ProfilePage";
@@ -22,8 +22,8 @@ import ProductCart from "./pages/ProductCart";
 import ProductPage from "./pages/ProductPage";
 import Blog from "./pages/blog";
 import Root from "./root";
-import LoginForm from "./pages/loginForm";
-import SignupForm from "./pages/signupForm";
+import LoginForm from "./pages/Auth/loginForm";
+import SignupForm from "./pages/Auth/signupForm";
 
 function App() {
   const pathname = window.location.pathname;
