@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 import {z} from "zod";
 import { useForm} from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useNavigate } from "react-router-dom";
 
 const schema = z.object({
     email: z.string().email("Invalid email, please provide a valid email"),
@@ -14,6 +15,8 @@ const schema = z.object({
 const LoginForm = () => {
 
     const {register, handleSubmit, formState:{errors, isSubmitting }, setError} = useForm({resolver: zodResolver(schema)})
+
+    const navigate = useNavigate();
     
     const onSubmit = async(data) => {
         try {
@@ -89,6 +92,7 @@ const LoginForm = () => {
          New here?
         <button
             disabled={isSubmitting}
+            onClick={() => navigate("/signup")}
           className="underline font-semibold hover:text-green-700"
         >
            Create an account

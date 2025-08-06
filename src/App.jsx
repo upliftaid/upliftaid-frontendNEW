@@ -23,6 +23,7 @@ import ProductPage from "./pages/ProductPage";
 import Blog from "./pages/blog";
 import Root from "./root";
 import LoginForm from "./pages/loginForm";
+import SignupForm from "./pages/signupForm";
 
 function App() {
   const pathname = window.location.pathname;
@@ -53,6 +54,7 @@ function App() {
             </Route>
 
             <Route path="/auth" element={<LoginForm />}/>
+            <Route path="/signup" element={<SignupForm />}/>
           </Routes>
           
         </Router>
