@@ -91,24 +91,56 @@ const App = () => {
       const fullData = { ...step1Data, ...data };
 
       // fetch call
-      await new Promise((resolve) => setTimeout(resolve, 5000));
+      // await new Promise((resolve) => setTimeout(resolve, 5000));
+
 
       console.log('Complete form data:', fullData);
-      alert('Account created successfully!');
     } catch (error) {
       form2.setError('root', { type: "manual", message: "there is some error, please try again" });
     }
     
   };
 
-  const handleSkip = () => {
-    const step1Data = step1Form.getValues();
-    console.log('Profile setup skipped, form submitted:', step1Data);
-    alert('Account created successfully! You can complete your profile later.');
-  };
+
+  // change the skip button type from submit to button and use this function
+  // const handleSkip = async() => {
+  //   const step1Data = step1Form.getValues();
+  //   try {
+  //     // fetch call
+  //     await new Promise((resolve) => setTimeout(resolve, 5000));
+
+  //     console.log('Profile setup skipped, form submitted:', step1Data);
+
+  //     alert('Account created successfully! You can complete your profile later.');
+  //   } catch (error) {
+  //     step1Form.setError("root", {
+  //               type: "manual",
+  //               message: "something went wrong, please try again",
+  //     });
+  //   }
+  // };
 
   const handleBack = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
+  };
+
+  const addInterest = () => {
+    const interest = prompt("interest");
+    const existingInterest = INTERESTS_OPTIONS.find((i) => i.trim().toLowerCase() === interest.trim().toLowerCase());
+    if (!existingInterest) {
+      INTERESTS_OPTIONS.push(interest); 
+    }
+
+    step2Form.setValue('interests', [...step2Form.getValues().interests, existingInterest || interest]);
+  };
+  const addSkill = () => {
+    const skill = prompt("interest");
+    const existingSkill = SKILLS_OPTIONS.find((i) => i.trim().toLowerCase() === skill.trim().toLowerCase());
+    if (!existingSkill) {
+      SKILLS_OPTIONS.push(skill); 
+    }
+
+    step2Form.setValue('skills', [...step2Form.getValues().skills, existingSkill || skill]);
   };
 
   const password = step1Form.watch('password');
@@ -293,6 +325,13 @@ const App = () => {
                     placeholder="Enter your phone number"
                   />
                 </div>
+                {
+                  step2Form.formState.errors.phone && (
+                    <div className="text-red-500 text-start text-sm">
+                      {step2Form.formState.errors.phone.message}
+                    </div>
+                  )
+                }
               </FormField>
 
               {/* Date of Birth */}
@@ -358,6 +397,9 @@ const App = () => {
 
               {/* Interests */}
               <FormField label="Interests">
+                <button type='button' onClick={()=>addInterest()} className='text-green-800 cursor-pointer w-full text-end text-sm -translate-y-[30px]'>
+                  Add Custom Interest +
+                </button>
                 <Controller
                   name="interests"
                   control={step2Form.control}
@@ -374,6 +416,9 @@ const App = () => {
 
               {/* Skills */}
               <FormField label="Skills">
+                <button type='button' onClick={addSkill} className='text-green-800 cursor-pointer w-full text-end text-sm -translate-y-[30px]'>
+                  Add Custom Skill +
+                </button>
                 <Controller
                   name="skills"
                   control={step2Form.control}
@@ -415,8 +460,8 @@ const App = () => {
                 </div>
               </div>
               <button
-                    type="button"
-                    onClick={handleSkip}
+                    type="submit"
+                    // onClick={handleSkip}   // change the type to button to use this onclick
                     disabled={step2Form.formState.isSubmitting}
                     style={{ opacity: step2Form.formState.isSubmitting ? 0.5 : 1 }}
                     className="px-6 text-center w-full cursor-pointer text-gray-600 hover:text-gray-800 font-medium rounded-xl text-[14px]  transition-all duration-200"

@@ -14,7 +14,7 @@ export const step1Schema = z.object({
 });
 
 export const step2Schema = z.object({
-  phone: z.string().optional(),
+  phone: z.string().length(10, 'Phone number must be 10 digits').optional().or(z.literal('')),
   address: z.object({
     street: z.string().optional(),
     city: z.string().optional(),
