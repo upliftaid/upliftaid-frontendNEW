@@ -24,98 +24,102 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import ProductCart from "./pages/ProductCart";
 import ProductPage from "./pages/ProductPage";
 import Blog from "./pages/blog";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   const pathname = window.location.pathname;
   return (
     <>
-        <Router>
-          <Navbar />
-          <MobileNavbar />
-          <Routes>
-            <Route
-              path="/"
-              element={<HomePage />}
-            />
-            <Route
-              path="/events"
-              element={<EventPage />}
-            />
-            <Route
-              path="*"
-              element={<Notfound />}
-            />
-            <Route
-              path="/about-us"
-              element={<About_us />}
-            />
-            <Route
-              path="/about-us/be-a-volunteer"
-              element={<BeAVolunteer />}
-            />
-            <Route
-              path="/about-us/our-story"
-              element={<Our_story />}
-            />
-            <Route
-              path="/about-us/what-we-do"
-              element={<WhatWeDoPage />}
-            />
-            <Route
-              path="/about-us/faq"
-              element={<FAQPage />}
-            />
-            <Route
-              path="/contact"
-              element={<ContactPage />}
-            />
-            <Route
-              path="/career"
-              element={<JoinTeamPage />}
-            />{" "}
-            {/*career page build by manav juneja at branch CareerPage-mana*/}
-            <Route
-              path="/about-us/testimonals"
-              element={<Testimonials />}
-            />
-            <Route
-              path="/causes"
-              element={<CausePage />}
-            />
-            {/* <Route path="/blog" element={<Blog />} /> */}{" "}
-            {/*another blog page*/}
-            <Route
-              path="/blog"
-              element={<Blog />}
-            />
-            <Route
-              path="/blog/:id"
-              element={<BlogDetailPage />}
-            />
-            <Route
-              path="/profile"
-              element={<ProfilePage />}
-            />
-            <Route
-              path="/product-detail"
-              element={<ProductDetailPage />}
-            />
-            <Route
-              path="/cart"
-              element={<ProductCart />}
-            />
-            <Route
-              path="/product"
-              element={<ProductPage />}
-            />
-            <Route
-              path="/auth"
-              element={<AuthPage />}
-            />
-          </Routes>
-          <Footer />
-        </Router>
-      
+      <Router>
+        <Navbar />
+        <MobileNavbar />
+        <Routes>
+          <Route
+            path="/"
+            element={<HomePage />}
+          />
+          <Route
+            path="/events"
+            element={<EventPage />}
+          />
+          <Route
+            path="*"
+            element={<Notfound />}
+          />
+          <Route
+            path="/about-us"
+            element={<About_us />}
+          />
+          <Route
+            path="/about-us/be-a-volunteer"
+            element={<BeAVolunteer />}
+          />
+          <Route
+            path="/about-us/our-story"
+            element={<Our_story />}
+          />
+          <Route
+            path="/about-us/what-we-do"
+            element={<WhatWeDoPage />}
+          />
+          <Route
+            path="/about-us/faq"
+            element={<FAQPage />}
+          />
+          <Route
+            path="/contact"
+            element={<ContactPage />}
+          />
+          <Route
+            path="/career"
+            element={<JoinTeamPage />}
+          />{" "}
+          {/*career page build by manav juneja at branch CareerPage-mana*/}
+          <Route
+            path="/about-us/testimonals"
+            element={<Testimonials />}
+          />
+          <Route
+            path="/causes"
+            element={<CausePage />}
+          />
+          {/* <Route path="/blog" element={<Blog />} /> */}{" "}
+          {/*another blog page*/}
+          <Route
+            path="/blog"
+            element={<Blog />}
+          />
+          <Route
+            path="/blog/:id"
+            element={<BlogDetailPage />}
+          />
+          <Route
+            path="/profile"
+            element={<ProfilePage />}
+          />
+          <Route
+            path="/product-detail"
+            element={<ProductDetailPage />}
+          />
+          <Route
+            path="/cart"
+            element={<ProductCart />}
+          />
+          <Route
+            path="/product"
+            element={<ProductPage />}
+          />
+          <Route
+            path="/auth"
+            element={<AuthPage />}
+          />
+          <Route
+            path="/portfolio"
+            element={<Portfolio />}
+          />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }
