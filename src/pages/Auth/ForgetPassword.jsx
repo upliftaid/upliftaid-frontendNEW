@@ -1,36 +1,37 @@
-import React from "react";  
-import { FaEnvelope, FaLock } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 import logo from "../../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 import {z} from "zod";
 import { useForm} from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useNavigate } from "react-router-dom";
 
 const schema = z.object({
     email: z.string().email("Invalid email, please provide a valid email"),
-    password: z.string().min(8, "Password must be at least 8 characters"),
 });
 
 
-const LoginForm = () => {
+export default function ForgetPassword() {
+  const navigate = useNavigate();
 
-    const {register, handleSubmit, formState:{errors, isSubmitting }, setError} = useForm({resolver: zodResolver(schema)})
+  const {register, handleSubmit, formState:{errors, isSubmitting }, setError} = useForm({resolver: zodResolver(schema)})
 
-    const navigate = useNavigate();
-    
-    const onSubmit = async(data) => {
-        try {
-            // your api call
-            await new Promise((resolve) => setTimeout(resolve, 5000));
-            console.log(data)
+  const onsubmit = async(data) => {
+    try {
+        // your api call
+        await new Promise((resolve) => setTimeout(resolve, 5000));
+        console.log(data)
 
-        } catch (error) {
-            setError("root", {
-                type: "manual",
-                message: "Invalid email or password",
-            });
-        }
+        navigate('/reset-password')
+
+    } catch (error) {
+        setError("root", {
+            type: "manual",
+            message: "Invalid email or password",
+        });
     }
+}
+
+
 
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-tr from-[#00733C] via-white to-[#00b894] overflow-hidden">
@@ -46,70 +47,50 @@ const LoginForm = () => {
       </div>
 
       <h2 className="text-3xl font-bold text-center text-green-800 mb-6 tracking-tight">
-        Welcome Back
+        Please enter your email
       </h2>
 
-      <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
+      <form className="space-y-4" onSubmit={handleSubmit(onsubmit)}>
         
         <div className="relative">
           <FaEnvelope className="absolute top-3 left-3 text-green-800" />
           <input
             type="email"
-            {...register("email")}
+            disabled={isSubmitting}
             placeholder="Email"
+            {...register("email")}
             className="w-full pl-10 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all"
           />
           {
             errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
           }
         </div>
-        <div className="relative">
-          <FaLock className="absolute top-3 left-3 text-green-800" />
-          <input
-            type="password"
-            {...register("password")}
-            placeholder="Password"
-            className="w-full pl-10 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all"
-          />
-          {
-            errors.password && <p className="text-red-500 text-xs mt-1">{errors.password.message}</p>
-          }
-        </div>
+        
 
         <button
           type="submit"
           disabled={isSubmitting}
+          style={isSubmitting ? { cursor: "not-allowed", opacity: 0.5 } : {}}
           className="w-full py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 transition-transform transform hover:scale-105 duration-200 shadow-md"
         >
-          Login
+          submit
         </button>
         {
-          errors.root && <p className="text-red-500 text-xs mt-1">{errors.root.message}</p>
+            errors.root && <p className="text-red-500 text-center text-xs w-full">{errors.root.message}</p>
         }
       </form>
 
       <p className="text-center mt-4 text-sm text-green-900">
-         New here?{" "}
         <button
-            disabled={isSubmitting}
-            onClick={() => navigate("/signup")}
+          disabled={isSubmitting}
+          style={isSubmitting ? { cursor: "not-allowed", opacity: 0.5 } : {}}
+          onClick={() => navigate("/auth")}
           className="underline font-semibold hover:text-green-700"
         >
-           Create an account
-        </button>
-      </p>
-      <p className="text-center mt-2 text-sm text-green-900">
-        <button
-            disabled={isSubmitting}
-            onClick={() => navigate("/forget-password")}
-          className="underline font-semibold hover:text-green-700"
-        >
-           Forget Password?
+          Go back
         </button>
       </p>
     </div>
     </div>
   );
-};
-
-export default LoginForm;
+}

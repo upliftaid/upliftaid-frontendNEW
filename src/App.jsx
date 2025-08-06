@@ -24,6 +24,8 @@ import Blog from "./pages/blog";
 import Root from "./root";
 import LoginForm from "./pages/Auth/loginForm";
 import SignupForm from "./pages/Auth/signupForm";
+import ForgetPassword from "./pages/Auth/ForgetPassword";
+import ResetPassword from "./pages/Auth/ResetPassword";
 
 function App() {
   const pathname = window.location.pathname;
@@ -55,6 +57,8 @@ function App() {
 
             <Route path="/auth" element={<LoginForm />}/>
             <Route path="/signup" element={<SignupForm />}/>
+            <Route path="/forget-password" element={<ForgetPassword />}/>
+            <Route path="/reset-password" element={<ResetPassword />}/>
           </Routes>
           
         </Router>
