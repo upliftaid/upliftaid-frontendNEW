@@ -126,7 +126,7 @@ const App = () => {
 
   const addInterest = () => {
     const interest = prompt("interest");
-    const existingInterest = INTERESTS_OPTIONS.find((i) => i.trim().toLowerCase() === interest.trim().toLowerCase());
+    const existingInterest = INTERESTS_OPTIONS.find((i) => i.replace(/\s+/g, "").toLowerCase() === interest.replace(/\s+/g, "").toLowerCase());
     if (!existingInterest) {
       INTERESTS_OPTIONS.push(interest); 
     }
@@ -135,7 +135,7 @@ const App = () => {
   };
   const addSkill = () => {
     const skill = prompt("interest");
-    const existingSkill = SKILLS_OPTIONS.find((i) => i.trim().toLowerCase() === skill.trim().toLowerCase());
+    const existingSkill = SKILLS_OPTIONS.find((i) => i.replace(/\s+/g, "").toLowerCase() === skill.replace(/\s+/g, "").toLowerCase());
     if (!existingSkill) {
       SKILLS_OPTIONS.push(skill); 
     }
