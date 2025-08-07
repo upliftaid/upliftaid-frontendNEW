@@ -13,7 +13,7 @@ import ContactPage from "./pages/ContactPage";
 import JoinTeamPage from "./pages/Career2";
 import Testimonials from "./pages/Testimonials";
 import CausePage from "./pages/CausePage";
-import AuthPage from "./pages/Auth/AuthPage";
+// import AuthPage from "./pages/Auth/AuthPage";
 // import Blog from "./pages/Blog"    // another blog page
 import BlogDetailPage from "./pages/BlogDetailPage";
 import ProfilePage from "./pages/ProfilePage";
@@ -26,6 +26,9 @@ import LoginForm from "./pages/Auth/loginForm";
 import SignupForm from "./pages/Auth/signupForm";
 import ForgetPassword from "./pages/Auth/ForgetPassword";
 import ResetPassword from "./pages/Auth/ResetPassword";
+import Portfolio from "./pages/Portfolio";
+import ProjectDetail from "./pages/ProjectDetail";
+
 
 function App() {
   const pathname = window.location.pathname;
@@ -53,6 +56,8 @@ function App() {
               <Route path="/product-detail" element={<ProductDetailPage />}/>
               <Route path="/cart" element={<ProductCart />}/>
               <Route path="/product" element={<ProductPage />}/>
+              <Route path="/portfolio" element={<Portfolio />}/>
+              <Route path="/portfolio/:slug" element={<ProjectDetail />}/>
             </Route>
 
             <Route path="/auth" element={<LoginForm />}/>
