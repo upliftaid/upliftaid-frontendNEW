@@ -109,7 +109,7 @@ export default function ResetPassword() {
             </FormField>
 
             <FormField 
-                label="Password" 
+                label="Confirm Password" 
                 required 
                 error={errors.confirmPassword}
             >
@@ -122,7 +122,7 @@ export default function ResetPassword() {
                     className={`w-full pl-11 pr-11 py-3 border rounded-xl border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all duration-200 ${
                       errors.password ? 'border-red-300 bg-red-50' : 'border-gray-300'
                     }`}
-                    placeholder="Create a strong password"
+                    placeholder="Confirm Password"
                   />
                   <button
                     type="button"
