@@ -25,12 +25,15 @@ import ProductCart from "./pages/ProductCart";
 import ProductPage from "./pages/ProductPage";
 import Blog from "./pages/blog";
 import Portfolio from "./pages/Portfolio";
+import ProjectDetail from "./pages/ProjectDetail";
+import ScrollToTop from "./layout/ScrollToTop";
 
 function App() {
   const pathname = window.location.pathname;
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <MobileNavbar />
         <Routes>
@@ -116,6 +119,10 @@ function App() {
           <Route
             path="/portfolio"
             element={<Portfolio />}
+          />
+          <Route
+            path="/portfolio/:slug"
+            element={<ProjectDetail />}
           />
         </Routes>
         <Footer />
