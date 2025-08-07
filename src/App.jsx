@@ -27,6 +27,7 @@ import Blog from "./pages/blog";
 import Portfolio from "./pages/Portfolio";
 import ProjectDetail from "./pages/ProjectDetail";
 import ScrollToTop from "./layout/ScrollToTop";
+import DonationPage from "./pages/DonationPage";
 
 function App() {
   const pathname = window.location.pathname;
@@ -123,6 +124,10 @@ function App() {
           <Route
             path="/portfolio/:slug"
             element={<ProjectDetail />}
+          />
+          <Route
+            path="/donate"
+            element={<DonationPage />}
           />
         </Routes>
         <Footer />

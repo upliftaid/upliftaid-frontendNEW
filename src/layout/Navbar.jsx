@@ -32,14 +32,24 @@ const Navbar = () => {
   return (
     <header className="bg-[#00733C] text-white w-full h-[70px] min-[1245px]:flex items-center justify-between px-12 fixed top-0 z-50 hidden">
       {/* Logo */}
-      <Link to="/" className="w-16 h-16">
-        <img src={logo} alt="logo" className="object-contain w-full h-full" />
+      <Link
+        to="/"
+        className="w-16 h-16"
+      >
+        <img
+          src={logo}
+          alt="logo"
+          className="object-contain w-full h-full"
+        />
       </Link>
 
       {/* Navigation */}
       <nav className="flex gap-6 text-[14px] font-[Poppins] items-center">
         {navlinklist.map((item, index) => (
-          <div key={index + item.name} className="relative group flex items-center">
+          <div
+            key={index + item.name}
+            className="relative group flex items-center"
+          >
             <NavLink
               to={item.url}
               className={({ isActive }) =>
@@ -50,8 +60,6 @@ const Navbar = () => {
             >
               {item.name}
             </NavLink>
-
-            
 
             {/* Submenu */}
             {item.hasSubmenu && (
@@ -71,22 +79,27 @@ const Navbar = () => {
         ))}
 
         {/* Cart */}
-        <NavLink to="/cart" className="relative group">
+        <NavLink
+          to="/cart"
+          className="relative group"
+        >
           <div className="bg-[#FFB204] hover:bg-[#E69F00] p-2 rounded flex items-center justify-center transition">
-            <FaCartShopping size={22} className="text-black group-hover:text-white" />
+            <FaCartShopping
+              size={22}
+              className="text-black group-hover:text-white"
+            />
           </div>
         </NavLink>
 
         {/* Donate Button */}
         <NavLink
-          to="/contact"
+          to="/donate"
           className="bg-[#FFB204] hover:bg-[#E69F00] text-black hover:text-white px-4 py-2 rounded font-semibold transition duration-300"
         >
           Donate
         </NavLink>
 
         {/* Login Button */}
-       
       </nav>
     </header>
   );
