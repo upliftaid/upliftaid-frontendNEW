@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PriceCardDetails from "../constants/Home2/PriceCardDetails";
+import { useSelector, useDispatch } from "react-redux";
+import { clearSelectedPlan } from "../redux/donationSlice";
 
 const DonationPage = () => {
   const [selectedCause, setSelectedCause] = useState("");
@@ -15,6 +17,23 @@ const DonationPage = () => {
   ];
 
   const predefinedAmounts = [500, 1000, 2500, 5000];
+
+  const selectedPlanFromRedux = useSelector(
+    (state) => state.donation.selectedPlan
+  );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (selectedPlanFromRedux) {
+      setSelectedPlan(selectedPlanFromRedux);
+      setAmount("");
+      setCustomAmount("");
+    }
+
+    return () => {
+      dispatch(clearSelectedPlan());
+    };
+  }, [selectedPlanFromRedux, dispatch]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
