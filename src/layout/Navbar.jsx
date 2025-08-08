@@ -1,9 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { FaCartShopping } from "react-icons/fa6";
-import { FaChevronDown } from "react-icons/fa6";
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
+    const cartItems = useSelector(state => state.cart.items)
+    const totalItemsInCart = cartItems.reduce((total, item) => total + item.quantity, 0)
   const navlinklist = [
     { name: "Home", url: "/" },
     {
@@ -72,6 +74,12 @@ const Navbar = () => {
 
         {/* Cart */}
         <NavLink to="/cart" className="relative group">
+          {totalItemsInCart > 0 && (
+              <div className="h-4 w-4 bg-white rounded-full text-black text-[10px] flex items-center justify-center absolute -top-2 -right-2">
+                  <p className="text-[10px] font-black">{totalItemsInCart}</p>
+              </div>
+          )}
+         
           <div className="bg-[#FFB204] hover:bg-[#E69F00] p-2 rounded flex items-center justify-center transition">
             <FaCartShopping size={22} className="text-black group-hover:text-white" />
           </div>

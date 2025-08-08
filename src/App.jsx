@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import EventPage from "./pages/EventPage";
 import Notfound from "./pages/Notfound";
 import HomePage from "./pages/HomePage";
@@ -17,7 +17,7 @@ import CausePage from "./pages/CausePage";
 // import Blog from "./pages/Blog"    // another blog page
 import BlogDetailPage from "./pages/BlogDetailPage";
 import ProfilePage from "./pages/ProfilePage";
-import ProductDetailPage from "./pages/ProductDetailPage";
+import ProductDetailPage from "./pages/Product/ProductDetailPage";
 import ProductCart from "./pages/ProductCart";
 import ProductPage from "./pages/ProductPage";
 import Blog from "./pages/blog";
@@ -28,6 +28,11 @@ import ForgetPassword from "./pages/Auth/ForgetPassword";
 import ResetPassword from "./pages/Auth/ResetPassword";
 import Portfolio from "./pages/Portfolio";
 import ProjectDetail from "./pages/ProjectDetail";
+// import Layout from "./components/Product2/Layout";
+import ProductsPage from "./pages/Product/ProductsPage";
+import CartPage from "./pages/Product/CartPage";
+import { store } from '../src/redux/store'
+import { Provider } from "react-redux";
 
 
 function App() {
@@ -35,6 +40,7 @@ function App() {
   return (
     <>
         <Router>
+              <Provider store={store}>
           
           <Routes >
             <Route path="/" element={<Root/>}>
@@ -53,11 +59,19 @@ function App() {
               <Route path="/blog" element={<Blog />}/>
               <Route path="/blog/:id" element={<BlogDetailPage />}/>
               <Route path="/profile" element={<ProfilePage />}/>
-              <Route path="/product-detail" element={<ProductDetailPage />}/>
-              <Route path="/cart" element={<ProductCart />}/>
-              <Route path="/product" element={<ProductPage />}/>
+              {/* <Route path="/product-detail" element={<ProductDetailPage />}/> */}
+              {/* <Route path="/cart" element={<ProductCart />}/> */}
+              {/* <Route path="/product" element={<ProductPage />}/> */}
               <Route path="/portfolio" element={<Portfolio />}/>
               <Route path="/portfolio/:slug" element={<ProjectDetail />}/>
+              <Route path="/product" element={<ProductsPage />} />
+              <Route path="/product/:id" element={<ProductDetailPage />} />
+              <Route path="/cart" element={<CartPage />} />
+
+              {/* <Route path="/" element={<Navigate to="/products" replace />} /> */}
+      
+        
+
             </Route>
 
             <Route path="/auth" element={<LoginForm />}/>
@@ -65,6 +79,7 @@ function App() {
             <Route path="/forget-password" element={<ForgetPassword />}/>
             <Route path="/reset-password" element={<ResetPassword />}/>
           </Routes>
+              </Provider>
           
         </Router>
       
