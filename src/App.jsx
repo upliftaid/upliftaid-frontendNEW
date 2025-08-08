@@ -33,7 +33,7 @@ import ProductsPage from "./pages/Product/ProductsPage";
 import CartPage from "./pages/Product/CartPage";
 import { store } from '../src/redux/store'
 import { Provider } from "react-redux";
-
+import DonationPage from "./pages/DonationPage";
 
 function App() {
   const pathname = window.location.pathname;
@@ -67,6 +67,7 @@ function App() {
               <Route path="/product" element={<ProductsPage />} />
               <Route path="/product/:id" element={<ProductDetailPage />} />
               <Route path="/cart" element={<CartPage />} />
+              <Route path="/donate" element={<DonationPage />}/>
 
               {/* <Route path="/" element={<Navigate to="/products" replace />} /> */}
       

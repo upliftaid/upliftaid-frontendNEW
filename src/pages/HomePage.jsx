@@ -15,7 +15,6 @@ import CausesSlider from "../components/Home2/CausesSlider";
 const HomePage = () => {
   return (
     <div className="">
-
       {/* carousel */}
 
       <HeaderCarousel />
@@ -25,7 +24,9 @@ const HomePage = () => {
 
         <div className="flex flex-col lg:flex-row md:justify-center lg:w-full  px-4 lg:px-20 lg:gap-0 gap-10 lg:items-center  min-w-[320px] ">
           <div className="grid gap-1 px-4 w-full max-w-[250px]">
-            <h1 className="text-[50px] font-[400] max-[1210px]:text-[40px] w-full ">About Us</h1>
+            <h1 className="text-[50px] font-[400] max-[1210px]:text-[40px] w-full ">
+              About Us
+            </h1>
             <div className="bg-[#00733C] w-16 h-[2.5px]"></div>
           </div>
           <div className="h-full flex justify-center items-center">
@@ -33,11 +34,11 @@ const HomePage = () => {
             <div className="w-full flex px-4 justify-center items-center gap-4 lg:ml-5">
               <div className="bg-[#e3e3e3] w-2 h-full md:h-30 lg:hidden block"></div>
               <p className="text-justify text-gray-600 italic">
-                Upliftaid is a nonprofit dedicated to protecting lives, empowering
-                communities, and creating equal opportunities through action in
-                child welfare, education, healthcare, environment, human rights,
-                and more. We work to build a just, inclusive, and compassionate
-                world for all.
+                Upliftaid is a nonprofit dedicated to protecting lives,
+                empowering communities, and creating equal opportunities through
+                action in child welfare, education, healthcare, environment,
+                human rights, and more. We work to build a just, inclusive, and
+                compassionate world for all.
               </p>
             </div>
           </div>
