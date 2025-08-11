@@ -20,7 +20,7 @@ import ProfilePage from "./pages/ProfilePage";
 import ProductDetailPage from "./pages/Product/ProductDetailPage";
 import ProductCart from "./pages/ProductCart";
 import ProductPage from "./pages/ProductPage";
-import Blog from "./pages/blog";
+import Blog from "./pages/Blog";
 import Root from "./root";
 import LoginForm from "./pages/Auth/loginForm";
 import SignupForm from "./pages/Auth/signupForm";
