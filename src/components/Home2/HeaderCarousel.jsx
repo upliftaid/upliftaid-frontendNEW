@@ -91,7 +91,7 @@ const HeaderCarousel = () => {
             <p className="mt-4 text-lg md:text-xl">{slide.line1}</p>
             <p className="text-lg md:text-xl !mb-10">{slide.line2}</p>
             <NavLink
-              to="/"
+              to="/donate"
               className="inline-block mt-8  bg-[#FFB204] hover:bg-[#fdbf30] text-black rounded hover:text-white font-semibold py-3 px-6 transition duration-300"
             >
               Donate Now

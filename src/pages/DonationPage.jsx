@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PriceCardDetails from "../constants/Home2/PriceCardDetails";
+import DonateDetails from "../constants/DonationDetails";
 import { useSelector, useDispatch } from "react-redux";
 import { clearSelectedPlan } from "../redux/donationSlice";
 
@@ -121,12 +121,14 @@ const DonationPage = () => {
           </div>
 
           {/* Subscription Plans */}
-          <div className="mb-8">
+          <div className="mb-8 ml-4">
+            {" "}
+            {/* Added ml-4 for left margin */}
             <h3 className="text-xl font-semibold text-[#00733C] mb-4">
               Or Choose a Subscription Plan
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {PriceCardDetails.map((plan, idx) => (
+              {DonateDetails.map((plan, idx) => (
                 <div
                   key={idx}
                   onClick={() => {
@@ -146,11 +148,17 @@ const DonationPage = () => {
                   <div className="text-center text-2xl font-semibold text-yellow-500 mb-4">
                     ₹{plan.price}/mo
                   </div>
-                  <ul className="text-sm text-gray-700 space-y-1">
-                    <li>✔ {plan.product1}</li>
-                    <li>✔ {plan.product2}</li>
-                    <li>✔ {plan.product3}</li>
-                    <li>✔ {plan.product4}</li>
+                  <ul className="text-sm text-gray-700 space-y-1 text-center">
+                    {plan.products.map((product, pIdx) => (
+                      <li
+                        key={pIdx}
+                        className={
+                          product.enabled ? "" : "line-through text-gray-400"
+                        }
+                      >
+                        {product.name}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               ))}
