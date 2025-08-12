@@ -93,7 +93,8 @@ const projects = [
     title: "Free Health Camp",
     description: "Medical aid to over 2,000 villagers.",
     category: "Health",
-    image: "https://nludelhi.ac.in/wp-content/uploads/2024/04/Health-Camp.jpg",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQDSVInJIyB3gDXBcHxvGzmBzWGx5w2xN3hA&s",
     donations: "$85,000",
     peopleHelped: "2,300+",
     pastEvents: [
@@ -112,7 +113,7 @@ const projects = [
       volunteers: 25,
     },
     gallery: [
-      "https://images.unsplash.com/photo-1588776814546-ec0c9b9de2ad",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZAfHBghpc27aAQFKHlbOjsPq7ZaHtGO21bg&s",
       "https://images.unsplash.com/photo-1550831107-1553da8c8464",
     ],
     volunteers: [
