@@ -4,10 +4,14 @@ import { RxCross2 } from "react-icons/rx";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FaCartShopping, FaChevronDown, FaChevronUp } from "react-icons/fa6";
+import { useSelector } from "react-redux";
 
 const SidebarNavbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+
+      const cartItems = useSelector(state => state.cart.items)
+    const totalItemsInCart = cartItems.reduce((total, item) => total + item.quantity, 0)
 
   const navlinks = [
     { url: "/", name: "Home" },
@@ -45,6 +49,11 @@ const SidebarNavbar = () => {
           onClick={() => setIsSidebarOpen(true)}
           aria-label="Open Sidebar"
         >
+          {totalItemsInCart > 0 && (
+              <div className="h-4 w-4 bg-white rounded-full text-black text-[10px] flex items-center justify-center absolute top-4 left-8.5">
+                  <p className="text-[10px] font-black">{totalItemsInCart}</p>
+              </div> 
+          )}
           <GiHamburgerMenu size={30} color="#FFB204" />
         </button>
         <Link to="/" className="h-14 w-14">
@@ -139,6 +148,14 @@ const SidebarNavbar = () => {
             onClick={closeSidebar}
             className="mt-6 bg-[#FFB204] hover:bg-[#E69F00] text-black hover:text-white font-semibold py-2 rounded flex items-center justify-center gap-2"
           >
+            {totalItemsInCart > 0 && (
+              <div className="h-4 w-4 bg-white rounded-full text-black text-[10px] flex items-center justify-center absolute top-153 right-2">
+                  <p className="text-[10px] font-black">{totalItemsInCart}</p>
+              </div> 
+          )}
+              {/* <div className="h-4 w-4 bg-white rounded-full text-black text-[10px] flex items-center justify-center absolute top-153 right-2">
+                  <p className="text-[10px] font-black">{totalItemsInCart}</p>
+              </div> */}
             <FaCartShopping />
             Cart
           </NavLink>
