@@ -84,7 +84,7 @@ const Footer = () => {
             <div>
               <h1 className="font-bold">Useful links</h1>
               <div className="flex flex-col mt-4 gap-2 text-[14px]">
-                <Link to='/career' className="hover:text-[#FFB204]">Carrers</Link>
+                <Link to='/career' className="hover:text-[#FFB204]">Careers</Link>
                 <Link to='/contact' className="hover:text-[#FFB204]">Contact Us</Link>
                 <Link to='/contact' className="hover:text-[#FFB204]">Donate</Link>
                 <Link to='/' className="hover:text-[#FFB204]">Medical resources</Link>
