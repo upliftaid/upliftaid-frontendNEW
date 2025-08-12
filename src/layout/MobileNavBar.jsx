@@ -24,7 +24,6 @@ const SidebarNavbar = () => {
     { url: "/product", name: "Products" },
     { url: "/career", name: "Career" },
     { url: "/profile", name: "Profile" },
-    { url: "/login", name: "Login" },
   ];
 
   const submenuLinks = [
@@ -141,6 +140,15 @@ const SidebarNavbar = () => {
               )}
             </div>
           ))}
+              <NavLink
+                to={localStorage.getItem("userId") ? '#' : '/auth'}
+                onClick={localStorage.getItem("userId") ? () => {localStorage.removeItem("userId"); closeSidebar()} : () => {} }
+                className={({ isActive }) =>
+                  `hover:text-[#FFB204] transition duration-200 px-2 block py-2 `
+                }
+              >
+               {localStorage.getItem("userId") ? "Logout" : "Login"}
+              </NavLink>
 
           {/* Cart Button */}
           <NavLink

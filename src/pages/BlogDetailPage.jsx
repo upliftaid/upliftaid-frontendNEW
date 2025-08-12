@@ -22,9 +22,9 @@ export default function BlogDetailPage() {
         <div className="flex flex-col lg:flex-row lg:px-20 lg:gap-10">
             <BlogDetail />
             <aside className="flex !w-full flex-1/4 flex-col gap-10 px-5 pb-5 lg:py-20">
-              <UpcomingEventsSection upcomingEvents={upcomingEvents} />
-              <BlogCategories />
+              {/* <UpcomingEventsSection upcomingEvents={upcomingEvents} /> */}
               <PopularPosts />
+              <BlogCategories />
               <ArchivesDate />
               <TagsSection />
             </aside>

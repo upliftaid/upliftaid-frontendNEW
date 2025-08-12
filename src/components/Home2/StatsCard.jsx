@@ -16,21 +16,17 @@ const StatsCard = () => {
       ></div>
 
       {/* Content wrapper with overlay */}
-      <div className="relative !pb-20 bg-black/70 md:py-16 md:px-8">
+      <div className="relative flex !pb-20 bg-black/70 md:py-16 md:px-8">
         {/* Header with navigation buttons */}
-        <div className="flex justify-end space-x-4">
-          <button className="swiper-button-prev-custom text-[#FFB204] font-bold text-3xl px-3 cursor-pointer select-none">
+          <button className="swiper-button-prev-custom text-[#FFB204] hover:scale-120 hover:-translate-x-1 duration-300 font-bold text-3xl px-3 cursor-pointer select-none">
             ‹
           </button>
-          <button className="swiper-button-next-custom text-[#FFB204] font-bold text-3xl px-3 cursor-pointer select-none">
-            ›
-          </button>
-        </div>
+          
 
         <Swiper
           spaceBetween={20}
           loop={true}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          // autoplay={{ delay: 2500, disableOnInteraction: false }}
           modules={[Autoplay, Navigation]}
           navigation={{
             nextEl: ".swiper-button-next-custom",
@@ -59,6 +55,9 @@ const StatsCard = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <button className="swiper-button-next-custom text-[#FFB204] hover:scale-120 hover:translate-x-1 duration-300 font-bold text-3xl px-3 cursor-pointer select-none">
+            ›
+          </button>
       </div>
     </div>
   );

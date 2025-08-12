@@ -1,10 +1,11 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { FaCartShopping } from "react-icons/fa6";
 import { useSelector } from 'react-redux'
 
 const Navbar = () => {
     const cartItems = useSelector(state => state.cart.items)
+    const navigate = useNavigate();
     const totalItemsInCart = cartItems.reduce((total, item) => total + item.quantity, 0)
   const navlinklist = [
     { name: "Home", url: "/" },
@@ -28,7 +29,6 @@ const Navbar = () => {
     { name: "Products", url: "/product" },
     { name: "Career", url: "/career" },
     { name: "Profile", url: "/profile" },
-    { name: "Login", url: "/auth" }, // ✅ NEW ROUTE
   ];
 
   return (
@@ -75,10 +75,18 @@ const Navbar = () => {
                     {subItem.name}
                   </Link>
                 ))}
+                
               </div>
             )}
           </div>
         ))}
+        <NavLink
+          to={localStorage.getItem("userId") ? '#' : '/auth'}
+          onClick={localStorage.getItem("userId") ? () => localStorage.removeItem("userId") : () => {}}
+          className="block px-4 py-2 hover:text-[#FFB204] transition duration-200"
+        >
+          {localStorage.getItem("userId") ? "Logout" : "Login"}
+        </NavLink>
 
         {/* Cart */}
         <NavLink to="/cart" className="relative group">

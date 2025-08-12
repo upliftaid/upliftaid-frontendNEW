@@ -6,7 +6,7 @@ import {
   FaUser,
 } from "react-icons/fa";
 
-const centerList = "flex flex-col items-center w-72 justify-center gap-4";
+const centerList = "flex flex-col items-center w-full max-[767px]:w-70 justify-center gap-4  p-10";
 
 export default function HowToApply() {
   return (
@@ -16,12 +16,12 @@ export default function HowToApply() {
           HOW TO APPLY
         </h1>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-5 md:gap-20  text-white">
-          <div className={centerList}>
+          <div className={`${centerList } `}>
             <FaUser
               color="#FFB204"
               className="h-12 w-10"
             />
-            <span className="text-2xl font-medium">Registration</span>
+            <span className="text-2xl text-center font-medium">Registration</span>
             <p className="text-center text-[0.8rem]">
               Start by filling out our Volunteer Registration Form. This helps
               us get to know you and match you with the right opportunities.
@@ -32,7 +32,7 @@ export default function HowToApply() {
               color="#FFB204"
               className="h-12 w-10"
             />
-            <span className="text-2xl font-medium">Check our program</span>
+            <span className="text-2xl text-center font-medium">Check our program</span>
             <p className="text-center text-[0.8rem]">
               Explore the different ways you can make a difference by visiting
               our Programs Page. Learn where your skills and passions are needed

@@ -92,7 +92,7 @@ const handleSubmit = (e) => {
                   />
                 </div>
                 <button className="hover:bg-[#E69F00] duration-300 rounded text-white cursor-pointer flex justify-center items-center py-3 bg-[#FFB204] w-full">
-                  <p className="text-lg mr-5"> Book Now</p> 
+                  <p className="text-lg mr-5"> Submit</p> 
                   <BookmarkCheck className="text-sm"/>
                 </button>
               </form>

@@ -24,6 +24,10 @@ const LoginForm = () => {
             await new Promise((resolve) => setTimeout(resolve, 5000));
             console.log(data)
 
+            const id = 1  // this id will come from backend when user login successfully and will hold the session info
+            localStorage.setItem("userId", id);
+            navigate(`/`)
+
         } catch (error) {
             setError("root", {
                 type: "manual",

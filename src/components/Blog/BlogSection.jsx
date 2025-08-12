@@ -112,9 +112,9 @@ const BlogSection = ({ totalPages = 4 }) => {
     </div>
 
     <div className="flex flex-1/4 flex-col gap-10 px-5 pb-5 lg:py-20">
-       <UpcomingEventsSection />
-       <BlogCategories />
+       {/* <UpcomingEventsSection /> */}
        <PopularPosts />
+       <BlogCategories />
        <ArchivesDate />
        <TagsSection />
     </div>

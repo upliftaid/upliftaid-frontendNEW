@@ -1,13 +1,17 @@
 import { FaRegCalendarAlt } from "react-icons/fa";
 import events from "../../constants/Event/events";
 
-export default function UpcomingEventsSection() {
+export default function UpcomingEventsSection({onEventClick}) {
     const upcomingEvents = events.filter((event) => event.status === "Upcoming");
   return (
     <div>
       <h2 className=" pb-4 text-xl font-semibold ">Upcoming Events</h2>
       {upcomingEvents.map((event, index) => (
-        <div className="group flex gap-2 py-2 cursor-pointer" key={index}>
+        <div 
+          onClick={() => onEventClick(event)}
+          className="group flex gap-2 py-2 cursor-pointer" 
+          key={index}
+        >
           <img
             src={event.image}
             alt={event.title}

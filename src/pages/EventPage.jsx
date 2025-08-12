@@ -34,9 +34,9 @@ export default function EventPage() {
             )}
           </div>
             <aside className="flex flex-1/4 flex-col gap-10 px-5 pb-5 lg:py-20">
-              <UpcomingEventsSection />
-              <BlogCategories />
-              <PopularPosts />
+              <UpcomingEventsSection onEventClick={setSelectedEvent} />
+              {/* <BlogCategories /> */}
+              {/* <PopularPosts /> */}
               <ArchivesDate />
               <TagsSection />
             </aside>

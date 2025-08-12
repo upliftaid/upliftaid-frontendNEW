@@ -54,6 +54,7 @@ export default function MainEventsSection({onEventClick}) {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: index * 0.3 }}
             key={index}
+            onClick={() => onEventClick(event)}
             className="group flex cursor-pointer flex-col items-start w-full max-w-xs gap-2 border-b !pb-10 border-gray-800 border-dotted"
           >
             <div className="w-full h-44 overflow-hidden mb-4 ">
@@ -66,7 +67,7 @@ export default function MainEventsSection({onEventClick}) {
 
             <h2
               className="text-xl font-semibold cursor-pointer group-hover:text-[#FFB204] !my-4  duration-300 text-start"
-              onClick={() => onEventClick(event)}
+              
             >
               {event.title}
             </h2>

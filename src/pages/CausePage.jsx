@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { FaChevronRight, FaCalendarAlt } from "react-icons/fa";
+import { FaChevronRight, FaCalendarAlt, FaAngleRight } from "react-icons/fa";
 import "@fontsource/poppins";
 
 
 import causeImage1 from "../assets/causes-1.jpg";
 import causeImage2 from "../assets/causes-2.jpg";
 import causeImage3 from "../assets/causes-3.jpg";
+import { useNavigate } from "react-router-dom";
 
 const causes = [
   {
@@ -51,8 +52,27 @@ const causes = [
 ];
 
 const galleryImages = [causeImage1, causeImage2, causeImage3];
+  const categories = [
+    "Charity",
+    "Child",
+    "Education",
+    "Food",
+    "Homeless",
+    "Hungry",
+    "Water",
+  ];
+  const tags = ["Charity", "Child", "Education", "Food", "Homeless", "Hungry", "Water"];
 
-const categories = ["Charity", "Child", "Education", "Food", "Water"];
+  const categoryDropdowns = {
+    Charity: ["Charity 1", "Charity 2", "Charity 3"],
+    Child: ["Child A", "Child B"],
+    Education: ["Course X", "Course Y"],
+    Food: ["Recipe 1", "Recipe 2"],
+    Homeless: ["option A", "option B"],
+    Health: ["Health Tip 1", "Health Tip 2"],
+    Hungry: ["Technique A", "Technique B"],
+    Water: ["Info Drop 1", "Info Drop 2"],
+  };
 
 const latestCauses = [
   {
@@ -72,10 +92,12 @@ const latestCauses = [
   },
 ];
 
-const tags = ["Charity", "Child", "Education", "Food", "Homeless", "Hungry", "Water"];
 
 const CausesPage = () => {
   const [currentImage, setCurrentImage] = useState(0);
+    const [openCategory, setOpenCategory] = useState(null);
+
+  const navigate  = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -83,6 +105,10 @@ const CausesPage = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
+
+    const toggleDropdown = (index) => {
+    setOpenCategory((prev) => (prev === index ? null : index));
+  };
 
   return (
     <div className="bg-white min-h-screen w-full flex flex-col items-center justify-center !mt-18 font-[Poppins] text-[14px] ">
@@ -106,7 +132,7 @@ const CausesPage = () => {
                     <span className="text-[#FFB204] font-medium !ml-5">Goal: ${cause.goal}</span> 
                   </p>
                   <p className="text-gray-400 text-sm !mb-4 ">{cause.description}</p>
-                  <button className="bg-[#00733C] hover:bg-[#FFB204] duration-300 cursor-pointer text-white px-4 py-2 rounded text-sm font-medium">
+                  <button onClick={() => navigate("/donate")} className="bg-[#00733C] hover:bg-[#FFB204] duration-300 cursor-pointer text-white px-4 py-2 rounded text-sm font-medium">
                     Donate Now
                   </button>
                 </div>
@@ -118,14 +144,46 @@ const CausesPage = () => {
 
         <div className="space-y-10 !mt-10">
           <div>
-            <h3 className="text-xl font-semibold mb-4  pb-2">Category</h3>
-            <ul className="space-y-2 text-gray-700">
-              {categories.map((cat, i) => (
-                <li key={i} className="flex items-center !my-5 text-gray-400 hover:text-black  duration-300 cursor-pointer gap-2">
-                  <FaChevronRight className="text-xs" /> {cat}
-                </li>
-              ))}
-            </ul>
+                <div className="grid gap-2">
+                  <h3 className="font-semibold  text-xl">Causes Categories</h3>
+                  <ul className="flex flex-col gap-2"> {/* Space between each category block */}
+                    {categories.map((cat, i) => (
+                      <li key={i}>
+                        <div className="flex flex-col gap-2"> {/* Space between button and dropdown */}
+                          <button
+                            onClick={()  => toggleDropdown(i)}
+                            className={`${openCategory === i ? " text-black" : "text-[#7f7f7f]"} flex items-center justify-between !my-2 hover:text-black duration-300 w-full text-left  text-[14px] cursor-pointer`}
+                          >
+                            <span className="flex items-center gap-2 ">
+                              <FaAngleRight className={`${openCategory === i ? "rotate-90" : ""} duration-300`}/>
+                              {cat}
+                            </span>
+                          </button>
+            
+                          {/* {openCategory === i && (
+                            <ul className="ml-6 text-sm text-gray-500 flex flex-col gap-2">
+                              {categoryDropdowns[cat].map((item, j) => (
+                                <li key={j} className="pl-4">- {item}</li>
+                              ))}
+                            </ul>
+                          )} */}
+                          <ul
+                            className={`
+                              overflow-hidden 
+                              transition-all duration-500 ease-in-out 
+                              ml-6 text-sm text-gray-500 flex flex-col gap-2
+                              ${openCategory === i ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+                            `}
+                          >
+                            {categoryDropdowns[cat].map((item, j) => (
+                              <li key={j} className="pl-4">- {item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
           </div>
 
           <div>
