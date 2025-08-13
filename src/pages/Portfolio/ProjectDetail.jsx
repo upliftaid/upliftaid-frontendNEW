@@ -1,10 +1,11 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
-import projects from "../constants/Portfolio/Projects";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import projects from "../../constants/Portfolio/Projects";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
+  const navigate = useNavigate();
 
   if (!project) {
     return (
@@ -23,15 +24,17 @@ const ProjectDetail = () => {
   }
 
   return (
-    <section className="py-25 px-4 sm:px-6 lg:px-8 bg-gray-50 min-h-screen">
+    <section className="py-25 px-4 sm:px-6 lg:px-8 bg-gray-50 min-h-screen font-[Poppins]">
       <div className="max-w-6xl mx-auto">
         {/* Back link */}
-        <Link
-          to="/portfolio"
-          className="text-green-600 hover:text-green-700 text-sm mb-6 inline-block transition"
-        >
-          ← Back to Portfolio
-        </Link>
+        <div className="mb-4">
+          <button
+            onClick={() => navigate("/portfolio")}
+            className="bg-[#2e7d32] text-white px-5 py-2 rounded-full shadow-md hover:bg-[#256628] transition"
+          >
+            ← Back to Portfolio
+          </button>
+        </div>
 
         {/* Project Banner */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-12">
@@ -70,11 +73,6 @@ const ProjectDetail = () => {
                 <span>Volunteers Involved</span>
               </div>
             </div>
-
-            {/* Join Program Button */}
-            <button className="mt-4 inline-block px-6 py-3 bg-green-600 text-white font-medium rounded-full hover:bg-green-700 transition">
-              Join This Program
-            </button>
           </div>
         </div>
 
@@ -156,6 +154,23 @@ const ProjectDetail = () => {
             </div>
           </div>
         )}
+
+        {/* Call to Action at Bottom */}
+        <div className="mt-16 text-center bg-white rounded-lg shadow-md p-8">
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+            Want to Be Part of This Mission?
+          </h3>
+          <p className="text-gray-600 mb-6">
+            If you wish to join us in making a difference, we'd love to hear
+            from you.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition"
+          >
+            Contact Us
+          </Link>
+        </div>
       </div>
     </section>
   );

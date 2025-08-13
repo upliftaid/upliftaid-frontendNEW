@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Footer from "../layout/Footer";
-import MobileNavbar from "../layout/MobileNavBar";
-import Navbar from "../layout/Navbar";
+import Footer from "../../layout/Footer";
+import MobileNavbar from "../../layout/MobileNavBar";
+import Navbar from "../../layout/Navbar";
 
 const testimonials = [
   {

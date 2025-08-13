@@ -43,7 +43,7 @@ const AboutUsSection = () => {
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
             VIDEO ABOUT OUR STORY
           </h2>
-          <div className="w-12 h-1 bg-[#00AEEF] mb-6"></div>
+          <div className="w-100 h-1 bg-[#00733C] mb-6"></div>
 
           <p className="text-gray-700 mb-6 text-base leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

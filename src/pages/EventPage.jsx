@@ -10,8 +10,6 @@ import TagsSection from "../components/EventPage/TagsSection";
 export default function EventPage() {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  
-
   return (
     <div className="font-[Poppins] ">
       <section className="flex-1 overflow-auto flex flex-col items-center justify-center pt-[70px] bg-white mb-12">
@@ -23,9 +21,7 @@ export default function EventPage() {
         <div className="flex flex-col lg:flex-row lg:px-20 lg:gap-10">
           <div className="grid w-full sm:px-8 px-2 py-20 gap-4">
             {!selectedEvent ? (
-              <MainEventsSection
-                onEventClick={setSelectedEvent}
-              />
+              <MainEventsSection onEventClick={setSelectedEvent} />
             ) : (
               <EventModel
                 setSelectedEvent={setSelectedEvent}
@@ -33,13 +29,13 @@ export default function EventPage() {
               />
             )}
           </div>
-            <aside className="flex flex-1/4 flex-col gap-10 px-5 pb-5 lg:py-20">
-              <UpcomingEventsSection />
-              <BlogCategories />
-              <PopularPosts />
-              <ArchivesDate />
-              <TagsSection />
-            </aside>
+          <aside className="flex flex-1/4 flex-col gap-10 px-5 pb-5 lg:py-20">
+            <UpcomingEventsSection />
+            <BlogCategories />
+            <PopularPosts />
+            <ArchivesDate />
+            <TagsSection />
+          </aside>
         </div>
       </section>
     </div>

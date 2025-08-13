@@ -9,14 +9,14 @@ import EventPage from "./pages/EventPage";
 import Notfound from "./pages/Notfound";
 import HomePage from "./pages/HomePage";
 // import Home from "./pages/home"    // another home page
-import BeAVolunteer from "./pages/BeAVolunteer";
-import About_us from "./pages/About_us";
-import Our_story from "./pages/our_story";
-import WhatWeDoPage from "./pages/WhatWeDoPage";
-import FAQPage from "./pages/FAQPage";
+import BeAVolunteer from "./pages/About Us/BeAVolunteer";
+import About_us from "./pages/About Us/About_us";
+import Our_story from "./pages/About Us/our_story";
+import WhatWeDoPage from "./pages/About Us/WhatWeDoPage";
+import FAQPage from "./pages/About Us/FAQPage";
 import ContactPage from "./pages/ContactPage";
-import JoinTeamPage from "./pages/Career2";
-import Testimonials from "./pages/Testimonials";
+import JoinTeamPage from "./pages/Career/Career2";
+import Testimonials from "./pages/About Us/Testimonials";
 import CausePage from "./pages/CausePage";
 // import AuthPage from "./pages/Auth/AuthPage";
 // import Blog from "./pages/Blog"    // another blog page
@@ -31,14 +31,15 @@ import LoginForm from "./pages/Auth/loginForm";
 import SignupForm from "./pages/Auth/signupForm";
 import ForgetPassword from "./pages/Auth/ForgetPassword";
 import ResetPassword from "./pages/Auth/ResetPassword";
-import Portfolio from "./pages/Portfolio";
-import ProjectDetail from "./pages/ProjectDetail";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import ProjectDetail from "./pages/Portfolio/ProjectDetail";
 // import Layout from "./components/Product2/Layout";
 import ProductsPage from "./pages/Product/ProductsPage";
 import CartPage from "./pages/Product/CartPage";
 import { store } from "../src/redux/store";
 import { Provider } from "react-redux";
 import DonationPage from "./pages/DonationPage";
+import ApplyNowPage from "./pages/Career/ApplyNow";
 
 function App() {
   const pathname = window.location.pathname;
@@ -90,6 +91,10 @@ function App() {
               <Route
                 path="/career"
                 element={<JoinTeamPage />}
+              />
+              <Route
+                path="/apply/:jobTitle"
+                element={<ApplyNowPage />}
               />
               <Route
                 path="/about-us/testimonals"

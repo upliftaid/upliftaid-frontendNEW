@@ -9,6 +9,9 @@ const DonationPage = () => {
   const [customAmount, setCustomAmount] = useState("");
   const [selectedPlan, setSelectedPlan] = useState(null);
 
+  const [causeError, setCauseError] = useState(false);
+  const [donationError, setDonationError] = useState(false);
+
   const causes = [
     "Education for Underprivileged",
     "Healthcare Support",
@@ -38,6 +41,19 @@ const DonationPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const isCauseSelected = selectedCause.trim() !== "";
+    const isDonationChosen =
+      customAmount.trim() !== "" || amount !== "" || selectedPlan !== null;
+
+    // Set error flags
+    setCauseError(!isCauseSelected);
+    setDonationError(!isDonationChosen);
+
+    if (!isCauseSelected || !isDonationChosen) {
+      alert("Please fill in the required fields before donating.");
+      return;
+    }
+
     const donationData = {
       cause: selectedCause,
       amount:
@@ -46,7 +62,7 @@ const DonationPage = () => {
     };
 
     console.log("Submitting donation:", donationData);
-    // Integrate with payment gateway here
+    // Payment gateway integration here
   };
 
   return (
@@ -63,9 +79,14 @@ const DonationPage = () => {
               Select a Cause
             </label>
             <select
-              className="w-full border border-gray-300 p-3 rounded-md"
+              className={`w-full border p-3 rounded-md ${
+                causeError ? "border-red-500" : "border-gray-300"
+              }`}
               value={selectedCause}
-              onChange={(e) => setSelectedCause(e.target.value)}
+              onChange={(e) => {
+                setSelectedCause(e.target.value);
+                setCauseError(false); // Clear error on change
+              }}
             >
               <option value="">-- Choose a cause --</option>
               {causes.map((cause, index) => (
@@ -84,7 +105,11 @@ const DonationPage = () => {
             <label className="block text-gray-700 font-medium mb-2">
               Choose a One-Time Donation
             </label>
-            <div className="flex flex-wrap gap-3">
+            <div
+              className={`flex flex-wrap gap-3 ${
+                donationError ? "border border-red-500 p-2 rounded-md" : ""
+              }`}
+            >
               {predefinedAmounts.map((amt) => (
                 <button
                   key={amt}
@@ -92,6 +117,7 @@ const DonationPage = () => {
                     setAmount(amt);
                     setCustomAmount("");
                     setSelectedPlan(null);
+                    setDonationError(false);
                   }}
                   className={`px-4 py-2 rounded-md border transition ${
                     amount === amt
@@ -109,12 +135,17 @@ const DonationPage = () => {
               <input
                 type="number"
                 placeholder="Or enter custom amount"
-                className="w-full border border-gray-300 p-3 rounded-md"
+                className={`w-full border p-3 rounded-md mt-4 ${
+                  donationError && !customAmount
+                    ? "border-red-500"
+                    : "border-gray-300"
+                }`}
                 value={customAmount}
                 onChange={(e) => {
                   setCustomAmount(e.target.value);
                   setAmount("");
                   setSelectedPlan(null);
+                  setDonationError(false);
                 }}
               />
             </div>

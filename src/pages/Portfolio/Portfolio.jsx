@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import projects from "../constants/Portfolio/Projects";
+import projects from "../../constants/Portfolio/Projects";
 
 const ProjectCard = ({ title, description, image, slug }) => (
   <Link
@@ -45,14 +45,15 @@ const Portfolio = () => {
 
   return (
     <section
-      className="py-20 bg-gray-50"
+      className="py-20 bg-gray-50 font-[Poppins]"
       id="portfolio"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-900">
+        <div className="text-center mb-12 mt-16 flex flex-col items-center">
+          <h1 className="text-[42px] text-gray-900">
             Our Projects
-          </h2>
+          </h1>
+          <div className="w-60 h-1 bg-[#00733C]" />
           <p className="mt-4 text-gray-600 text-lg">
             Take a look at some of the impactful work we’ve done so far.
           </p>
