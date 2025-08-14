@@ -1,13 +1,27 @@
 import { motion } from "framer-motion";
 import { FaRegCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { Bookmark, Box, User } from 'lucide-react';
-import events from "../../constants/Event/events";
-import { useState } from "react";
+import {  useState } from "react";
 
-export default function MainEventsSection({onEventClick}) {
+export default function MainEventsSection({selectedEvent}) {
     const [activeTab, setActiveTab] = useState("Happening");
-    const filteredEvents = events.filter((event) => event.status === activeTab);
+    const filteredEvents = selectedEvent.filter((event) => event.status === activeTab);
     const tabs = ["Happening", "Upcoming", "Expired"];
+
+
+    const getCount =(tab)=>{
+      if(tab === "Happening"){
+        return selectedEvent.filter((event) => event.status === "Happening").length
+      }
+      else if(tab === "Upcoming"){
+        return selectedEvent.filter((event) => event.status === "Upcoming").length
+      }
+      else if(tab === "Expired"){
+        return selectedEvent.filter((event) => event.status === "Expired").length
+      }
+    }
+
+   
 
     
   return (
@@ -38,7 +52,7 @@ export default function MainEventsSection({onEventClick}) {
             {
               tab === "Expired" && <User className="h-4 "/>
             }
-            {tab}
+            {tab} {getCount(tab)}
           </button>
         ))}
       </motion.div>
@@ -48,44 +62,47 @@ export default function MainEventsSection({onEventClick}) {
         key={activeTab}
         className="grid grid-cols-1 min-[600px]:grid-cols-2  min-[1150px]:grid-cols-3 gap-x-6 gap-y-10 py-4 justify-items-center"
       >
-        {filteredEvents.map((event, index) => (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: index * 0.3 }}
-            key={index}
-            onClick={() => onEventClick(event)}
-            className="group flex cursor-pointer flex-col items-start w-full max-w-xs gap-2 border-b !pb-10 border-gray-800 border-dotted"
-          >
-            <div className="w-full h-44 overflow-hidden mb-4 ">
-              <img
-                src={event.image}
-                alt={event.title}
-                className="w-full h-full object-cover group-hover:scale-105 duration-300 "
-              />
-            </div>
-
-            <h2
-              className="text-xl font-semibold cursor-pointer group-hover:text-[#FFB204] !my-4  duration-300 text-start"
-              
+        {filteredEvents.map((event, index) => {
+          const shortenDescription = event.description.slice(0, 90)
+          return(
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: index * 0.3 }}
+              key={index}
+              onClick={() => window.location.href = `/events/${event.id}`}
+              className="group flex cursor-pointer flex-col items-start w-full max-w-xs gap-2 border-b !pb-10 border-gray-800 border-dotted"
             >
-              {event.title}
-            </h2>
+              <div className="w-full h-44 overflow-hidden mb-4 ">
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  className="w-full h-full object-cover group-hover:scale-105 duration-300 "
+                />
+              </div>
 
-            <p className="text-gray-500 text-[14px] text-start mb-3 ">
-              {event.description}
-            </p>
+              <h2
+                className="text-xl font-semibold cursor-pointer group-hover:text-[#FFB204] !my-4  duration-300 text-start"
 
-            <div className="flex items-center text-[11px] !mt-2 text-gray-400 gap-4 flex-wrap ">
-              <span className="flex items-center gap-1">
-                <FaRegCalendarAlt color="#FFB204" /> {event.date}
-              </span>
-              <span className="flex items-center gap-1 text-xs">
-                <FaMapMarkerAlt color="#FFB204" /> PLACE: {event.place}
-              </span>
-            </div>
-          </motion.div>
-        ))}
+              >
+                {event.title}
+              </h2>
+
+              <p className="text-gray-500 text-[14px] text-start mb-3 ">
+                {shortenDescription}...
+              </p>
+
+              <div className="flex items-center text-[11px] !mt-2 text-gray-400 gap-4 flex-wrap ">
+                <span className="flex items-center gap-1">
+                  <FaRegCalendarAlt color="#FFB204" /> {event.date}
+                </span>
+                <span className="flex items-center gap-1 text-xs">
+                  <FaMapMarkerAlt color="#FFB204" /> PLACE: {event.place}
+                </span>
+              </div>
+            </motion.div>
+          )
+        })}
       </div>
     </div>
   );
