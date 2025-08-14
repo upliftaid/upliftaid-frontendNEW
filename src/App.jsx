@@ -1,42 +1,50 @@
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 // import EventPage from "./pages/Event/EventPage";
-import Notfound from "./pages/Notfound";
-import HomePage from "./pages/HomePage";
 // import Home from "./pages/home"    // another home page
-import BeAVolunteer from "./pages/BeAVolunteer";
-import About_us from "./pages/About_us";
-import Our_story from "./pages/our_story";
-import WhatWeDoPage from "./pages/WhatWeDoPage";
-import FAQPage from "./pages/FAQPage";
-import ContactPage from "./pages/ContactPage";
-import JoinTeamPage from "./pages/Career2";
-import Testimonials from "./pages/Testimonials";
-import CausePage from "./pages/CausePage";
+// import BeAVolunteer from "./pages/About Us/BeAVolunteer";
+// import About_us from "./pages/About Us/About_us";
+// import WhatWeDoPage from "./pages/About Us/WhatWeDoPage";
+// import Our_story from "./pages/About Us/our_story";
+// import FAQPage from "./pages/About Us/FAQPage";
+// import Testimonials from "./pages/About Us/Testimonials";
+// import JoinTeamPage from "./pages/Career/Career2";
 // import AuthPage from "./pages/Auth/AuthPage";
 // import Blog from "./pages/Blog"    // another blog page
-import BlogDetailPage from "./pages/BlogDetailPage";
-import ProfilePage from "./pages/ProfilePage";
-import ProductDetailPage from "./pages/Product/ProductDetailPage";
-import ProductCart from "./pages/ProductCart";
-import ProductPage from "./pages/ProductPage";
-import Blog from "./pages/Blog";
-import Root from "./root";
-import LoginForm from "./pages/Auth/loginForm";
-import SignupForm from "./pages/Auth/signupForm";
-import ForgetPassword from "./pages/Auth/ForgetPassword";
-import ResetPassword from "./pages/Auth/ResetPassword";
-import Portfolio from "./pages/Portfolio";
-import ProjectDetail from "./pages/ProjectDetail";
+// import ProductDetailPage from "./pages/Product/ProductDetailPage";
+// import ProductCart from "./pages/ProductCart";
+// import ProductPage from "./pages/ProductPage";
+// import LoginForm from "./pages/Auth/loginForm";
+// import SignupForm from "./pages/Auth/signupForm";
+// import ForgetPassword from "./pages/Auth/ForgetPassword";
+// import ResetPassword from "./pages/Auth/ResetPassword";
+// import ProjectDetail from "./pages/Portfolio/ProjectDetail";
 // import Layout from "./components/Product2/Layout";
-import ProductsPage from "./pages/Product/ProductsPage";
-import CartPage from "./pages/Product/CartPage";
-import { store } from '../src/redux/store'
-import { Provider } from "react-redux";
-import DonationPage from "./pages/DonationPage";
+// import ProductsPage from "./pages/Product/ProductsPage";
+// import CartPage from "./pages/Product/CartPage";
+// import ApplyNowPage from "./pages/Career/ApplyNow";
 // import EventDetails from "./pages/Event/EventDetails";
 
+
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Notfound from "./pages/Notfound";
+import HomePage from "./pages/HomePage";
+import ContactPage from "./pages/ContactPage";
+import CausePage from "./pages/CausePage";
+import BlogDetailPage from "./pages/BlogDetailPage";
+import ProfilePage from "./pages/ProfilePage";
+import Blog from "./pages/Blog";
+import Root from "./root";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import { store } from "../src/redux/store";
+import { Provider } from "react-redux";
+import DonationPage from "./pages/DonationPage";
+
 import {EventDetailsPage, EventPage} from "./pages/Event"
+import { About_us, Our_story, WhatWeDoPage, FAQPage, BeAVolunteer, Testimonials } from "./pages/About Us";
+import { LoginForm, SignupForm, ForgetPassword, ResetPassword } from "./pages/Auth";
+import { ApplyNowPage, JoinTeamPage} from "./pages/Career";
+import { ProjectDetail } from "./pages/Portfolio";
+import  { ProductsPage, CartPage, ProductDetailPage } from "./pages/Product"; 
 
 function App() {
   const pathname = window.location.pathname;
@@ -68,31 +76,60 @@ function App() {
               <Route path="/blog" element={<Blog />}/>
               <Route path="/blog/:id" element={<BlogDetailPage />}/>
               <Route path="/profile" element={<ProfilePage />}/>
+              <Route
+                path="/apply/:jobTitle"
+                element={<ApplyNowPage />}
+              />
               {/* <Route path="/product-detail" element={<ProductDetailPage />}/> */}
               {/* <Route path="/cart" element={<ProductCart />}/> */}
               {/* <Route path="/product" element={<ProductPage />}/> */}
-              <Route path="/portfolio" element={<Portfolio />}/>
-              <Route path="/portfolio/:slug" element={<ProjectDetail />}/>
-              <Route path="/product" element={<ProductsPage />} />
-              <Route path="/product/:id" element={<ProductDetailPage />} />
-              <Route path="/cart" element={<CartPage />} />
-              <Route path="/donate" element={<DonationPage />}/>
+              <Route
+                path="/portfolio"
+                element={<Portfolio />}
+              />
+              <Route
+                path="/portfolio/:slug"
+                element={<ProjectDetail />}
+              />
+              <Route
+                path="/product"
+                element={<ProductsPage />}
+              />
+              <Route
+                path="/product/:id"
+                element={<ProductDetailPage />}
+              />
+              <Route
+                path="/cart"
+                element={<CartPage />}
+              />
+              <Route
+                path="/donate"
+                element={<DonationPage />}
+              />
 
               {/* <Route path="/" element={<Navigate to="/products" replace />} /> */}
-      
-        
-
             </Route>
 
-            <Route path="/auth" element={<LoginForm />}/>
-            <Route path="/signup" element={<SignupForm />}/>
-            <Route path="/forget-password" element={<ForgetPassword />}/>
-            <Route path="/reset-password" element={<ResetPassword />}/>
+            <Route
+              path="/auth"
+              element={<LoginForm />}
+            />
+            <Route
+              path="/signup"
+              element={<SignupForm />}
+            />
+            <Route
+              path="/forget-password"
+              element={<ForgetPassword />}
+            />
+            <Route
+              path="/reset-password"
+              element={<ResetPassword />}
+            />
           </Routes>
-              </Provider>
-          
-        </Router>
-      
+        </Provider>
+      </Router>
     </>
   );
 }

@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react";
-import hands from "../assets/images/hands.jpeg";
-import puzzle from "../assets/images/image.png";
-import apply from "../assets/images/puzzle.png";
-import JobDescriptionModal from "../components/JobDescriptionModal";
+import hands from "../../assets/images/hands.jpeg";
+import puzzle from "../../assets/images/image.png";
+import apply from "../../assets/images/puzzle.png";
+import JobDescriptionModal from "../../components/JobDescriptionModal";
+import { useNavigate } from "react-router-dom";
 
 // 🔹 Why Work With Us Data
 const whyWorkWithUsData = [
@@ -80,8 +81,8 @@ const jobListings = [
 const JoinTeamPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
-  const [jobPosition, setJobPosition] = useState("");
-  const formRef = useRef(null);
+
+  const navigate = useNavigate();
 
   const openModal = (job) => {
     setSelectedJob(job);
@@ -93,9 +94,13 @@ const JoinTeamPage = () => {
     setSelectedJob(null);
   };
 
+  // const handleApplyNow = (jobTitle) => {
+  //   setJobPosition(jobTitle);
+  //   formRef.current?.scrollIntoView({ behavior: "smooth" });
+  // };
+
   const handleApplyNow = (jobTitle) => {
-    setJobPosition(jobTitle);
-    formRef.current?.scrollIntoView({ behavior: "smooth" });
+    navigate(`/apply/${encodeURIComponent(jobTitle)}`);
   };
 
   return (
@@ -119,7 +124,8 @@ const JoinTeamPage = () => {
             className="w-full max-w-md mx-auto rounded-lg transition-transform duration-500 hover:scale-105"
           />
           <div className="animate-fadeIn">
-            <h2 className="text-3xl font-semibold mb-4">Our Culture</h2>
+            <h2 className="text-3xl mb-4">Our Culture</h2>
+            <div className="w-39 h-1 bg-[#00733C] mb-6"></div>
             <p className="text-gray-700 text-lg leading-relaxed">
               UpliftAid believes in compassion, inclusivity, and relentless
               dedication. Our team is united by a commitment to making a
@@ -136,9 +142,12 @@ const JoinTeamPage = () => {
       {/* Why Work With Us */}
       {/* Why Work With Us */}
       <div className="py-16 px-6 md:px-20 bg-gray-50">
-        <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-12">
-          Why Work With Us?
-        </h2>
+        <div className=" flex flex-col items-center justify-center mb-4">
+          <h2 className="text-2xl sm:text-3xl text-center mb-4">
+            Why Work With Us?
+          </h2>
+          <div className="w-68 h-1 bg-[#00733C] mb-6" />
+        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
           {whyWorkWithUsData.map((item, idx) => (
             <div
@@ -157,68 +166,89 @@ const JoinTeamPage = () => {
 
       {/* Job Listings */}
       <div className="py-16 px-6 md:px-20 bg-white">
-        <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-4">
-          Join Our Team
-        </h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          We’re looking for passionate individuals to join our growing team.
-          Explore our job openings below and apply today!
-        </p>
+        <div className="flex flex-col items-center justify-center">
+          <h2 className="text-2xl sm:text-3xl text-center mb-4">
+            Join Our Team
+          </h2>
+          <div className="w-52 h-1 bg-[#00733C] mb-4" />
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            We’re looking for passionate individuals to join our growing team.
+            Explore our job openings below and apply today!
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {jobListings.map((job, index) => (
-            <div className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col">
-              <img
-                src={job.image}
-                alt={job.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-xl font-bold mb-2">{job.title}</h3>
-                <p className="text-gray-600 text-sm mb-1">
-                  Location: {job.location}
-                </p>
-                <p className="text-gray-600 text-sm mb-1">
-                  Experience: {job.experience}
-                </p>
-                <p className="text-gray-600 text-sm mb-3">
-                  Skills: {job.skills}
-                </p>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    openModal(job);
-                  }}
-                  className="text-green-700 underline text-sm mb-4"
-                >
-                  View Job Description
-                </a>
-
-                {/* This wrapper pushes the button to the bottom */}
-                <div className="mt-auto">
-                  <button
-                    onClick={() => handleApplyNow(job.title)}
-                    className="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition"
+        {jobListings.length === 0 ? (
+          <div className="flex flex-col items-center justify-center text-center mt-8">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/4076/4076549.png"
+              alt="No Openings"
+              className="w-32 h-32 mb-6"
+            />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              We're not hiring right now
+            </h3>
+            <p className="text-gray-600 max-w-md">
+              Thank you for your interest in joining UpliftAid Foundation.
+              Please check back later for new opportunities, or reach out
+              through our contact page if you'd like to collaborate.
+            </p>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-2 gap-8">
+            {jobListings.map((job, index) => (
+              <div className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col">
+                <img
+                  src={job.image}
+                  alt={job.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-xl font-bold mb-2">{job.title}</h3>
+                  <p className="text-gray-600 text-sm mb-1">
+                    Location: {job.location}
+                  </p>
+                  <p className="text-gray-600 text-sm mb-1">
+                    Experience: {job.experience}
+                  </p>
+                  <p className="text-gray-600 text-sm mb-3">
+                    Skills: {job.skills}
+                  </p>
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      openModal(job);
+                    }}
+                    className="text-green-700 underline text-sm mb-4"
                   >
-                    APPLY NOW
-                  </button>
+                    View Job Description
+                  </a>
+
+                  {/* This wrapper pushes the button to the bottom */}
+                  <div className="mt-auto">
+                    <button
+                      onClick={() => handleApplyNow(job.title)}
+                      className="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition"
+                    >
+                      APPLY NOW
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Application Form */}
       <div className="py-20 px-6 md:px-20 bg-gray-50">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-10 text-center">
-          Apply for a Career
-        </h2>
-        <div
-          ref={formRef}
-          className="grid md:grid-cols-2 gap-12 items-start"
-        >
+        <div className="flex flex-col items-center justify-center mb-4">
+          <h2 className="text-2xl sm:text-3xl mb-4 text-center">
+            Apply for a Career
+          </h2>
+          <div className="w-62 h-1 bg-[#00733C] mb-6" />
+        </div>
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <form className="space-y-6 w-full max-w-lg mx-auto">
             {/* Full Name */}
             <div>
@@ -241,7 +271,7 @@ const JoinTeamPage = () => {
             </div>
 
             {/* Job Position */}
-            <div>
+            {/* <div>
               <label className="block font-medium">Job Position</label>
               <input
                 type="text"
@@ -250,7 +280,7 @@ const JoinTeamPage = () => {
                 onChange={(e) => setJobPosition(e.target.value)}
                 className="w-full mt-1 border border-gray-300 p-2 rounded"
               />
-            </div>
+            </div> */}
 
             {/* Upload Resume */}
             <div>
@@ -274,16 +304,18 @@ const JoinTeamPage = () => {
             </div>
 
             {/* Submit Button */}
-            <button
-              type="submit"
-              className="bg-white text-[#00733C] border border-1.5 border-[#00733C] transition duration-200 hover:bg-green-700 hover:text-white px-6 py-2 rounded"
-            >
-              SUBMIT APPLICATION
-            </button>
+            <div className=" flex items-center justify-center">
+              <button
+                type="submit"
+                className="border border-1.5 border-[#00733C] transition duration-200 bg-green-700 text-white px-6 py-2 rounded-full"
+              >
+                Submit Application
+              </button>
+            </div>
           </form>
 
           {/* Right Side Image */}
-          <div className="flex justify-center animate-fadeIn">
+          <div className="flex justify-center animate-fadeIn items-center">
             <img
               src={puzzle}
               alt="Apply"

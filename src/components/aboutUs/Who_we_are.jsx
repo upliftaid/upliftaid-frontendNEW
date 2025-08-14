@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaPlus, FaMinus } from "react-icons/fa";
 import {
   tabs,
   missionBox1,
@@ -119,45 +120,51 @@ const WhoWeAre = () => {
 
       {/* Why Choose Us + Fundraisers */}
       {tabs[activeTab].contentType === "whyChooseUs" && (
-        <div className="flex flex-col md:flex-row w-full max-w-7xl mx-auto px-4 lg:px-6 mt-10 gap-6">
-          {/* Left Column */}
+        <div className="flex flex-col md:flex-row w-full max-w-7xl mx-auto px-4 lg:px-6 py-10 gap-6">
+          {/* Left Column - Why Choose Us Accordion */}
           <div className="md:w-1/2">
             <div className="grid gap-1 mt-4">
               <h1 className="text-[28px]">Why Choose Us</h1>
               <div className="bg-[#00733C] w-16 h-[2.5px]" />
             </div>
-            <div className="grid mt-10 gap-4">
-              {WhyChooseUsDescriptionDetails.map((data, index) => (
-                <div
-                  key={index}
-                  className="grid gap-2"
-                >
-                  <h1
-                    className="font-semibold cursor-pointer"
+            <div className="grid mt-6">
+              {WhyChooseUsDescriptionDetails.map((data, index) => {
+                const isOpen = openIndex === index;
+                return (
+                  <div
+                    key={index}
+                    className="border-b last:border-b-0 py-4 cursor-pointer transition-colors hover:bg-gray-50"
                     onClick={() => toggleIndex(index)}
                   >
-                    {data.heading}
-                  </h1>
-                  <div className="w-full h-[0.5px] bg-[#e9e7e7]" />
-                  <AnimatePresence>
-                    {openIndex === index && (
-                      <motion.p
-                        initial={{ y: -10, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: -10, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="text-[14px] mt-2 text-justify w-full"
-                      >
+                    {/* Header */}
+                    <div className="flex justify-between items-center px-2 sm:px-0">
+                      <h1 className="font-semibold text-base sm:text-lg text-[#333]">
+                        {data.heading}
+                      </h1>
+                      <div className="text-[#00733C]">
+                        {isOpen ? <FaMinus size={14} /> : <FaPlus size={14} />}
+                      </div>
+                    </div>
+
+                    {/* Body */}
+                    <div
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        isOpen
+                          ? "max-h-[500px] opacity-100 mt-3"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <p className="text-sm text-gray-600 leading-relaxed px-2 sm:px-0">
                         {data.description}
-                      </motion.p>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
-          {/* Right Column */}
+          {/* Right Column - Progress Bars */}
           <div className="md:w-1/2">
             <div className="md:px-6">
               <div className="grid gap-1 mt-4">

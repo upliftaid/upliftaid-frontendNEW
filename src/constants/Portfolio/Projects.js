@@ -29,8 +29,8 @@ const projects = [
       volunteers: 45,
     },
     gallery: [
-      "https://images.unsplash.com/photo-1589820296159-236b20f7a0b1",
-      "https://images.unsplash.com/photo-1603889864980-16d7b24c6cfb",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpE8kPJY5r5uWRC_y6oqxVnQvg5u9MJ3cUfHe7mY2pyWJh6FgV93aDGnddcyieq0g60Ao&usqp=CAU",
+      "https://images.ctfassets.net/hnk2vsx53n6l/5tCW7mzojHRPQp0J2Il7IL/dee88db0ac1f11357b51e4ad1a4fe019/CAMBODIA_2013_APRIL__TYLER_RIEWER_-1315.jpg?fm=webp",
     ],
     volunteers: [
       {
@@ -71,8 +71,8 @@ const projects = [
       volunteers: 30,
     },
     gallery: [
-      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6",
-      "https://images.unsplash.com/photo-1598300054389-1fd4b96d8d9d",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-ECLVLxBNqBcxq1n9Z52aFFtgzPlPEyVj0w&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfmsctmNDpgitW3QKUt7TzEqwwyhttAjmGGg&s",
     ],
     volunteers: [
       {
@@ -154,8 +154,8 @@ const projects = [
       volunteers: 40,
     },
     gallery: [
-      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f",
-      "https://images.unsplash.com/photo-1588072432836-e10032774350",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8wq5omCNNupXhleNf3doaKb5M6cozp1B-UubMy07hE8gk60F7uc_C46SGkN9v3ASMAak&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfte_Fife3JMsfdhA6DWRJE0Nh33rjfPor2fjnLd9n4_8F0HOaRS0uugJ2AAd_r-SxC_Y&usqp=CAU",
     ],
     volunteers: [
       {

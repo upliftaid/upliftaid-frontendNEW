@@ -27,15 +27,17 @@ const ProgressBars = () => {
         return (
           <div
             className="lg:w-[90%] min-w-48 lg:mx-auto mt-4"
-
             key={index + bar.label}
           >
-            <div className="flex">
-              <span className="text-[14px]">{bar.label}</span>
-              <p className="text-gray-500 lg:px-[200px] px-12 py-2 text-[14px]">
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-[14px] font-medium text-gray-800">
+                {bar.label}
+              </span>
+              <span className="text-[14px] text-gray-600">
                 {bar.completed}%
-              </p>
+              </span>
             </div>
+
             <div></div>
 
             {/* Progress bar */}

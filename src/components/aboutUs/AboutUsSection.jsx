@@ -26,7 +26,7 @@ const AboutUsSection = () => {
         >
           <div className="flex flex-col gap-4">
             <div>
-              <h2 className="text-2xl sm:text-3xl text-black mb-4 relative">
+              <h2 className="text-2xl sm:text-3xl text-black mb-4 relative mt-4">
                 MORE ABOUT US
                 <div className="w-10 h-1 bg-[#00733C] mt-4"></div>
               </h2>

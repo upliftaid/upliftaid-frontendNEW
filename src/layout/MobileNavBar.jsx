@@ -10,8 +10,11 @@ const SidebarNavbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
 
-      const cartItems = useSelector(state => state.cart.items)
-    const totalItemsInCart = cartItems.reduce((total, item) => total + item.quantity, 0)
+  const cartItems = useSelector((state) => state.cart.items);
+  const totalItemsInCart = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   const navlinks = [
     { url: "/", name: "Home" },
@@ -26,12 +29,13 @@ const SidebarNavbar = () => {
     { url: "/profile", name: "Profile" },
   ];
 
+  // ✅ Fixed URLs to match App.jsx routes exactly
   const submenuLinks = [
     { url: "/about-us/our-story", name: "Our Story" },
-    { url: "/about/what-we-do", name: "What we do" },
+    { url: "/about-us/what-we-do", name: "What we do" },
     { url: "/about-us/be-a-volunteer", name: "Be a Volunteer" },
-    { url: "/about/faq", name: "FAQ" },
-    { url: "/about/testimonals", name: "Testimonals" },
+    { url: "/about-us/faq", name: "FAQ" },
+    { url: "/about-us/testimonals", name: "Testimonals" },
   ];
 
   const closeSidebar = () => {
@@ -43,20 +47,29 @@ const SidebarNavbar = () => {
     <>
       {/* Top Bar */}
       <div className="min-[1245px]:hidden flex items-center justify-between px-4 w-full h-[70px] fixed top-0 z-[50] bg-[#00733C]">
-        
         <button
           onClick={() => setIsSidebarOpen(true)}
           aria-label="Open Sidebar"
         >
           {totalItemsInCart > 0 && (
-              <div className="h-4 w-4 bg-white rounded-full text-black text-[10px] flex items-center justify-center absolute top-4 left-8.5">
-                  <p className="text-[10px] font-black">{totalItemsInCart}</p>
-              </div> 
+            <div className="h-4 w-4 bg-white rounded-full text-black text-[10px] flex items-center justify-center absolute top-4 left-8.5">
+              <p className="text-[10px] font-black">{totalItemsInCart}</p>
+            </div>
           )}
-          <GiHamburgerMenu size={30} color="#FFB204" />
+          <GiHamburgerMenu
+            size={30}
+            color="#FFB204"
+          />
         </button>
-        <Link to="/" className="h-14 w-14">
-          <img src={logo} alt="logo" className="h-full w-full object-contain" />
+        <Link
+          to="/"
+          className="h-14 w-14"
+        >
+          <img
+            src={logo}
+            alt="logo"
+            className="h-full w-full object-contain"
+          />
         </Link>
       </div>
 
@@ -75,24 +88,39 @@ const SidebarNavbar = () => {
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-white/10">
-          <Link to="/" onClick={closeSidebar}>
-            <img src={logo} alt="logo" className="w-12 h-12 object-contain" />
+          <Link
+            to="/"
+            onClick={closeSidebar}
+          >
+            <img
+              src={logo}
+              alt="logo"
+              className="w-12 h-12 object-contain"
+            />
           </Link>
-          <button onClick={closeSidebar} aria-label="Close Sidebar">
-            <RxCross2 size={30} color="#FFB204" />
+          <button
+            onClick={closeSidebar}
+            aria-label="Close Sidebar"
+          >
+            <RxCross2
+              size={30}
+              color="#FFB204"
+            />
           </button>
         </div>
 
         <nav className="flex flex-col text-white font-[Poppins] p-4">
           {navlinks.map((link, index) => (
-            <div key={index} className="mb-1">
+            <div
+              key={index}
+              className="mb-1"
+            >
               {link.hasSubmenu ? (
                 <>
-                  <div className="w-full flex justify-between items-center py-2  hover:text-[#FFB204]">
+                  <div className="w-full flex justify-between items-center py-2 hover:text-[#FFB204]">
                     <NavLink
                       to={link.url}
                       onClick={closeSidebar}
-                      // className="flex-1"
                       className={({ isActive }) =>
                         `hover:text-[#FFB204] flex-1 transition duration-200 px-2 block py-2 ${
                           isActive ? "text-[#FFB204] font-semibold" : ""
@@ -102,13 +130,17 @@ const SidebarNavbar = () => {
                       {link.name}
                     </NavLink>
                     <button onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}>
-                        <FaChevronUp className={`text-[#FFB204] ${isSubmenuOpen ? "rotate-180" : "rotate-90"} duration-300 cursor-pointer`} />
+                      <FaChevronUp
+                        className={`text-[#FFB204] ${
+                          isSubmenuOpen ? "rotate-180" : "rotate-90"
+                        } duration-300 cursor-pointer`}
+                      />
                     </button>
                   </div>
 
                   <div
                     className={`ml-4 bg-[#006030] rounded-md overflow-hidden transition-[max-height] duration-500 ease-in-out ${
-                      isSubmenuOpen ? "max-h-96 " : "max-h-0 "
+                      isSubmenuOpen ? "max-h-96" : "max-h-0"
                     }`}
                   >
                     {submenuLinks.map((sublink, subIndex) => (
@@ -122,12 +154,10 @@ const SidebarNavbar = () => {
                       </Link>
                     ))}
                   </div>
-
                 </>
               ) : (
                 <NavLink
                   to={link.url}
-                  // className="block py-2 px-2 hover:text-[#FFB204] transition"
                   className={({ isActive }) =>
                     `hover:text-[#FFB204] transition duration-200 px-2 block py-2 ${
                       isActive ? "text-[#FFB204] font-semibold" : ""
@@ -158,12 +188,9 @@ const SidebarNavbar = () => {
           >
             {totalItemsInCart > 0 && (
               <div className="h-4 w-4 bg-white rounded-full text-black text-[10px] flex items-center justify-center absolute top-153 right-2">
-                  <p className="text-[10px] font-black">{totalItemsInCart}</p>
-              </div> 
-          )}
-              {/* <div className="h-4 w-4 bg-white rounded-full text-black text-[10px] flex items-center justify-center absolute top-153 right-2">
-                  <p className="text-[10px] font-black">{totalItemsInCart}</p>
-              </div> */}
+                <p className="text-[10px] font-black">{totalItemsInCart}</p>
+              </div>
+            )}
             <FaCartShopping />
             Cart
           </NavLink>

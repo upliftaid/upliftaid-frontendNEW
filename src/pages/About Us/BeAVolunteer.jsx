@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import VolunteerTopSection from "../components/aboutUs/BeAVolunteer/VolunteerTopSection";
-import BecomeAVolunteer from "../components/aboutUs/BeAVolunteer/BecomeAVolunteer";
-import HowToApply from "../components/aboutUs/BeAVolunteer/HowToApply";
-import Testimonials from "../components/aboutUs/BeAVolunteer/Testimonals";
-import { owlItems } from "../constants/aboutUs/BeVolunteer/OwlItems";
-import Teams from "../components/aboutUs/BeAVolunteer/Teams";
+import VolunteerTopSection from "../../components/aboutUs/BeAVolunteer/VolunteerTopSection";
+import BecomeAVolunteer from "../../components/aboutUs/BeAVolunteer/BecomeAVolunteer";
+import HowToApply from "../../components/aboutUs/BeAVolunteer/HowToApply";
+import Testimonials from "../../components/aboutUs/BeAVolunteer/Testimonals";
+import { owlItems } from "../../constants/aboutUs/BeVolunteer/OwlItems";
+import Teams from "../../components/aboutUs/BeAVolunteer/Teams";
 
 export default function BeAVolunteer() {
   const scrollRef = useRef(null);

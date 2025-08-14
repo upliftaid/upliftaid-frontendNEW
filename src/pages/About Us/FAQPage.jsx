@@ -1,9 +1,9 @@
-import Header from "../components/aboutUs/FAQ/Header";
+import Header from "../../components/aboutUs/FAQ/Header";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import HelpingMessage from "../components/aboutUs/FAQ/HelpingMessage";
-import GeneralQuestions from "../components/aboutUs/FAQ/GeneralQuestions";
-import GeneralQuestionsData1 from "../constants/aboutUs/FAQ/GeneralQuestionsData1";
-import GeneralQuestionsData2 from "../constants/aboutUs/FAQ/GeneralQuestionsData2";
+import HelpingMessage from "../../components/aboutUs/FAQ/HelpingMessage";
+import GeneralQuestions from "../../components/aboutUs/FAQ/GeneralQuestions";
+import GeneralQuestionsData1 from "../../constants/aboutUs/FAQ/GeneralQuestionsData1";
+import GeneralQuestionsData2 from "../../constants/aboutUs/FAQ/GeneralQuestionsData2";
 
 const FAQPage = () => {
   return (
