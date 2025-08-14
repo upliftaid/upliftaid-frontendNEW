@@ -56,8 +56,8 @@ const Meet_team = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">MEET THE TEAM</h2>
-          <div className="w-16 h-1 bg-[#00733C] mx-auto"></div>
+          <h2 className="text-3xl sm:text-4xl text-gray-800 mb-4 capitalize">Meet The Team</h2>
+          <div className="w-64 h-1 bg-[#00733C] mx-auto"></div>
         </div>
 
         {/* Team Grid */}

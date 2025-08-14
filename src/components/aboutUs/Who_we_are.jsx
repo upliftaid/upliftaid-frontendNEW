@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import {
   tabs,
@@ -31,14 +31,29 @@ const WhoWeAre = () => {
     }
   }, [activeTab]);
 
+  const headingRef = useRef(null);
+  const [headingWidth, setHeadingWidth] = useState(0);
+
+  useEffect(() => {
+    if (headingRef.current) {
+      setHeadingWidth(headingRef.current.offsetWidth);
+    }
+  }, [tabs, activeTab]);
+
   return (
     <section className="bg-gray-100 py-4 px-4 sm:px-6 lg:px-8 w-full">
       {/* Heading */}
       <div className="flex flex-col items-center justify-center mb-10 text-center w-full mx-auto px-4 py-3">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-4 my-2">
-          {tabs[activeTab].title.toUpperCase()}
+        <h2
+          ref={headingRef}
+          className="text-2xl sm:text-3xl font-semibold mb-4 my-2 capitalize"
+        >
+          {tabs[activeTab].title}
         </h2>
-        <div className="h-1 w-50 bg-[#00733C] mx-auto" />
+        <div
+          className="h-1 bg-[#00733C] mx-auto transition-all duration-300"
+          style={{ width: `${headingWidth}px` }}
+        />
       </div>
 
       {/* Tabs */}
@@ -125,7 +140,7 @@ const WhoWeAre = () => {
           <div className="md:w-1/2">
             <div className="grid gap-1 mt-4">
               <h1 className="text-[28px]">Why Choose Us</h1>
-              <div className="bg-[#00733C] w-16 h-[2.5px]" />
+              <div className="bg-[#00733C] w-50 h-[2.5px]" />
             </div>
             <div className="grid mt-6">
               {WhyChooseUsDescriptionDetails.map((data, index) => {
@@ -169,7 +184,7 @@ const WhoWeAre = () => {
             <div className="md:px-6">
               <div className="grid gap-1 mt-4">
                 <h1 className="text-[28px]">Our Fundraisers</h1>
-                <div className="bg-[#00733C] w-16 h-[2.5px]" />
+                <div className="bg-[#00733C] w-52 h-[2.5px]" />
               </div>
               <div className="w-full mt-6">
                 <ProgressBars />
