@@ -13,7 +13,7 @@ export function ProductCard({ product }) {
           <img
             src={product.primaryImage || "/placeholder.svg"}
             alt={product.productName}
-            fill
+            // fill
             style={{ objectFit: "cover" }}
             className="transition-transform duration-300 group-hover:scale-105"
           />

@@ -1,143 +1,120 @@
 // Mock product data for demonstration
 export const mockProducts = [
   {
-    id: "product-1",
-    productName: "Elegant Blue Ceramic Vase",
+    id: "tshirt-1",
+    productName: "Classic White Cotton T-Shirt",
     images: [
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      
+      "https://images.pexels.com/photos/6311606/pexels-photo-6311606.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311607/pexels-photo-6311607.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311608/pexels-photo-6311608.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311609/pexels-photo-6311609.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
-    primaryImage: "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-    category: "Home Decor",
+    primaryImage:
+      "https://images.pexels.com/photos/6311606/pexels-photo-6311606.jpeg?auto=compress&cs=tinysrgb&w=600",
+    category: "T-Shirts",
     description:
-      "A beautifully crafted ceramic vase with a smooth, glossy blue finish. Perfect for adding a touch of elegance to any room. Its unique design makes it a focal point, whether filled with flowers or standing alone.",
-    price: "79.99",
-    material: "High-quality Ceramic",
-    size: "25cm (H) x 15cm (Dia)",
-    weight: "1.2 kg",
+      "A timeless white cotton T-shirt with a soft and breathable feel. Perfect for casual wear or layering.",
+    price: "19.99",
+    material: "100% Cotton",
+    size: "S, M, L, XL",
+    weight: "0.25 kg",
+    discount: "15% off",
+    otherSpecification: "Pre-shrunk fabric, Machine washable",
+    createdAt: "2023-05-10T10:00:00Z",
+    updatedAt: "2023-05-15T14:30:00Z"
+  },
+  {
+    id: "tshirt-2",
+    productName: "Graphic Print Oversized T-Shirt",
+    images: [
+      "https://images.pexels.com/photos/6311606/pexels-photo-6311606.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311607/pexels-photo-6311607.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311608/pexels-photo-6311608.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311609/pexels-photo-6311609.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    primaryImage:
+      "https://images.pexels.com/photos/6311606/pexels-photo-6311606.jpeg?auto=compress&cs=tinysrgb&w=600",
+    category: "T-Shirts",
+    description:
+      "Trendy oversized T-shirt with a bold graphic print. Made with premium fabric for all-day comfort.",
+    price: "24.99",
+    material: "Cotton-Polyester Blend",
+    size: "S, M, L, XL",
+    weight: "0.3 kg",
+    discount: null,
+    otherSpecification: "High-quality print, Fade-resistant",
+    createdAt: "2023-06-01T11:00:00Z",
+    updatedAt: "2023-06-05T16:00:00Z"
+  },
+  {
+    id: "tshirt-3",
+    productName: "Black Slim Fit T-Shirt",
+    images: [
+      "https://images.pexels.com/photos/6311606/pexels-photo-6311606.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311607/pexels-photo-6311607.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311608/pexels-photo-6311608.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311609/pexels-photo-6311609.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    primaryImage:
+      "https://images.pexels.com/photos/6311606/pexels-photo-6311606.jpeg?auto=compress&cs=tinysrgb&w=600",
+    category: "T-Shirts",
+    description:
+      "A sleek black slim-fit T-shirt that pairs perfectly with jeans or chinos for a modern casual look.",
+    price: "21.50",
+    material: "95% Cotton, 5% Spandex",
+    size: "S, M, L, XL, XXL",
+    weight: "0.28 kg",
     discount: "10% off",
-    otherSpecification: "Hand-painted details, Water-resistant",
-    createdAt: "2023-01-15T10:00:00Z",
-    updatedAt: "2023-01-20T14:30:00Z",
+    otherSpecification: "Stretchable fabric, Breathable",
+    createdAt: "2023-07-10T09:00:00Z",
+    updatedAt: "2023-07-12T13:00:00Z"
   },
   {
-    id: "product-2",
-    productName: "Modern Abstract Wall Art",
+    id: "tshirt-4",
+    productName: "Striped Casual T-Shirt",
     images: [
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      
+      "https://images.pexels.com/photos/6311606/pexels-photo-6311606.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311607/pexels-photo-6311607.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311608/pexels-photo-6311608.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311609/pexels-photo-6311609.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
-    primaryImage: "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-    category: "Wall Decor",
+    primaryImage:
+      "https://images.pexels.com/photos/6311606/pexels-photo-6311606.jpeg?auto=compress&cs=tinysrgb&w=600",
+    category: "T-Shirts",
     description:
-      "Captivating abstract art piece featuring a blend of cool blue and white tones. Ideal for contemporary living spaces, adding a sophisticated touch and visual interest.",
-    price: "120.00",
-    material: "Canvas, Acrylic Paint",
-    size: "60cm x 90cm",
-    weight: "2.5 kg",
+      "A classic striped T-shirt that adds a fresh, nautical vibe to your wardrobe. Comfortable and versatile.",
+    price: "22.00",
+    material: "100% Organic Cotton",
+    size: "S, M, L, XL",
+    weight: "0.27 kg",
     discount: null,
-    otherSpecification: "Ready to hang, UV resistant",
-    createdAt: "2023-02-01T11:00:00Z",
-    updatedAt: "2023-02-05T16:00:00Z",
+    otherSpecification: "Eco-friendly dyes, Soft texture",
+    createdAt: "2023-08-01T14:00:00Z",
+    updatedAt: "2023-08-05T10:00:00Z"
   },
   {
-    id: "product-3",
-    productName: "Soft Blue Throw Blanket",
+    id: "tshirt-5",
+    productName: "Vintage Washed Grey T-Shirt",
     images: [
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      
+      "https://images.pexels.com/photos/6311606/pexels-photo-6311606.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311607/pexels-photo-6311607.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311608/pexels-photo-6311608.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6311609/pexels-photo-6311609.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
-    primaryImage: "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-    category: "Textiles",
+    primaryImage:
+      "https://images.pexels.com/photos/6311606/pexels-photo-6311606.jpeg?auto=compress&cs=tinysrgb&w=600",
+    category: "T-Shirts",
     description:
-      "Luxuriously soft and warm throw blanket in a calming shade of blue. Perfect for cozying up on the sofa or adding a layer of comfort to your bed.",
-    price: "45.50",
-    material: "100% Polyester Fleece",
-    size: "150cm x 200cm",
-    weight: "0.8 kg",
+      "A trendy vintage washed grey T-shirt with a relaxed fit and lived-in look. Pairs well with denim.",
+    price: "23.99",
+    material: "100% Cotton",
+    size: "S, M, L, XL",
+    weight: "0.26 kg",
     discount: "5% off",
-    otherSpecification: "Machine washable, Anti-pilling",
-    createdAt: "2023-03-10T09:00:00Z",
-    updatedAt: "2023-03-12T13:00:00Z",
-  },
-  {
-    id: "product-4",
-    productName: "Minimalist Blue Desk Lamp",
-    images: [
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      
-    ],
-    primaryImage: "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-    category: "Lighting",
-    description:
-      "Sleek and modern desk lamp with an adjustable arm and a soft blue finish. Provides focused illumination for reading or working, enhancing any workspace.",
-    price: "65.00",
-    material: "Aluminum, Steel",
-    size: "40cm (H) x 15cm (Base Dia)",
-    weight: "1.5 kg",
-    discount: null,
-    otherSpecification: "LED integrated, Dimmable",
-    createdAt: "2023-04-01T14:00:00Z",
-    updatedAt: "2023-04-05T10:00:00Z",
-  },
-  {
-    id: "product-5",
-    productName: "Minimalist Blue Desk Lamp",
-    images: [
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      
-    ],
-    primaryImage: "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-    category: "Lighting",
-    description:
-      "Sleek and modern desk lamp with an adjustable arm and a soft blue finish. Provides focused illumination for reading or working, enhancing any workspace.",
-    price: "65.00",
-    material: "Aluminum, Steel",
-    size: "40cm (H) x 15cm (Base Dia)",
-    weight: "1.5 kg",
-    discount: null,
-    otherSpecification: "LED integrated, Dimmable",
-    createdAt: "2023-04-01T14:00:00Z",
-    updatedAt: "2023-04-05T10:00:00Z",
-  },
-  {
-    id: "product-6",
-    productName: "Minimalist Blue Desk Lamp",
-    images: [
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-      
-    ],
-    primaryImage: "https://src1.ilogo.in/new_upload/2018/0803/15204827242232292422419698/1520501226/front_design_idea.webp",
-    category: "Lighting",
-    description:
-      "Sleek and modern desk lamp with an adjustable arm and a soft blue finish. Provides focused illumination for reading or working, enhancing any workspace.",
-    price: "65.00",
-    material: "Aluminum, Steel",
-    size: "40cm (H) x 15cm (Base Dia)",
-    weight: "1.5 kg",
-    discount: null,
-    otherSpecification: "LED integrated, Dimmable",
-    createdAt: "2023-04-01T14:00:00Z",
-    updatedAt: "2023-04-05T10:00:00Z",
-  },
+    otherSpecification: "Washed finish, Soft touch",
+    createdAt: "2023-09-01T14:00:00Z",
+    updatedAt: "2023-09-05T10:00:00Z"
+  }
 ]
 
 export function getProductById(id) {

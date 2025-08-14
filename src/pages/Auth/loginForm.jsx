@@ -24,7 +24,7 @@ const LoginForm = () => {
             await new Promise((resolve) => setTimeout(resolve, 5000));
             console.log(data)
 
-            const id = 1  // this id will come from backend when user login successfully and will hold the session info
+            const id = data.email  // this id will come from backend when user login successfully and will hold the session info
             localStorage.setItem("userId", id);
             navigate(-1)
 
@@ -83,6 +83,7 @@ const LoginForm = () => {
         <button
           type="submit"
           disabled={isSubmitting}
+          style={isSubmitting ? { cursor: "not-allowed ", opacity: 0.5 } : {}}
           className="w-full py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 transition-transform transform hover:scale-105 duration-200 shadow-md"
         >
           Login
@@ -98,6 +99,7 @@ const LoginForm = () => {
             disabled={isSubmitting}
             onClick={() => navigate("/signup")}
           className="underline font-semibold hover:text-green-700"
+          style={isSubmitting ? { cursor: "not-allowed ", opacity: 0.5 } : {}}
         >
            Create an account
         </button>
@@ -107,6 +109,7 @@ const LoginForm = () => {
             disabled={isSubmitting}
             onClick={() => navigate("/forget-password")}
           className="underline font-semibold hover:text-green-700"
+          style={isSubmitting ? { cursor: "not-allowed ", opacity: 0.5 } : {}}
         >
            Forget Password?
         </button>

@@ -4,7 +4,10 @@ import { useState, useEffect, useCallback } from "react"
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../redux/ProductSlice'
 import { getProductById } from "../../constants/product2/mock-products"
-import { Link, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
+import Review from "../../components/Product2/Review"
+import { Star } from "lucide-react"
+import review from "../../constants/product2/review"
 // import Link from "next/link"
 
 export default function ProductDisplayPage({ params }) {
@@ -15,6 +18,8 @@ export default function ProductDisplayPage({ params }) {
   const [currentImage, setCurrentImage] = useState(null)
   const [quantity, setQuantity] = useState(1)
   const [totalPrice, setTotalPrice] = useState(0)
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (product) {
@@ -57,6 +62,31 @@ export default function ProductDisplayPage({ params }) {
     return (
       <div className="flex items-center justify-center min-h-[60vh] text-2xl text-gray-600">Product not found.</div>
     )
+  }
+
+
+  const averageRating = review.reduce((sum, review) => sum + review.rating, 0) / review.length;
+
+  const handleBuyNow =async () => {
+    try {
+      if(!localStorage.getItem('userId')) {
+        alert('Please login to join the event')
+        navigate('/auth')
+        return
+      }
+
+      // backend call to buy now
+
+      // data to sent to backend
+      console.log("product", product)
+      console.log("quantity", quantity)
+      console.log("total price", totalPrice)
+      console.log("user id", localStorage.getItem('userId'))
+
+
+    } catch (error) {
+      console.log(error.message)
+    }
   }
 
   return (
@@ -124,6 +154,12 @@ export default function ProductDisplayPage({ params }) {
               {product.productName}
             </h1>
             {product.category && <p className="text-base text-gray-500 mb-4">Category: {product.category}</p>}
+            <div className="flex items-center gap-2 mb-2">
+              {renderStars(Math.round(averageRating))}
+              <span className="text-sm font-semibold text-gray-700">
+                {averageRating.toFixed(1)} out of 5
+              </span>
+            </div>
             <p className="text-gray-700 leading-relaxed mb-4 text-lg">{product.description}</p>
             <div className="flex items-baseline gap-2 mb-4">
               <span className="text-4xl font-extrabold text-[#FFB204]">
@@ -133,6 +169,7 @@ export default function ProductDisplayPage({ params }) {
                 <span className="text-lg text-red-500 line-through opacity-80">{product.discount}</span>
               )}
             </div>
+            
           </div>
 
           <div className="h-px bg-gray-100"></div>
@@ -211,12 +248,38 @@ export default function ProductDisplayPage({ params }) {
             >
               Add to Cart
             </button>
-            <button className="flex-1 border border-green-600 text-green-600 hover:bg-blue-50 hover:text-green-700 py-3 px-6 rounded-lg text-lg font-semibold transition-colors bg-transparent shadow-sm">
-              Book Now
+            <button 
+              onClick={handleBuyNow}
+              className="flex-1 border border-green-600 text-green-600 hover:bg-blue-50 hover:text-green-700 py-3 px-6 rounded-lg text-lg font-semibold transition-colors bg-transparent shadow-sm"
+            >
+              Buy Now
             </button>
           </div>
+          {/* <ReviewModal/> */}
         </div>
       </div>
+          <Review />
     </div>
   )
 }
+
+
+  const renderStars = (rating, interactive = false, onRatingChange = null) => {
+    return (
+      <div className="flex gap-1 ">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <Star
+            key={star}
+            className={` w-3 h-3  ${
+              star <= rating 
+                ? 'text-yellow-400 fill-current' 
+                : 'text-gray-300'
+            } ${interactive ? 'cursor-pointer hover:text-yellow-400 transition-colors' : ''}`}
+            onClick={interactive ? () => onRatingChange(star) : undefined}
+          />
+        ))}
+      </div>
+    );
+  };
+
+

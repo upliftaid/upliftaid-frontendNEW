@@ -1,24 +1,24 @@
 
-import Header from "../components/product/Header";
-import ProductCard from "../components/product/ProductCard";
-import ProductFilter from "../components/product/ProductFilter";
+// import Header from "../components/product/Header";
+// import ProductCard from "../components/product/ProductCard";
+// import ProductFilter from "../components/product/ProductFilter";
 
-const ProductPage = () => {
-  return (
-    <div className="font-[Poppins]">
+// const ProductPage = () => {
+//   return (
+//     <div className="font-[Poppins]">
 
-      <section className="grid gap-4">
-        {/* Header */}
-        <Header />
-        <ProductFilter />
+//       <section className="grid gap-4">
+//         {/* Header */}
+//         <Header />
+//         <ProductFilter />
 
-        {/* Cards */}
+//         {/* Cards */}
 
-        <ProductCard />
-      </section>
+//         <ProductCard />
+//       </section>
 
-    </div>
-  );
-};
+//     </div>
+//   );
+// };
 
-export default ProductPage;
+// export default ProductPage;
