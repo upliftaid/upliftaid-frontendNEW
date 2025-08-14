@@ -1,203 +1,244 @@
 const events = [
   {
+    id: 1,
     title: "Charity For Education",
+    category: "Education",
+    tags: ["charity", "education", "fundraising", "children"],
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...",
+      "This charity event is dedicated to breaking the cycle of poverty through education. We aim to build classrooms, provide essential learning materials, and support teacher training in underfunded schools. Every contribution helps children gain access to the education they deserve, empowering them to build a better future.",
     date: "05.11.2014",
     place: "Rock Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-1.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-1.jpg",
     status: "Happening",
   },
   {
+    id: 2,
     title: "Donate Clothes",
+    category: "Donation",
+    tags: ["clothes", "charity", "poverty"],
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...",
+      "Many families are forced to endure harsh weather conditions without proper clothing. This initiative collects new and gently used clothes to distribute to low-income communities and those in crisis situations. Your donation can bring warmth, dignity, and comfort to someone in need.",
     date: "03.11.2014",
     place: "Villey Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-2.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-2.jpg",
     status: "Happening",
   },
   {
+    id: 3,
     title: "Feed A Hungry Child",
+    category: "Hunger Relief",
+    tags: ["food", "children", "charity"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi dolore velit quis rerum facere explicabo.",
+      "Every day, countless children go to bed hungry. This program provides hot, nutritious meals to children from low-income families, ensuring they have the energy to learn and grow. By supporting this cause, you’re giving children not just food, but hope for a healthier tomorrow.",
     date: "03.05.2025",
     place: "Rock Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-3.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-3.jpg",
     status: "Happening",
   },
   {
+    id: 4,
     title: "Adopt Child",
+    category: "Child Welfare",
+    tags: ["adoption", "children", "charity"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi dolore velit quis rerum facere explicabo.",
+      "Thousands of children are waiting for loving homes. This event raises awareness about adoption and connects prospective parents with agencies and children in need. Together, we can provide safe, nurturing environments where children can thrive and feel truly loved.",
     date: "03.05.2025",
     place: "Rock Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-4.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-4.jpg",
     status: "Happening",
   },
   {
+    id: 5,
     title: "Become Volunteer",
+    category: "Volunteer Work",
+    tags: ["volunteer", "help", "community"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi dolore velit quis rerum facere explicabo.",
+      "Volunteering is one of the most powerful ways to make a difference. This program offers opportunities to help in local shelters, environmental projects, community events, and educational programs. Give your time, share your skills, and be part of meaningful change in your community.",
     date: "03.05.2025",
     place: "Villey Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-5.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-5.jpg",
     status: "Happening",
   },
   {
+    id: 6,
     title: "Donate Money",
+    category: "Donation",
+    tags: ["money", "fundraising", "charity"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi dolore velit quis rerum facere explicabo.",
+      "Your financial contributions help sustain life-changing projects, from disaster relief to educational support. Every donation, no matter the size, is carefully allocated to maximize its impact. Together, we can support those in crisis and create lasting improvements in their lives.",
     date: "03.05.2025",
     place: "London Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-6.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-6.jpg",
     status: "Happening",
   },
   {
+    id: 7,
     title: "Help HomeLess People",
+    category: "Homeless Support",
+    tags: ["homeless", "charity", "shelter"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi dolore velit quis rerum facere explicabo.",
+      "Homelessness is more than just the absence of a home—it’s a struggle for safety, food, and dignity. This event provides hot meals, clothing, and temporary shelter to individuals in need, while also offering guidance towards long-term housing solutions.",
     date: "03.05.2025",
     place: "Villey Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-7.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-7.jpg",
     status: "Happening",
   },
   {
+    id: 8,
     title: "Poor Children's Smile",
+    category: "Child Welfare",
+    tags: ["children", "smile", "charity"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi dolore velit quis rerum facere explicabo.",
+      "Happiness is a gift every child deserves. This program organizes games, creative workshops, and community events for children living in poverty, ensuring they experience joy, laughter, and a sense of belonging.",
     date: "03.05.2025",
     place: "Villey Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-8.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-8.jpg",
     status: "Happening",
   },
   {
+    id: 9,
     title: "Raise Donation",
+    category: "Fundraising",
+    tags: ["donation", "charity", "fundraising"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi dolore velit quis rerum facere explicabo.",
+      "A community-driven fundraising event aimed at generating resources for multiple humanitarian projects. Live performances, charity auctions, and interactive booths create a vibrant atmosphere while raising essential funds for those in need.",
     date: "03.05.2025",
     place: "London Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-9.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-9.jpg",
     status: "Happening",
   },
   {
+    id: 10,
     title: "Charity For Education",
+    category: "Education",
+    tags: ["charity", "education", "children"],
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...",
+      "An education-focused charity event to supply books, stationery, and scholarships to deserving students. By investing in young minds, we can empower communities and reduce inequality. Your support helps children unlock their full potential.",
     date: "05.11.2014",
     place: "Rock Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-1.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-1.jpg",
     status: "Upcoming",
   },
   {
+    id: 11,
     title: "Raise Donation",
+    category: "Fundraising",
+    tags: ["fundraising", "donation", "charity"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi dolore velit quis rerum facere explicabo.",
+      "A high-energy event bringing together donors, volunteers, and local businesses to raise funds for humanitarian causes. Every penny raised goes directly to programs that change lives and create lasting impact.",
     date: "03.05.2025",
     place: "London Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-9.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-9.jpg",
     status: "Upcoming",
   },
   {
+    id: 12,
     title: "Donate Money",
+    category: "Donation",
+    tags: ["money", "charity", "fundraising"],
     description:
-      "Join us in collecting and distributing food to those in need. Your contribution can make a real difference in someone's life.",
+      "Join us in funding projects that provide meals, shelter, and educational support for those in need. This initiative ensures that your financial contributions reach the right places, creating measurable and meaningful change.",
     date: "15.12.2024",
     place: "London Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-6.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-6.jpg",
     status: "Upcoming",
   },
   {
+    id: 13,
     title: "Adopt Child",
+    category: "Child Welfare",
+    tags: ["adoption", "charity", "children"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi dolore velit quis rerum facere explicabo.",
+      "Helping match children in need with caring adoptive families to give them a brighter future. This event includes adoption counseling, awareness programs, and meet-ups for families looking to make a difference.",
     date: "03.05.2025",
     place: "Rock Stadium",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-4.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-4.jpg",
     status: "Upcoming",
   },
   {
+    id: 14,
     title: "Medical Supplies Donation",
+    category: "Healthcare",
+    tags: ["medical", "supplies", "donation"],
     description:
-      "Help us provide essential medical supplies to underprivileged communities. Every donation counts towards better healthcare access.",
+      "Collecting and distributing essential medical equipment and supplies to underserved communities. Your contributions help hospitals and clinics provide better care to patients in urgent need.",
     date: "20.11.2024",
     place: "City Hospital",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-3.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-3.jpg",
     status: "Upcoming",
   },
   {
+    id: 15,
     title: "Winter Clothing Collection",
+    category: "Donation",
+    tags: ["winter", "clothes", "homeless"],
     description:
-      "Help keep the homeless warm this winter by donating winter clothes and blankets.",
+      "Gathering warm clothes and blankets to help the homeless survive harsh winter conditions. Each item donated is a step toward ensuring no one faces the cold alone.",
     date: "01.09.2024",
     place: "Winter Shelter",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-4.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-4.jpg",
     status: "Expired",
   },
   {
+    id: 16,
     title: "Blood Donation Camp",
+    category: "Healthcare",
+    tags: ["blood donation", "health", "charity"],
     description:
-      "Your blood can save lives. Join our blood donation camp and be a hero in someone's life.",
+      "Organizing a blood drive to collect life-saving donations for hospitals and emergency care. A single pint of blood can save up to three lives—your contribution truly matters.",
     date: "25.08.2024",
     place: "Red Cross Center",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-5.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-5.jpg",
     status: "Expired",
   },
   {
+    id: 17,
     title: "Tech for Education",
+    category: "Education",
+    tags: ["technology", "education", "donation"],
     description:
-      "Donate your old computers and tablets to help bridge the digital divide in education.",
+      "Encouraging people to donate old laptops, tablets, and devices to schools in need of tech resources. With better access to technology, students can expand their learning opportunities and prepare for the future.",
     date: "15.07.2024",
     place: "Tech Hub",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-6.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-6.jpg",
     status: "Expired",
   },
   {
+    id: 18,
     title: "Donate Clothes for Needy",
+    category: "Donation",
+    tags: ["clothes", "winter", "charity"],
     description:
-      "A successful clothing drive that helped provide warm clothes to hundreds of underprivileged families during winter.",
+      "A successful clothing drive that kept hundreds of underprivileged families warm during the winter season. Your contributions ensure that vulnerable people face the cold with dignity and comfort.",
     date: "01.06.2024",
     place: "Community Hall",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-7.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-7.jpg",
     status: "Expired",
   },
   {
+    id: 19,
     title: "Feed a Hungry Child",
+    category: "Hunger Relief",
+    tags: ["food", "children", "charity"],
     description:
-      "A heartwarming initiative that provided nutritious meals to over 500 children from low-income families.",
+      "Providing healthy, freshly prepared meals to children in need across various communities. Every meal served brings relief to families struggling to put food on the table.",
     date: "15.05.2024",
     place: "City Food Bank",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-8.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-8.jpg",
     status: "Expired",
   },
   {
+    id: 20,
     title: "Poor Children's Smile",
+    category: "Child Welfare",
+    tags: ["children", "smile", "charity"],
     description:
-      "A special day filled with joy and activities for underprivileged children, bringing smiles to their faces.",
+      "A day dedicated to organizing games, meals, and gifts for children from disadvantaged backgrounds. It’s a celebration of joy, aiming to create lifelong happy memories for these young hearts.",
     date: "01.04.2024",
     place: "Children's Park",
-    image:
-      "https://zozothemes.com/html/the-charity/img/sections/blog/news-9.jpg",
+    image: "https://zozothemes.com/html/the-charity/img/sections/blog/news-9.jpg",
     status: "Expired",
   },
 ];
+
 export default events;

@@ -26,7 +26,7 @@ const LoginForm = () => {
 
             const id = 1  // this id will come from backend when user login successfully and will hold the session info
             localStorage.setItem("userId", id);
-            navigate(`/`)
+            navigate(-1)
 
         } catch (error) {
             setError("root", {
