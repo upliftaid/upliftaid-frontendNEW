@@ -18,7 +18,7 @@ const Testimonials = () => {
             <h1 className="text-3xl sm:text-4xl text-white font-semibold">
               Testimonials
             </h1>
-            <div className="bg-[#00733C] w-16 h-[2.5px] mx-auto mt-2" />
+            <div className="bg-[#00733C] w-54 h-[2.5px] mx-auto mt-2" />
           </div>
 
           {/* Swiper Slider */}

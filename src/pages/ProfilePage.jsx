@@ -5,6 +5,8 @@ import PersonalInfo from "../components/profile/PersonalInfo";
 import Activity from "../components/profile/Activity";
 import Settings from "../components/profile/Seetings";
 import TopBar from "../components/profile/TopBar";
+import PastDonations from "../components/profile/PastDonations";
+import ApplicationStatus from "../components/profile/ApplicationStatus";
 
 const ProfilePage = () => {
   return (
@@ -13,6 +15,8 @@ const ProfilePage = () => {
         <TopBar />
         <PersonalInfo />
         <Activity />
+        <PastDonations />
+        <ApplicationStatus />
         <Settings />
       </div>
     </div>

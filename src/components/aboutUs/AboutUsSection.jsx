@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 const AboutUsSection = () => {
   const [animateLeft, setAnimateLeft] = useState(false);
   const [animateRight, setAnimateRight] = useState(false);
+  const [showFullText, setShowFullText] = useState(false);
 
   useEffect(() => {
     const leftTimer = setTimeout(() => setAnimateLeft(true), 200);
@@ -27,16 +28,17 @@ const AboutUsSection = () => {
           <div className="flex flex-col gap-4">
             <div>
               <h2 className="text-2xl sm:text-3xl text-black mb-4 relative mt-4">
-                MORE ABOUT US
-                <div className="w-10 h-1 bg-[#00733C] mt-4"></div>
+                More About Us
+                <div className="w-50 h-1 bg-[#00733C] mt-2"></div>
               </h2>
 
               <h3 className="text-[#00733C] text-xl sm:text-2xl font-light leading-snug">
                 Together, we uplift lives.
               </h3>
 
-              <p className="text-[#00733C] text-lg my-6">Service Since 2024</p>
+              <p className="text-[#00733C] text-lg my-4">Service Since 2024</p>
 
+              {/* Short Description */}
               <p className="text-gray-800 mb-4 leading-6">
                 UpliftiAid is a nonprofit organization committed to uplifting
                 vulnerable communities through compassion, action, and
@@ -46,22 +48,31 @@ const AboutUsSection = () => {
                 begins with people helping people.
               </p>
 
-              <p className="text-gray-800 mb-4 leading-6 mt-1">
-                Our programs are designed to meet urgent needs while building
-                long-term resilience. Whether it's providing school supplies,
-                supporting disaster relief, or empowering women with livelihood
-                skills, UpliftiAid stands at the intersection of care and
-                change. With the support of our volunteers, donors, and
-                partners, we aim to create a world where dignity, opportunity,
-                and hope are accessible to all.
-              </p>
+              {/* Conditional Full Description */}
+              {showFullText && (
+                <p className="text-gray-800 mb-4 leading-6 mt-1 transition-all duration-700 ease-in transform opacity-0 translate-y-4 animate-fade-in-up">
+                  Our programs are designed to meet urgent needs while building
+                  long-term resilience. Whether it's providing school supplies,
+                  supporting disaster relief, or empowering women with
+                  livelihood skills, UpliftiAid stands at the intersection of
+                  care and change. With the support of our volunteers, donors,
+                  and partners, we aim to create a world where dignity,
+                  opportunity, and hope are accessible to all.
+                </p>
+              )}
             </div>
 
-            <div className="mt-4 my-4">
-              <button className="bg-[#00733C] hover:bg-green-800 text-white px-4 py-3 text-sm">
-                READ MORE
-              </button>
-            </div>
+            {/* READ MORE button (only if not showing full text) */}
+            {!showFullText && (
+              <div className="mt-4 my-4">
+                <button
+                  className="bg-[#00733C] hover:bg-green-800 text-white px-4 py-3 text-sm"
+                  onClick={() => setShowFullText(true)}
+                >
+                  READ MORE
+                </button>
+              </div>
+            )}
           </div>
         </div>
 

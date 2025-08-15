@@ -3,6 +3,7 @@ import { CiHeart } from "react-icons/ci";
 import { FaClock, FaCalendar } from "react-icons/fa";
 import { FaHandHoldingHeart } from "react-icons/fa6";
 import { PiUsersThree } from "react-icons/pi";
+import { MdEventAvailable } from "react-icons/md";
 
 // Static activity list
 const ActivityDetails = [
@@ -30,9 +31,17 @@ const ActivityDetails = [
     date: "Feb 20, 2025",
     amount: "₹950",
   },
+  {
+    type: "event",
+    iconColor: "red-500",
+    icon: MdEventAvailable,
+    heading: "Attended Tech Conference 2025",
+    date: "April 1, 2025",
+    amount: "1 day",
+  },
 ];
 
-const filters = ["all", "donation", "volunteer"];
+const filters = ["all", "donation", "volunteer", "event"];
 
 const Activity = () => {
   const [selectedFilter, setSelectedFilter] = useState("all");
@@ -86,8 +95,8 @@ const Activity = () => {
           {/* Card 4 */}
           <div className="flex bg-yellow-500 px-4 py-3 items-center text-white justify-between rounded hover:scale-[1.02] transition">
             <div>
-              <p className="text-gray-200 md:text-lg">Repeated Donation</p>
-              <p className="font-bold md:text-xl text-sm">₹2450</p>
+              <p className="text-gray-200 md:text-lg">Referrals</p>
+              <p className="font-bold md:text-xl text-sm">5</p>
             </div>
             <div className="transform hover:scale-125 transition">
               <CiHeart size={30} />
@@ -106,7 +115,7 @@ const Activity = () => {
             onClick={() => setSelectedFilter(filter)}
             className={`px-4 py-2 rounded-full border transition ${
               selectedFilter === filter
-                ? "bg-blue-500 text-white border-blue-500"
+                ? "bg-green-500 text-white border-green-500"
                 : "bg-white border-gray-300 text-gray-700 hover:bg-gray-100"
             }`}
           >
